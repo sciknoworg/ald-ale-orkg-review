@@ -1,0 +1,425 @@
+1. V. M. Donnelly and A. Kornblit, “Plasma etching: Yesterday, today, and tomorrow,”
+Journal of Vacuum Science & Technology A, 31, 050825 (2013).
+2. N. Marchack and J. P. Chang, “Perspectives in nanoscale plasma etching: what are
+the ultimate limits?,” Journal of Physics D-Applied Physics, 44, 174011 (2011).
+3. C. G. N. Lee, K. J. Kanarik, and R. A. Gottscho, “The grand challenges of plasma
+etching: a manufacturing perspective,” Journal of Physics D-Applied Physics, 47,
+273001 (2014).
+4. S. Banna, A. Agarwal, G. Cunge, M. Darnon, E. Pargon, and O. Joubert, “Pulsed
+high-density plasmas for advanced dry etching processes,” Journal of Vacuum Science
+& Technology A, 30, 040801 (2012).
+5. D. J. Economou, “Pulsed plasma etching for semiconductor manufacturing,” Journal
+of Physics D-Applied Physics, 47, 303001 (2014).
+6. C. Petit-Etienne,M.Darnon, P. Bodart,M. Fouchier, G. Cunge, E. Pargon, L.Vallier,
+O. Joubert, and S. Banna, “Atomic-scale silicon etching control using pulsed Cl2
+plasma,” Journal of Vacuum Science & Technology B, 31, 011201 (2013).
+7. S. Samukawa, M. Hori, S. Rauf, K. Tachibana, P. Bruggeman, G. Kroesen,
+J. C. Whitehead, A. B. Murphy, A. F. Gutsol, S. Starikovskaia, U. Kortshagen,
+J. P. Boeuf, T. J. Sommerer, M. J. Kushner, U. Czarnetzki, and N. Mason, “The
+2012 Plasma Roadmap,” Journal of Physics D-Applied Physics, 45, 37 (2012).
+8. M. Guillorn, J. Chang, N. Fuller, J. Patel, M. Darnon, A. Pyzyna, E. Joseph,
+S. Engelmann, J. Ott, J. Newbury, D. Klaus, J. Bucchignano, P. Joshi, C. Scerbo,
+E. Kratschmer, W. Graham, B. To, J. Parisi, Y. Zhang, and W. Haensch, “Hydrogen
+silsesquioxane-based hybrid electron beam and optical lithography for high density
+circuit prototyping”, J. Vac. Sci. Technol. B., 27, 2588 (2009).
+9. A. Agarwal and M. J. Kushner, “Plasma atomic layer etching using conventional
+plasma equipment,” Journal of Vacuum Science & Technology A, 27(1), 37 (2009).
+10. K. J. Kanarik, S. Tan, J. Holland,A. Eppler,V.Vahedi, J.Marks, and R. A. Gottscho,
+“Moving atomic layer etch from lab to fab,” Solid State Technology, 56, 14 (2013).
+11. “First Workshop on Atomic-Layer-ETch (ALET) and –Clean (ALC) technology”,
+April 2014, San Francisco (organized by Craig Huffman, Int. SEMATECH);
+http://www.sematech.org/meetings/archives/fep/10605/index.htm; In conjunction
+with ALD 2015, AVS Plasma Science and Technology Division will be
+hosting a “Workshop on Atomic Layer Etching”, July 1–2, 2015, Portland (Chair,
+Eric A. Joseph).
+12. http://en.wikipedia.org/wiki/The_Tipping_Point.
+13. P. D. Agnello and P. D. “Process requirements for continued scaling of CMOS - the
+need and prospects for atomic-level manipulation,” IBM J. Res. Dev., 46(2–3), 317
+(2002).
+14. S. Bangsaruntip, G. M. Cohen, A. Majumdar, Y. Zhang, S. U. Engelmann,
+N. C. M. Fuller, L. M. Gignac, S. Mittal, J. S. Newbury, M. Guillorn, T. Barwicz,
+L. Sekaric, M. M. Frank, and J. W. Sleight, “High Performance and Highly Uniform
+Gate-All-Around Silicon NanowireMOSFETs withWire Size Dependent Scaling”,
+IEDM Baltimore (2009).
+15. M. Guillorn, J. Chang, A. Pyzyna, S. Engelmann, E. Joseph, B. Fletcher,
+C. Cabral, Jr., C.-H. Lin, A. Bryant, M. Darnon, J. Ott, C. Lavoie, M. Frank,
+L. Gignac, J. Newbury, C. Wang, D. Klaus, E. Kratschmer, J. Bucchignano, B. To,
+W. Graham, I. Lauer, E. Sikorski, S. Carter, V. Narayanan, N. Fuller, Y. Zhang, and
+W. Haensch, “Trigate 6T SRAM Scaling to 0.06 m2”, IEDM Baltimore (2009).
+16. K. J. Kanarik, G. Kamarthy, and R. A. Gottscho, “Plasma etch challenges for Fin-
+FET transistors,” Solid State Technology, 55(3), 15 (2012).
+17. F. Schwierz, “Graphene transistors,” Nature Nanotechnology, 5(7), 487 (2010).
+18. D. Akinwande, N. Petrone, and J. Hone, “Two-dimensional flexible nanoelectronics,”
+Nature Communications 5 (2014).
+19. J. L. Zhang, X.Wang, G. Dinakov, and H. Dai, “Narrow graphene nanoribbons from
+carbon nanotubes,“ Nature, 458, 877 (2009).
+20. G. S. Oehrlein and H. L.Williams, “Silicon Etching Mechanisms in a CF4/H2 Glow
+Discharge”, J. Appl. Phys., 62, 662 (1987).
+21. T. E. F. M. Standaert,M. Schaepkens, N. R. Rueger, P. G. M. Sebel, G. S. Oehrlein,
+and J. M. Cook, “High-Density Fluorocarbon Etching of Silicon in an Inductively
+Coupled Plasma: Mechanism of Etching through a Thick Steady-State Fluorocarbon
+Layer,” J. Vac. Sci. & Technol. A, 16, 239 (1998).
+22. N. R. Rueger, J. J. Beulens, M. Schaepkens, M. F. Doemling, J. M. Mirza,
+T. E. F. M. Standaert, and G. S. Oehrlein, “The role of steady-state fluorocarbon
+films in the etching of silicon dioxide using CHF3 in an inductively coupled plasma
+reactor,” J. Vac. Sci. & Technol. A, 15, 1881 (1997).
+23. M. Schaepkens, T. E. F. M. Standaert, N. R. Rueger, P. G. M. Sebel, and
+G. S. Oehrlein, “Study of the SiO2-to-Si3N4 etch selectivity mechanism in inductively
+coupled fluorocarbon plasmas and a comparison with the SiO2-to-Si mechanism,”
+J. Vac. Sci. & Technol. A, 17, 26 (1999).
+24. T. E. F. M. Standaert, C. Hedlund, E. A. Joseph, G. S. Oehrlein, and T. J. Dalton,
+“On the role of the fluorocarbon film formation in the etching of silicon, silicon
+dioxide, silicon nitride, and amorphous hydrogenated silicon carbide,” J. Vac. Sci.
+& Technol. A, 22, 53 (2004).
+25. A. Sankaran and M. J. Kushner, “Integrated feature scale modeling of plasma processing
+of porous and solids SiO2. I. Fluorocarbon etching,” Journal of Vacuum
+Science & Technology A, 22(4), 1242 (2004).
+26. A. Sankaran and M. J. Kushner, “Etching of porous and solid SiO2 in Ar/c-C4F8,
+O2/c-C4F8 and Ar/O2/c-C4F8 plasmas,” Journal of Applied Physics, 97(2) (2005).
+27. G. S. Oehrlein andR.Kalish, “Silicon loss and transient etch rate in selective reactive
+ion etching of oxide overlayers,” App. Phys. Lett., 54, 2698 (1989).
+28. G. S. Oehrlein and Y. Kurogi, “Sidewall Chemistry in Plasma Etching,” Materials
+Science and Engineering Reports R, 24, 153 (1998).
+29. S. M. George, “Atomic Layer Deposition: An Overview,” Chemical Reviews,
+110(1), 111 (2010).
+30. M. Leskel¨a and M. Ritala, “Atomic layer deposition (ALD): from precursors to thin
+film structures,” Thin Solid Films, 409, 138 (2002).
+31. M. Leskel¨a and M. Ritala, “Atomic layer deposition chemistry: Recent developments
+and future challenges,” Angewandte Chemie-International Edition, 42, 5548 (2003).
+32. S. M. George, A. W. Ott, and J. W. Klaus, “Surface chemistry for atomic layer
+growth,” Journal of Physical Chemistry, 100, 13121 (1996).
+33. A. W. Ott, J. W. Klaus, J. M. Johnson, and S. M. George, “Al2O3 thin film growth
+on Si(100) using binary reaction sequence chemistry,” Thin Solid Films, 292, 135
+(1997).
+34. M. D. Groner, J. W. Elam, F. H. Fabreguette, and S. M. George, “Electrical characterization
+of thin Al2O3 films grown by atomic layer deposition on silicon and
+various metal substrates,” Thin Solid Films, 413, 186 (2002).
+35. M. D. Groner, F. H. Fabreguette, J. W. Elam, and S. M. George, “Low-temperature
+Al2O3 atomic layer deposition,” Chemistry of Materials, 16, 639 (2004).
+36. H. B. Profijt, S. E. Potts, M. C. M. van de Sanden, andW. M. M. Kessels, “Plasma-
+Assisted Atomic Layer Deposition: Basics, Opportunities, and Challenges,” Journal
+of Vacuum Science & Technology A, 29(5), 050801 (2011).
+37. S. E. Potts and W. M. M. Kessels, “Energy-enhanced atomic layer deposition for
+more process and precursor versatility,” Coord. Chem. Rev., 257(23–24), 3254
+(2013).
+38. H. Kim and I. K. Oh, “Review of plasma-enhanced atomic layer deposition: Technical
+enabler of nanoscale device fabrication,” Jpn. J. Appl. Phys., 53(3) 03DA01
+(2014).
+39. H. C. M. Knoops, E. Langereis, M. C. M. van de Sanden, and W. M. M. Kessels,
+“Conformality of Plasma-Assisted ALD: Physical Processes and Modeling,” Journal
+of the Electrochemical Society, 157(12), G241 (2010).
+40. S. D. Park, D. H. Lee, and G. Y. Yeom, “Atomic layer etching of Cl-adsorbed
+silicon by using a low-angle forward reflected Ar neutral beam,” Journal of the
+Korean Physical Society, 47(3), 469 (2005).
+41. S. D. Park,D. H. Lee, and G. Y.Yeom, “Atomic layer etching of Si(100) and Si(111)
+using Cl2 and Ar neutral beam,” Electrochemical and Solid State Letters, 8(8), C106
+(2005).
+42. D. J. Economou, “Fast (tens to hundreds of eV) neutral beams for materials processing,”
+Journal of Physics D-Applied Physics, 41, 024001 (2008).
+43. T. Meguro, M. Hamagaki, S. Modaressi, T. Hara, Y. Aoyagi, M. Ishii, and
+Y. Yamamoto, “Digital Etching of GaAs - New Approach of Dry Etching to Atomic
+Ordered Processing,” Applied Physics Letters, 56(16), 1552 (1990).
+44. M. Ishii, T.Meguro, K. Gamo, T. Sugano, andY.Aoyagi, “Digital Etching Using Krf
+Excimer-Laser - Approach to Atomic-Order-Controlled Etching by Photo Induced
+Reaction,” Japanese Journal of Applied Physics Part 1-Regular Papers Short Notes
+& Review Papers, 32(12B), 6178 (1993).
+45. E.g. see, K. Nakayama,C. M. Aldao, and J. H.Weaver, “Halogen etching of Si(100)-
+2×1: Dependence on surface concentration,” Physical Review B, 59, 15893 (1999).
+46. H. Shin, W. Y. Zhu, V. M. Donnelly, and D. J. Economou, “Surprising importance
+of photo-assisted etching of silicon in chlorine-containing plasmas,” Journal of
+Vacuum Science & Technology A, 30(2) (2012).
+47. S. D. Park, W. S. Lim, B. J. Park, H. C. Lee, J. W. Bae, and G. Y. Yeom, “Precise
+depth control and low-damage atomic-layer etching of HfO2 using BCl3 and Ar
+neutral beam,” Electrochemical and Solid State Letters, 11(4), H71 (2008).
+48. A. Ludviksson, M. D. Xu, and R. M. Martin, “Atomic Layer Etching Chemistry of
+Cl2 on GaAs(100),” Surface Science, 277, 282 (1992).
+49. J. C. Patrin, Y. Z. Li, M. Chander, and J. H. Weaver, “Atomic Layer Etching of
+GaAs(110) with Br2 Studied by Scanning Tunneling Microscopy,” Applied Physics
+Letters, 62, 1277 (1993).
+50. J. C. Patrin and J. H. Weaver, “Br2 and Cl2 Adsorption and Etching of GaAs(110)
+Studied by Use of Scanning-Tunneling-Microscopy,” Physical Review B, 48, 17913
+(1993).
+51. H. F. Winters and J. W. Coburn, “Surface Science Aspects of Etching Reactions,”
+Surf. Sci. Rep., 14, 161 (1992).
+52. D. Rioux, F. Stepniak, R. J. Pechman, and J. H. Weaver, “Chemisorption and Thermally
+Activated Etching of Si(100)-2×1 by Iodine,” Physical Review B, 51(16),
+10981 (1995).
+53. R. J. Pechman, X. S.Wang, and J. H.Weaver, “Interactions of Br with Si(111)-7×7
+- Chemisorption, Step Retreat, and Terrace Etching,” Physical Review B, 52, 11412
+(1995).
+54. C. M. Aldao and J. H.Weaver, “Halogen etching of Si via atomic-scale processes,”
+Progress in Surface Science, 68(4–6), 189 (2001).
+55. C. M. Aldao, Abhishek Agrawal, R. E. Butera, and J. H.Weaver, “Atomic processes
+during Cl supersaturation etching of Si(100)-(2×1),” Physical Review B, 79, 125303
+(2009).
+56. J. J. Boland and J. H. Weaver, “A surface view of etching,” Phys. Today, 51(8), 34
+(1998).
+57. P. A. Maki and D. J. Ehrlich, “Laser Bilayer Etching of Gaas-Surfaces,” Applied
+Physics Letters, 55(2), 91 (1989).
+58. Young I. Jhon, Kyung S. Min, G. Y. Yeom, and Young Min Jhon, “Understanding
+time-resolved processes in atomic-layer etching of ultra-thin Al2O3 film using BCl3
+and Ar neutral beam,” Applied Physics Letters, 105(9), 093104 (2014).
+59. K. S. Min, S. H. Kang, J. K. Kim, Y. I. Jhon, M. S. Jhon, and G. Y. Yeom, “Atomic
+layer etching of Al2O3 using BCl3/Ar for the interface passivation layer of III-V
+MOS devices,” Microelectronic Engineering, 110, 457 (2013).
+60. K. S. Min, S. H. Kang, J. K. Kim, J. H. Yum, Y. I. Jhon, W. Todd Hudnall,
+C. W. Bielawski, S. K. Banerjee, G. Bersuker,M. S. Jhon, and G. Y. Yeom, “Atomic
+layer etching of BeO using BCl3/Ar for the interface passivation layer of III-V MOS
+devices,” Microelectronic Engineering, 114, 121 (2014).
+61. T. Meguro, M. Ishii, H. Kodama, M. Hamagaki, T. Hara, Y. Yamamoto, and
+Y. Aoyagi, “Layer-by-Layer Controlled Digital Etching by Means of an Electron-
+Beam-Excited Plasma System,” Japanese Journal of Applied Physics Part 1-Regular
+Papers Short Notes & Review Papers, 29, 2216 (1990).
+62. T. Meguro, M. Ishii, K. Kodama, Y. Yamamoto, K. Gamo, and Y. Aoyagi, “Surface
+Processes in Digital Etching of GaAs,” Thin Solid Films, 225(1–2), 136
+(1993).
+63. M. Ishii, T. Meguro, H. Kodama, Y. Yamamoto, and Y. Aoyagi, “Study of
+Surface Processes in the Digital Etching of GaAs,” Japanese Journal of Applied
+Physics Part 1-Regular Papers Short Notes & Review Papers, 31(7), 2212
+(1992).
+64. M. Ishii, T. Meguro, T. Sugano, K. Gamo, and Y. Aoyagi, “Digital Etching by
+Using a Laser-Beam - on the Control of Digital Etching Products,” Applied Surface
+Science, 80, 104 (1994).
+65. Y. Aoyagi, K. Shinmura, K. Kawasaki, T. Tanaka, K. Gamo, S. Namba, and
+I. Nakamoto, “Molecular Layer Etching of GaAs,” Applied Physics Letters, 60(8),
+968 (1992).
+66. K. K.Ko and S. W. Pang, “Controllable Layer-by-Layer Etching of III-V Compound
+Semiconductors with an Electron-Cyclotron-Resonance Source,” Journal ofVacuum
+Science & Technology B, 11(6), 2275 (1993).
+67. W. S. Lim, S. D. Park, B. J. Park, and G. Y. Yeom, “Atomic layer etching of
+(100)/(111) GaAs with chlorine and low angle forward reflected Ne neutral beam,”
+Surface & Coatings Technology, 202, 5701 (2008).
+68. N. Otsuka, Y. Oyama, H. Kikuchi, J. Nishizawa, and K. Suto, “Digital etching of
+(001) InP substrate by intermittent injection of tertiarybutylphosphine in ultrahigh
+vacuum,” Japanese Journal of Applied Physics Part 2-Letters, 37(12B), L1509
+(1998).
+69. S. D. Park, C. K. Oh, J. W. Bae, G. Y. Yeom, T. W. Kim, J. I. Song, and J. H. Jang,
+“Atomic layer etching of InP using a low angle forward reflected Ne neutral beam,”
+Applied Physics Letters, 89, 043109 (2006).
+70. S. D. Park, C. K. Oh, W. S. Lim, H. C. Lee, J. W. Bae, G. Y. Yeom, T. W. Kim,
+J. I. Song, and J. H. Jang, “Highly selective and low damage atomic layer etching
+of InP/InAIAs heterostructures for high electron mobility transistor fabrication,”
+Applied Physics Letters, 91, 013110 (2007).
+71. T. W. Kim, D. H. Kim, S. D. Park, S. H. Shin, S. J. Jo, H. J. Song,
+Y. M. Park, J. O. Bae, Y. W. Kim, G. Y. Yeom, J. H. Jang, and J. I. Song,
+“A two-step-recess process based on atomic-layer etching for high-performance
+In0.52Al0.48As/In0.53Ga0.47As p-HEMTs,” IEEE Transactions on Electron Devices,
+55(7), 1577 (2008).
+72. T. Sugiyama, T. Matsuura, and J. Murota, “Atomic-layer etching of Ge using an
+ultraclean ECR plasma,” Applied Surface Science, 112, 187 (1997).
+73. T. Matsuura, T. Sugiyama, and J. Murota, “Atomic-layer surface reaction of chlorine
+on Si and Ge assisted by an ultraclean ECR plasma,” Surface Science, 402, 202
+(1998).
+74. W. S. Lim, Y. Y. Kim, H. Kim, S. Jang, N. Kwon, B. J. Park, J. H. Ahn, I. Chung,
+B. H. Hong, and G. Y. Yeom, “Atomic layer etching of graphene for full graphene
+device fabrication,” Carbon, 50(2), 429 (2012).
+75. Y. Y. Kim, W. S. Lim, J. B. Park, and G. Y. Yeom, “Layer by Layer Etching of the
+Highly Oriented Pyrolythic Graphite by Using Atomic Layer Etching,” Journal of
+the Electrochemical Society, 158(12), D710 (2011).
+76. J. B. Park, W. S. Lim, B. J. Park, I. H. Park, Y. W. Kim, and G. Y. Yeom, “Atomic
+layer etching of ultra-thin HfO2 film for gate oxide in MOSFET devices,” Journal
+of Physics D-Applied Physics, 42, 055202 (2009).
+77. K. S. Min, C. Y. Kang, C. Park, C. S. Park, B. J. Park, J. B. Park, M. M. Hussain,
+J. C. Lee, B. H. Lee, P. Kirsch, H. H. Tseng, R. Jammy, and G. Y. Yeom, “A Novel
+Damage-Free High-k Etch Technique Using Neutral Beam-Assisted Atomic Layer
+Etching (NBALE) for Sub-32nm Technology Node Low Power Metal Gate/Highk
+Dielectric CMOSFETs,” in 2009 IEEE International Electron Devices Meeting
+(IEEE, New York, 2009), pp. 406.
+78. E. Vogli, D. Metzler, and G. S. Oehrlein, “Feasibility of atomic layer etching of
+polymer material based on sequential O2 exposure and Ar low-pressure plasmaetching,”
+Applied Physics Letters, 102, 253105 (2013).
+79. Y. Horiike, T. Tanaka, M. Nakano, S. Iseda, H. Sakaue, A. Nagata, H. Shindo,
+S. Miyazaki, andM. Hirose, “Digital Chemical Vapor-Deposition and Etching Technologies
+for Semiconductor Processing,” Journal of Vacuum Science & Technology
+a-Vacuum Surfaces and Films, 8(3), 1844 (1990).
+80. H. Sakaue, S. Iseda, K. Asami, J. Yamamoto, M. Hirose, and Y. Horiike, “Atomic
+Layer Controlled Digital Etching of Silicon,” Japanese Journal of Applied Physics
+Part 1-Regular Papers Short Notes & Review Papers, 29(11), 2648 (1990).
+81. T. Engel, “Fundamental aspects of the reactions of thermal and hyperthermal F, F2,
+Cl, and Cl2 with Si surfaces,” Japanese Journal of Applied Physics Part 1, 35, 2403
+(1996).
+82. A. Szabo, P. D. Farrall, and T. Engel, “Reactions of Chlorine with Si(100)
+and Si(111) - Adsorption and Desorption-Kinetics,” Surface Science, 312, 284
+(1994).
+83. T. Matsuura, J. Murota,Y. Sawada, and T. Ohmi, “Self-limited layer-by-layer etching
+of Si by alternated chlorine adsorption and Ar+ ion irradiation,” Applied Physics
+Letters, 63(20), 2803 (1993).
+84. K. Suzue, T. Matsuura, J. Murota, Y. Sawada, and T. Ohmi, “Substrate Orientation
+Dependence of Self-Limited Atomic-Layer Etching of Si with Chlorine Adsorption
+and Low-Energy Ar+ Irradiation,” Applied Surface Science, 82–3, 422 (1994).
+85. S. D. Athavale and D. J. Economou, “Molecular-Dynamics Simulation of Atomic
+Layer Etching of Silicon,” Journal of Vacuum Science & Technology a-Vacuum
+Surfaces and Films, 13(3), 966 (1995).
+86. S. D. Athavale andD. J. Economou, “Realization of atomic layer etching of silicon,”
+Journal of Vacuum Science & Technology B, 14(6), 3702 (1996).
+87. B. J. Kim, S. H. Chung, and S. M. Cho, “Atomic layer etching of Si (100) for reducing
+etching damage,” in Thin Film Materials, Processes, and Reliability (ELECTROCHEMICAL
+SOCIETY INC, Pennington, 2001), Vol. 2001, pp. 54.
+88. B. J. Kim, S. Chung, and S. M. Cho, “Layer-by-layer etching of Cl-adsorbed silicon
+surfaces by low energy Ar+ ion irradiation,” Applied Surface Science, 187(1–2),
+124 (2002).
+89. S. D. Park, K. S. Min, B. Y. Yoon, D. H. Lee, and G. Y. Yeom, “Precise depth
+control of silicon etching using chlorine atomic layer etching,” Japanese Journal of
+Applied Physics Part 1-Regular Papers Short Notes & Review Papers, 44(1A), 389
+(2005).
+90. S. D. Park, C. K. Oh, D. H. Lee, and G. Y. Yeom, “Surface roughness variation
+during Si atomic layer etching by chlorine adsorption followed by an Ar neutral
+beam irradiation,” Electrochemical and Solid State Letters, 8, C177 (2005).
+91. C. K. Oh, S. D. Park, H. C. Lee, J. W. Bae, and G. Y. Yeom, “Surface analysis of
+atomic-layer-etched silicon by chlorine,” Electrochemical and Solid State Letters,
+10, H94 (2007).
+92. H. J. Yun, T. H. Kim, C. B. Shin, C. K. Kim, J. H. Min, and S. H. Moon, “Comparison
+of atomic scale etching of poly-Si in inductively coupled Ar and He plasmas,”
+Korean Journal of Chemical Engineering, 24(4), 670 (2007).
+93. T. Matsuura, Y. Honda, and J. Murota, “Atomic-order layer-by-layer role-share
+etching of silicon nitride using an electron cyclotron resonance plasma,” Applied
+Physics Letters, 74, 3573 (1999).
+94. N. Posseme, O. Pollet, and S. Barnola, “Alternative process for thin layer etching:
+Application to nitride spacer etching stopping on silicon germanium,” Applied
+Physics Letters, 105, 051605 (2014).
+95. S. Rauf, T. Sparks, P. L. G.Ventzek,V. V. Smirnov,A. V. Stengach,K. G.Gaynullin,
+and V. A. Pavlovsky, “A molecular dynamics investigation of fluorocarbon based
+layer-by-layer etching of silicon and SiO2,” Journal of Applied Physics, 101, 033308
+(2007).
+96. S. B.Wang and A. E.Wendt, “Control of ion energy distribution at substrates during
+plasma processing,” Journal of Applied Physics, 88(2), 643 (2000).
+97. R. Silapunt, A. E. Wendt, and K. H. R. Kirmse, “Ion energy control at substrates
+during plasma etching of patterned structures,” Journal of Vacuum Science & Technology
+B, 25(6), 1882 (2007).
+98. N. Schaepkens, G. S. Oehrlein, and J. M. Cook, “Effects of radio frequency bias
+frequency and radio frequency bias pulsing on SiO2 feature etching in inductively
+coupled fluorocarbon plasmas,” Journal of Vacuum Science & Technology B, 18(2),
+856 (2000).
+99. D. Metzler, R. L. Bruce, S. Engelmann, E. A. Joseph, and G. S. Oehrlein, “Fluorocarbon
+assisted atomic layer etching of SiO2 using cyclic Ar/C4F8 plasma,” Journal
+of Vacuum Science & Technology A, 32, 020603 (2014).
+100. D. Metzler, C. Li, R. L. Bruce, S. Engelmann, E. A. Joseph, V. Godyak, and
+G. S. Oehrlein (to be published).
+101. E. Hudson, V. Vidyarthi, R. Bhowmick, R. Bise, H. J. Shin, G. Delgadino,
+B. Jariwala, D. Lambert, and S. Deshmukh, “Highly selective etching of Silicon
+Dioxide Using Fluorocarbons”; AVS 61st International Symposium & Exhibition
+(2014); http://www2.avs.org/symposium2014/Papers/Paper_PS2+TF-ThM2.html.
+102. F. Laermer and A. Schilp, “Method for anisotropic plasma etching of substrates,”
+US Pat. 5498312, March-12 (1996).
+103. F. Laermer and A. Urban, “Challenges, developments and applications of silicon
+deep reactive ion etching,” Microelectronic Engineering, 67–8, 349 (2003).
+104. F. Roozeboom, B. Kniknie, A. M. Lankhorst, G. Winands, R. Knaapen, M. Smets,
+P. Poodt, G. Dingemans, W. Keuning, and W. M. M. Kessels, “A new concept for
+spatially divided Deep Reactive Ion Etching with ALD-based passivation,” IOP
+Conf. Ser.: Mater. Sci. Eng., 41, 012001 (2012).
+105. J. B. Park, W. S. Lim, S. D. Park, Y. J. Park, and G. Y. Yeom, “Etch Characteristics
+of TiO2 Etched by Using an Atomic Layer Etching technique with BCl3 Gas and
+an Ar Neutral Beam,” Journal of the Korean Physical Society, 54(3), 976 (2009).
+106. W. S. Lim, J. B. Park, J. Y. Park, B. J. Park, and G. Y. Yeom, “Low Damage Atomic
+Layer Etching of ZrO2 by Using BCl3 Gas and Ar Neutral Beam,” Journal of
+Nanoscience and Nanotechnology, 9(12), 7379 (2009).
+107. R. A. Gottscho, C. W. Jurgensen, and D. J. Vitkavage, “Microscopic Uniformity
+in Plasma-Etching,” Journal of Vacuum Science & Technology B, 10(5), 2133
+(1992).
+108. P. L. G. Ventzek, R. J. Hoekstra, and M. J. Kushner, “2-Dimensional Modeling
+of High Plasma-Density Inductively-Coupled Sources for Materials Processing,”
+Journal of Vacuum Science & Technology B, 12(1), 461 (1994).
+109. R. J. Hoekstra and M. J. Kushner, “Predictions of ion energy distributions and radical
+fluxes in radio frequency biased inductively coupled plasma etching reactors,”
+Journal of Applied Physics, 79(5), 2275 (1996).
+110. C. T. Gabriel and Y. Melaku, “Gate Oxide Damage in a High-Density Inductively-
+Coupled Plasma,” Journal of Vacuum Science & Technology B, 12(1), 454
+(1994).
+111. P. K. Aum, R. Brandshaft,D. Brandshaft, and T. B. Dao, “Controlling plasma charge
+damage in advanced semiconductor manufacturing-challenge of small feature size
+device, large chip size, and large wafer size,” IEEE Transactions on Electron Devices,
+45(3), 722 (1998).
+112. S. Rauf, A. Haggag, M. Moosa, and P. L. G. Ventzek, “Computational modeling of
+process induced damage during plasma clean,” Journal of Applied Physics, 100,
+023302 (2006).
+113. J. P. Chang and J. W. Coburn, “Plasma-surface interactions,” Journal of Vacuum
+Science & Technology A, 21(5), S145 (2003).
+114. V. M. Donnelly, J. Guha, and L. Stafford, “Critical review: Plasma-surface reactions
+and the spinning wall method,” Journal of Vacuum Science & Technology A, 29,
+010801 (2011).
+115. G. S. Oehrlein, R. J. Phaneuf, and D. B. Graves, “Plasma-polymer interactions:
+A review of progress in understanding polymer resist mask durability during
+plasma etching for nanoscale fabrication,” J. Vac. Sci. Technol. B, 29, 010801
+(2011).
+116. M. J. Kushner, “Hybrid modelling of low temperature plasmas for fundamental
+investigations and equipment design,” Journal of Physics D-Applied Physics, 42,
+194013 (2009).
+117. SRIM simulation parameters used for simulations
+Lattice Surface
+99999 ions Binding Binding Displacement
+0deg injection Density Energy Energy Energy
+Si 2.321 Si (28.086) 2 4.7 15
+SiO2 2.65 Si (28.086) 2 4.7 15
+O(15.999) 3 2 28
+Most of these values were obtained from http://www.srim.org/. The SiO2 density
+was obtained from Greenwood, Norman N.; Earnshaw, Alan (1984). Chemistry of
+the Elements. Oxford: Pergamon Press. pp. 393–99. ISBN 0-08-022057-6.
+118. M. E. Barone and D. B. Graves, “Chemical and physical sputtering of fluorinated
+silicon,” J. Appl. Phys., 77, 3 (1995).
+119. M. E. Barone andD. B.Graves, “Molecular dynamics simulations of plasma-surface
+chemistry,” Plasma Sources Sci. Technol., 5, 2 (1996).
+120. N. A. Kubota, D. J. Economou, and S. J. Plimpton, “Molecular dynamics simulations
+of low-energy (25–200 eV) argon ion interactions with silicon surfaces: Sputter
+yields and product formation pathways,” J. Appl. Phys., 83, 8 (1998).
+121. N. Laegreid and G. K. Wehner, “Sputtering Yields of Metals for Ar+ and Ne+ Ions
+with Energies from 50 to 600 ev,” J. Appl. Phys., 32, 3 (1961).
+122. Y. H. Lee, “Surface damage threshold of Si and SiO2 in electron-cyclotronresonance
+plasmas,” J. Vac. Sci. & Technol. A, 10, 4 (1992).
+123. N. Matsunami, Y. Yamamura, Y. Itikawa, N. Itoh, Y. Kazumata, S. Miyagawa,
+K. Morita, R. Shimizu, and H. Tawara, “Energy-Dependence of the Ion-Induced
+Sputtering Yields of Monatomic Solids,” At. Data Nucl. Data Tables, 31, 1
+(1984).
+124. H. Ohta and S. Hamaguchi, “Molecular dynamics simulation of silicon and silicon
+dioxide etching by energetic halogen beams,” J. Vac. Sci.&Technol. A, 19, 5 (2001).
+125. D. J. Oostra, R. P. van Ingen, A. Haring, A. E. de Vries, and G. N. A. van Veen,
+“Near threshold sputtering of Si and SiO2 in a Cl2 environment,” Appl. Phys. Lett.,
+50, 21 (1987).
+126. C. Steinbru¨uchel, “Universal energy dependence of physical and ion-enhanced
+chemical etch yields at low ion energy,” Appl. Phys. Lett., 55, 19 (1989).
+127. S. Tachi, K. Miyake, and T. Tokuyama, “Chemical and Physical Sputtering in F+
+Ion-Beam Etching of Si,” Jpn. J. Appl. Phys., 20, 6 (1981).
+128. Y.-Y. Tu, T. Chuang, and H. Winters, “Chemical sputtering of fluorinated silicon,”
+Phys. Rev. B: Condens. Matter, 23, 2 (1981).
+129. S.-M. Wu, R. van de Kruijs, E. Zoethout, and F. Bijkerk, “Sputtering yields of Ru,
+Mo, and Si under low energy Ar+ bombardment,” J. Appl. Phys., 106, 5 (2009).
+130. Y. Yamamura and H. Tawara, “Energy dependence of ion-induced sputtering yields
+from monatomic solids at normal incidence,” At. Data Nucl. Data Tables, 62, 2
+(1996).
+131. E. Hechtl and J. Bohdansky, “Sputtering Behavior of Graphite and Molybdenum at
+Low Bombarding Energies,” J. Nucl. Mater., 123, 1 (1984).
+132. R. V. Stuart and G. K. Wehner, “Sputtering Yields at Very Low Bombarding Ion
+Energies,” J. Appl. Phys., 33, 7 (1962).
+133. J. P. Chang and H. H. Sawin, “Molecular-beam study of the plasma-surface kinetics
+of silicon dioxide and photoresist etching with chlorine,” J. Vac. Sci. & Technol. B,
+19, 4 (2001).
+134. J. M. E. Harper, J. J. Cuomo, P. A. Leary, G. M. Summa, H. R. Kaufman, and
+F. J. Bresnock, “Low-Energy Ion-Beam Etching,” J. Electrochem. Soc., 128, 5
+(1981).
+135. G. V. Jorgenson and G. K. Wehner, “Sputtering Studies of Insulators by Means of
+Langmuir Probes,” J. Appl. Phys., 36, 9 (1965).
+136. P. J. Cumpson, J. F. Portoles, A. J. Barlow, and N. Sano, “Accurate argon clusterion
+sputter yields: Measured yields and effect of the sputter threshold in practical
+depth-profiling by X-ray photoelectron spectroscopy and secondary ion mass spectrometry,”
+J. Appl. Phys., 114, 12 (2013).
+137. S. S. Todorov and E. R. Fossum, “Sputtering of Silicon Dioxide near Threshold,”
+Appl. Phys. Lett., 52, 5 (1988).
+138. M. Schaepkens, R. C. M. Bosch, T. E. F. M. Standaert, G. S. Oehrlein, and
+J. M. Cook, “Influence of reactor wall conditions on etch processes in inductively
+coupled fluorocarbon plasmas,” Journal of Vacuum Science & Technology A-Vacuum
+Surfaces And Films, 16, 2099 (1998).
+139. S. J. Ullal, H. Singh, J. Daugherty, V. Vahedi, and E. S. Aydil, “Maintaining reproducible
+plasma reactor wall conditions: SF6 plasma cleaning of films deposited on
+chamber walls during Cl2/O2 plasma etching of Si,” Journal of Vacuum Science &
+Technology A-Vacuum Surfaces And Films, 20(4), 1195 (2002).
+140. G. Cunge, M. Kogelsehatz, and N. Sadeghi, “Influence of reactor walls on plasma
+chemistry and on silicon etch product densities during silicon etching in halogenbased
+plasmas,” Plasma Sources Science & Technology, 13(3), 522 (2004).
+141. G. Cunge, M. Kogelschatz, O. Joubert, and N. Sadeghi, “Plasma-wall interactions
+during silicon etching processes in high-density HBr/Cl2/O2 plasmas,” Plasma
+Sources Science & Technology, 14(2), S42 (2005).
+142. W. Y. Zhu, S. Sridhar, L. Liu, E. Hernandez, V. M. Donnelly, and D. J. Economou,
+“Photo-assisted etching of silicon in chlorine- and bromine-containing plasmas,”
+Journal of Applied Physics, 115, 203303 (2014).
+143. M. F. Doemling,N. R. Rueger, andG. S.Oehrlein, “Observation of Inverse Reactive
+Ion Etching (RIE) Lag for Silicon Dioxide Etching in Inductively Coupled Plasmas
+(ICP),” Appl. Phys. Lett., 68, 10 (1996).
