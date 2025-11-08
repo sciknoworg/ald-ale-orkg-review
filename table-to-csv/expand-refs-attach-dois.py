@@ -123,6 +123,37 @@ def load_ref_to_doi(mapping_csv: Path) -> Dict[int, str]:
     mapping = {int(row["idx"]): str(row["best_doi"]).strip() for _, row in df_ok.iterrows()}
     return mapping
 
+def load_ref_to_doi_df(df) -> Dict[int, str]:
+    """
+    Build {idx -> doi} from an already-loaded DataFrame (mapping CSV),
+    keeping only decision == 'accepted' and non-empty best_doi.
+    """
+    # Normalize column names (trim)
+    cols = {c: c.strip() for c in df.columns}
+    df = df.rename(columns=cols).copy()
+
+    for c in ["idx", "best_doi", "decision"]:
+        if c not in df.columns:
+            raise ValueError(f"Mapping file missing required column: '{c}'")
+
+    df_ok = df[df["decision"].astype(str).str.lower().str.contains("accept", na=False)].copy()
+    df_ok = df_ok[df_ok["best_doi"].astype(str).str.strip() != ""]
+    df_ok["idx"] = pd.to_numeric(df_ok["idx"], errors="coerce").astype("Int64")
+    df_ok = df_ok.dropna(subset=["idx"])
+
+    return {int(row["idx"]): str(row["best_doi"]).strip() for _, row in df_ok.iterrows()}
+
+
+def read_csv_any(path: Path, **kwargs):
+    for enc in ("utf-8", "utf-8-sig", "cp1252", "latin-1"):
+        try:
+            return pd.read_csv(path, encoding=enc, **kwargs)
+        except UnicodeDecodeError:
+            continue
+    # last resort: raise with a helpful message
+    raise UnicodeDecodeError("utf-8", b"", 0, 1,
+        f"Could not decode {path.name} with utf-8/utf-8-sig/cp1252/latin-1. "
+        "Open and re-save as UTF-8 (CSV) or tell the script which encoding to use.")
 
 def main():
     ap = argparse.ArgumentParser(description="Expand 'Refs.' and attach DOIs from a mapping; drop non-accepted matches.")
@@ -137,13 +168,15 @@ def main():
     mapping_path = Path(args.mapping).expanduser().resolve()
     out_path = Path(args.out).expanduser().resolve()
 
-    # Load mapping
-    ref_to_doi = load_ref_to_doi(mapping_path)
+    # Load mapping (robust encoding)
+    df_map = read_csv_any(mapping_path, sep=None, engine="python")
+    ref_to_doi = load_ref_to_doi_df(df_map)
     if not ref_to_doi:
         print("Warning: no accepted DOIs found in the mapping file; output may be empty.")
 
-    # Load data (auto-detect separator)
-    df = pd.read_csv(data_path, sep=None, engine="python", dtype=str).fillna("")
+    # Load data (robust encoding)
+    df = read_csv_any(data_path, sep=None, engine="python", dtype=str).fillna("")
+
     # Figure out DOI column
     doi_col = args.doi_col.strip()
     if not doi_col:
@@ -202,7 +235,7 @@ def main():
             dropped += 1
 
     out_df = pd.DataFrame(new_rows, columns=columns)
-    out_df.to_csv(out_path, index=False)
+    out_df.to_csv(out_path, index=False, encoding="utf-8-sig")
     print(f"Done. Wrote: {out_path}")
     print(f"Kept with DOI: {kept} | Expanded rows created: {expanded} | Dropped (no accepted DOI): {dropped}")
 

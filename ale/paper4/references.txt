@@ -1,0 +1,49 @@
+[1] Oehrlein G, Metzler D and Li C 2015 Atomic layer etching at the tipping point: an overview ECS J. Solid State Sci. Technol. 4 N5041–53
+[2] Carver C T et al 2015 Atomic layer etching: an industry perspective ECS J. Solid State Sci. Technol. 4 N5005–9 
+[3] Lee C G, Kanarik K J and Gottscho R A 2014 The grand challenges of plasma etching: a manufacturing perspective J. Phys. D: Appl. Phys. 47 273001
+[4] Kanarik K J et al 2015 Overview of atomic layer etching in the semiconductor industry J. Vac. Sci. Technol. A 33 020802
+[5] Winters H F and Coburn J W 1992 Surface science aspects of etching reactions Surf. Sci. Rep. 14 162–269
+[6] Lee Y and George S M 2017 Thermal atomic layer etching of titanium nitride using sequential, self-limiting reactions: oxidation to TiO2 and fluorination to volatile TiF4 Chem. Mater. 29 8202–10
+[7] Johnson N R and George S M 2017 WO3 and W thermal atomic layer etching using ‘Conversion-Fluorination’ and ‘Oxidation-Conversion-Fluorination’ mechanisms ACS Appl. Mater. Interfaces 9 34435–47
+[8] Johnson N R et al 2016 Thermal atomic layer etching of crystalline aluminum nitride using sequential, self-limiting hydrogen fluoride and Sn(acac)2 reactions and enhancement by H2 and Ar plasmas J. Vac. Sci. Technol. A 34 050603
+[9] Fukumizu H et al 2019 Atomic layer etching of AlGaN using Cl2 and Ar gas chemistry and UV damage evaluation J. Vac. Sci. Technol. A 37 021002
+[10] Park S et al 2006 Atomic layer etching of InP using a low angle forward reflected Ne neutral beam Appl. Phys. Lett. 89 043109
+[11] Marchack N and Chang J P 2012 Chemical processing of materials on silicon: more functionality, smaller features, and larger wafers Annu. Rev. Chem. Biomol. Eng. 3 235–62
+[12] George S M 2009 Atomic layer deposition: an overview Chem. Rev. 110 111–31
+[13] Kim H et al 2002 Diffusion barrier properties of transition metal thin films grown by plasma-enhanced atomic-layer deposition J. Vac. Sci. Technol. B 20 1321–6
+[14] Ritala M et al 1999 Perfectly conformal TiN and Al2O3 films deposited by atomic layer deposition Chem. Vapor Depos. 5 7–9
+[15] Gordon R G 2011 Overview of ALD precursors and reaction mechanisms (http://nrs.harvard.edu/urn-3:HUL. InstRepos:9639954)
+[16] Johnson N R et al 2019 Thermal atomic layer etching of crystalline GaN using sequential exposures of XeF2 and BCl3 Appl. Phys. Lett. 114 243103
+[17] Lu W et al 2019 In situ thermal atomic layer etching for sub-5 nm InGaAs multigate MOSFETs Nano Lett. 19 5159–66
+[18] Huard C M et al 2017 Atomic layer etching of 3D structures in silicon: self-limiting and nonideal reactions J. Vac. Sci. Technol. A 35 031306
+[19] Sugiyama T, Matsuura T and Murota J 1997 Atomic-layer etching of Ge using an ultraclean ECR plasma Appl. Surf. Sci. 112 187–90
+[20] Aoyagi Y et al 1992 Molecular layer etching of GaAs Appl. Phys. Lett. 60 968–70 
+[21] Kauppinen C et al 2017 Atomic layer etching of gallium nitride (0 0 0 1) J. Vac. Sci. Technol. A 35 060603
+[22] Park J W et al 2017 Atomic layer etching of InGaAs by controlled ion beam J. Phys. D: Appl. Phys. 50 254007
+[23] Park S et al 2008 Precise depth control and low-damage atomic-layer etching of HfO2 using BCl3 and Ar neutral beam Electrochem. Solid-State Lett. 11 H71–3
+[24] Mameli A et al 2018 Isotropic atomic layer etching of ZnO using Acetylacetone and O2 plasma ACS Appl. Mater. Interfaces 10 38588–95
+[25] Yeomú G Y 2009 Etch characteristics of TiO2 etched by using an atomic layer etching technique with BCl3 gas and an Ar neutral beam J. Korean Phys. Soc. 54 976–80
+[26] Yokoyama S et al 1995 High-temperature etching of PZT/Pt/TiN structure by high-density ECR plasma Japan. J. Appl. Phys. 34 767
+[27] Okabayashi J, Miura Y and Munekata H 2018 Anatomy of interfacial spin-orbit coupling in Co/Pd multilayers using x-ray magnetic circular dichroism and first-principles calculations Sci. Rep. 8 8303
+[28] Parkin S et al 1999 Exchange-biased magnetic tunnel junctions and application to nonvolatile magnetic random access memory J. Appl. Phys. 85 5828–33
+[29] Mannini M et al 2009 Magnetic memory of a single-molecule quantum magnet wired to a gold surface Nat. Mater. 8 194
+[30] Park J W et al 2018 Atomic layer etching of chrome using ion beams Nanotechnology 30 085303
+[31] Lin X et al 2018 In situ XPS study on atomic layer etching of Fe thin film using Cl2 and acetylacetone J. Vac. Sci. Technol. A 36 051401
+[32] Campbell S A 2001 The Science and Engineering of Microelectronic Fabrication (The Oxford Series in Electrical and Computer Engineering) (Oxford: Oxford University Press)
+[33] Trucks G et al 1990 Mechanism of HF etching of silicon surfaces: a theoretical understanding of hydrogen passivation Phys. Rev. Lett. 65 504
+[34] Ubara H, Imura T and Hiraki A 1984 Formation of Si–H bonds on the surface of microcrystalline silicon covered with SiOx by HF treatment Solid State Commun. 50 673–5
+[35] Thissen P, Seitz O and Chabal Y J 2012 Wet chemical surface functionalization of oxide-free silicon Prog. Surf. Sci. 87 272–90
+[36] Kudriavtsev Y et al 2005 Calculation of the surface binding energy for ion sputtered particles Appl. Surf. Sci. 239 273–8
+[37] Kelly R 1989 Bombardment-induced compositional change with alloys, oxides, oxysalts and halides III. The role of chemical driving forces Mater. Sci. Eng. A 115 11–24
+[38] Kanarik K J, Tan S and Gottscho R A 2018 Atomic layer etching: rethinking the art of etch J. Phys. Chem. Lett. 9 4814–21
+[39] Kanarik K J et al 2017 Predicting synergy in atomic layer etching J. Vac. Sci. Technol. A 35 05C302
+[40] Griffith J S 1964 The Theory of Transition-Metal Ions (Cambridge: Cambridge University Press)
+[41] Beletskaya I P and Cheprakov A V 2000 The Heck reaction as a sharpening stone of palladium catalysis Chem. Rev. 100 3009–66
+[42] Shushanyan A D et al 2019 Thermochemical study of new volatile palladium (II) and copper (II) β-ketohydrazonates for CVD application J. Ther. Anal. Calorimetry 136 2341–52
+[43] Cabrera N and Mott N F 1949 Theory of the oxidation of metals Rep. Prog. Phys. 12 163
+[44] Lee Y and George S M 2015 Atomic layer etching of Al2O3 using sequential, self-limiting thermal reactions with Sn (acac) 2 and hydrogen fluoride ACS Nano 9 2061–70
+[45] Chen J K-C et al 2017 Directional etch of magnetic and noble metals. I. Role of surface oxidation states J. Vac. Sci. Technol. A 35 05C304
+[46] Altieri N D et al 2017 Plasma–surface interactions at the atomic scale for patterning metals J. Vac. Sci. Technol. A 35 05C203
+[47] Chen J K-C et al 2017 Directional etch of magnetic and noble metals. II. Organic chemical vapor etch J. Vac. Sci. Technol. A 35 05C305
+[48] Barone M and Graves D 1995 Molecular-dynamics simulations of direct reactive ion etching of silicon by fluorine and chlorine J. Appl. Phys. 78 6604–15
+[49] Berry I L et al 2018 Applying sputtering theory to directional atomic layer etching J. Vac. Sci. Technol. A 36 01B105

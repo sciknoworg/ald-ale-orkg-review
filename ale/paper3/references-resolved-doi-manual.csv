@@ -1,0 +1,37 @@
+idx,raw_ref,best_doi,best_title,best_container_title,best_year,best_volume,best_page,best_article_number,score,decision
+1,"[1] M. Guillorn, J. Chang, N. Fuller, J.J. Patel, Vac. Sci. Technol. B 27 (6) (2009) 2588–2592.",10.1116/1.3246357,,,,,,,,accepted
+2,"[2] S. Samukawa, M. Hori, S. Rauf, K. Tachibana, P. Bruggeman, G. Kroesen, J.C. Whitehead, A.B. Murphy, A.F. Gutsol, S. Starikovskaia, U. Kortshagen, J.P. Boeuf, T.J. Sommerer, M.J. Kushner, U. Czarnetzki, J. Phys. D: Appl. Phys. 45 (25) (2012) 253001.",10.1088/0022-3727/45/25/253001,,,,,,,,accepted
+3,"[3] S.M. George, Chem. Rev. 110 (2010) 111–131.",10.1021/cr900056b,,,,,,,,accepted
+4,"[4] V.M. Donnelly, A. Kornblit, J. Vac. Sci. Technol. A 31 (5) (2013) 050825–050848.",10.1116/1.4819876,,,,,,,,accepted
+5,"[5] C.G.N. Lee, K.J. Kanarik, R.A. Gottscho, J. Phys. D: Appl. Phys. 47 (27) (2014) 994–1004.",10.1088/0022-3727/47/27/273001,,,,,,,,accepted
+6,"[6] S. Banna, A. Agarwal, G. Cunge, M. Darnon, E. Pargon, O. Joubert, J. Vac. Sci. Technol. A 30 (4) (2012) 040801–040829.",10.1116/1.4716176,,,,,,,,accepted
+7,"[7] N. Marchack, J.P. Chang, J. Phys. D: Appl. Phys. 44 (17) (2011) 174011–174021.",10.1088/0022-3727/44/17/174011,,,,,,,,accepted
+8,"[8] T. Faraz, F. Roozeboom, H.C.M. Knoops, W.M.M. Kessels, ECS J. Solid State Sci. Technol. 4 (6) (2015) N5023–N5032.",10.1149/2.0051506jss,,,,,,,,accepted
+9,"[9] A. Sherman, Atomic Layer Deposition For Nanotechnology: an Enabling Process for Nanotechnology Fabrication, Ivoryton Press, New York, 2008.",,Atomic layer deposition for nanotechnology: an enabling process for nanotechnology fabrication,,2008,,,,,
+10,"[10] A.D. Li, Atomic Layer Deposition Technology-Fundamental and Applications, Scientific Press, Beijing, 2016.",,,,,,,,,
+11,"[11] M.N. Yoder, Atomic layer etching: U.S. Patent, 4756794A, 1988.",,,,,,,,,
+12,"[12] P.A. Maki, D.J. Ehrlich, Appl. Phys. Lett. 55 (1989) 91–93.",10.1063/1.102097,,,,,,,,accepted
+13,"[13] H. Sakaue, K. Asami, T. Ichihara, S. Ishizuka, K.K.Y. Horiike, Digital process for advanced VLSI's and surface reaction study, MRS Proc. (1991) 222.",10.1557/proc-222-195,,,,,,,,accepted
+14,"[14] G.S. Oehrlein, D. Metzler, C. Li, Atomic layer etching at the tipping point: an overview, ECS J. Solid State Sci. Technol. 4 (6) (2015) N5041–N5053.",10.1149/2.0061506jss,,,,,,,,accepted
+15,"[15] C. Petit-Etienne, M. Darnon, P. Bodart, M. Fouchier, G. Cunge, E. Pargon, L. Vallier, O. Joubert, J. Vac. Sci. Technol. B 31 (1) (2013) (011201-1~8).",10.1116/1.4768717,,,,,,,,accepted
+16,"[16] Y. Lee, S.M. George, ACS Nano 9 (2015) 2061–2070.",10.1021/nn507277f,"Atomic Layer Etching of Al<sub>2</sub>O<sub>3</sub> Using Sequential, Self-Limiting Thermal Reactions with Sn(acac)<sub>2</sub> and Hydrogen Fluoride",ACS Nano,2015,9,2061-2070,,45,accepted
+17,"[17] S.M. George, Y. Lee, ACS Nano 10 (2016) 4889–4894.",10.1021/acsnano.6b02991,"Prospects for Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions",ACS Nano,2016,10,4889-4894,,45,accepted
+18,"[18] C.T. Carver, J.J. Plombon, P.E. Romero, S. Suri, T.A. Tronic, R.B. Turkot, J. ECS J. Solid State Sci. Technol. 4 (2015) N5005–N5009.",10.1149/2.0021506jss,,,,,,,,accepted
+19,"[19] K.J. Kanarik, T. Lill, E.A. Hudson, S. Sriraman, S. Tan, J. Marks, V. Vahedi, R.A. Gottscho, J. Vac. Sci. Technol. A 33 (2) (2015) (20802-1~14).",10.1116/1.4913379,,,,,,,,accepted
+20,"[20] Y. Lee, S.M. George, Chem. Mater. 29 (2017) 8202–8210.",10.1021/acs.chemmater.7b02286,,,,,,,,accepted
+21,"[21] Y. Lee, J.W. DuMont, S.M. George, ECS J. Solid State Sci. Technol. 4 (2015) N5013–N5022.",10.1149/2.0041506jss,,,,,,,,accepted
+22,"[22] C. Paul, Lemaire, N.P. Gregory, Chem. Mater. 29 (2017) 6653–6665.",10.1021/acs.chemmater.7b00985,,,,,,,,accepted
+23,"[23] O. Joubert, E. Despiau-Pujo, G. Cunge, In: Proceedings of the Workshop on Atomic-Layer-Etch and Clean Technology. San Francisco, CA, 2014.",,,,,,,,,
+24,"[24] J. DuMont, A.E. Marquardt, A.M. Cano, S.M. George, ACS Appl. Mater. Interfaces 9 (2017) 10296–10307.",10.1021/acsami.7b01259,,,,,,,,accepted
+25,"[25] R. Nicholas, Johnson, S.M. George, ACS Appl. Mater. Interfaces 9 (2017) 34435–34447.",10.1021/acsami.7b09161,,,,,,,,accepted
+26,"[26] Y. Lee, J.W. DuMont, S.M. George, Chem. Mater. 28 (2016) 2994–3003.",10.1021/acs.chemmater.6b00111,,,,,,,,accepted
+27,"[27] J.C. Lockhart, Chem. Rev. 65 (1965) 131–151.",10.1021/cr60233a004,,,,,,,,accepted
+28,"[28] H.W. Roesky, I.J. Haiduc, Chem. Soc., Dalton Trans. (1999) 2249–2264.",10.1039/a901728c,,,,,,,,accepted
+29,"[29] Y. Lee, C. Huffman, S.M. George, Chem. Mater. 28 (2016) 7657–7665.",10.1021/acs.chemmater.6b02543,,,,,,,,accepted
+30,"[30] N.R. Johnson, H. Sun, K. Sharma, S.M. George, J. Vac. Sci. Technol. A 34 (2016) 050603.",10.1116/1.4959779,,,,,,,,accepted
+31,"[31] Y. Lee, J.W. DuMont, S.M. George, J. Phys. Chem. C 119 (2015) 25385–25393.",10.1021/acs.jpcc.5b07236,,,,,,,,accepted
+32,"[32] J.K. Kang, J. Chem. Phys. 116 (2002) 275–280.",10.1063/1.1420729,,,,,,,,accepted
+33,"[33] R. David, Zywotko, S.M. George, Chem. Mater. 29 (2017) 1183–1191.",10.1021/acs.chemmater.6b04529,,,,,,,,accepted
+34,"[34] W.Y. Xie, C. Paul, Lemaire, G.N. Parsons, ACS Appl. Mater. Interfaces 10 (2018) 9147–9154.",10.1021/acsami.7b19024,,,,,,,,accepted
+35,"[35] D. Choi, K. Barmak, Electron. Mater. Lett. 13 (2017) 449–456.",10.1007/s13391-017-1610-5,,,,,,,,accepted
+36,"[36] H.J. Kim, Vac. Sci. Technol., B: Microelectron. Process. Phenom. 21 (2003) 2231–2261.",10.1108/02634500310458126,,,,,,,,accepted

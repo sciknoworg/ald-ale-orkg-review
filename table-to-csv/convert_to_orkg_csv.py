@@ -26,24 +26,59 @@ import pandas as pd
 
 # Candidate headers to tolerate encoding differences on Windows
 CANDIDATE_HEADERS = {
-    "P9071": ["Material"],
+    "P9071":   ["Material"],
     "P180042": ["Precursor 1"],
     "P180043": ["Precursor 2"],
     "P180044": ["Precursor 3"],
     "P180045": ["Precursor 4"],
-    "P180041": ["GPC [Å]", "GPC [Ã…]", "GPC [A]"],   # tolerate odd encodings
-    "P180013": ["T [°C]", "T [Â°C]", "T [C]"],       # tolerate odd encodings
-    "doi": ["doi"],                                  # preserved as-is
+    "P180041": ["GPC [Å]", "GPC [Ã…]", "GPC [A]"],    # tolerate odd encodings
+    "P180013": ["T [°C]", "T [Â°C]", "T [C]"],        # tolerate odd encodings
+    "doi":     ["doi"],
+
+    # --- ALE mapping (unique properties) ---
+    "P183117": ["Materials Surface", "Material surface", "Materials surface", "Materialsurface"],
+    "P183118": ["Surface adsorption", "Adsorption precursor", "Adsorption"],
+    "P183119": ["Surface removal", "Removal precursor", "Removal"],
+    "P183120": ["EPC (Å/cycle)", "EPC (A/cycle)", "EPC (Ã…/cycle)", "EPC (Ã/cycle)", "EPC"],
+    "P183121": ["Etching temperature", "Etch temperature", "Etching temp", "Etch temp",
+                "T [°C]", "T [Â°C]", "T [C]"],
+
+    # --- new ALE+ extension mappings ---
+    "P183123": ["Semi-conductor", "Semiconductor", "Semi conductor"],
+    "P183124": ["Modification"],
+    "P183125": ["Removal"],
+    "P183126": ["Activation"],
+    "P183127": ["Material type", "Type of material", "Materialtype"],
 }
 
-MOLECULE_COL_PIDS = ["P9071", "P180042", "P180043", "P180044", "P180045"]
+# Molecule-like columns that need chemical normalization + "resource:" prefix
+MOLECULE_COL_PIDS = [
+    "P9071", "P180042", "P180043", "P180044", "P180045",
+    "P183117", "P183118", "P183119",
+    "P183123", "P183124", "P183125", "P183126", "P183127",
+]
+
+
+def _norm_header(s: str) -> str:
+    s = (s or "").replace("\u00a0", " ")  # NBSP → space
+    s = re.sub(r"\s+", " ", s).strip().lower()
+    return s
 
 
 def find_actual_column(df_cols, candidates):
-    """Return the first matching column name from candidates; None if not found."""
-    for c in candidates:
-        if c in df_cols:
-            return c
+    # map normalized -> original
+    norm_map = {_norm_header(c): c for c in df_cols}
+    # exact normalized match
+    for cand in candidates:
+        nc = _norm_header(cand)
+        if nc in norm_map:
+            return norm_map[nc]
+    # relaxed: substring match on normalized headers
+    for cand in candidates:
+        nc = _norm_header(cand)
+        for k, orig in norm_map.items():
+            if nc in k or k in nc:
+                return orig
     return None
 
 
@@ -78,8 +113,17 @@ def normalize_molecule(value: str) -> str:
 
 def main():
     ap = argparse.ArgumentParser(description="Convert merged-w-dois CSV to ORKG-ready CSV with property IDs.")
-    ap.add_argument("--in", dest="inp", required=True, help="Input CSV (e.g., merged-w-dois-tab-3-4-5-6.csv)")
+    ap.add_argument("--in", dest="inp", required=True, help="Input CSV (e.g., merged-w-dois-tab-3.csv)")
     ap.add_argument("--out", dest="out", required=True, help="Output CSV for ORKG upload")
+    ap.add_argument(
+        "--pids",
+        nargs="+",
+        required=True,
+        help=(
+            "List of property IDs to include, in order. "
+            "Example: --pids P183117 P183118 P183119 P183120 P183121 P183123 P183124 P183125 P183126 P183127"
+        ),
+    )
     args = ap.parse_args()
 
     inp = Path(args.inp).expanduser().resolve()
@@ -94,34 +138,51 @@ def main():
         col = find_actual_column(df.columns, candidates)
         present[pid] = col  # may be None for optional ones
 
-    # Build output with required columns (preserve order)
-    out_cols = ["P9071", "P180042", "P180043", "P180044", "P180045", "P180041", "P180013", "doi"]
+    # --- forward-fill any user-specified PID columns automatically ---
+    src_cols_to_ffill = []
+    for pid in args.pids:
+        col = present.get(pid)
+        if col:  # only if we actually found a column for this PID
+            src_cols_to_ffill.append(col)
+
+    if src_cols_to_ffill:
+        df[src_cols_to_ffill] = (
+            df[src_cols_to_ffill]
+            .replace(r"^\s*$", pd.NA, regex=True)
+            .ffill()
+        )
+
+    # Build output columns dynamically (from user-specified list + doi)
+    out_cols = args.pids + ["doi"]
     out_df = pd.DataFrame(columns=out_cols)
 
     # Copy/transform columns
     for pid in out_cols:
-        src = present.get(pid)
-        if pid in MOLECULE_COL_PIDS:
-            # Normalize molecule strings and prefix with "resource:"
-            if src:
-                out_df[pid] = df[src].apply(lambda v: f"resource:{normalize_molecule(v)}" if str(v).strip() else "")
-            else:
-                out_df[pid] = ""
-        elif pid == "doi":
+        if pid == "doi":
+            # Preserve DOI column as-is
+            src = present.get("doi")
             if src:
                 out_df["doi"] = df[src].astype(str)
             elif "doi" in df.columns:
                 out_df["doi"] = df["doi"].astype(str)
             else:
-                # Keep empty doi column if not present
                 out_df["doi"] = ""
+            continue
+
+        src = present.get(pid)
+        if pid in MOLECULE_COL_PIDS:
+            # Normalize molecules and prefix with "resource:"
+            if src:
+                out_df[pid] = df[src].apply(lambda v: f"resource:{normalize_molecule(v)}" if str(v).strip() else "")
+            else:
+                out_df[pid] = ""
         else:
-            # Direct copy for GPC and T columns (no chemical normalization)
+            # Direct copy for numeric/text properties
             out_df[pid] = df[src].astype(str) if src else ""
 
     # Write output
     outp.parent.mkdir(parents=True, exist_ok=True)
-    out_df.to_csv(outp, index=False)
+    out_df.to_csv(outp, index=False, encoding="utf-8-sig")
     print(f"Done. Wrote ORKG CSV: {outp}")
     print("Columns:", ", ".join(out_df.columns))
 

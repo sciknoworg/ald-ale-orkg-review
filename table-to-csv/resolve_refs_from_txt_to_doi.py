@@ -56,10 +56,23 @@ JOURNAL_MAP = {
     "j mater chem c": "Journal of Materials Chemistry C",
     "j. mater. chem. c": "Journal of Materials Chemistry C",
     "j nanophotonics": "Journal of Nanophotonics",
+
+    # Vacuum Science & Technology (existing + new)
     "j vac sci technol a": "Journal of Vacuum Science & Technology A",
-    "j vac sci technol b microelectron nanometer struct process meas phenom": "Journal of Vacuum Science & Technology B",
     "j. vac. sci. technol. a": "Journal of Vacuum Science & Technology A",
+    "vac sci technol a": "Journal of Vacuum Science & Technology A",
+    "vac. sci. technol. a": "Journal of Vacuum Science & Technology A",
+
+    "j vac sci technol b microelectron nanometer struct process meas phenom": "Journal of Vacuum Science & Technology B",
     "j. vac. sci. technol. b microelectron nanometer struct process meas phenom": "Journal of Vacuum Science & Technology B",
+    "j vac sci technol b": "Journal of Vacuum Science & Technology B",
+    "j. vac. sci. technol. b": "Journal of Vacuum Science & Technology B",
+    "vac sci technol b": "Journal of Vacuum Science & Technology B",
+    "vac. sci. technol. b": "Journal of Vacuum Science & Technology B",
+    "j vac sci technol b microelectron process phenom": "Journal of Vacuum Science & Technology B",
+    "j. vac. sci. technol., b: microelectron. process. phenom.": "Journal of Vacuum Science & Technology B",
+    "journal of vacuum science & technology b microelectronics and nanometer structures processing measurement and phenomena": "Journal of Vacuum Science & Technology B",
+
     "j chem phys": "The Journal of Chemical Physics",
     "j. chem. phys.": "The Journal of Chemical Physics",
     "j appl phys": "Journal of Applied Physics",
@@ -80,7 +93,83 @@ JOURNAL_MAP = {
     "mater sci eng r rep": "Materials Science and Engineering: R: Reports",
     "mater sci eng r rep.": "Materials Science and Engineering: R: Reports",
     "recl trav chim pays-bas": "Recueil des Travaux Chimiques des Pays-Bas",
+
+    # IOP “J. Phys. D”
+    "j phys d appl phys": "Journal of Physics D: Applied Physics",
+    "j. phys. d: appl. phys.": "Journal of Physics D: Applied Physics",
+
+    # ACS / chemistry core (additions)
+    "chem mater": "Chemistry of Materials",
+    "chem. mater.": "Chemistry of Materials",
+    "acs appl mater interfaces": "ACS Applied Materials & Interfaces",
+    "acs appl. mater. interfaces": "ACS Applied Materials & Interfaces",
+
+    # ECS journals + meetings
+    "ecs j solid state sci technol": "ECS Journal of Solid State Science and Technology",
+    "ecs j. solid state sci. technol.": "ECS Journal of Solid State Science and Technology",
+    "j ecs j solid state sci technol": "ECS Journal of Solid State Science and Technology",
+    "ecs meeting abstracts": "ECS Meeting Abstracts",
+
+    # MRS proceedings
+    "mrs proc": "MRS Proceedings",
+    "mrs proc.": "MRS Proceedings",
+    "materials research society symposium proceedings": "MRS Proceedings",
+
+    # Dalton / RSC legacy
+    "chem soc dalton trans": "Journal of the Chemical Society, Dalton Transactions",
+    "chem. soc., dalton trans.": "Journal of the Chemical Society, Dalton Transactions",
+
+    # Electronic Materials Letters
+    "electron mater lett": "Electronic Materials Letters",
+    "electron. mater. lett.": "Electronic Materials Letters",
 }
+
+JOURNAL_MAP.update({
+    # --- extra aliases from the new refs ---
+    "surf sci rep": "Surface Science Reports",
+    "surf. sci. rep.": "Surface Science Reports",
+    "chem vapor depos": "Chemical Vapor Deposition",
+    "chem. vapor depos.": "Chemical Vapor Deposition",
+    "chem vap depos": "Chemical Vapor Deposition",
+    "annu rev chem biomol eng": "Annual Review of Chemical and Biomolecular Engineering",
+    "annu. rev. chem. biomol. eng.": "Annual Review of Chemical and Biomolecular Engineering",
+    "annual review of chemical and biomolecular engineering": "Annual Review of Chemical and Biomolecular Engineering",
+    "japan j appl phys": "Japanese Journal of Applied Physics",
+    "jpn j appl phys": "Japanese Journal of Applied Physics",
+    "jpn. j. appl. phys.": "Japanese Journal of Applied Physics",
+    "phys rev lett": "Physical Review Letters",
+    "phys. rev. lett.": "Physical Review Letters",
+    "solid state commun": "Solid State Communications",
+    "solid state commun.": "Solid State Communications",
+    "prog surf sci": "Progress in Surface Science",
+    "prog. surf. sci.": "Progress in Surface Science",
+    "mater sci eng a": "Materials Science and Engineering: A",
+    "mater. sci. eng. a": "Materials Science and Engineering: A",
+    "nano lett": "Nano Letters",
+    "nano lett.": "Nano Letters",
+    "nat mater": "Nature Materials",
+    "nat. mater.": "Nature Materials",
+    "electrochem solid-state lett": "Electrochemical and Solid-State Letters",
+    "electrochem. solid-state lett.": "Electrochemical and Solid-State Letters",
+    "electrochem solid state lett": "Electrochemical and Solid-State Letters",
+    "j thermal anal calorim": "Journal of Thermal Analysis and Calorimetry",
+    "j therm anal calorim": "Journal of Thermal Analysis and Calorimetry",
+    "j. therm. anal. calorim.": "Journal of Thermal Analysis and Calorimetry",
+    "j. ther. anal. calorimetry": "Journal of Thermal Analysis and Calorimetry",
+    "j korean phys soc": "Journal of the Korean Physical Society",
+    "j. korean phys. soc.": "Journal of the Korean Physical Society",
+    "nanotechnology": "Nanotechnology",
+    # helpful variants
+    "j phys d": "Journal of Physics D: Applied Physics",
+    "j. phys. d": "Journal of Physics D: Applied Physics",
+    "j phys d: appl phys": "Journal of Physics D: Applied Physics",
+    "acs appl mater interfaces": "ACS Applied Materials & Interfaces",
+    "acs appl. mater. interf.": "ACS Applied Materials & Interfaces",
+    "chem mater.": "Chemistry of Materials",
+    "acs appl electron materials": "ACS Applied Electronic Materials",
+    "j vac sci technol": "Journal of Vacuum Science & Technology",
+    "j. vac. sci. technol.": "Journal of Vacuum Science & Technology",
+})
 
 def expand_journal(j: str) -> str:
     jn = norm_punct(j)

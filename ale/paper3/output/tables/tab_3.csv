@@ -1,0 +1,20 @@
+Materials Surface,Surface,EPC (Å/,Etching,Ref.
+,adsorption,removal,cycle),temperature,
+Al 2 O 3,HF,Sn(acac) 2,0.61,250 °C,[16]
+,HF,TMA,0.14/0.75,250/325 °C,[26]
+HfO 2,HF,Sn(acac) 2,0.117,250 °C,[21]
+,HF,Al(CH 3 ) 2 Cl,0.77,250 °C,[29]
+ZrO 2,HF,SiCl 4 / Sn,0.14,350 °C/,[29]
+,,(acac) 2,,200 °C,
+,HF,Al(CH 3 ) 2 Cl,0.117,250 °C,[29]
+ZnO,HF,TMA,2.19,295 °C,[33]
+TiO 2,WF 6,BCl 3,0.6-0.7,170 °C,[22]
+SiO 2,HF,TMA,0.31,300 °C,[24]
+WO 3,BCl 3,HF,4.19,207 °C,[25]
+W,O 3 /BCl 3,HF,2.5,207 °C,[25]
+,O 2,WF 6,6.3,300 °C,[34]
+TiN,O 3,HF,0.20,250 °C,[20]
+AlN,HF,Sn(acac) 2,0.36,250 °C,[30]
+,HF,Sn(acac) 2 /H 2,1.96,250 °C,[30]
+,,plasma,,,
+AlF 3,HF,Sn(acac) 2,0.069/0.63 150/250 °C,[31]

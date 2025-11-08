@@ -1,0 +1,36 @@
+[1] M. Guillorn, J. Chang, N. Fuller, J.J. Patel, Vac. Sci. Technol. B 27 (6) (2009) 2588–2592.
+[2] S. Samukawa, M. Hori, S. Rauf, K. Tachibana, P. Bruggeman, G. Kroesen, J.C. Whitehead, A.B. Murphy, A.F. Gutsol, S. Starikovskaia, U. Kortshagen, J.P. Boeuf, T.J. Sommerer, M.J. Kushner, U. Czarnetzki, J. Phys. D: Appl. Phys. 45 (25) (2012) 253001.
+[3] S.M. George, Chem. Rev. 110 (2010) 111–131.
+[4] V.M. Donnelly, A. Kornblit, J. Vac. Sci. Technol. A 31 (5) (2013) 050825–050848.
+[5] C.G.N. Lee, K.J. Kanarik, R.A. Gottscho, J. Phys. D: Appl. Phys. 47 (27) (2014) 994–1004.
+[6] S. Banna, A. Agarwal, G. Cunge, M. Darnon, E. Pargon, O. Joubert, J. Vac. Sci. Technol. A 30 (4) (2012) 040801–040829.
+[7] N. Marchack, J.P. Chang, J. Phys. D: Appl. Phys. 44 (17) (2011) 174011–174021.
+[8] T. Faraz, F. Roozeboom, H.C.M. Knoops, W.M.M. Kessels, ECS J. Solid State Sci. Technol. 4 (6) (2015) N5023–N5032.
+[9] A. Sherman, Atomic Layer Deposition For Nanotechnology: an Enabling Process for Nanotechnology Fabrication, Ivoryton Press, New York, 2008.
+[10] A.D. Li, Atomic Layer Deposition Technology-Fundamental and Applications, Scientific Press, Beijing, 2016.
+[11] M.N. Yoder, Atomic layer etching: U.S. Patent, 4756794A, 1988.
+[12] P.A. Maki, D.J. Ehrlich, Appl. Phys. Lett. 55 (1989) 91–93.
+[13] H. Sakaue, K. Asami, T. Ichihara, S. Ishizuka, K.K.Y. Horiike, Digital process for advanced VLSI's and surface reaction study, MRS Proc. (1991) 222.
+[14] G.S. Oehrlein, D. Metzler, C. Li, Atomic layer etching at the tipping point: an overview, ECS J. Solid State Sci. Technol. 4 (6) (2015) N5041–N5053.
+[15] C. Petit-Etienne, M. Darnon, P. Bodart, M. Fouchier, G. Cunge, E. Pargon, L. Vallier, O. Joubert, J. Vac. Sci. Technol. B 31 (1) (2013) (011201-1~8).
+[16] Y. Lee, S.M. George, ACS Nano 9 (2015) 2061–2070.
+[17] S.M. George, Y. Lee, ACS Nano 10 (2016) 4889–4894.
+[18] C.T. Carver, J.J. Plombon, P.E. Romero, S. Suri, T.A. Tronic, R.B. Turkot, J. ECS J. Solid State Sci. Technol. 4 (2015) N5005–N5009.
+[19] K.J. Kanarik, T. Lill, E.A. Hudson, S. Sriraman, S. Tan, J. Marks, V. Vahedi, R.A. Gottscho, J. Vac. Sci. Technol. A 33 (2) (2015) (20802-1~14).
+[20] Y. Lee, S.M. George, Chem. Mater. 29 (2017) 8202–8210.
+[21] Y. Lee, J.W. DuMont, S.M. George, ECS J. Solid State Sci. Technol. 4 (2015) N5013–N5022.
+[22] C. Paul, Lemaire, N.P. Gregory, Chem. Mater. 29 (2017) 6653–6665.
+[23] O. Joubert, E. Despiau-Pujo, G. Cunge, In: Proceedings of the Workshop on Atomic-Layer-Etch and Clean Technology. San Francisco, CA, 2014.
+[24] J. DuMont, A.E. Marquardt, A.M. Cano, S.M. George, ACS Appl. Mater. Interfaces 9 (2017) 10296–10307.
+[25] R. Nicholas, Johnson, S.M. George, ACS Appl. Mater. Interfaces 9 (2017) 34435–34447.
+[26] Y. Lee, J.W. DuMont, S.M. George, Chem. Mater. 28 (2016) 2994–3003.
+[27] J.C. Lockhart, Chem. Rev. 65 (1965) 131–151.
+[28] H.W. Roesky, I.J. Haiduc, Chem. Soc., Dalton Trans. (1999) 2249–2264.
+[29] Y. Lee, C. Huffman, S.M. George, Chem. Mater. 28 (2016) 7657–7665.
+[30] N.R. Johnson, H. Sun, K. Sharma, S.M. George, J. Vac. Sci. Technol. A 34 (2016) 050603.
+[31] Y. Lee, J.W. DuMont, S.M. George, J. Phys. Chem. C 119 (2015) 25385–25393.
+[32] J.K. Kang, J. Chem. Phys. 116 (2002) 275–280.
+[33] R. David, Zywotko, S.M. George, Chem. Mater. 29 (2017) 1183–1191.
+[34] W.Y. Xie, C. Paul, Lemaire, G.N. Parsons, ACS Appl. Mater. Interfaces 10 (2018) 9147–9154.
+[35] D. Choi, K. Barmak, Electron. Mater. Lett. 13 (2017) 449–456.
+[36] H.J. Kim, Vac. Sci. Technol., B: Microelectron. Process. Phenom. 21 (2003) 2231–2261.

@@ -1,0 +1,10 @@
+﻿orkg:P183123,orkg:P183124,orkg:P183125,orkg:P183126,paper:doi,paper:research_field
+resource:Si,resource:Cl2,resource:Ar,resource: plasma,10.1116/1.4979661,R254
+resource:Ge,resource:Cl2,resource:Ar,resource: plasma,10.1016/S0169-4332(96)01026-4,R254
+resource:GaAs,resource:Cl2,resource:Ar,resource: plasma,10.1063/1.106477,R254
+resource:InP,resource:Cl2,resource:Ne,resource: plasma,10.1063/1.2221504,R254
+resource:GaN,resource:Cl2,resource:Ar,resource: plasma,10.1116/1.4993996,R254
+resource:GaN,resource:XeF2,resource:BCl3,resource:Thermal,10.1063/1.5095938,R254
+resource:InGaAs,resource:Cl2,resource:Ar,resource: plasma,10.1088/1361-6463/aa70c8,R254
+resource:InGaAs,resource:HF-pyridine,resource:AlCl(CH3)2,resource:Thermal,10.1021/acs.nanolett.9b01525,R254
+resource:AlGaN,resource:Cl2,resource:Ar,resource: plasma,10.1116/1.5063795,R254

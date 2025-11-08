@@ -1,0 +1,17 @@
+﻿orkg:P183117,orkg:P183118,orkg:P183119,orkg:P183120,orkg:P183121,paper:doi,paper:research_field
+resource:Al2O3,resource:HF,resource:Sn(acac)2,0.61,250 °C,10.1021/nn507277f,R254
+resource:Al2O3,resource:HF,resource:TMA,0.14/0.75,250/325 °C,10.1021/acs.chemmater.6b00111,R254
+resource:HfO2,resource:HF,resource:Sn(acac)2,0.117,250 °C,10.1149/2.0041506jss,R254
+resource:HfO2,resource:HF,resource:Al(CH3)2Cl,0.77,250 °C,10.1021/acs.chemmater.6b02543,R254
+resource:ZrO2,resource:HF,resource:SiCl4/Sn(acac)2,0.14,350 °C/200 °C,10.1021/acs.chemmater.6b02543,R254
+resource:ZrO2,resource:HF,resource:Al(CH3)2Cl,0.117,250 °C,10.1021/acs.chemmater.6b02543,R254
+resource:ZnO,resource:HF,resource:TMA,2.19,295 °C,10.1021/acs.chemmater.6b04529,R254
+resource:TiO2,resource:WF6,resource:BCl3,0.6-0.7,170 °C,10.1021/acs.chemmater.7b00985,R254
+resource:SiO2,resource:HF,resource:TMA,0.31,300 °C,10.1021/acsami.7b01259,R254
+resource:WO3,resource:BCl3,resource:HF,4.19,207 °C,10.1021/acsami.7b09161,R254
+resource:W,resource:O3/BCl3,resource:HF,2.5,207 °C,10.1021/acsami.7b09161,R254
+resource:W,resource:O2,resource:WF6,6.3,300 °C,10.1021/acsami.7b19024,R254
+resource:TiN,resource:O3,resource:HF,0.2,250 °C,10.1021/acs.chemmater.7b02286,R254
+resource:AlN,resource:HF,resource:Sn(acac)2,0.36,250 °C,10.1116/1.4959779,R254
+resource:AlN,resource:HF,resource:Sn(acac)2/H2 plasma,1.96,250 °C,10.1116/1.4959779,R254
+resource:AlF3,resource:HF,resource:Sn(acac)2,0.069/0.63,150/250 °C,10.1021/acs.jpcc.5b07236,R254

@@ -39,15 +39,15 @@ docker run -t --rm -p 8070:8070 grobid/grobid:0.8.2-full
 
 ```bash
 python table-to-csv\extract_tables_from_pdf.py ^
-  --pdf papers\paper1\rare-earth-materials.pdf ^
-  --out papers\paper1\output ^
+  --pdf ale\paper4\physical-and-chemical-effects-in-directional-atomic-layer-etching.pdf ^
+  --out ale\paper4\output ^
   --grobid "http://localhost:8070"
 ```
 
 **Outputs**
-- `papers\paper1\output\tei.xml`  
-- `papers\paper1\output\tables\*.csv`  
-- `papers\paper1\output\index.csv` (page, bbox, caption, status)
+- `ale\paper4\output\tei.xml`  
+- `ale\paper4\output\tables\*.csv`  
+- `ale\paper4\output\index.csv` (page, bbox, caption, status)
 
 ---
 
@@ -66,8 +66,8 @@ First run (quick trial on first 25)
 
 ```bash
 python table-to-csv\resolve_refs_from_txt_to_doi.py ^
-  --txt papers\paper1\references.txt ^
-  --out papers\paper1\references-resolved-doi.csv ^
+  --txt ale\paper4\references.txt ^
+  --out ale\paper4\references-resolved-doi.csv ^
   --min-score 40 ^
   --rows 8 ^
   --pause 0.3 ^
@@ -77,7 +77,7 @@ python table-to-csv\resolve_refs_from_txt_to_doi.py ^
 Simplest run (with defaults)
 
 ```bash
-python table-to-csv\resolve_refs_from_txt_to_doi.py --txt papers\paper1\references.txt --out papers\paper1\references-resolved-doi.csv
+python table-to-csv\resolve_refs_from_txt_to_doi.py --txt ale\paper4\references.txt --out ale\paper4\references-resolved-dois.csv
 ```
 
 ### Resume later (append from next idx)
@@ -87,8 +87,8 @@ Example (353 total; last written idx=268, so 85 remaining):
 
 ```bash
 python table-to-csv\resolve_refs_from_txt_to_doi.py ^
-  --txt papers\paper1\references.txt ^
-  --out papers\paper1\references-resolved-doi.csv ^
+  --txt ale\paper4\references.txt ^
+  --out ale\paper4\references-resolved-doi.csv ^
   --resume
 ```
 
@@ -146,12 +146,12 @@ This step takes your **table CSV** (with a `Refs.` column) and the **resolved re
 - Looks up each reference number (`idx`) in the mapping file and **fills DOI only if `decision == accepted`**.
 - If none of the expanded refs have an accepted DOI, the row is **dropped**.
 
-**Run**
+**1 Example Run**
 ```bash
 python table-to-csv\expand-refs-attach-dois.py ^
-  --data papers\paper1\output\tables\merged-tab-3-4-5-6.csv ^
-  --mapping papers\paper1\references-resolved-doi.csv ^
-  --out papers\paper1\output\tables\merged-w-dois-tab-3-4-5-6.csv ^
+  --data ale\paper4\output\tables\tab_0.csv ^
+  --mapping ale\paper4\references-resolved-doi-some-manual.csv ^
+  --out ale\paper4\output\tables\tab_0-w-dois.csv ^
   --refs-col "Refs." ^
   --doi-col "doi"
 ```
@@ -159,8 +159,23 @@ python table-to-csv\expand-refs-attach-dois.py ^
 > If your input already has a DOI column named doi or doi_list, you can omit --doi-col and the script will auto-detect it; otherwise it creates a new doi column.
 
 ```yaml
-Done. Wrote: ...\merged-w-dois-tab-3-4-5-6.csv
-Kept with DOI: 0 | Expanded rows created: 253 | Dropped (no accepted DOI): 12
+Done. Wrote: C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper4\output\tables\tab_0-w-dois.csv
+Kept with DOI: 0 | Expanded rows created: 9 | Dropped (no accepted DOI): 0
+```
+
+**2 Example Run**
+```bash
+python table-to-csv\expand-refs-attach-dois.py ^
+  --data ale\paper4\output\tables\tab_4.csv ^
+  --mapping ale\paper4\references-resolved-doi-some-manual.csv ^
+  --out ale\paper4\output\tables\tab_4-w-dois.csv ^
+  --refs-col "Refs." ^
+  --doi-col "doi"
+```
+
+```yaml
+Done. Wrote: C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper4\output\tables\tab_4-w-dois.csv
+Kept with DOI: 0 | Expanded rows created: 8 | Dropped (no accepted DOI): 0
 ```
 
 Notes
@@ -169,3 +184,19 @@ Notes
 - Supported Refs. formats: [28,224-226], 208, 207,233, [ 184 ], and ranges with en-dashes.
 - Only accepted mappings are used; low_confidence and no_match are ignored.
 - To preserve rows that already contain DOIs, set --doi-col to the existing DOI column (e.g., doi_list) or omit the flag for auto-detection.
+
+## Convert to a csv file to upload to ORKG
+
+```bash
+python table-to-csv/convert_to_orkg_csv.py ^
+  --in ale/paper4/output/tables/tab_0-w-dois.csv ^
+  --out ale/paper4/orkg-upload/tab_0-data.csv ^
+  --pids P183123 P183124 P183125 P183126
+```
+
+```bash
+python table-to-csv/convert_to_orkg_csv.py ^
+  --in ale/paper4/output/tables/tab_4-w-dois.csv ^
+  --out ale/paper4/orkg-upload/tab_4-data.csv ^
+  --pids P9071 P183124 P183125 P183127
+```

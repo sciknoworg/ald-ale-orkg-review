@@ -1,0 +1,13 @@
+,,Plasma ALE,Thermal ALE,Plasma-thermal ALE
+,,Plasma modification,Chemical modification,Plasma modification
+,Half-reactions,Ion sputtering,Chemical etching,Chemical etching
+Modification,Chemical contrast,Chemisorption of halogen atoms via plasma,Conversion to oxides via thermal reactions,Conversion to oxides via plasma
+,formation,,,
+,Control parameters,Plasma chemistry,Reactant pressure/temperature,Ion chemistry and energy
+,Origin of selectivity,Difference in surface binding energy,Difference in reaction favorability,Difference in reaction favorability
+Removal,Etch product formation,"Physical, anisotropic","Chemical, isotropic","Chemical, isotropic"
+,Control parameters,Argon ion energy,"Pressure, temperature","Pressure, temper ature"
+,Origin of anisotropy,Directionality of Ar +,Isotropic,Chemical contrast
+Comments,ALE Window,"Narrow, ion energy sensitive","Wide, determined by thermodynamics","Wide, determined by thermodynamics"
+,Control of selectivity,"Both, in separate steps",Selectivity control only,"Both, in single step"
+,and anisotropy,,,
