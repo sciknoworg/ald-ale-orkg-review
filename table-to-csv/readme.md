@@ -51,6 +51,77 @@ python table-to-csv\extract_tables_from_pdf.py ^
 
 ---
 
+## 4a) Extract tables (GROBID route)
+
+```bash
+python table-to-csv\extract_tables_from_pdf.py ^
+  --pdf ale\paper4\physical-and-chemical-effects-in-directional-atomic-layer-etching.pdf ^
+  --out ale\paper4\output ^
+  --grobid "http://localhost:8070"
+```
+
+**Outputs**
+- `ale\paper4\output\tei.xml`  
+- `ale\paper4\output\tables\*.csv`  
+- `ale\paper4\output\index.csv` (page, bbox, caption, status)
+
+---
+
+## 4b) **Alternative:** Extract tables with **MinerU** (Markdown/HTML → CSV)
+
+MinerU performs end-to-end document analysis and emits Markdown/HTML fragments for tables;  
+the provided wrapper converts those into the **same outputs** as the GROBID route  
+(`tables/*.csv` + `index.csv`).
+
+### Install (Windows / clean virtualenv recommended)
+
+```bash
+pip install mineru
+# If the CLI errors on first run, add these:
+pip install doclayout-yolo ultralytics ftfy shapely pyclipper omegaconf
+```
+
+- The **pipeline** backend uses document-layout and OCR models (faster, more dependencies).
+- The **VLM** backend avoids most vision deps but downloads large transformer weights on first run.
+
+### Run (pipeline backend)
+
+First time.
+
+```bash
+python table-to-csv\extract_tables_with_mineru.py ^
+  --pdf ale\paper5\atomic-layer-etching-of-sio2-for-nanoscale-semiconductor-devices-a-review.pdf ^
+  --out ale\paper5\output
+```
+
+If you’ve already run MinerU and just want to re-extract without re-downloading models:
+
+```bash
+python table-to-csv\extract_tables_with_mineru.py ^
+  --pdf ale\paper5\atomic-layer-etching-of-sio2-for-nanoscale-semiconductor-devices-a-review.pdf ^
+  --out ale\paper5\output ^
+  --skip-run
+```
+
+### Run (VLM backend — fewer deps)
+
+```bash
+python table-to-csv\extract_tables_with_mineru.py ^
+  --pdf ale\paper5\atomic-layer-etching-of-sio2-for-nanoscale-semiconductor-devices-a-review.pdf ^
+  --out ale\paper5\output ^
+  --backend vlm-transformers
+```
+
+**Outputs (same as GROBID route)**
+- `ale\paper5\output\tables\*.csv`  
+- `ale\paper5\output\index.csv` (page, bbox, caption, status)
+
+> **Notes**
+> - First MinerU run downloads model weights to your Hugging Face cache (~1 GB).  
+> - Works on CPU; GPU is optional (requires CUDA-enabled PyTorch).
+
+---
+
 ## 5) Resolve references (TXT → DOI)
 
 Prepare `references.txt` like:
