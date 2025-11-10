@@ -1,0 +1,15 @@
+﻿orkg:P183125,orkg:P183130,orkg:P183120,orkg:P183148,orkg:P183149,orkg:P183151,orkg:P9071,paper:doi,paper:research_field
+resource:Formic acid,80,28,resource:Anisotropy,resource:O2,350 sec,resource:Co,10.1116/1.4983830,R254
+resource:hfacH,140,2,resource:Isotropy,resource:Cl2,95 sec,resource:Co,10.3390/sci1020037,R254
+resource:Formic acid,80,42,resource:Anisotropy,resource:O2,350 sec,resource:Fe,10.1116/1.4983830,R254
+resource:Formic acid,80,12,resource:Anisotropy,resource:O2,350 sec,resource:Pd,10.1116/1.4983830,R254
+resource:Formic acid,80,5,resource:Anisotropy,resource:O2,350 sec,resource:Pt,10.1116/1.4983830,R254
+resource:Cl2,RT,1.1,resource:Anisotropy,resource:O2,40 sec,resource:Cr,10.1088/1361-6528/aaf521,R254
+resource:WF6,300,6.3,resource:Isotropy,resource:O2,320 sec,resource:W,10.1021/acsami.7b19024,R254
+resource:BCl3→HF,207,2.5,resource:Isotropy,resource:O2/O3,325 sec,resource:W,10.1021/acsami.7b09161,R254
+resource:O2,RT,2.6,resource:Anisotropy,resource:NF3,40 sec,resource:W,10.1002/ppap.201900081,R254
+resource:Ar,60,2.1,resource:Anisotropy,resource:Cl2,25 sec,resource:W,10.1116/1.4979019,R254
+resource:Hfac,275,0.9,resource:Isotropy,resource:O2,11 min,resource:Cu,10.1149/2.0211809jss,R254
+resource:O2-GCIB,RT,0.7,resource:Anisotropy,resource:Acetic acid,92 sec,resource:Cu,10.1088/1361-6463/aa6527,R254
+resource:HF,250,0.15,resource:Isotropy,resource:O3,64 sec,resource:TiN,10.1021/acs.chemmater.7b02286,R254
+resource:Sn(acac)2,275,0.36,resource:Isotropy,resource:HF,280 sec,resource:AlN,10.1116/1.4959779,R254

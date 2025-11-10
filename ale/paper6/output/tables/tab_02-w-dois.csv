@@ -1,0 +1,15 @@
+﻿Material,Direction,Reaction,Removal,Process Temperature (°C),EPC (Å/cycle),Time of cycle,Reference,doi
+Co,Anisotropy,O2,Formic acid,80,28,350 sec,17,10.1116/1.4983830
+Co,Isotropy,Cl2,hfacH,140,2,95 sec,32,10.3390/sci1020037
+Fe,Anisotropy,O2,Formic acid,80,42,350 sec,17,10.1116/1.4983830
+Pd,Anisotropy,O2,Formic acid,80,12,350 sec,17,10.1116/1.4983830
+Pt,Anisotropy,O2,Formic acid,80,5,350 sec,17,10.1116/1.4983830
+Cr,Anisotropy,O2,Cl2,RT,1.1,40 sec,28,10.1088/1361-6528/aaf521
+W,Isotropy,O2,WF6,300,6.3,320 sec,33,10.1021/acsami.7b19024
+W,Isotropy,O2/O3,BCl3 → HF,207,2.5,325 sec,31,10.1021/acsami.7b09161
+W,Anisotropy,NF3,O2,RT,2.6,40 sec,29,10.1002/ppap.201900081
+W,Anisotropy,Cl2,Ar,60,2.1,25 sec,26,10.1116/1.4979019
+Cu,Isotropy,O2,Hfac,275,0.9,11 min,34,10.1149/2.0211809jss
+Cu,Anisotropy,Acetic acid,O2-GCIB,RT,0.7,92 sec,30,10.1088/1361-6463/aa6527
+TiN,Isotropy,O3,HF,250,0.15,64 sec,18,10.1021/acs.chemmater.7b02286
+AlN,Isotropy,HF,Sn(acac)2,275,0.36,280 sec,19,10.1116/1.4959779

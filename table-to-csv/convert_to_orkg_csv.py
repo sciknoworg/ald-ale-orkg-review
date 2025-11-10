@@ -30,15 +30,26 @@ CANDIDATE_HEADERS = {
 
     "P183117": ["Materials Surface", "Material surface", "Materials surface", "Materialsurface"],
     "P183118": ["Surface adsorption", "Adsorption precursor"],
-    "P183119": ["Surface removal", "Removal precursor"],  # no plain "Removal"
+    "P183119": ["Surface removal", "Removal precursor"],
     "P183120": ["EPC (Å/cycle)", "EPC (A/cycle)", "EPC (Ã…/cycle)", "EPC (Ã/cycle)", "EPC"],
     "P183121": ["Etching temperature", "Etch temperature", "Etching temp", "Etch temp"],
 
     "P183123": ["Semi-conductor", "Semiconductor", "Semi conductor"],
     "P183124": ["Modification"],
-    "P183125": ["Removal"],  # canonical
+    "P183125": ["Removal"],
     "P183126": ["Activation"],
     "P183127": ["Material type", "Type of material", "Materialtype"],
+
+    "P183144": ["Material etched", "Etched material"],
+    "P183145": ["Reactant 1"],
+    "P183146": ["Reactant 2"],
+    "P183147": ["Reactant 3"],
+
+    # NEW PROPERTIES
+    "P183148": ["Direction"],
+    "P183149": ["Reaction"],
+    "P183150": ["Process Temperature (°C)", "Process temperature (°C)", "Process temp (°C)"],
+    "P183151": ["Time of cycle", "Cycle time", "Time/cycle"],
 
     "P183142": [
         "Precursor Chemistries for Adsorption",
@@ -74,6 +85,7 @@ CANDIDATE_HEADERS = {
     "P183138": ["2nd step", "Second step"],
     "P183139": ["3rd step", "Third step"],
 }
+
 
 # ==============================================================
 # 2) TOKEN-AWARE HEADER MATCHER  (replaces your old find_actual_column)
@@ -122,9 +134,12 @@ ORDERED_PIDS = [
     "P183142","P183143",
     "P183117","P183118","P183119","P183120","P183121",
     "P183123","P183124","P183126","P183127",
+    "P183144","P183145","P183146","P183147",
+    "P183148","P183149","P183150","P183151",
     "P9071","P180042","P180043","P180044","P180045",
     "P180041","P180013",
 ]
+
 
 # ==============================================================
 # 4) MOLECULE NORMALIZATION HELPER
@@ -132,9 +147,10 @@ ORDERED_PIDS = [
 
 MOLECULE_COL_PIDS = {
     "P183129","P183125","P183117","P183118","P183119",
-    "P183142",  # keep chemicals compact if present
-    # P183143 removed → preserve spaces for energy-source phrases
+    "P183142",
     "P183123","P183124","P183126","P183127",
+    "P183144","P183145","P183146","P183147",
+    "P183148", "P183149",
     "P9071","P180042","P180043","P180044","P180045",
     "P183137","P183138","P183139",
 }

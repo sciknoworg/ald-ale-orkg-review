@@ -194,7 +194,11 @@ def main():
     ap.add_argument("--out", required=True, help="Output CSV path.")
     ap.add_argument("--refs-col", default="Reference", help="Name of the references column in the data CSV (default: 'Reference'). Auto-detects common variants if missing.")
     ap.add_argument("--doi-col", default="doi", help="Name of the DOI column in the data CSV. If empty, use 'doi' or 'doi_list' if present; otherwise create 'doi'.")
-    ap.add_argument("--no-ask-missing", action="store_true", help="Disable interactive prompting for missing DOIs (skip instead).")
+    ap.add_argument("--no-ask-missing",
+        dest="no_ask_missing",
+        action="store_true",
+        help="Disable interactive prompting for missing DOIs (skip instead)."
+    )
     args = ap.parse_args()
 
     data_path = Path(args.data).expanduser().resolve()
@@ -233,7 +237,7 @@ def main():
     if doi_col not in columns:
         columns.append(doi_col)
 
-    ask_missing = not args.no-ask-missing
+    ask_missing = not args.no_ask_missing
 
     for _, row in df.iterrows():
         row_dict = {c: row.get(c, "") for c in columns}
