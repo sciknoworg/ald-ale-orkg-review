@@ -1,0 +1,10 @@
+﻿orkg:P183129,orkg:P183125,orkg:P183130,orkg:P183131,orkg:P183132,paper:doi,paper:research_field
+resource:CHF3 plasma,resource:Ar plasma,-40–20,9.0–11.0,0–50V,10.1002/ppap.201900051,R254
+resource:C4F8 plasma,resource:Arionbeam,RT,1.9,30–200V,10.1088/1361-6463/aa6f40,R254
+resource:C4F6/Ar plasma,resource:Ar plasma,-10,14.2,10–100V,10.1063/5.0047811,R254
+resource:C4F8 plasma,resource:Ar plasma,20,5.8,30–90V,10.1116/1.5134710,R254
+resource:CHF3 plasma,resource:O2 plasma,20,4.1,30–90V,10.1116/1.5134710,R254
+resource:C3F7OCH3 plasma,resource:O2 plasma,20,2.1,30–90V,10.1116/1.5134710,R254
+resource:n-C3F7OCH3 plasma,resource:Ar plasma,RT,2.1,10–80V,10.1021/acssuschemeng.2c05186,R254
+resource:i-C3F7OCH3 plasma,resource:Ar plasma,RT,1.8,10–80V,10.1021/acssuschemeng.2c05186,R254
+resource:CF3CF2CF2CH2OH plasma,resource:Ar plasma,RT,5.2,10–80V,10.1021/acssuschemeng.2c05186,R254

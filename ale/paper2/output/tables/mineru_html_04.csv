@@ -1,0 +1,27 @@
+0,1,2,3,4
+Material,Material,Material,Material,Material
+etched,Reactant 1,Reactant 2,Lead author,Reference
+Ge,$Cl_2$,Thermal cycling,Ikeda22,"App1. Surf. Sci. 112, 87 (1997)"
+HfO2,HF,Sn(acac)2,Lee³35,"ECS J. Solid State Sci. Technol. 4, N5013 (2015)"
+HfO2,HF,"Sn(acac)2, TMA, DMAC, SiCl4",Lee59,"Chem. Mater. 28, 7657 (2016)"
+HfO2,HF,TiCl4,Lee70,"J. Vac. Sci. Technol., A 36, 061504 (2018)"
+$HfO2$,HF,DMAC,Lee1,"J. Phys. Chem. C 123, 18455 (2019)"
+HfO2,"HF, DFT study of fluorination reaction",,Mullins24,"Chem. Mater. 32, 3414 (2020)"
+HfO2,HF,"DMAC, TiCl4",Murdzek1,"2019 International Symposium on VLSI, TSA (2019), p. 18970301."
+HfO2,"HF, XeF2, SF4","DMAC, TiCl4",Murdzek52,"J. Vac. Sci. Technol, A 38, 022608 (2020)"
+HfZrO2,HF,"DMAC, TiCl4",Murdzek71,"2019 International Symposium on VLSI, TSA (2019), p. 18970301."
+HfZrO2,"HF, XeF2, SF4","DMAC, TiCl4",Murdzek52,"J. Vac. Sci. Technol., A 38, 022608 (2020)"
+InGaAs,HF,DMAC,Lu²2,"IEDM (2018), 895."
+InAlAs,HF,DMAC,Lu 3,"Nano Lett. 19, 5159 (2019)."
+InGaAs,HF,DMAC,Lu73,"Nano Lett. 19, 5159 (2019)."
+InGaZnO4,HF,DMAC,Routzahn74,U.S. patent pending
+Mo,03,BCl3,HF Fischer3,U.S. patent pending
+Ni,02,H+hfac,Basher75,"J. Vac. Sci. Technol. A 38, 052602 (2020)"
+Si,02,HF,TMA Abdulagatov444,"Chem. Mater. 30, 8465 (2018)."
+Si,"ClF3, BrF3, BrF5, IF5",,Ibbotson16,"J. Appl. Phys. 56, 2939 (1984)."
+Si,Cl₂$,Thermal cycling,Imai76,"Jpn. J. Appl. Phys. 34, 9A (1995)"
+Si3N4,"O2,03",HF,TMA Abdulagatov7777,"J. Vac. Sci. Technol., A 38, 022607 (2020)"
+SiO2,TMA,HF,DuMont41,"ACS Appl. Mater. Interfaces 9, 10296 (2017)"
+"SiO2,",CHF3,TMA,Rahman2,"ACS Appl. Mater. Interfaces 10, 31784 (2018)"
+TiN,03,HF,Lee12,"Chem. Mater. 29, 8202 (2017)"
+TiN,CHFz/O2 downstream plasma,Thermal cycling,Shinoda78,"J. Phys. D: Appl. Phys. 52, 475106 (2019)d)"

@@ -1,0 +1,28 @@
+0,1,2,3,4
+Material etched,Reactant,Reactant,Reactant,Reactant
+Material etched,Reactant 1,Reactant 2,Lead author,Reference
+Al203,HF,TMA,Can028,"J. Phys. Chem. 123, 10346 (2019)"
+Al2O3,HF,"TMA, DMAC",Clancey48,"J. Phys. Chem. C 124, 287 (2020)"
+Al203,HF,TMA,DuMont55,"J. Chem. Phys. 146, 052819 (2017)"
+Al2O3,HF,DMAC,Fischer53,"66th AVS Symposium, Columbus, Ohio, October 2019"
+Al203,HF,DMAC,Fischer25,"J. Vac. Sci. Technol., A 38, 022603 (2020)"
+Al2O3,HF,DMAC,Fischer31,"J. Vac. Sci. Technol., A 38, 042601 (2020)"
+Al2O3,HF,TMA,George56,"ACS Nano 10, 4889 (2016)"
+A12 3,"HF, SF4",Sn(acac)2,Gertsch 7,"Chem. Mater. 31, 3624 (2019)"
+Al2O3,HF,TMA,Hennessy 588,"J. Vac. Sci. Technol., A 35, 041512 (2017)"
+Al203,HF,Sn(acac)2,Lee23,"ACS Nano 9, 2061 (2015)"
+Al203,HF,Sn(acac)2,Lee³6,"Chem. Mater. 27, 3648 (2015)"
+Al203,HF,"Sn(acac)2, TMA, DMAC, SiCl4",Lee59,"Chem. Mater. 28, 7657 (2016)."
+Al2O3,HF,TMA,Lee60,"Chem. Mater. 28, 2994 (2016)"
+A1203,HF,DMAC,Lee1,"J. Phys. Chem. C 123, 18455 (2019)"
+Al203,CHF3,TMA,Rahman62,"ACS App1. Mater. Interfaces 10, 31784 (2018)"
+Al2O3,HF,TMA,Zywotko63,"J. Vac. Sci. Technol., A 36, 061508 (2018)"
+Al203,"HF, DFT study of fluorination reaction",,Natarajan64,"Chem. Mater. 30, 5912 (2018)"
+AIF3,HF,Sn(acac)2,Lee26,"J. Phys. Chem. C 119, 25385 (2015)"
+AIN,HF,Sn(acac)2,Johnson 5,"J. Vac. Sci. Technol, A 34, 050603 (2016)"
+Co,Cl_,"Hhfac, Hacac",Konh46,"J. Vac. Sci. Technol., A 37, 021004 (2019)"
+Co,02,Hhfac,Zhao66,Appl. Surf. Sci. 45 (2018)
+Cu,03,Hhfac,Mohimi45,"ECS J. Solid State Sci. Technol. 7, 491 (2018)"
+Fe,$Cl_$,Hacac,Lin67,"J. Vac. Sci. Technol., A 36, 051401 (2018)"
+Ga2O3,HF,"BCl3, DMAC, TMA, TiCl4, Ga[N(CH3)2]3",Lee68,"Chem. Mater. 32, 5937 (2020)"
+GaN,XeF2$,BCl3,Johnson09,"Appl. Phys. Lett. 114, 243103 (2019)"

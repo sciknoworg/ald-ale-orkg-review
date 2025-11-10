@@ -1,0 +1,15 @@
+﻿orkg:P183129,orkg:P183125,orkg:P183133,orkg:P173032,orkg:P183134,paper:doi,paper:research_field
+resource:C4F8/Ar plasma,resource:Ar plasma,SiO2/Si3N4,0.2–15.0,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,10.1116/1.4935462,R254
+resource:CHF3/Ar plasma,resource:Ar plasma,SiO2/Si3N4,0.2–15.0,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,10.1116/1.4935462,R254
+resource:C4F8/Ar plasma,resource:Ar plasma,SiO2/Si3N4,>7.0,Precursor selection,10.1116/1.5035291,R254
+resource:C4F8/H2/Ar plasma,resource:Ar plasma,SiO2/Si3N4,>7.0,Precursor selection,10.1116/1.5035291,R254
+resource:C3H3F3/Ar plasma,resource:Ar plasma,SiO2/Si3N4,>7.0,Precursor selection,10.1116/1.5035291,R254
+resource:C4F8/Ar plasma,resource:Ar plasma,SiO2/Si,>10.0,Precursor selection,10.1116/1.5035291,R254
+resource:C4F8/H2/Ar plasma,resource:Ar plasma,SiO2/Si,>10.0,Precursor selection,10.1116/1.5035291,R254
+resource:C3H3F3/Ar plasma,resource:Ar plasma,SiO2/Si,>10.0,Precursor selection,10.1116/1.5035291,R254
+resource:C4F8 plasma,resource:Ar plasma,SiO2/Si,2.6–17.5,Precursor selection,10.1116/1.5134710,R254
+resource:CHF3 plasma,resource:O2 plasma,SiO2/Si,2.6–17.5,Precursor selection,10.1116/1.5134710,R254
+resource:C3F7OCH3 plasma,resource:O2 plasma,SiO2/Si,2.6–17.5,Precursor selection,10.1116/1.5134710,R254
+resource:n-C3F7OCH3 plasma,resource:Ar plasma,SiO2/Si,17.5,Precursor selection,10.1021/acssuschemeng.2c05186,R254
+resource:i-C3F7OCH3 plasma,resource:Ar plasma,SiO2/Si,102.8,Precursor selection,10.1021/acssuschemeng.2c05186,R254
+resource:CF3CF2CF2CH2OH plasma,resource:Ar plasma,SiO2/Si,3.4,Precursor selection,10.1021/acssuschemeng.2c05186,R254

@@ -2,21 +2,11 @@
 """
 Convert merged-w-dois CSV to ORKG-ready CSV.
 
-- Column mapping:
-  Material      -> P9071
-  Precursor 1   -> P180042
-  Precursor 2   -> P180043
-  Precursor 3   -> P180044
-  Precursor 4   -> P180045
-  GPC [Å]/[Ã…]  -> P180041
-  T [°C]/[Â°C]  -> P180013
-  (Keep 'doi' column as-is)
+Auto-detects which ORKG property IDs (PIDs) to include by matching input headers.
 
-- For Material and Precursor 1..4 values:
-  * Remove all spaces inside the chemical/molecule (e.g., "H 2 O" -> "H2O", "Cp 3 Sc" -> "Cp3Sc",
-    "Sc(thd) 3" -> "Sc(thd)3")
-  * BUT keep a space before trailing "plasma" (e.g., "O 2 plasma" -> "O2 plasma")
-  * Prefix non-empty values with "resource:" (e.g., "resource:O3", "resource:O2 plasma")
+Normalization rules for molecule-like columns:
+- Remove spaces inside the chemical/molecule, but keep a space before "plasma".
+- Prefix non-empty values with "resource:".
 """
 
 import argparse
@@ -24,167 +14,209 @@ import re
 from pathlib import Path
 import pandas as pd
 
-# Candidate headers to tolerate encoding differences on Windows
+# ==============================================================
+# 1) HEADER MAP (your cleaned-up version)
+# ==============================================================
+
 CANDIDATE_HEADERS = {
     "P9071":   ["Material"],
     "P180042": ["Precursor 1"],
     "P180043": ["Precursor 2"],
     "P180044": ["Precursor 3"],
     "P180045": ["Precursor 4"],
-    "P180041": ["GPC [Å]", "GPC [Ã…]", "GPC [A]"],    # tolerate odd encodings
-    "P180013": ["T [°C]", "T [Â°C]", "T [C]"],        # tolerate odd encodings
+    "P180041": ["GPC [Å]", "GPC [Ã…]", "GPC [A]"],
+    "P180013": ["T [°C]", "T [Â°C]", "T [C]"],
     "doi":     ["doi"],
 
-    # --- ALE mapping (unique properties) ---
     "P183117": ["Materials Surface", "Material surface", "Materials surface", "Materialsurface"],
-    "P183118": ["Surface adsorption", "Adsorption precursor", "Adsorption"],
-    "P183119": ["Surface removal", "Removal precursor", "Removal"],
+    "P183118": ["Surface adsorption", "Adsorption precursor"],
+    "P183119": ["Surface removal", "Removal precursor"],  # no plain "Removal"
     "P183120": ["EPC (Å/cycle)", "EPC (A/cycle)", "EPC (Ã…/cycle)", "EPC (Ã/cycle)", "EPC"],
-    "P183121": ["Etching temperature", "Etch temperature", "Etching temp", "Etch temp",
-                "T [°C]", "T [Â°C]", "T [C]"],
+    "P183121": ["Etching temperature", "Etch temperature", "Etching temp", "Etch temp"],
 
-    # --- new ALE+ extension mappings ---
     "P183123": ["Semi-conductor", "Semiconductor", "Semi conductor"],
     "P183124": ["Modification"],
-    "P183125": ["Removal"],
+    "P183125": ["Removal"],  # canonical
     "P183126": ["Activation"],
     "P183127": ["Material type", "Type of material", "Materialtype"],
+
+    "P183142": [
+        "Precursor Chemistries for Adsorption",
+        "Precursor chemistries for adsorption",
+        "Precursor Chemistry for Adsorption",
+        "Precursor chemistry for adsorption",
+        "Precursor chemistries (adsorption)",
+        "Precursor Chemistries for Adsorption: P183142",
+        "Precursor Chemistries for Adsorption (P183142)",
+        "Adsorption precursor chemistries"
+    ],
+    "P183143": [
+        "Energy Source for Etching/Desorption",
+        "Energy source for etching/desorption",
+        "Energy Source for Etching / Desorption",
+        "Energy Source for Desorption",
+        "Energy Source for Etching",
+        "Energy source (etching/desorption)",
+        "Energy Source for Etching/Desorption: P183143",
+        "Energy Source for Etching/Desorption (P183143)"
+    ],
+
+    "P183129": ["Precursor chemistries for fluorination"],
+    "P183130": ["Process temp. (°C)", "Process temperature (°C)"],
+    "P183131": ["Etching rate (Å/cycle)", "Etching rate"],
+    "P183132": ["Ion energy in the removal step (Bias voltage)"],
+    "P183133": ["Selectivity of material"],
+    "P173032": ["Selectivity"],
+    "P183134": ["Improving etch selectivity method"],
+    "P183135": ["Method of removal chamber wall effect"],
+    "P183136": ["Etching mechanism"],
+    "P183137": ["1st step", "First step"],
+    "P183138": ["2nd step", "Second step"],
+    "P183139": ["3rd step", "Third step"],
 }
 
-# Molecule-like columns that need chemical normalization + "resource:" prefix
-MOLECULE_COL_PIDS = [
-    "P9071", "P180042", "P180043", "P180044", "P180045",
-    "P183117", "P183118", "P183119",
-    "P183123", "P183124", "P183125", "P183126", "P183127",
-]
-
+# ==============================================================
+# 2) TOKEN-AWARE HEADER MATCHER  (replaces your old find_actual_column)
+# ==============================================================
 
 def _norm_header(s: str) -> str:
-    s = (s or "").replace("\u00a0", " ")  # NBSP → space
+    s = (s or "")
+    # strip BOM / zero-width
+    s = s.replace("\ufeff", "").replace("\u200b", "").replace("\u200c", "").replace("\u200d", "")
+    s = s.replace("\u00a0", " ")
     s = re.sub(r"\s+", " ", s).strip().lower()
     return s
 
+def _tokens(s: str):
+    return [t for t in re.split(r"[^a-z0-9]+", _norm_header(s)) if t]
 
 def find_actual_column(df_cols, candidates):
-    # map normalized -> original
     norm_map = {_norm_header(c): c for c in df_cols}
-    # exact normalized match
+
+    # exact match first
     for cand in candidates:
         nc = _norm_header(cand)
         if nc in norm_map:
             return norm_map[nc]
-    # relaxed: substring match on normalized headers
-    for cand in candidates:
-        nc = _norm_header(cand)
-        for k, orig in norm_map.items():
-            if nc in k or k in nc:
+
+    # token-aware fallback: only when candidate has >= 2 tokens
+    cand_tokens_list = [(cand, _tokens(cand)) for cand in candidates]
+    cand_tokens_list = [(cand, toks) for cand, toks in cand_tokens_list if len(toks) >= 2]
+
+    for cand, cand_toks in cand_tokens_list:
+        for k_norm, orig in norm_map.items():
+            hdr_toks = set(_tokens(orig))
+            if all(t in hdr_toks for t in cand_toks):
                 return orig
+
     return None
 
+# ==============================================================
+# 3) PID PRIORITY LIST AND COLLISION HANDLING
+# ==============================================================
+
+ORDERED_PIDS = [
+    "P183129","P183125","P183130","P183131","P183132",
+    "P183133","P173032","P183134","P183135",
+    "P183136","P183137","P183138","P183139",
+    "P183142","P183143",
+    "P183117","P183118","P183119","P183120","P183121",
+    "P183123","P183124","P183126","P183127",
+    "P9071","P180042","P180043","P180044","P180045",
+    "P180041","P180013",
+]
+
+# ==============================================================
+# 4) MOLECULE NORMALIZATION HELPER
+# ==============================================================
+
+MOLECULE_COL_PIDS = {
+    "P183129","P183125","P183117","P183118","P183119",
+    "P183142",  # keep chemicals compact if present
+    # P183143 removed → preserve spaces for energy-source phrases
+    "P183123","P183124","P183126","P183127",
+    "P9071","P180042","P180043","P180044","P180045",
+    "P183137","P183138","P183139",
+}
 
 def normalize_molecule(value: str) -> str:
-    """
-    Remove spaces within the chemical part, but keep a space before a trailing 'plasma'.
-    Examples:
-      "O 3"            -> "O3"
-      "H 2 O"          -> "H2O"
-      "O 2 plasma"     -> "O2 plasma"
-      "Sc(thd) 3"      -> "Sc(thd)3"
-      "Cp 3 Sc"        -> "Cp3Sc"
-    """
-    s = (value or "").strip()
+    s = (str(value) or "").strip()
     if not s:
         return ""
-
-    # Normalize whitespace
     s = re.sub(r"\s+", " ", s)
-
-    # Detect 'plasma' as a trailing token (case-insensitive)
     m = re.search(r"\bplasma\b", s, flags=re.IGNORECASE)
     if m:
         base = s[:m.start()].strip()
-        # join all spaces inside the base
         base_compact = re.sub(r"\s+", "", base)
         return f"{base_compact} plasma"
-
-    # No 'plasma' → remove all spaces
     return re.sub(r"\s+", "", s)
 
+# ==============================================================
+# MAIN
+# ==============================================================
 
 def main():
-    ap = argparse.ArgumentParser(description="Convert merged-w-dois CSV to ORKG-ready CSV with property IDs.")
-    ap.add_argument("--in", dest="inp", required=True, help="Input CSV (e.g., merged-w-dois-tab-3.csv)")
-    ap.add_argument("--out", dest="out", required=True, help="Output CSV for ORKG upload")
-    ap.add_argument(
-        "--pids",
-        nargs="+",
-        required=True,
-        help=(
-            "List of property IDs to include, in order. "
-            "Example: --pids P183117 P183118 P183119 P183120 P183121 P183123 P183124 P183125 P183126 P183127"
-        ),
-    )
+    ap = argparse.ArgumentParser(description="Convert merged CSV to ORKG-ready CSV with property IDs (auto-detected).")
+    ap.add_argument("--in", dest="inp", required=True, help="Input CSV file")
+    ap.add_argument("--out", dest="out", required=True, help="Output CSV file")
     args = ap.parse_args()
 
     inp = Path(args.inp).expanduser().resolve()
     outp = Path(args.out).expanduser().resolve()
 
-    # Read input (auto-detect delimiter)
-    df = pd.read_csv(inp, sep=None, engine="python", dtype=str).fillna("")
+    df = pd.read_csv(inp, sep=None, engine="python", dtype=str, encoding="utf-8-sig").fillna("")
 
-    # Resolve actual columns present
-    present = {}
-    for pid, candidates in CANDIDATE_HEADERS.items():
-        col = find_actual_column(df.columns, candidates)
-        present[pid] = col  # may be None for optional ones
+    # detect which columns exist
+    present = {pid: find_actual_column(df.columns, cands)
+               for pid, cands in CANDIDATE_HEADERS.items()}
 
-    # --- forward-fill any user-specified PID columns automatically ---
-    src_cols_to_ffill = []
-    for pid in args.pids:
-        col = present.get(pid)
-        if col:  # only if we actually found a column for this PID
-            src_cols_to_ffill.append(col)
+    # ---- Resolve collisions by priority ----
+    seen_src = set()
+    pids_used = []
+    for pid in ORDERED_PIDS:
+        src = present.get(pid)
+        if not src:
+            continue
+        if src in seen_src:
+            continue  # skip duplicates (like Removal)
+        seen_src.add(src)
+        pids_used.append(pid)
+    pids_used.append("doi")
 
+    # ---- Forward fill unique source columns ----
+    src_cols_to_ffill = [present[pid] for pid in pids_used if pid != "doi" and present.get(pid)]
+    seen = set()
+    src_cols_to_ffill = [c for c in src_cols_to_ffill if not (c in seen or seen.add(c))]
     if src_cols_to_ffill:
-        df[src_cols_to_ffill] = (
+        filled = (
             df[src_cols_to_ffill]
             .replace(r"^\s*$", pd.NA, regex=True)
             .ffill()
         )
+        for col in src_cols_to_ffill:
+            df[col] = filled[col]
 
-    # Build output columns dynamically (from user-specified list + doi)
-    out_cols = args.pids + ["doi"]
-    out_df = pd.DataFrame(columns=out_cols)
-
-    # Copy/transform columns
-    for pid in out_cols:
+    # ---- Build output ----
+    out_df = pd.DataFrame(columns=pids_used)
+    for pid in pids_used:
         if pid == "doi":
-            # Preserve DOI column as-is
-            src = present.get("doi")
-            if src:
-                out_df["doi"] = df[src].astype(str)
-            elif "doi" in df.columns:
-                out_df["doi"] = df["doi"].astype(str)
-            else:
-                out_df["doi"] = ""
+            src = present.get("doi") or ("doi" if "doi" in df.columns else None)
+            out_df["doi"] = df[src].astype(str) if src else ""
             continue
 
         src = present.get(pid)
+        if not src:
+            out_df[pid] = ""
+            continue
         if pid in MOLECULE_COL_PIDS:
-            # Normalize molecules and prefix with "resource:"
-            if src:
-                out_df[pid] = df[src].apply(lambda v: f"resource:{normalize_molecule(v)}" if str(v).strip() else "")
-            else:
-                out_df[pid] = ""
+            out_df[pid] = df[src].apply(lambda v: f"resource:{normalize_molecule(v)}" if str(v).strip() else "")
         else:
-            # Direct copy for numeric/text properties
-            out_df[pid] = df[src].astype(str) if src else ""
+            out_df[pid] = df[src].astype(str)
 
-    # Write output
     outp.parent.mkdir(parents=True, exist_ok=True)
     out_df.to_csv(outp, index=False, encoding="utf-8-sig")
-    print(f"Done. Wrote ORKG CSV: {outp}")
-    print("Columns:", ", ".join(out_df.columns))
+    print(f"✅ Done. Wrote ORKG CSV: {outp}")
+    print("→ Columns:", ", ".join(out_df.columns))
 
 
 if __name__ == "__main__":

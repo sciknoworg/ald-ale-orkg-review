@@ -1,0 +1,47 @@
+idx,raw_ref,best_doi,best_title,best_container_title,best_year,best_volume,best_page,best_article_number,score,decision
+1,"[1] J. Coburn, H. F. Winters, and T. J. Chuang, J. Appl. Phys. 48, 3532 (1977).",10.1063/1.324150,Ion-surface interactions in plasma etching,Journal of Applied Physics,1977,48,3532-3540,,100,accepted
+2,"[2] H. F. Winters and J. W. Coburn, Surf. Sci. Rep. 14, 162 (1992).",10.1016/0167-5729(92)90009-z,Surface science aspects of etching reactions,Surface Science Reports,1992,14,162-269,,95,accepted
+3,"[3] F. Palumbo, C. Wen, S. Lombardo, S. Pazos, F. Aguirre, M. Eizenberg, F. Hui, and M. Lanza, Adv. Funct. Mater. 30, 1900657 (2020).",10.1002/adfm.202070117,Research at GTIIT: The Birth of Guangdong Technion–Israel Institute of Technology: Innovative and Sophisticated Education and Research in China (Adv. Funct. Mater. 18/2020),Advanced Functional Materials,2020,30,,2070117,70,accepted
+4,"[4] V. M. Donnelly and A. Kornblit, J. Vac. Sci. Technol. A 31, 050825 (2013).",,,,,,,,,no_match
+5,"[5] T. Faraz, F. Roozeboom, H. C. M. Knoops, and W. M. M. Kessels, ECS J. Solid State Sci. Technol. 4, N5023 (2015).",10.1149/2.0051506jss,Atomic Layer Etching: What Can We Learn from Atomic Layer Deposition?,ECS Journal of Solid State Science and Technology,2015,4,N5023-N5032,,100,accepted
+6,"[6] K. J. Kanarik, T. Lill, E. A. Hudson, S. Sriraman, S. Tan, J. Marks, V. Vahedi, and R. A. Gottscho, J. Vac. Sci. Technol. A 33, 020802 (2015).",,,,,,,,,no_match
+7,"[7] G. Oehrlein, D. Metzler, and C. Li, ECS J. Solid State Sci. Technol. 4, N5041 (2015).",10.1149/2.0061506jss,Atomic Layer Etching at the Tipping Point: An Overview,ECS Journal of Solid State Science and Technology,2015,4,N5041-N5053,,100,accepted
+8,"[8] Y. Kim, S. Lee, Y. Cho, S. Kim, and H. Chae, J. Vac. Sci. Technol. A 38, 022606 (2020).",10.1116/1.5134710,,,,,,,,accepted
+9,"[9] J. Kim, H. Kang, Y. Kim, M. Jeon, and H. Chae, Plasma Processes Polym. e2300216 (2024).",,,,,,,,,no_match
+10,"[10] S. K. Sung, T. Y. Kim, E. S. Cho, H. J. Cho, B. Y. Choi, C. W. Oh, B. K. Cho, C. H. Lee, and D. Park, IEEE Trans. Nanotechnol. 5, 174 (2006).",10.1109/tnano.2006.869954,Fully integrated SONOS flash memory cell array with BT (body tied)-FinFET structure,IEEE Transactions On Nanotechnology,2006,5,174-179,,90,accepted
+11,"[11] H. Yun, T. Kim, C. B. Shin, C. -K. Kim, J. -H. Min, and S. H. Moon, Korean J. Chem. Eng. 24, 670 (2007).",10.1007/s11814-007-0023-9,Comparison of atomic scale etching of poly-Si in inductively coupled Ar and He plasmas,Korean Journal of Chemical Engineering,2007,24,670-673,,100,accepted
+12,"[12] N. R. Johnson and S. M. George, ACS Appl. Mater. Interfaces 9, 34435 (2017).",,,,,,,,,no_match
+13,"[13] J. Kim, D. Shim, Y. Kim, and H. Chae, J. Vac. Sci. Technol. A 40, 032603 (2022).",,,,,,,,,no_match
+14,"[14] Y. Lee, Y. Kim, J. Son, and H. Chae, J. Vac. Sci. Technol. A 40, 022602 (2022).",,,,,,,,,no_match
+15,"[15] D. Shim, J. Kim, Y. Kim, and H. Chae, J. Vac. Sci. Technol. B 40, 022208 (2022).",,,,,,,,,no_match
+16,"[16] N. R. Johnson, H. Sun, K. Sharma, and S. M. George, J. Vac. Sci. Technol. A 34, 050603 (2016).",,,,,,,,,no_match
+17,"[17] Y. Lee and S. M. George, Chem. Mater. 29, 8202 (2017).",10.1021/acs.chemmater.7b02286,"Thermal Atomic Layer Etching of Titanium Nitride Using Sequential, Self-Limiting Reactions: Oxidation to TiO<sub>2</sub> and Fluorination to Volatile TiF<sub>4</sub>",Chemistry of Materials,2017,29,8202-8210,,95,accepted
+18,"[18] A. M. Cano, A. E. Marquardt, J. W. DuMont, and S. M. George, J. Phys. Chem. C 123, 10346 (2019).",10.1021/acs.jpcc.9b00124,Effect of HF Pressure on Thermal Al<sub>2</sub>O<sub>3</sub>Atomic Layer Etch Rates and Al<sub>2</sub>O<sub>3</sub>Fluorination,The Journal of Physical Chemistry C,2019,123,10346-10355,,100,accepted
+19,"[19] S. M. George, Acc. Chem. Res. 53, 1151 (2020).",10.1021/acs.accounts.0c00084,Mechanisms of Thermal Atomic Layer Etching,Accounts of Chemical Research,2020,53,1151-1160,,95,accepted
+20,"[20] Y. Kim, H. Kang, H. Ha, M. Choi, M. Jeon, S. M. Cho, and H. Chae, Plasma Processes Polym. e2300161 (2023).",,,,,,,,,no_match
+21,"[21] Y. Kim, H. Kang, H. Ha, C. Kim, S. Cho, and H. Chae, Appl. Surf. Sci. 627, 157309 (2023).",10.1016/j.apsusc.2023.157309,Plasma atomic layer etching of molybdenum with surface fluorination,Applied Surface Science,2023,627,157309,157309,120,accepted
+22,"[22] M. Kawakami, D. Metzler, C. Li, and G. S. Oehrlein, J. Vac. Sci. Technol. A 34, 040603 (2016).",10.1116/1.4949260,,,,,,,,accepted
+23,"[23] C. Li, D. Metzler, C. S. Lai, E. A. Hudson, and G. S. Oehrlein, J. Vac. Sci. Technol. A 34, 041307 (2016).",,,,,,,,,no_match
+24,"[24] D. Metzler, C. Li, S. Engelmann, R. L. Bruce, E. A. Joseph, and G. S. Oehrlein, J. Vac. Sci. Technol. A 34, 01B101 (2016).",10.1116/1.4935462,,,,,,,,accepted
+25,"[25] J. W. DuMont, A. E. Marquardt, A. M. Cano, and S. M. George, ACS Appl. Mater. Interfaces 9, 10296 (2017).",10.1021/acsami.7b01259,,,,,,,,accepted
+26,"[26] R. J. Gasvoda, A. W. van de Steeg, R. Bhowmick, E. A. Hudson, and S. Agarwal, ACS Appl. Mater. Interfaces 9, 31067 (2017).",,,,,,,,,no_match
+27,"[27] S. S. Kaler, Q. Lou, V. M. Donnelly, and D. J. Economou, J. Phys. D: Appl. Phys. 50, 234001 (2017).",10.1088/1361-6463/aa6f40,Atomic layer etching of silicon dioxide using alternating C<sub>4</sub>F<sub>8</sub>and energetic Ar<sup>+</sup>plasma beams,Journal of Physics D: Applied Physics,2017,50,234001,,100,accepted
+28,"[28] D. Metzler, C. Li, C. S. Lai, E. A. Hudson, and G. S. Oehrlein, J. Phys. D: Appl. Phys. 50, 254006 (2017).",10.1088/1361-6463/aa71f1,Investigation of thin oxide layer removal from Si substrates using an SiO<sub>2</sub>atomic layer etching approach: the importance of the reactivity of the substrate,Journal of Physics D: Applied Physics,2017,50,254006,,100,accepted
+29,"[29] T. Tsutsumi, H. Kondo, M. Hori, M. Zaitsu, A. Kobayashi, T. Nozawa, and N. Kobayashi, J. Vac. Sci. Technol. A 35, 01A103 (2017).",10.1016/j.vacuum.2016.09.011,Micro-multi-plasmajet array thruster for space propulsion applications,Vacuum,2017,136,190-195,,55,accepted
+30,"[30] K. Koh, Y. Kim, C. -K. Kim, and H. Chae, J. Vac. Sci. Technol. A 36, 01B106 (2018).",10.1116/1.5003417,,,,,,,,accepted
+31,"[31] K. Y. Lin, C. Li, S. Engelmann, R. L. Bruce, E. A. Joseph, D. Metzler, and G. S. Oehrlein, J. Vac. Sci. Technol. A 36, 040601 (2018).",10.1116/1.5035291,,,,,,,,accepted
+32,"[32] R. Rahman, E. C. Mattson, J. P. Klesko, A. Dangerfield, S. Rivillon-Amy, D. C. Smith, D. Hausmann, and Y. J. Chabal, ACS Appl. Mater. Interfaces 10, 31784 (2018).",10.1021/acsami.8b10899,,,,,,,,accepted
+33,"[33] S. Dallorto, A. Goodyear, M. Cooke, J. E. Szornel, C. Ward, C. Kastl, A. Schwartzberg, I. W. Rangelow, and S. Cabrini, Plasma Processes Polym. 16, 1900051 (2019).",10.1002/ppap.201900051,Atomic layer etching of SiO<sub>2</sub> with Ar and CHF<sub>3</sub> plasmas: A self‐limiting process for aspect ratio independent etching,Plasma Processes and Polymers,2019,16,,1900051,100,accepted
+34,"[34] R. J. Gasvoda, Y. G. Verstappen, S. Wang, E. A. Hudson, and S. Agarwal, J. Vac. Sci. Technol. A 37, 051003 (2019).",,,,,,,,,no_match
+35,"[35] Y. Cho, Y. Kim, S. Kim, and H. Chae, J. Vac. Sci. Technol. A 38, 022604 (2020).",10.1116/1.5132986,,,,,,,,accepted
+36,"[36] G. Antoun, T. Tillocher, P. Lefaucheux, J. Faguet, K. Maekawa, and R. Dussart, Sci. Rep. 11, 357 (2021).",10.1038/s41598-020-79560-z,Mechanism understanding in cryo atomic layer etching of SiO2 based upon C4F8 physisorption,Scientific Reports,2021,11,,357,100,accepted
+37,"[37] A. Fischer, A. Routzahn, S. M. George, and T. Lill, J. Vac. Sci. Technol. A 39, 030801 (2021).",,,,,,,,,no_match
+38,"[38] R. J. Gasvoda, Z. Zhang, E. A. Hudson, and S. Agarwal, J. Vac. Sci. Technol. A 39, 040401 (2021).",,,,,,,,,no_match
+39,"[39] Y. J. Gill, D. S. Kim, H. S. Gil, K. H. Kim, Y. J. Jang, Y. E. Kim, and G. Y. Yeom, Plasma Processes Polym. 18, 2100063 (2021).",10.1002/ppap.202100063,Cyclic etching of silicon oxide using NF<sub>3</sub>/H<sub>2</sub> remote plasma and NH<sub>3</sub> gas flow,Plasma Processes and Polymers,2021,18,,2100063,100,accepted
+40,"[40] M. Y. Yoon, H. J. Yeom, J. H. Kim, W. Chegal, Y. J. Cho, D. C. Kwon, J. R. Jeong, and H. C. Lee, Phys. Plasmas 28, 063504 (2021).",10.1063/5.0047811,Discharge physics and atomic layer etching in Ar/C4F6 inductively coupled plasmas with a radio frequency bias,Physics of Plasmas,2021,28,,063504,100,accepted
+41,"[41] S. Kim, I. Park, and J. Ahn, Appl. Surf. Sci. 589, 153045 (2022).",10.1016/j.apsusc.2022.153045,Atomic layer etching of SiO2 using trifluoroiodomethane,Applied Surface Science,2022,589,153045,153045,120,accepted
+42,"[42] N. Miyoshi, H. Kobayashi, K. Shinoda, M. Kurihara, K. Kawamura, Y. Kouzuma, and M. Izawa, J. Vac. Sci. Technol. A 40, 012601 (2022).",10.1116/6.0001517,,,,,,,,accepted
+43,"[43] Y. Kim, H. Kang, C. Kim, and H. Chae, ACS Sustainable Chem. Eng. 11, 6136 (2023).",10.1021/acssuschemeng.2c05186,,,,,,,,accepted
+44,"[44] C. Mogab, A. Adams, and D. Flamm, J. Appl. Phys. 49, 3796 (1978).",10.1063/1.325382,Plasma etching of Si and SiO2—The effect of oxygen additions to CF4 plasmas,Journal of Applied Physics,1978,49,3796-3803,,100,accepted
+45,"[45] H. Doh, J. Kim, K. Whang, and S. Lee, J. Vac. Sci. Technol. A 14, 1088 (1996).",,,,,,,,,no_match
+46,"[46] D. Marra and E. Aydil, J. Vac. Sci. Technol. A 15, 2508 (1997).",,,,,,,,,no_match

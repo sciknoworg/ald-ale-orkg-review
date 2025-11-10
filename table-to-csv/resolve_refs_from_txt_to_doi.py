@@ -171,28 +171,141 @@ JOURNAL_MAP.update({
     "j. vac. sci. technol.": "Journal of Vacuum Science & Technology",
 })
 
+JOURNAL_MAP.update({
+    # New (from your refs)
+    "adv funct mater": "Advanced Functional Materials",
+    "adv. funct. mater.": "Advanced Functional Materials",
+
+    "plasma processes polym": "Plasma Processes and Polymers",
+    "plasma processes polym.": "Plasma Processes and Polymers",
+
+    "ieee trans nanotechnol": "IEEE Transactions on Nanotechnology",
+    "ieee trans. nanotechnol.": "IEEE Transactions on Nanotechnology",
+
+    "korean j chem eng": "Korean Journal of Chemical Engineering",
+    "korean j. chem. eng.": "Korean Journal of Chemical Engineering",
+
+    "phys plasmas": "Physics of Plasmas",
+    "phys. plasmas": "Physics of Plasmas",
+
+    "acc chem res": "Accounts of Chemical Research",
+    "acc. chem. res.": "Accounts of Chemical Research",
+
+    "acs sustainable chem eng": "ACS Sustainable Chemistry & Engineering",
+    "acs sustainable chem. eng.": "ACS Sustainable Chemistry & Engineering",
+})
+
+
 def expand_journal(j: str) -> str:
     jn = norm_punct(j)
     return JOURNAL_MAP.get(jn, j)
 
-# ------- TXT parsing -------
+JVST_A_ALIASES = {
+    "journal of vacuum science & technology a",
+    "journal of vacuum science & technology a: vacuum, surfaces, and films",
+    "j vac sci technol a",
+}
+JVST_B_ALIASES = {
+    "journal of vacuum science & technology b",
+    "journal of vacuum science & technology b: microelectronics and nanometer structures processing measurement and phenomena",
+    "j vac sci technol b",
+}
+
+def is_jvst_ab(jname: str) -> bool:
+    j = norm_punct(expand_journal(jname))
+    return j in {norm_punct(x) for x in JVST_A_ALIASES | JVST_B_ALIASES}
+
+
+# ------- TXT parsing (robust) -------
+
+# Detect starts like:
+#   [12] ...   |   12. ...   |   12) ...   |   12- ...   |   12Smith ... (no space)
+# BUT NOT plain "12 " (digits + space) which often starts a continuation like "324 (1992)."
+_START_RE = re.compile(
+    r"""^\s*
+        (?:\[(?P<b>\d+)\]            # [n]
+         |
+         (?P<d>\d+)                  # n
+         (?=                         # lookahead: don't consume
+             [\.\)\-]                # punctuation after the number
+             |                       # OR
+             \s*[A-Z]                # optional space(s) then an Uppercase letter (author)
+         )
+        )
+    """,
+    re.VERBOSE
+)
+
+
+def _match_ref_start(line: str) -> Optional[int]:
+    """
+    Return the numeric index if the line starts a new reference, else None.
+    Supports: [n]  |  n.  |  n)  |  n-
+    """
+    m = _START_RE.match(line)
+    if not m:
+        return None
+    return int(m.group("b") or m.group("d"))
+
+def _strip_any_index_prefix(line: str) -> Tuple[Optional[int], str]:
+    """
+    Strip leading index prefix and return (idx, rest_of_line).
+    """
+    m = _START_RE.match(line)
+    if m:
+        idx = int(m.group("b") or m.group("d"))
+        return idx, line[m.end():].strip()
+    return None, line.strip()
+
 def join_wrapped_refs(txt_path: Path) -> List[str]:
     """
-    Combine wrapped lines: each reference starts with [n]; subsequent lines
-    belong to the same reference until the next [m].
+    Combine wrapped lines into one string per reference.
+    Works for both:
+      - [n] Reference lines (possibly wrapped)
+      - n. / n) / n- Reference lines (possibly wrapped)
     """
     lines = [ln.rstrip() for ln in txt_path.read_text(encoding="utf-8").splitlines()]
-    refs = []
-    cur = ""
-    for ln in lines:
-        if re.match(r"\s*\[\d+\]", ln):  # new ref starts
-            if cur.strip():
-                refs.append(cur.strip())
-            cur = ln.strip()
+
+    refs: List[str] = []
+    cur_idx: Optional[int] = None
+    cur_text: List[str] = []
+
+    def _flush():
+        nonlocal cur_idx, cur_text
+        if cur_idx is not None:
+            # Join with spaces, normalize internal whitespace
+            joined = " ".join(part.strip() for part in cur_text if part.strip())
+            # Rebuild a canonical "[n] " prefix so the downstream parser can stay unchanged
+            refs.append(f"[{cur_idx}] {joined}".strip())
+        cur_idx, cur_text = None, []
+
+    for raw in lines:
+        if not raw.strip():
+            continue
+
+        maybe_idx = _match_ref_start(raw)
+
+        if maybe_idx is not None:
+            # Guard against false positives like "324 (1992)." being split off:
+            is_sequential = (cur_idx is None and maybe_idx == 1) or (cur_idx is not None and maybe_idx == cur_idx + 1)
+
+            if not is_sequential:
+                # Not sequential → treat as a continuation line (likely page/year)
+                cur_text.append(raw.strip())
+                continue
+
+            # Starting a new, sequential reference
+            _flush()
+            cur_idx = maybe_idx
+            _, rest = _strip_any_index_prefix(raw)
+            cur_text.append(rest)
         else:
-            cur += " " + ln.strip()
-    if cur.strip():
-        refs.append(cur.strip())
+            # Continuation of current reference (page/article/year tails, etc.)
+            if cur_idx is None:
+                cur_idx = 1
+            cur_text.append(raw.strip())
+
+    _flush()
     return refs
 
 def strip_bracket_index(line: str) -> Tuple[Optional[int], str]:
@@ -211,9 +324,9 @@ def extract_volume_after_year(s: str, year: Optional[str]) -> Optional[str]:
     if idx == -1: return None
     tail = s[idx + len(year):]
     # commonly "... year, VOL, PAGE"
-    m = re.search(r",\s*([0-9]+)\s*,", tail)
+    m = re.search(r",\s*([0-9]+(?:\s*\(\s*\d+(?:\s*[–-]\s*\d+)?\s*\))?)\s*,", tail)
     if m: return m.group(1)
-    m = re.search(r"[,;]\s*([0-9]+)\b", tail)
+    m = re.search(r"[,;]\s*([0-9]+(?:\s*\(\s*\d+(?:\s*[–-]\s*\d+)?\s*\))?)\b", tail)
     if m: return m.group(1)
     return None
 
@@ -222,7 +335,7 @@ def extract_page_or_artnum(s: str) -> Optional[str]:
     if len(parts) >= 2:
         token = parts[-1].rstrip(".").replace(" ", "").replace("\u00a0", "")
         token = token.replace("-", "")
-        if re.search(r"[0-9]{3,}", token):
+        if re.search(r"[0-9]{1,}", token):
             return token
     return None
 
@@ -241,7 +354,7 @@ def extract_author_lastnames(s: str, max_authors: int = 5) -> List[str]:
     j = extract_journal(s, year) or ""
     stop = s.find(j) if j else (s.find(year) if year else len(s))
     author_segment = s[:max(0, stop)]
-    parts = [p.strip() for p in author_segment.split(",") if p.strip()]
+    parts = [p.strip() for p in re.split(r",|;| and ", author_segment) if p.strip()]
     lastnames = []
     for p in parts[:max_authors]:
         ws = re.findall(r"[A-Za-z][A-Za-z\-']+", p)
@@ -249,105 +362,299 @@ def extract_author_lastnames(s: str, max_authors: int = 5) -> List[str]:
             lastnames.append(ws[-1])
     return lastnames[:max_authors]
 
-def parse_refs_from_txt(txt_path: Path) -> List[dict]:
-    joined = join_wrapped_refs(txt_path)
-    recs = []
-    for i, ln in enumerate(joined, 1):
-        idx, body = strip_bracket_index(ln)
+NON_JOURNAL_HINTS = [
+    r"\bIEDM\b", r"\bInternational\s+Electron\s+Devices\s+Meeting\b",
+    r"\bSymposium\b", r"\bConference\b", r"\bProceedings\b", r"\bIOP\s+Conf\.\s+Ser\b",
+    r"\bUS\s*Pat", r"\bPatent\b",
+    r"http[s]?://", r"\bto be published\b", r"\bpp\.\s*\d+",
+
+    # NEW: book/handbook/chapter cues & common publishers
+    r"\b in \s+[A-Z][^,]+?\(",          # “..., “Title,” in Book Title (Publisher, City, Year)”
+    r"\bHandbook\b",
+    r"\bed\.|\bedition\b",
+    r"\b(Wiley|Elsevier|Springer|CRC|Cambridge\s+Univ\.?\s*Press|Oxford\s+Univ\.?\s*Press)\b",
+]
+NON_JOURNAL_RE = re.compile("|".join(NON_JOURNAL_HINTS), re.IGNORECASE)
+
+def is_non_journal_ref(text: str) -> bool:
+    return bool(NON_JOURNAL_RE.search(text))
+
+
+# With quoted title:
+J_REF_WITH_TITLE = re.compile(
+    r"""^\s*(?:\[\d+\]\s*)?                 # optional [n]
+        (?P<authors>.+?),\s*               # authors (comma-separated)
+        [“"](?P<title>.+?)[”"]\s*,\s*      # “Title,” or "Title,"
+        (?P<journal>.+?)\s*(?:,|\s)\s*     # journal, then comma OR just whitespace
+        (?P<volume>\d+(?:\s*\(\s*\d+(?:\s*[–-]\s*\d+)?\s*\))?)   # volume or volume(issue/range)
+        (?:\s*(?:,|\s)\s*(?P<page>[^\s,(]+))?   # optional page/article token (comma OR space)
+        \s*\(\s*(?P<year>\d{4})\s*\)\.?    # (YEAR)
+        """,
+    re.VERBOSE
+)
+
+# Without title:
+J_REF_NO_TITLE = re.compile(
+    r"""^\s*(?:\[\d+\]\s*)?                 # optional [n]
+        (?P<authors>.+?),\s*               # authors
+        (?P<journal>.+?)\s*(?:,|\s)\s*     # journal, then comma OR just whitespace
+        (?P<volume>\d+(?:\s*\(\s*\d+(?:\s*[–-]\s*\d+)?\s*\))?)   # volume or volume(issue)
+        (?:\s*(?:,|\s)\s*(?P<page>[^\s,(]+))?   # optional page/article token
+        \s*\(\s*(?P<year>\d{4})\s*\)\.?    # (YEAR)
+        """,
+    re.VERBOSE
+)
+
+def parse_single_ref(line: str, fallback_idx: int) -> dict:
+    idx, body = strip_bracket_index(line)
+
+    # Quietly tag non-journal items and skip strict parsing
+    if is_non_journal_ref(body):
         y = extract_year(body) or ""
-        v = extract_volume_after_year(body, y) or ""
-        p = extract_page_or_artnum(body) or ""
-        j = extract_journal(body, y) or ""
+        return {
+            "idx": idx or fallback_idx,
+            "raw_ref": line,
+            "authors": extract_author_lastnames(body, max_authors=5),
+            "journal": "",  # unknown / non-journal
+            "year": y,
+            "volume": "",
+            "page_or_article": "",
+        }
+
+    m = J_REF_WITH_TITLE.search(body) or J_REF_NO_TITLE.search(body)
+    if m:
+        j = (m.groupdict().get("journal") or "").strip().rstrip(".")
+        v = (m.groupdict().get("volume") or "").strip()
+        p = (m.groupdict().get("page") or "" ).strip()
+        y = (m.groupdict().get("year") or "" ).strip()
         auths = extract_author_lastnames(body, max_authors=5)
-        recs.append({
-            "idx": idx or i,
-            "raw_ref": ln,
+        return {
+            "idx": idx or fallback_idx,
+            "raw_ref": line,
             "authors": auths,
             "journal": j,
             "year": y,
             "volume": v,
             "page_or_article": p
-        })
-    # sort by idx in case the TXT is out of order
+        }
+
+    # --- fallback heuristics ---
+    y = extract_year(body) or ""
+    v = extract_volume_after_year(body, y) or ""
+    p = extract_page_or_artnum(body) or ""
+    j = extract_journal(body, y) or ""
+    auths = extract_author_lastnames(body, max_authors=5)
+    log(f"[warn] regex parse failed for idx={idx or fallback_idx}: {body}")
+    return {
+        "idx": idx or fallback_idx,
+        "raw_ref": line,
+        "authors": auths,
+        "journal": j,
+        "year": y,
+        "volume": v,
+        "page_or_article": p
+    }
+
+
+def parse_refs_from_txt(txt_path: Path) -> List[dict]:
+    joined = join_wrapped_refs(txt_path)
+    joined = [ln for ln in joined if re.search(r"\b(19|20)\d{2}\b", ln)]
+    recs = [parse_single_ref(ln, i) for i, ln in enumerate(joined, 1)]
+    # Normalize zero/pseudo indices to a sequential order if any 0 slipped in
+    for i, r in enumerate(recs, 1):
+        if not isinstance(r["idx"], int) or r["idx"] <= 0:
+            r["idx"] = i
     recs.sort(key=lambda r: int(r["idx"]))
     return recs
 
+
 # ------- Crossref querying -------
+def pick_page_or_article_filter(token: str, journal: str) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Return (page_filter, article_number_filter). For JVST A/B we avoid page filter on first pass.
+    """
+    if not token:
+        return (None, None)
+    t = token.strip()
+    has_alpha = bool(re.search(r"[A-Za-z]", t))
+    starts_zero = t.startswith("0")
+    only_digits_flag = bool(re.fullmatch(r"\d+", t))
+
+    # JVST: often inconsistent storage -> prefer *no* page filter initially
+    if is_jvst_ab(journal):
+        # still return both so later passes can choose to use them
+        p = f"page:{t}" if only_digits_flag or starts_zero else None
+        a = f"article-number:{t}" if (has_alpha or starts_zero or len(t) >= 5) else None
+        return (p, a)
+
+    # Non-JVST heuristic
+    if has_alpha or starts_zero:
+        return (None, f"article-number:{t}")
+    if only_digits_flag and len(t) >= 1:
+        return (f"page:{t}", None)
+    return (f"page:{t}", f"article-number:{t}")
+
+
+def alternate_page_tokens(token: str) -> List[str]:
+    """
+    Return plausible page tokens to try.
+    For JVST-style article numbers, Crossref may drop leading zeros.
+    e.g., '032603' -> ['032603', '32603'].
+    """
+    if not token:
+        return []
+    t = token.strip()
+    alts = [t]
+    if t.startswith("0") and t.lstrip("0"):
+        alts.append(t.lstrip("0"))
+    return list(dict.fromkeys(alts))  # de-dup
+
+# ---- modify crossref_query: build requests in passes and suppress page filter for JVST on first pass ----
 def crossref_query(journal: str, year: str, volume: str, page_or_art: str,
-                   authors: List[str], mailto: str, rows: int = 7) -> List[dict]:
-    params = {
+                   authors: List[str], mailto: str, rows: int = 7,
+                   raw_biblio: Optional[str] = None) -> List[dict]:
+    headers = {"User-Agent": f"txt-ref-resolver/1.0 (mailto:{mailto})"} if mailto else {}
+
+    def _request(params):
+        try:
+            r = requests.get("https://api.crossref.org/works", params=params, headers=headers, timeout=20)
+            r.raise_for_status()
+            return r.json().get("message", {}).get("items", []) or []
+        except Exception:
+            return []
+
+    # shared base
+    base = {
         "rows": rows,
         "select": "DOI,title,container-title,issued,volume,page,author,article-number",
     }
     if journal:
-        params["query.container-title"] = expand_journal(journal)
+        base["query.container-title"] = expand_journal(journal)
+
+    # filters common to several passes
+    def common_filters(use_volume=True):
+        flt = []
+        if year and re.fullmatch(r"\d{4}", year):
+            flt += [f"from-pub-date:{year}-01-01", f"until-pub-date:{year}-12-31"]
+        if use_volume and volume:
+            # strip any issue part like "27(1)" → volume=27
+            vol_only = re.match(r"\s*(\d+)", volume)
+            flt.append(f"volume:{vol_only.group(1) if vol_only else volume}")
+        return flt
+
+    # Precompute page/article filters
+    pfil, afil = pick_page_or_article_filter(page_or_art, journal)
+
+    # -------- Pass 1: strict container + year + volume (NO page filter if JVST), with author
+    params1 = dict(base)
+    params1["filter"] = ",".join(common_filters(use_volume=True))
+    if not is_jvst_ab(journal) and pfil:
+        params1["filter"] += ("," + pfil)
+    if not is_jvst_ab(journal) and afil:
+        params1["filter"] += ("," + afil)
     if authors:
-        params["query.author"] = authors[0]
+        params1["query.author"] = authors[0]
+    # helpful biblio hint
+    hint = " ".join([expand_journal(journal) if journal else "", volume or "", page_or_art or "", year or ""]).strip()
+    if hint:
+        params1["query.bibliographic"] = hint
 
-    filters = []
-    if year and re.fullmatch(r"\d{4}", year):
-        filters.append(f"from-pub-date:{year}-01-01")
-        filters.append(f"until-pub-date:{year}-12-31")
-    if volume:
-        filters.append(f"volume:{volume}")
-    if page_or_art:
-        filters.append(f"page:{page_or_art}")
-    if filters:
-        params["filter"] = ",".join(filters)
+    items = _request(params1)
+    if items:
+        return items
 
-    headers = {"User-Agent": f"txt-ref-resolver/1.0 (mailto:{mailto})"} if mailto else {}
-    try:
-        r = requests.get("https://api.crossref.org/works", params=params, headers=headers, timeout=20)
-        r.raise_for_status()
-        items = r.json().get("message", {}).get("items", []) or []
+    # -------- Pass 2: drop author
+    params2 = dict(params1)
+    params2.pop("query.author", None)
+    items = _request(params2)
+    if items:
+        return items
+
+    # -------- Pass 3 (JVST emphasis): container + year + volume, *no page/article filter at all*
+    params3 = dict(base)
+    params3["filter"] = ",".join(common_filters(use_volume=True))
+    items = _request(params3)
+    if items:
+        return items
+
+    # -------- Pass 4: full raw bibliographic string
+    if raw_biblio and raw_biblio.strip():
+        params4 = dict(base)
+        params4["query.bibliographic"] = raw_biblio
+        if year and re.fullmatch(r"\d{4}", year):
+            params4["filter"] = f"from-pub-date:{year}-01-01,until-pub-date:{year}-12-31"
+        items = _request(params4)
         if items:
             return items
-    except Exception:
-        pass
 
-    # Fallback: bibliographic string
-    biblio = ", ".join([x for x in [", ".join(authors[:3]) if authors else "", journal, year, volume, page_or_art] if x])
-    params2 = {
-        "rows": rows,
-        "select": "DOI,title,container-title,issued,volume,page,author,article-number",
-        "query.bibliographic": biblio
-    }
-    if year and re.fullmatch(r"\d{4}", year):
-        params2["filter"] = f"from-pub-date:{year}-01-01,until-pub-date:{year}-12-31"
-    try:
-        r = requests.get("https://api.crossref.org/works", params=params2, headers=headers, timeout=20)
-        r.raise_for_status()
-        return r.json().get("message", {}).get("items", []) or []
-    except Exception:
-        return []
+    # -------- Pass 5: compact biblio (authors/journal/year/volume/page)
+    parts = [", ".join(authors[:3]) if authors else "", journal, year, volume, page_or_art]
+    compact = ", ".join([p for p in parts if p]).strip(", ")
+    if compact:
+        params5 = dict(base)
+        params5["query.bibliographic"] = compact
+        if year and re.fullmatch(r"\d{4}", year):
+            params5["filter"] = f"from-pub-date:{year}-01-01,until-pub-date:{year}-12-31"
+        items = _request(params5)
+        if items:
+            return items
+
+
+    return []
+
 
 # ------- scoring -------
+def same_journal(want_j: str, got_container_list: List[str]) -> bool:
+    if not want_j or not got_container_list:
+        return False
+    want = norm_punct(expand_journal(want_j))
+    for c in got_container_list:
+        got = norm_punct(c)
+        # require equality or strong containment in *either* direction
+        if want == got or want in got or got in want:
+            return True
+    return False
+
+def looks_like_wrong_venue(item: dict) -> bool:
+    """Block obvious mismatches that often slip through Crossref fallback."""
+    ct = " ".join(item.get("container-title") or []).lower()
+    bad = [
+        "meeting abstracts",          # ECS Meeting Abstracts etc.
+        "proceedings",                # generic proceedings
+        "neuroscience applied",       # random journals that popped up in logs
+        "micromachines",
+        "annals of oncology",
+    ]
+    return any(b in ct for b in bad)
+
+
 def score_candidate(item: dict, want: dict) -> int:
     score = 0
-    # Year match
+    # Year
     cy = get_year_from_issued(item)
     if want["year"] and cy == want["year"]:
-        score += 15
-    # Journal/container match (abbrev/full)
-    cj_list = item.get("container-title") or []
-    cj = norm_punct(" ".join(cj_list[:1])) if cj_list else ""
-    wj = norm_punct(expand_journal(want["journal"]))
-    if cj and wj and (wj in cj or cj in wj):
         score += 20
-    # Volume match
+    # Journal
+    cj_list = item.get("container-title") or []
+    if same_journal(want["journal"], cj_list):
+        score += 35
+    # Volume
     cv = (item.get("volume") or "").strip()
-    if cv and want["volume"] and cv == want["volume"]:
-        score += 10
-    # Page / article-number match
+    # Compare only leading numeric for volume if want has issue like "27(1)"
+    want_vol_num = re.match(r"\s*(\d+)", want["volume"] or "")
+    want_vol_num = want_vol_num.group(1) if want_vol_num else (want["volume"] or "")
+    if cv and want_vol_num and cv == want_vol_num:
+        score += 15
+    # Page / article-number
     wp = want["page_or_article"]
     if wp:
-        ip = (item.get("page") or "")
+        ip = (item.get("page") or "").replace(" ", "")
         ia = (item.get("article-number") or "")
-        if ip and re.search(rf"\b{re.escape(wp)}\b", ip.replace(" ", "")):
-            score += 15
+        if ip and re.search(rf"\b{re.escape(wp)}\b", ip):
+            score += 20
         if ia and only_digits(ia) == only_digits(wp):
-            score += 15
-    # Author last names (first up to 3)
+            score += 20
+    # Authors (up to 3)
     want_auths = [norm_punct(a) for a in (want["authors"] or []) if a]
     item_auths = [norm_punct(a.get("family","")) for a in (item.get("author") or []) if a.get("family")]
     matches = sum(1 for x in want_auths[:3] if x and x in item_auths)
@@ -418,15 +725,30 @@ def resolve_and_write(
                 "page_or_article": rec["page_or_article"],
             }
 
-            items = crossref_query(rec["journal"], rec["year"], rec["volume"], rec["page_or_article"], rec["authors"], mailto, rows=rows)
+            items = crossref_query(
+                rec["journal"], rec["year"], rec["volume"], rec["page_or_article"],
+                rec["authors"], mailto, rows=rows, raw_biblio=rec["raw_ref"]
+            )
+
             best, best_score = None, -1
             for it in items:
                 sc = score_candidate(it, want)
                 if sc > best_score:
                     best, best_score = it, sc
 
+            # ---- hard checks BEFORE extracting fields ----
+            if best:
+                # strict journal match if we have a journal
+                if want["journal"]:
+                    cj_list = best.get("container-title") or []
+                    if not same_journal(want["journal"], cj_list):
+                        best, best_score = None, -1
+                # obvious venue mismatches
+                if best and looks_like_wrong_venue(best):
+                    best, best_score = None, -1
+
+            # Now populate output fields only if best survived
             doi = title = cont = byear = bvol = bpage = bart = ""
-            decision = "no_match"
             if best:
                 doi = (best.get("DOI") or "").lower().strip()
                 tl = best.get("title") or []
@@ -436,8 +758,9 @@ def resolve_and_write(
                 byear = get_year_from_issued(best)
                 bvol = (best.get("volume") or "").strip()
                 bpage = (best.get("page") or "").strip()
-                bart  = (best.get("article-number") or "").strip()
-                decision = "accepted" if best_score >= min_score else "low_confidence"
+                bart = (best.get("article-number") or "").strip()
+
+            decision = "accepted" if (best and best_score >= min_score) else ("low_confidence" if best else "no_match")
 
             # Write row immediately (so an interrupt still keeps progress)
             w.writerow([idx, rec["raw_ref"], doi, title, cont, byear, bvol, bpage, bart, best_score if best else "", decision])
@@ -451,11 +774,11 @@ def resolve_and_write(
 # ------- CLI -------
 def main():
     ap = argparse.ArgumentParser(description="Resolve DOIs from a TXT list of title-less references via Crossref (simple resume).")
-    ap.add_argument("--txt", required=True, help="TXT file: each ref starts with [n]; lines may wrap")
+    ap.add_argument("--txt", required=True, help="TXT file: references may be wrapped and numbered as [n] or n./n)/n-")
     ap.add_argument("--out", default="resolved_refs.csv", help="Output CSV")
     ap.add_argument("--mailto", default="", help="Email for Crossref User-Agent (recommended)")
-    ap.add_argument("--min-score", type=int, default=35, help="Min score to accept a match (raise to be stricter)")
-    ap.add_argument("--rows", type=int, default=7, help="Crossref candidates to fetch per ref")
+    ap.add_argument("--min-score", type=int, default=50, help="Min score to accept a match (raise to be stricter)")
+    ap.add_argument("--rows", type=int, default=20, help="Crossref candidates to fetch per ref")
     ap.add_argument("--pause", type=float, default=0.25, help="Seconds to sleep between Crossref requests")
     ap.add_argument("--limit", type=int, default=None, help="Process only first N refs from the resume point")
     ap.add_argument("--resume", action="store_true", help="Read existing --out CSV and continue from the next idx")
@@ -466,6 +789,10 @@ def main():
     out_path = Path(args.out).expanduser().resolve()
 
     refs = parse_refs_from_txt(txt_path)
+    if not refs:
+        log("No references parsed from TXT.")
+        return
+
     log(f"Parsed {len(refs)} references from TXT (min idx={refs[0]['idx']} max idx={refs[-1]['idx']})")
 
     if args.start_idx is not None:

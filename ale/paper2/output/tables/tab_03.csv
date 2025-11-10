@@ -1,0 +1,63 @@
+Material etched,Reactant 1,Reactant 2,Reactant 3,Lead author,Reference,Ref.
+Al2O3,HF,TMA,,Cano,"J. Phys. Chem. 123, 10346 (2019)",28
+Al2O3,HF,"TMA, DMAC",,Clancey,"J. Phys. Chem. C 124, 287 (2020)",48
+Al2O3,HF,TMA,,DuMont,"J. Chem. Phys. 146, 052819 (2017)",55
+Al2O3,HF,DMAC,,Fischer,"66th AVS Symposium, Columbus, Ohio, October 2019",53
+Al2O3,HF,DMAC,,Fischer,"J. Vac. Sci. Technol., A 38, 022603 (2020)",25
+Al2O3,HF,DMAC,,Fischer,"J. Vac. Sci. Technol., A 38, 042601 (2020)",31
+Al2O3,HF,TMA,,George,"ACS Nano 10, 4889 (2016)",56
+Al2O3,"HF, SF4",Sn(acac)2,,Gertsch,"Chem. Mater. 31, 3624 (2019)",57
+Al2O3,HF,TMA,,Hennessy,"J. Vac. Sci. Technol., A 35, 041512 (2017)",58
+Al2O3,HF,Sn(acac)2,,Lee,"ACS Nano 9, 2061 (2015)",23
+Al2O3,HF,Sn(acac)2,,Lee,"Chem. Mater. 27, 3648 (2015)",36
+Al2O3,HF,"Sn(acac)2, TMA, DMAC, SiCl4",,Lee,"Chem. Mater. 28, 7657 (2016)",59
+Al2O3,HF,TMA,,Lee,"Chem. Mater. 28, 2994 (2016)",60
+Al2O3,HF,DMAC,,Lee,"J. Phys. Chem. C 123, 18455 (2019)",61
+Al2O3,CHF3,TMA,,Rahman,"ACS Appl. Mater. Interfaces 10, 31784 (2018)",62
+Al2O3,HF,TMA,,Zywotko,"J. Vac. Sci. Technol., A 36, 061508 (2018)",63
+Al2O3,"HF, DFT study of fluorination reaction",,,Natarajan,"Chem. Mater. 30, 5912 (2018)",64
+AlF3,HF,Sn(acac)2,,Lee,"J. Phys. Chem. C 119, 25385 (2015)",26
+AlN,HF,Sn(acac)2,,Johnson,"J. Vac. Sci. Technol., A 34, 050603 (2016)",65
+Co,Cl2,"Hhfac, Hacac",,Konh,"J. Vac. Sci. Technol., A 37, 021004 (2019)",46
+Co,O2,Hhfac,,Zhao,Appl. Surf. Sci. 455 (2018),66
+Cu,O3,Hhfac,,Mohimi,"ECS J. Solid State Sci. Technol. 7, 491 (2018)",45
+Fe,Cl2,Hacac,,Lin,"J. Vac. Sci. Technol., A 36, 051401 (2018)",67
+Ga2O3,HF,"BCl3, DMAC, TMA, TiCl4, Ga[N(CH3)2]3",,Lee,"Chem. Mater. 32, 5937 (2020)",68
+GaN,XeF2,BCl3,,Johnson,"Appl. Phys. Lett. 114, 243103 (2019)",69
+Ge,Cl2,Thermal cycling,,Ikeda,"Appl. Surf. Sci. 112, 87 (1997)",22
+HfO2,HF,Sn(acac)2,,Lee,"ECS J. Solid State Sci. Technol. 4, N5013 (2015)",35
+HfO2,HF,"Sn(acac)2, TMA, DMAC, SiCl4",,Lee,"Chem. Mater. 28, 7657 (2016)",59
+HfO2,HF,TiCl4,,Lee,"J. Vac. Sci. Technol., A 36, 061504 (2018)",70
+HfO2,HF,DMAC,,Lee,"J. Phys. Chem. C 123, 18455 (2019)",61
+HfO2,"HF, DFT study of fluorination reaction",,,Mullins,"Chem. Mater. 32, 3414 (2020)",24
+HfO2,HF,"DMAC, TiCl4",,Murdzek,"2019 International Symposium on VLSI, TSA (2019), p. 18970301",71
+HfO2,"HF, XeF2, SF4","DMAC, TiCl4",,Murdzek,"J. Vac. Sci. Technol., A 38, 022608 (2020)",52
+HfZrO2,HF,"DMAC, TiCl4",,Murdzek,"2019 International Symposium on VLSI, TSA (2019), p. 18970301",71
+HfZrO2,"HF, XeF2, SF4","DMAC, TiCl4",,Murdzek,"J. Vac. Sci. Technol., A 38, 022608 (2020)",52
+InGaAs,HF,DMAC,,Lu,"IEDM (2018), 895",72
+InAlAs,HF,DMAC,,Lu,"Nano Lett. 19, 5159 (2019)",73
+InGaAs,HF,DMAC,,Lu,"Nano Lett. 19, 5159 (2019)",73
+InGaZnO4,HF,DMAC,,Routzahn,U.S. patent pending,74
+Mo,O3,BCl3,HF,Fischer,U.S. patent pending,43
+Ni,O2,Hhfac,,Basher,"J. Vac. Sci. Technol. A 38, 052602 (2020)",75
+Si,O2,HF,TMA,Abdulagatov,"Chem. Mater. 30, 8465 (2018)",44
+Si,"ClF3, BrF3, BrF5, IF5",,,Ibbotson,"J. Appl. Phys. 56, 2939 (1984)",16
+Si,Cl2,Thermal cycling,,Imai,"Jpn. J. Appl. Phys. 34, 9A (1995)",76
+Si3N4,"O2, O3",HF,TMA,Abdulagatov,"J. Vac. Sci. Technol., A 38, 022607 (2020)",77
+SiO2,TMA,HF,,DuMont,"ACS Appl. Mater. Interfaces 9, 10296 (2017)",41
+SiO2,CHF3,TMA,,Rahman,"ACS Appl. Mater. Interfaces 10, 31784 (2018)",62
+TiN,O3,HF,,Lee,"Chem. Mater. 29, 8202 (2017)",12
+TiN,CHF3/O2 downstream plasma,Thermal cycling,,Shinoda,"J. Phys. D: Appl. Phys. 52, 475106 (2019)",78
+TiO2,WF6,BCl3,,Lemaire,"Chem. Mater. 29, 6653 (2017)",47
+TiO2,WF6,BCl3,,Song,"Chem. Mater. 31, 4793 (2019)",78
+VO2,"HF, SF4",Sn(acac)2,,Gertsch,"Chem. Mater. 31, 3624 (2019)",57
+W,"O2, O3","BCl3, HF",,Johnson,"ACS Appl. Mater. Interfaces 9, 34435 (2017)",42
+W,"O2, O3",WF6,,Xie,"ACS Appl. Mater. Interfaces 10, 9147 (2018)",79
+W,"O2, O3",WCl6,,Xie,"J. Vac. Sci. Technol., A 38, 022605 (2020)",80
+WO3,"O2, O3","BCl3, HF",,Johnson,"ACS Appl. Mater. Interfaces 9, 34435 (2017)",42
+ZnO,Hacac,O2 plasma,,Mameli,"ACS Appl. Mater. Interfaces 10, 38588 (2018)",20
+ZnO,HF,TMA,,Zywotko,"Chem. Mater. 29, 1183 (2017)",40
+ZrO2,HF,"Sn(acac)2, TMA, DMAC, SiCl4",,Lee,"Chem. Mater. 28, 7657 (2016)",59
+ZrO2,HF,DMAC,,Lee,"J. Phys. Chem. C 123, 18455 (2019)",61
+ZrO2,"HF, DFT study of fluorination reaction",,,Mullins,"Chem. Mater. 32, 3414 (2020)",24
+ZrO2,HF,"DMAC, TiCl4",,Murdzek,"2019 International Symposium on VLSI, TSA (2019), p. 18970301",71

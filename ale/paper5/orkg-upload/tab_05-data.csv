@@ -1,0 +1,4 @@
+﻿orkg:P183131,orkg:P183136,orkg:P183137,orkg:P183138,orkg:P183139,paper:doi,paper:research_field
+0.07–0.27,Conversion: SiO2 → Al2O3; Fluorination: Al2O3 → AlF3; Ligand exchange: AlF3 → AlF(CH3)2,resource:TMA(300°C),resource:HF(300°C),resource:TMA(300°C),10.1021/acsami.7b01259,R254
+0.35–1.50,Conversion: SiO2 → Al2O3; Fluorination: Al2O3 → AlF3; Ligand exchange: AlF3 → AlF(CH3)2,resource:TMA(350°C),resource:HF(350°C),resource:TMA(300°C),10.1021/acsami.8b10899,R254
+9,Conversion: SiO2 → (NH4)2SiF6; Heating: (NH4)2SiF6 → SiF4 + 2NH3 + 2HF,resource:HF(20°C),resource:NH3(20°C),resource:Heating(140°C),10.1116/6.0001517,R254

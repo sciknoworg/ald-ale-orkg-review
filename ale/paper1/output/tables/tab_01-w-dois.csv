@@ -1,0 +1,47 @@
+﻿Material,Precursor Chemistries for Adsorption,Energy Source for Etching/Desorption,Reference,doi
+Al2O3,BCl3,Ar neutral beam,59,10.1016/j.mee.2013.03.170
+Al2O3,BCl3,Ar neutral beam,58,10.1063/1.4894523
+BeO,BCl3,Ar neutral beam,60,10.1016/j.mee.2013.10.003
+III-V: GaAs,Cl2,Electron bombardment,43,10.1063/1.103171
+III-V: GaAs,Cl2,low-energy Ar+ ions,61,10.1143/jjap.29.2216
+III-V: GaAs,Cl2,low-energy Ar+ ions,62,10.1016/0040-6090(93)90142-c
+III-V: GaAs,Cl2,low-energy Ar+ ions,63,10.1143/jjap.31.2212
+III-V: GaAs,Cl2,248 nm KrF excimer laser and Ti sapphire laser,44,10.1143/jjap.32.6178
+III-V: GaAs,Cl2,248 nm KrF excimer laser and Ti sapphire laser,64,10.1016/0169-4332(94)90396-4
+III-V: GaAs,Cl2/Ar plasma,Ar ions from ECR plasma,65,10.1063/1.106477
+"III-V: GaAs,",Cl2/Ar plasma,Ar ions from ECR plasma,66,10.1116/1.586889
+III-V: GaAs,Cl2,Ne neutral beam,67,10.1016/j.surfcoat.2008.06.123
+III-V: InP,Tertiarybutylphosphine,Halogen lamp desorption,68,10.1143/JJAP.37.L1509
+"III-V: InP (and InAlAs, InGaAs)",$Cl2$,Ne neutral beam,69,10.1063/1.2221504
+"III-V: InP (and InAlAs, InGaAs)",$Cl2$,Ne neutral beam,70,10.1063/1.2754636
+"III-V: InP (and InAlAs, InGaAs)",$Cl2$,Ne neutral beam,71,10.1109/ted.2008.923522
+Ge,$Cl2$,Ar ions from ECR plasma,72,10.1016/s0169-4332(96)01026-4
+"Ge (and Si, SiGe)",Cl2$,Ar ions from ECR plasma,73,10.1016/s0039-6028(97)00994-1
+Graphene,O2 plasma,Ar neutral beam,74,10.1016/j.carbon.2011.08.058
+Graphite,O2 plasma,Ar neutral beam,75,10.1149/2.061112jes
+HfO2,BCl3,Ar neutral beam,47,10.1149/1.2832427
+HfO2,BCl3,Ar neutral beam,76,10.1088/0022-3727/42/5/055202
+HfO2,$Cl2$,Ar neutral beam,77,10.1109/IEDM.2009.5424330
+Polymer (Polystyrene),02,Ar ions from CCP plasma,78,10.1063/1.4812750
+Si,CF4+O2 plasma,Ar ions from ECR plasma,79,10.1116/1.576814
+Si,"CF4/O2, NF3/N2, or F2/He plasmas",Ar ions from ECR plasma,80,10.1143/jjap.29.2648
+Si,Cl2,Ar ions from ECR plasma,83,10.1063/1.110340
+Si,Cl2,Ar ions from ECR plasma,84,10.1016/0169-4332(94)90252-6
+Si,Cl2,50 eV Ar ions (MD simulation),85,10.1116/1.579659
+Si,Cl2,Ar ions from helical resonator plasma,86,10.1116/1.588651
+Si,Cl2,Ar ions from helicon plasma,88,10.1016/s0169-4332(01)00826-1
+Si,Cl2,Ar ions from ICP type ion gun,89,10.1143/jjap.44.389
+Si,Cl2,Ar neutral beam,40,10.3938/jkps.47.292
+Si,Cl2,Ar neutral beam,41,10.1149/1.1938848
+Si,Cl2,Ar neutral beam,90,10.1149/1.2073667
+Si,Cl2,Ar neutral beam,91,10.1149/1.2426414
+Si,Cl2,Ar or He ions from ICP source,92,10.1007/s11814-007-0023-9
+Si,Cl2/Ar plasma,Ar ions from ICP source,9,10.1116/1.3021361
+Si3N4,H2 plasma,Ion bombardment from Ar/H2 ECR plasma,93,10.1063/1.124165
+Si3N4,Ion implantation from H2 plasma,Wet etching (aqueous HF solution),94,10.1063/1.4892543
+SiO2 (and Si),CFx + ions or radical adsorption,Ar ions (MD simulation),95,10.1063/1.2464192
+SiO2,C4F8 /Ar plasma,Ion bombardment from C4Fg/Ar ICP plasma,9,10.1116/1.3021361
+SiO2,C4F8 /Ar plasma,Ar ions from magnetically enhanced plasma,9,10.1116/1.3021361
+SiO2,C4F8/Ar plasma,Ar ions from ICP source,99,10.1016/j.vacuum.2013.04.020
+TiO2,BCl3,Ar neutral beam,105,10.3938/jkps.54.976
+ZrO2,BCl3,Ar neutral beam,106,10.1166/jnn.2009.1781

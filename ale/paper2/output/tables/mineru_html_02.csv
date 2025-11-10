@@ -1,0 +1,23 @@
+0,1,2
+,Conversion,
+Material class,into,Precursors
+Metals,,
+Co,Chloride,"Hhfac, Hacac"
+"Cu, Ni",oxide,Hhfac
+Fe,chloride,Hacac
+Ge,chloride,thermal cycling
+"Mo, W","oxide, then B2O3",BCl3
+Metal oxides,,
+"Ga2O3, VO2, ZnO, InGaZnO4, Al2O3, HfSiO2, HfO2, HfZrO2,",Fluoride for all,"TMA, DMAC, Sn(acac)2"
+ZrO2 Nitrides,,
+AIN,Fluoride,Sn(acac)2
+GaN,fluoride,BCl3
+Si3N4,"oxide, then",TMA
+TiN,Al2O3,HF
+,oxide,
+Semiconductors,,
+"InAlAs, InGaAs",Fluoride,DMAC
+Si,Al2O3,TMA
+Semiconductor oxides,,
+SiO2,Fluoride,TMA
+InGaZnO4,fluoride,DMAC

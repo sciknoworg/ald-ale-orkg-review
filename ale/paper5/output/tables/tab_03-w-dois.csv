@@ -1,0 +1,15 @@
+﻿Selectivity of material,Selectivity,Improving etch selectivity method,Precursor chemistries for fluorination,Removal,Ref,doi
+SiO2/Si3N4,0.2–15.0,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,C4F8/Ar plasma,Ar plasma,[24],10.1116/1.4935462
+SiO2/Si3N4,0.2–15.0,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,CHF3/Ar plasma,Ar plasma,[24],10.1116/1.4935462
+SiO2/Si3N4,>7.0,Precursor selection,C4F8/Ar plasma,Ar plasma,[31],10.1116/1.5035291
+SiO2/Si3N4,>7.0,Precursor selection,C4F8/H2/Ar plasma,Ar plasma,[31],10.1116/1.5035291
+SiO2/Si3N4,>7.0,Precursor selection,C3H3F3/Ar plasma,Ar plasma,[31],10.1116/1.5035291
+SiO2/Si,>10.0,Precursor selection,C4F8/Ar plasma,Ar plasma,[31],10.1116/1.5035291
+SiO2/Si,>10.0,Precursor selection,C4F8/H2/Ar plasma,Ar plasma,[31],10.1116/1.5035291
+SiO2/Si,>10.0,Precursor selection,C3H3F3/Ar plasma,Ar plasma,[31],10.1116/1.5035291
+SiO2/Si,2.6–17.5,Precursor selection,C4F8 plasma,Ar plasma,[8],10.1116/1.5134710
+SiO2/Si,2.6–17.5,Precursor selection,CHF3 plasma,O2 plasma,[8],10.1116/1.5134710
+SiO2/Si,2.6–17.5,Precursor selection,C3F7OCH3 plasma,O2 plasma,[8],10.1116/1.5134710
+SiO2/Si,17.5,Precursor selection,n-C3F7OCH3 plasma,Ar plasma,[43],10.1021/acssuschemeng.2c05186
+SiO2/Si,102.8,Precursor selection,i-C3F7OCH3 plasma,Ar plasma,[43],10.1021/acssuschemeng.2c05186
+SiO2/Si,3.4,Precursor selection,CF3CF2CF2CH2OH plasma,Ar plasma,[43],10.1021/acssuschemeng.2c05186

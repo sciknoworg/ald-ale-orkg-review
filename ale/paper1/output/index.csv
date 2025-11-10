@@ -1,1 +1,3 @@
-
+table_id,page,bbox,label,caption,csv_path,status
+mineru_html_01,,,,,C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper1\output\tables\mineru_html_01.csv,ok_from_html
+mineru_html_02,,,,,C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper1\output\tables\mineru_html_02.csv,ok_from_html

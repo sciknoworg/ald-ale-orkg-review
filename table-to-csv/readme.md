@@ -216,6 +216,11 @@ This step takes your **table CSV** (with a `Refs.` column) and the **resolved re
 - For rows **without** a DOI, it parses `Refs.` (e.g., `[28,224-226]` → `[28]`, `[224]`, `[225]`, `[226]`) and **duplicates** the row once per reference number.
 - Looks up each reference number (`idx`) in the mapping file and **fills DOI only if `decision == accepted`**.
 - If none of the expanded refs have an accepted DOI, the row is **dropped**.
+- For reference numbers **missing in the mapping**, the script will now **prompt you interactively** to enter the DOI.  
+  - If you provide a DOI, it’s attached and **the mapping file is automatically updated** (only `best_doi` and `decision` are changed).  
+  - If the DOI truly cannot be found, press **Enter** or type **`skip`** to continue without it.
+
+> 💡 To disable prompts and skip unresolved references silently, add the flag `--no-ask-missing`.
 
 **1 Example Run**
 ```bash
@@ -223,11 +228,8 @@ python table-to-csv\expand-refs-attach-dois.py ^
   --data ale\paper4\output\tables\tab_0.csv ^
   --mapping ale\paper4\references-resolved-doi-some-manual.csv ^
   --out ale\paper4\output\tables\tab_0-w-dois.csv ^
-  --refs-col "Refs." ^
-  --doi-col "doi"
+  --refs-col "Refs."
 ```
-
-> If your input already has a DOI column named doi or doi_list, you can omit --doi-col and the script will auto-detect it; otherwise it creates a new doi column.
 
 ```yaml
 Done. Wrote: C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper4\output\tables\tab_0-w-dois.csv
@@ -240,8 +242,7 @@ python table-to-csv\expand-refs-attach-dois.py ^
   --data ale\paper4\output\tables\tab_4.csv ^
   --mapping ale\paper4\references-resolved-doi-some-manual.csv ^
   --out ale\paper4\output\tables\tab_4-w-dois.csv ^
-  --refs-col "Refs." ^
-  --doi-col "doi"
+  --refs-col "Refs."
 ```
 
 ```yaml
@@ -249,25 +250,42 @@ Done. Wrote: C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper4\output\tables\
 Kept with DOI: 0 | Expanded rows created: 8 | Dropped (no accepted DOI): 0
 ```
 
+**3 Silent Mode Example Run**
+```bash
+python table-to-csv\expand-refs-attach-dois.py ^
+  --data ale\paper4\output\tables\tab_1.csv ^
+  --mapping ale\paper4\references-resolved-doi-some-manual.csv ^
+  --out ale\paper4\output\tables\tab_1-w-dois.csv ^
+  --refs-col "Refs." ^
+  --no-ask-missing
+```
+
+```yaml
+Done. Wrote: C:\Users\DSouzaJ\Code\ald-ale-orkg-review\ale\paper4\output\tables\tab_1-w-dois.csv
+Kept with DOI: 2 | Expanded rows created: 5 | Dropped (no accepted DOI): 1
+```
+
 Notes
 
-- Matching uses the reference numbers in Refs. (e.g., [28]) against the mapping CSV’s idx column from Section 5.
-- Supported Refs. formats: [28,224-226], 208, 207,233, [ 184 ], and ranges with en-dashes.
-- Only accepted mappings are used; low_confidence and no_match are ignored.
-- To preserve rows that already contain DOIs, set --doi-col to the existing DOI column (e.g., doi_list) or omit the flag for auto-detection.
+- Matching uses the reference numbers in `Refs.` (e.g., `[28]`) against the mapping CSV’s `idx` column from Section 5.
+- Supported `Refs.` formats: `[28,224-226]`, `208`, `207,233`, `[ 184 ]`, and ranges with en-dashes.
+- Only accepted mappings are used; `low_confidence` and `no_match` are ignored.
+- To preserve rows that already contain DOIs, set `--doi-col` to the existing DOI column (e.g., `doi_list`) or omit the flag for auto-detection.
+- When running **interactively (default)**, you can supply missing DOIs manually, and they’ll be stored back into the mapping file.  
+  To run **silently**, add `--no-ask-missing` to skip all unresolved references.
+
+---
 
 ## Convert to a csv file to upload to ORKG
 
 ```bash
 python table-to-csv/convert_to_orkg_csv.py ^
   --in ale/paper4/output/tables/tab_0-w-dois.csv ^
-  --out ale/paper4/orkg-upload/tab_0-data.csv ^
-  --pids P183123 P183124 P183125 P183126
+  --out ale/paper4/orkg-upload/tab_0-data.csv
 ```
 
 ```bash
 python table-to-csv/convert_to_orkg_csv.py ^
   --in ale/paper4/output/tables/tab_4-w-dois.csv ^
-  --out ale/paper4/orkg-upload/tab_4-data.csv ^
-  --pids P9071 P183124 P183125 P183127
+  --out ale/paper4/orkg-upload/tab_4-data.csv
 ```

@@ -1,0 +1,10 @@
+﻿Precursor chemistries for fluorination,Removal,Ion energy in the removal step (Bias voltage),Process temperature (°C),Etching rate (Å/cycle),Ref,doi
+CHF3 plasma,Ar plasma,0–50V,-40–20,9.0–11.0,[33],10.1002/ppap.201900051
+C4F8 plasma beam,Ar ion beam,30–200V,RT,1.9,[27],10.1088/1361-6463/aa6f40
+C4F6/Ar plasma,Ar plasma,10–100V,-10,14.2,[40],10.1063/5.0047811
+C4F8 plasma,Ar plasma,30–90V,20,5.8,[8],10.1116/1.5134710
+CHF3 plasma,O2 plasma,30–90V,20,4.1,[8],10.1116/1.5134710
+C3F7OCH3 plasma,O2 plasma,30–90V,20,2.1,[8],10.1116/1.5134710
+n-C3F7OCH3 plasma,Ar plasma,10–80V,RT,2.1,[43],10.1021/acssuschemeng.2c05186
+i-C3F7OCH3 plasma,Ar plasma,10–80V,RT,1.8,[43],10.1021/acssuschemeng.2c05186
+CF3CF2CF2CH2OH plasma,Ar plasma,10–80V,RT,5.2,[43],10.1021/acssuschemeng.2c05186

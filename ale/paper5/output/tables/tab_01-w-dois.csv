@@ -1,0 +1,16 @@
+﻿Precursor chemistries for fluorination,Removal,Process temp. (°C),Etching rate (Å/cycle),Ref,doi
+C4F8/Ar plasma,Ar plasma,10,2.5,[24],10.1116/1.4935462
+CHF3/Ar plasma,Ar plasma,10,3.5,[24],10.1116/1.4935462
+C4F6/Ar plasma,Ar plasma,-10,13,[40],10.1063/5.0047811
+C4F8/Ar plasma,Ar plasma,10,2.6,[31],10.1116/1.5035291
+C4F8/H2/Ar plasma,Ar plasma,10,1.6,[31],10.1116/1.5035291
+C3H3F3/Ar plasma,Ar plasma,10,1.2,[31],10.1116/1.5035291
+CHF3 plasma,O2 plasma,RT,6.8,[30],10.1116/1.5003417
+CHF3 plasma,Ar plasma,RT,4.0,[30],10.1116/1.5003417
+CF3I/Ar plasma,O2 plasma,40,9.3,[41],10.1016/j.apsusc.2022.153045
+C4F8 plasma,Ar plasma,RT,5.8,[8],10.1116/1.5134710
+CHF3 plasma,O2 plasma,RT,4.1,[8],10.1116/1.5134710
+n-C3F7OCH3 plasma,O2 plasma,RT,2.1,[8],10.1116/1.5134710
+n-C3F7OCH3 plasma,Ar plasma,RT,2.1,[43],10.1021/acssuschemeng.2c05186
+i-C3F7OCH3 plasma,Ar plasma,RT,1.8,[43],10.1021/acssuschemeng.2c05186
+CF3CF2CF2CH2OH plasma,Ar plasma,RT,5.2,[43],10.1021/acssuschemeng.2c05186

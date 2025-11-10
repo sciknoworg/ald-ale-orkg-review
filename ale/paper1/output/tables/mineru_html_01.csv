@@ -1,0 +1,39 @@
+Material,Precursor Chemistries for Adsorption,Energy Source for Etching/Desorption,Reference
+Al2O3,BCl3,Ar neutral beam,59
+Al2O3,BCl3,Ar neutral beam,58
+BeO,BCl3,Ar neutral beam,60
+III-V: GaAs,Cl2,Electron bombardment,43
+III-V: GaAs,Cl2,low-energy Ar+ ions,61-63
+III-V: GaAs,Cl2,248 nm KrF excimer laser and Ti sapphire laser,"44,64"
+III-V: GaAs,Cl2/Ar plasma,Ar ions from ECR plasma,65
+"III-V: GaAs,",Cl2/Ar plasma,Ar ions from ECR plasma,66
+III-V: GaAs,Cl2,Ne neutral beam,67
+III-V: InP,Tertiarybutylphosphine,Halogen lamp desorption,68
+"III-V: InP (and InAlAs, InGaAs)",$Cl2$,Ne neutral beam,69-71
+Ge,$Cl2$,Ar ions from ECR plasma,72
+"Ge (and Si, SiGe)",Cl2$,Ar ions from ECR plasma,73
+Graphene,O2 plasma,Ar neutral beam,74
+Graphite,O2 plasma,Ar neutral beam,75
+HfO2,BCl3,Ar neutral beam,"47,76"
+HfO2,$Cl2$,Ar neutral beam,77
+Polymer (Polystyrene),02,Ar ions from CCP plasma,78
+Si Si,CF4+O2 plasma,Ar ions from ECR plasma,79
+Si,"CF4/O2, NF3/N2, or F2/He plasmas",Ar ions from ECR plasma,80
+Si,Cl2,Ar ions from ECR plasma,83
+Si,Cl2,Ar ions from ECR plasma,84
+Si,Cl2,50 eV Ar ions (MD simulation),85
+Si,Cl2,Ar ions from helical resonator plasma,86
+Si,Cl2,Ar ions from helicon plasma,"87,88"
+,Cl2,Ar ions from ICP type ion gun,89
+Si,Cl2,Ar neutral beam,"40,41,90,91"
+Si,Cl2,Ar or He ions from ICP source,92
+Si,Cl2/Ar plasma,Ar ions from ICP source,9
+Si,Cl2/Ar plasma,Ar ions from ICP source,10
+Si3N4,H2 plasma,Ion bombardment from Ar/H2 ECR plasma,93
+Si3N4,Ion implantation from H2 plasma,Wet etching (aqueous HF solution),94
+SiO2 (and Si),CFx + ions or radical adsorption,Ar ions (MD simulation),95
+SiO2,C4F8 /Ar plasma,Ion bombardment from C4Fg/Ar ICP plasma,9
+SiO2,C4F8 /Ar plasma,Ar ions from magnetically enhanced plasma,9
+SiO2,C4F8/Ar plasma,Ar ions from ICP source,99
+TiO2,BCl3,Ar neutral beam,105
+ZrO2,BCl3,Ar neutral beam,106

@@ -1,0 +1,83 @@
+idx,raw_ref,best_doi,best_title,best_container_title,best_year,best_volume,best_page,best_article_number,score,decision
+1,"[1] K. J. Kanarik, T. Lill, E. A. Hudson, S. Sriraman, S. Tan, J. Marks, V. Vahedi, and R. A. Gottscho, J. Vac. Sci. Technol. A 33, 020802 (2015).",,,,,,,,,no_match
+2,"[2] M. Yoder, U.S. patent 4,756,794A (12 July 1988).",10.1016/b978-0-12-033706-4.50009-8,Cochliobolus Heterostrophus. Cause of Southern Corn Leaf Blight,Advances in Plant Pathology,1988,,93-112,,25,low_confidence
+3,"[3] S. M. George, Chem. Rev. 110, 111 (2010).",10.1021/cr800433k,Carbon Nanotube−Inorganic Hybrids,Chemical Reviews,2010,110,1348-1385,,70,accepted
+4,"[4] T. Faraz, H. C. M. Knoops, F. Roozeboom, and W. M. M. Kessels, ECS J. Solid State Sci. Technol. 4, N5023 (2015).",,,,,,,,,no_match
+5,"[5] T. Lill, V. Vahedi, and R. Gottscho, “Etching of semiconductor devices,” in Materials Science and Technology (Wiley, Weinheim, 2019).",10.1055/a-0757-8807,Frakturversorgung der Patella,OP-JOURNAL,2019,34,156-161,,25,low_confidence
+6,"[6] P. Gupta, C. H. Mak, P. A. Coon, and S. M. George, Phys. Rev. B 40, 7739 (1989).",,,,,,,,,no_match
+7,"[7] P. Gupta, P. A. Coon, B. G. Koehler, and S. M. George, J. Chem. Phys. 93, 2827 (1990).",,,,,,,,,no_match
+8,"[8] P. A. Coon, M. L. Wise, A. C. Dillon, M. B. Robinson, and S. M. George, J. Vac. Sci. Technol. B 10, 221 (1992).",,,,,,,,,no_match
+9,"[9] P. A. Coon, P. Gupta, M. L. Wise, and S. M. George, J. Vac. Sci. Technol. A 10, 324 (1992).",,,,,,,,,no_match
+10,"[10] D. A. King and M. G. Wells, Proc. R. Soc. London 339, 245 (1974).",,,,,,,,,no_match
+11,"[11] P. B. Chu, J. T. Chen, R. Yeh, G. Lin, J. C. P. Huang, B. A. Warneke, and S. J. Pister, “Controlled pulse-etching with xenon difluoride,” Proceedings of IEEE International Solid State Sensors and Actuators Conference (Transducers ‘97), Chicago, IL, 19 June 1997 (IEEE, New York, 1997), Vol. 1, pp. 665–668.",10.2172/564278,"Atomic physics in strong fields. Final report, September 15, 1990--August 15, 1997",,1997,,,,25,low_confidence
+12,"[12] Y. Lee and S. M. George, Chem. Mater. 29, 8202 (2017).",10.1021/acs.chemmater.7b02286,"Thermal Atomic Layer Etching of Titanium Nitride Using Sequential, Self-Limiting Reactions: Oxidation to TiO<sub>2</sub> and Fluorination to Volatile TiF<sub>4</sub>",Chemistry of Materials,2017,29,8202-8210,,100,accepted
+13,"[13] H. F. Winters and J. W. Coburn, Appl. Phys. Lett. 34, 70 (1979).",10.1063/1.90562,The etching of silicon with XeF2 vapor,Applied Physics Letters,1979,34,70-73,,100,accepted
+14,"[14] C. R. Helms and B. E. Deal, J. Vac. Sci. Technol. A 10, 806 (1992).",,,,,,,,,no_match
+15,"[15] V. M. Donnelly, J. Vac. Sci. Technol. A 35, 05C202 (2017).",,,,,,,,,no_match
+16,"[16] D. E. Ibbotson, J. A. Mucha, D. L. Flamm, and J. M. Cook, J. Appl. Phys. 56, 2939 (1984).",,,,,,,,,no_match
+17,"[17] P. J. Holmes and J. E. Snell, Microelectron. Reliab. 5, 337 (1966).",,,,,,,,,no_match
+18,"[18] J. Ruzyllo, K. Torek, C. Daffron, R. Grant, and R. Novak, J. Electrochem. Soc. 140, L64 (1993).",,,,,,,,,no_match
+19,"[19] M. A. George, D. W. Hess, S. E. Beck, K. Young, D. A. Bohling, G. Voloshin, and A. P. Lane, J. Electrochem. Soc. 143, 3257 (1996).",10.1177/110330889600400302,Parental power and gender revolution,YOUNG,1996,4,19-31,,55,accepted
+20,"[20] A. Mameli, M. A. Verheijen, A. J. M. Mackus, W. M. M. Kessels, and F. Roozeboom, ACS Appl. Mater. Interfaces 10, 38588 (2018).",,,,,,,,,no_match
+21,"[21] D. R. Lide, CRC Handbook of Chemistry and Physics, 85th ed. (CRC, Boca Raton, 2004).",10.5951/mtms.9.5.0280,Circles of Humanity,Mathematics Teaching in the Middle School,2004,9,280-285,,25,low_confidence
+22,"[22] K. Ikeda, S. Imai, and M. Matsumuraf, Appl. Surf. Sci. 112, 87 (1997).",,,,,,,,,no_match
+23,"[23] Y. Lee and S. M. George, ACS Nano 9, 2061 (2015).",10.1021/nn507277f,"Atomic Layer Etching of Al<sub>2</sub>O<sub>3</sub> Using Sequential, Self-Limiting Thermal Reactions with Sn(acac)<sub>2</sub> and Hydrogen Fluoride",ACS Nano,2015,9,2061-2070,,100,accepted
+24,"[24] R. Mullins, S. K. Natarajan, S. D. Elliott, and M. Nolan, Chem. Mater. 32, 3414 (2020).",10.1016/j.chempr.2020.01.004,Science that Inspires,Chem,2020,6,317-319,,55,accepted
+25,"[25] A. Fischer, A. Routzahn, Y. Lee, T. Lill, and S. M. George, J. Vac. Sci. Technol. A 38, 022603 (2020).",10.3390/sci2020033,Railway Vehicle Wheel Restoration by Submerged Arc Welding and Its Characterization,Sci,2020,2,33,,60,accepted
+26,"[26] Y. Lee, J. W. DuMont, and S. M. George, J. Phys. Chem. C 119, 25385 (2015).",,,,,,,,,no_match
+27,"[27] B. E. Deal and A. S. Grove, J. Appl. Phys. 36, 3770 (1965).",10.1063/1.1713945,General Relationship for the Thermal Oxidation of Silicon,Journal of Applied Physics,1965,36,3770-3778,,100,accepted
+28,"[28] A. M. Cano, A. E. Marquardt, J. W. DuMont, and S. M. George, J. Phys. Chem. C 123, 10346 (2019).",10.1021/acs.jpcc.9b00124,,,,,,,,accepted
+29,"[29] M. Lucht, M. Lerche, H.-C. Wille, Yu. V. Shvyd’ko, H. D. Rüter, E. Gerdau, and P. Becker, J. Appl. Crystallogr. 36, 1075 (2003).",,,,,,,,,no_match
+30,"[30] B. Diawara, Y. Beh, and P. Marcus, Atomistic Simulation of the Passivation of Iron-Chromium Alloys Using Calculated Local Diffusion Activation Barriers (Elsevier, Paris, 2006), p. 651.",10.1016/b978-044452224-5/50100-1,Atomistic simulation of the passivation of iron-chromium alloys using calculated local diffusion activation barriers,"Passivation of Metals and Semiconductors, and Properties of Thin Oxide Layers",2006,,651-657,,30,low_confidence
+31,"[31] A. Fischer, A. Routzahn, S. Wen, and T. Lill, J. Vac. Sci. Technol. A 38, 042601 (2020).",10.3390/sci2020031,Antioxidant Properties of Western Georgia Native Khechechuri Pear,Sci,2020,2,31,,55,accepted
+32,"[32] J. W. Coburn and H. F. Winters, Appl. Phys. Lett. 55, 2730 (1989).",10.1063/1.101937,Conductance considerations in the reactive ion etching of high aspect ratio features,Applied Physics Letters,1989,55,2730-2732,,100,accepted
+33,"[33] K. Malek and M.-O. Coppens, J. Chem. Phys. 119, 2801 (2003).",10.1063/1.1584652,Knudsen self- and Fickian diffusion in rough nanoporous media,The Journal of Chemical Physics,2003,119,2801-2811,,100,accepted
+34,"[34] J. Abel, K. Lavoie, and K. Purushottam, U.S. patent 10727046 (28 July 2020).",10.2105/ccdmc.3087.129,Trachoma,Control of Communicable Diseases Clinical Practice,2020,,,,25,low_confidence
+35,"[35] Y. Lee, J. W. DuMont, and S. M. George, ECS J. Solid State Sci. Technol. 4, N5013 (2015).",,,,,,,,,no_match
+36,"[36] Y. Lee, J. W. DuMont, and S. M. George, Chem. Mater. 27, 3648 (2015).",,,,,,,,,no_match
+37,"[37] C. T. Carver, J. J. Plombon, P. E. Romero, S. Suri, T. A. Tronic, and R. B. Turkot, ECS J. Solid State Sci. Technol. 4, N5005 (2015).",,,,,,,,,no_match
+38,"[38] S. M. George, Acc. Chem. Res. 53, 1151 (2020).",10.1021/acs.accounts.0c00084,Mechanisms of Thermal Atomic Layer Etching,Accounts of Chemical Research,2020,53,1151-1160,,95,accepted
+39,"[39] K. J. Kanarik et al., J. Vac. Sci. Technol. A 35, 05C302 (2017).",,,,,,,,,no_match
+40,"[40] D. R. Zywotko and S. M. George, Chem. Mater. 29, 1183 (2017).",10.1021/acs.chemmater.6b04529,Thermal Atomic Layer Etching of ZnO by a “Conversion-Etch” Mechanism Using Sequential Exposures of Hydrogen Fluoride and Trimethylaluminum,Chemistry of Materials,2017,29,1183-1191,,100,accepted
+41,"[41] J. W. DuMont, A. E. Marquardt, A. M. Cano, and S. M. George, ACS Appl. Mater. Interfaces 9, 10296 (2017).",,,,,,,,,no_match
+42,"[42] N. R. Johnson and S. M. George, ACS Appl. Mater. Interfaces 9, 34435 (2017).",,,,,,,,,no_match
+43,"[43] A. Fischer, A. Routzahn, T. Lill, and S. Varadarajan, U.S. patent pending (2019).",10.5771/9783845299495-383,Die Europäische Union und Russland,Jahrbuch der Europäischen Integration 2019,2019,,383-388,,25,low_confidence
+44,"[44] A. I. Abdulagatov and S. M. George, Chem. Mater. 30, 8465 (2018).",10.1021/acs.chemmater.8b02745,"Thermal Atomic Layer Etching of Silicon Using O<sub>2</sub>, HF, and Al(CH<sub>3</sub>)<sub>3</sub> as the Reactants",Chemistry of Materials,2018,30,8465-8475,,100,accepted
+45,"[45] E. Mohimi, X. I. Chu, B. B. Trinh, S. Babar, G. S. Girolami, and J. R. Abelson, ECS J. Solid State Sci. Technol. 7, P491 (2018).",,,,,,,,,no_match
+46,"[46] M. Konh, C. He, X. Lin, X. Guo, V. Pallem, R. L. Opila, A. V. Teplyakov, Z. Wang, and B. Yuan, J. Vac. Sci. Technol. A 37, 021004 (2019).",10.3390/sci1020046,Origin of the 16S Ribosomal Molecule from Ancestor tRNAs,Sci,2019,1,46,,55,accepted
+47,"[47] P. C. Lemaire and G. N. Parsons, Chem. Mater. 29, 6653 (2017).",10.1021/acs.chemmater.7b00985,Thermal Selective Vapor Etching of TiO<sub>2</sub>: Chemical Vapor Etching via WF<sub>6</sub> and Self-Limiting Atomic Layer Etching Using WF<sub>6</sub> and BCl<sub>3</sub>,Chemistry of Materials,2017,29,6653-6665,,100,accepted
+48,"[48] J. W. Clancey, A. S. Cavanagh, J. E. T. Smith, S. Sharma, and S. M. George, J. Phys. Chem. C 124, 287 (2020).",10.1021/acs.jpcc.9b06104,,,,,,,,accepted
+49,"[49] N. Miyoshi, H. Kobayashi, K. Shinoda, M. Kurihara, T. Watanabe, Y. Kouzuma, K. Yokogawa, S. Sakai, and M. Izawa, Jpn. J. Appl. Phys. 56, 06HB01 (2017).",,,,,,,,,no_match
+50,"[50] R. D. Robinson, B. Sadtler, D. O. Demchenko, C. K. Erdonmez, L.-W. Wang, and A. P. Alivisatos, Science 317, 355 (2007).",10.1126/science.1142593,Spontaneous Superlattice Formation in Nanorods Through Partial Cation Exchange,Science,2007,317,355-358,,100,accepted
+51,"[51] H. Li, M. Zanella, A. Genovese, M. Povia, A. Falqui, C. Giannini, and L. Manna, Nano Lett. 11, 4964 (2011).",,,,,,,,,no_match
+52,"[52] J. A. Murdzek and S. M. George, J. Vac. Sci. Technol. A 38, 022608 (2020).",,,,,,,,,no_match
+53,"[53] A. Fischer, A. Routzahn, and T. Lill, in 66th AVS Symposium, Columbus, OH, October 2019 (AVS, New York, 2019).",10.5771/9783845299495-383,Die Europäische Union und Russland,Jahrbuch der Europäischen Integration 2019,2019,,383-388,,25,low_confidence
+54,"[54] A. Fischer, R. Janek, J. Boniface, T. Lill, K. J. Kanarik, Y. Pan, V. Vahedi, and R. A. Gottscho, Proc. SPIE 10149, 101490H (2017).",,,,,,,,,no_match
+55,"[55] J. W. DuMont and S. M. George, J. Chem. Phys. 146, 052819 (2017).",10.1063/1.4973310,Competition between Al2O3 atomic layer etching and AlF3 atomic layer deposition using sequential exposures of trimethylaluminum and hydrogen fluoride,The Journal of Chemical Physics,2017,146,,052819,100,accepted
+56,"[56] S. M. George and Y. Lee, ACS Nano 10, 4889 (2016).",10.1021/acsnano.6b02991,"Prospects for Thermal Atomic Layer Etching Using Sequential, Self-Limiting Fluorination and Ligand-Exchange Reactions",ACS Nano,2016,10,4889-4894,,100,accepted
+57,"[57] J. C. Gertsch, A. M. Cano, V. M. Bright, and S. M. George, Chem. Mater. 31, 3624 (2019).",,,,,,,,,no_match
+58,"[58] J. Hennessy, C. S. Moore, K. Balasubramanian, A. D. Jewell, K. France, and S. Nikzad, J. Vac. Sci. Technol. A 35, 041512 (2017).",,,,,,,,,no_match
+59,"[59] Y. Lee, C. Huffman, and S. M. George, Chem. Mater. 28, 7657 (2016).",,,,,,,,,no_match
+60,"[60] Y. Lee, J. W. DuMont, and S. M. George, Chem. Mater. 28, 2994 (2016).",,,,,,,,,no_match
+61,"[61] Y. Lee and S. M. George, J. Phys. Chem. C 123, 18455 (2019).",10.1021/acs.jpcc.9b04767,"Thermal Atomic Layer Etching of Al<sub>2</sub>O<sub>3</sub>, HfO<sub>2</sub>, and ZrO<sub>2</sub> Using Sequential Hydrogen Fluoride and Dimethylaluminum Chloride Exposures",The Journal of Physical Chemistry C,2019,123,18455-18466,,100,accepted
+62,"[62] R. Rahman, E. C. Mattson, J. P. Klesko, A. Dangerfield, S. Rivillon-Amy, D. C. Smith, D. Hausmann, and Y. J. Chabal, ACS Appl. Mater. Interfaces 10, 31784 (2018).",,,,,,,,,no_match
+63,"[63] D. R. Zywotko, J. Faguet, and S. M. George, J. Vac. Sci. Technol. A 36, 061508 (2018).",10.5040/9781350907720,George,George,2018,,,,55,accepted
+64,"[64] S. K. Natarajan and S. D. Elliott, Chem. Mater. 30, 5912 (2018).",10.1021/acs.chemmater.8b01930,Modeling the Chemical Mechanism of the Thermal Atomic Layer Etch of Aluminum Oxide: A Density Functional Theory Study of Reactions during HF Exposure,Chemistry of Materials,2018,30,5912-5922,,95,accepted
+65,"[65] N. R. Johnson, H. Sun, K. Sharma, and S. M. George, J. Vac. Sci. Technol. A 34, 050603 (2016).",,,,,,,,,no_match
+66,"[66] J. Zhao, M. Konh, and A. Teplyakov, Appl. Surf. Sci. 455, 438 (2018).",10.3390/sci1010001,Sci—An Open Access Journal with Post-Publication Peer Review,Sci,2018,1,1-Jan,,55,accepted
+67,"[67] X. Lin, M. Chen, A. Janotti, and R. Opila, J. Vac. Sci. Technol. A 36, 051401 (2018).",10.3390/sci1010001,Sci—An Open Access Journal with Post-Publication Peer Review,Sci,2018,1,1-Jan,,55,accepted
+68,"[68] Y. Lee, N. R. Johnson, and S. M. George, Chem. Mater. 32, 5937 (2020).",,,,,,,,,no_match
+69,"[69] N. R. Johnson, J. K. Hite, M. A. Mastro, Charles R. Eddy, and S. M. George, Appl. Phys. Lett. 114, 243103 (2019).",,,,,,,,,no_match
+70,"[70] Y. Lee and S. M. George, J. Vac. Sci. Technol. A 36, 061504 (2018).",,,,,,,,,no_match
+71,"[71] J. Murdzek and S. M. George, in 2019 International Symposium on VLSI, TSA, Hsinchu, Taiwan, 22–25 April 2019 (IEEE, New York, 2019), p. 18970301.",10.1109/vlsi-tsa.2019.8804645,"Thermal Atomic Layer Etching of Amorphous and Crystalline Hafnium Oxide, Zirconium Oxide, and Hafnium Zirconium Oxide","2019 International Symposium on VLSI Technology, Systems and Application (VLSI-TSA)",2019,,2-Jan,,30,low_confidence
+72,"[72] Y. Lu, J. Lee, J. Murdzek, A. Gertsch, A. Vardi, L. Kong, S. George, and J. del Alamo, in International Electron Devices Meeting, San Francisco, 1–5 December 2018 (IEDM, Montgomery Village, 2018), p. 895.",,,,,,,,,no_match
+73,"[73] W. Lu, Y. Lee, J. C. Gertsch, J. A. Murdzek, A. S. Cavanagh, L. Kong, J. A. del Alamo, and S. M. George, Nano Lett. 19, 5159 (2019).",,,,,,,,,no_match
+74,"[74] A. Routzahn, A. Fischer, and T. Lill, U.S. patent pending (2020).",,,,,,,,,no_match
+75,"[75] A. H. Basher, M. Krstić, K. Fink, T. Ito, K. Karahashi, W. Wenzel, and S. Hamaguchi, J. Vac. Sci. Technol. A 38, 052602 (2020).",10.3390/sci2040075,A Hybrid Approach: Dynamic Diagnostic Rules for Sensor Systems in Industry 4.0 Generated by Online Hyperparameter Tuned Random Forest,Sci,2020,2,75,,55,accepted
+76,"[76] S. Imai, T. Haga, O. Matsuzaki, T. Hattori, and M. Matsumura, Jpn. J. Appl. Phys. 34, 5049 (1995).",,,,,,,,,no_match
+77,"[77] A. I. Abdulagatov and S. M. George, J. Vac. Sci. Technol. A 38, 022607 (2020).",,,,,,,,,no_match
+78,"[78] K. Shinoda, N. Miyoshi, H. Kobayashi, M. Izawa, K. Ishikawa, and M. Hori, J. Phys. D: Appl. Phys. 52, 475106 (2019).",,,,,,,,,no_match
+79,"[79] W. Xie, P. C. Lemaire, and G. N. Parsons, ACS Appl. Mater. Interfaces 10, 9147 (2018).",,,,,,,,,no_match
+80,"[80] W. Xie and G. N. Parsons, J. Vac. Sci. Technol. A 38, 022605 (2020).",,,,,,,,,no_match
+81,"[81] S. K. Song, H. Saare, and G. N. Parsons, Chem. Mater. 31, 4793 (2019).",10.1016/j.chempr.2019.03.017,Reaction: A New Option for Producing Amino Acids from Renewable Biomass?,Chem,2019,5,742-743,,60,accepted
+82,"[82] Z. Wang and R. L. Opila, J. Vac. Sci. Technol. A 38, 022611 (2020).",,,,,,,,,no_match

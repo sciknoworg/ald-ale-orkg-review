@@ -1,0 +1,134 @@
+1K. J. Kanarik, T. Lill, E. A. Hudson, S. Sriraman, S. Tan, J. Marks, V. Vahedi,
+and R. A. Gottscho, J. Vac. Sci. Technol. A 33, 020802 (2015).
+2M. Yoder, U.S. patent 4,756,794A (12 July 1988).
+3S. M. George, Chem. Rev. 110, 111 (2010).
+4T. Faraz, H. C. M. Knoops, F. Roozeboom, and W. M. M. Kessels, ECS J. Solid
+State Sci. Technol. 4, N5023 (2015).
+5T. Lill, V. Vahedi, and R. Gottscho, “Etching of semiconductor devices,” in
+Materials Science and Technology (Wiley, Weinheim, 2019).
+6P. Gupta, C. H. Mak, P. A. Coon, and S. M. George, Phys. Rev. B 40, 7739
+(1989).
+7P. Gupta, P. A. Coon, B. G. Koehler, and S. M. George, J. Chem. Phys. 93, 2827
+(1990).
+8P. A. Coon, M. L. Wise, A. C. Dillon, M. B. Robinson, and S. M. George, J. Vac.
+Sci. Technol. B 10, 221 (1992).
+9P. A. Coon, P. Gupta, M. L. Wise, and S. M. George, J. Vac. Sci. Technol. A 10,
+324 (1992).
+10D. A. King and M. G. Wells, Proc. R. Soc. London 339, 245 (1974).
+11P. B. Chu, J. T. Chen, R. Yeh, G. Lin, J. C. P. Huang, B. A. Warneke, and
+S. J. Pister, “Controlled pulse-etching with xenon difluoride,” Proceedings of
+IEEE International Solid State Sensors and Actuators Conference (Transducers
+‘97), Chicago, IL, 19 June 1997 (IEEE, New York, 1997), Vol. 1, pp. 665–668.
+12Y. Lee and S. M. George, Chem. Mater. 29, 8202 (2017).
+13H. F. Winters and J. W. Coburn, Appl. Phys. Lett. 34, 70 (1979).
+14C. R. Helms and B. E. Deal, J. Vac. Sci. Technol. A 10, 806 (1992).
+15V. M. Donnelly, J. Vac. Sci. Technol. A 35, 05C202 (2017).
+16D. E. Ibbotson, J. A. Mucha, D. L. Flamm, and J. M. Cook, J. Appl. Phys. 56,
+2939 (1984).
+17P. J. Holmes and J. E. Snell, Microelectron. Reliab. 5, 337 (1966).
+18J. Ruzyllo, K. Torek, C. Daffron, R. Grant, and R. Novak, J. Electrochem. Soc.
+140, L64 (1993).
+19M. A. George, D. W. Hess, S. E. Beck, K. Young, D. A. Bohling, G. Voloshin,
+and A. P. Lane, J. Electrochem. Soc. 143, 3257 (1996).
+20A. Mameli, M. A. Verheijen, A. J. M. Mackus, W. M. M. Kessels, and
+F. Roozeboom, ACS Appl. Mater. Interfaces 10, 38588 (2018).
+21D. R. Lide, CRC Handbook of Chemistry and Physics, 85th ed. (CRC, Boca
+Raton, 2004).
+22K. Ikeda, S. Imai, and M. Matsumuraf, Appl. Surf. Sci. 112, 87 (1997).
+23Y. Lee and S. M. George, ACS Nano 9, 2061 (2015).
+24R. Mullins, S. K. Natarajan, S. D. Elliott, and M. Nolan, Chem. Mater. 32,
+3414 (2020).
+25A. Fischer, A. Routzahn, Y. Lee, T. Lill, and S. M. George, J. Vac. Sci. Technol. A
+38, 022603 (2020).
+26Y. Lee, J. W. DuMont, and S. M. George, J. Phys. Chem. C 119, 25385 (2015).
+27B. E. Deal and A. S. Grove, J. Appl. Phys. 36, 3770 (1965).
+28A. M. Cano, A. E. Marquardt, J. W. DuMont, and S. M. George, J. Phys.
+Chem. C 123, 10346 (2019).
+29M. Lucht, M. Lerche, H.-C. Wille, Yu. V. Shvyd’ko, H. D. Rüter, E. Gerdau,
+and P. Becker, J. Appl. Crystallogr. 36, 1075 (2003).
+30B. Diawara, Y. Beh, and P. Marcus, Atomistic Simulation of the Passivation of
+Iron-Chromium Alloys Using Calculated Local Diffusion Activation Barriers
+(Elsevier, Paris, 2006), p. 651.
+31A. Fischer, A. Routzahn, S. Wen, and T. Lill, J. Vac. Sci. Technol. A 38,
+042601 (2020).
+32J. W. Coburn and H. F. Winters, Appl. Phys. Lett. 55, 2730 (1989).
+33K. Malek and M.-O. Coppens, J. Chem. Phys. 119, 2801 (2003).
+34J. Abel, K. Lavoie, and K. Purushottam, U.S. patent 10727046 (28 July 2020).
+35Y. Lee, J. W. DuMont, and S. M. George, ECS J. Solid State Sci. Technol. 4,
+N5013 (2015).
+36Y. Lee, J. W. DuMont, and S. M. George, Chem. Mater. 27, 3648 (2015).
+37C. T. Carver, J. J. Plombon, P. E. Romero, S. Suri, T. A. Tronic, and
+R. B. Turkot, ECS J. Solid State Sci. Technol. 4, N5005 (2015).
+38S. M. George, Acc. Chem. Res. 53, 1151 (2020).
+39K. J. Kanarik et al., J. Vac. Sci. Technol. A 35, 05C302 (2017).
+40D. R. Zywotko and S. M. George, Chem. Mater. 29, 1183 (2017).
+41J. W. DuMont, A. E. Marquardt, A. M. Cano, and S. M. George, ACS Appl.
+Mater. Interfaces 9, 10296 (2017).
+42N. R. Johnson and S. M. George, ACS Appl. Mater. Interfaces 9, 34435 (2017).
+43A. Fischer, A. Routzahn, T. Lill, and S. Varadarajan, U.S. patent pending (2019).
+44A. I. Abdulagatov and S. M. George, Chem. Mater. 30, 8465 (2018).
+45E. Mohimi, X. I. Chu, B. B. Trinh, S. Babar, G. S. Girolami, and J. R. Abelson,
+ECS J. Solid State Sci. Technol. 7, P491 (2018).
+46M. Konh, C. He, X. Lin, X. Guo, V. Pallem, R. L. Opila, A. V. Teplyakov,
+Z. Wang, and B. Yuan, J. Vac. Sci. Technol. A 37, 021004 (2019).
+47P. C. Lemaire and G. N. Parsons, Chem. Mater. 29, 6653 (2017).
+48J. W. Clancey, A. S. Cavanagh, J. E. T. Smith, S. Sharma, and S. M. George,
+J. Phys. Chem. C 124, 287 (2020).
+49N. Miyoshi, H. Kobayashi, K. Shinoda, M. Kurihara, T. Watanabe,
+Y. Kouzuma, K. Yokogawa, S. Sakai, and M. Izawa, Jpn. J. Appl. Phys. 56,
+06HB01 (2017).
+50R. D. Robinson, B. Sadtler, D. O. Demchenko, C. K. Erdonmez, L.-W. Wang,
+and A. P. Alivisatos, Science 317, 355 (2007).
+51H. Li, M. Zanella, A. Genovese, M. Povia, A. Falqui, C. Giannini, and
+L. Manna, Nano Lett. 11, 4964 (2011).
+52J. A. Murdzek and S. M. George, J. Vac. Sci. Technol. A 38, 022608 (2020).
+53A. Fischer, A. Routzahn, and T. Lill, in 66th AVS Symposium, Columbus, OH,
+October 2019 (AVS, New York, 2019).
+54A. Fischer, R. Janek, J. Boniface, T. Lill, K. J. Kanarik, Y. Pan, V. Vahedi, and
+R. A. Gottscho, Proc. SPIE 10149, 101490H (2017).
+55J. W. DuMont and S. M. George, J. Chem. Phys. 146, 052819 (2017).
+56S. M. George and Y. Lee, ACS Nano 10, 4889 (2016).
+57J. C. Gertsch, A. M. Cano, V. M. Bright, and S. M. George, Chem. Mater. 31,
+3624 (2019).
+58J. Hennessy, C. S. Moore, K. Balasubramanian, A. D. Jewell, K. France, and
+S. Nikzad, J. Vac. Sci. Technol. A 35, 041512 (2017).
+59Y. Lee, C. Huffman, and S. M. George, Chem. Mater. 28, 7657 (2016).
+60Y. Lee, J. W. DuMont, and S. M. George, Chem. Mater. 28, 2994 (2016).
+61Y. Lee and S. M. George, J. Phys. Chem. C 123, 18455 (2019).
+62R. Rahman, E. C. Mattson, J. P. Klesko, A. Dangerfield, S. Rivillon-Amy,
+D. C. Smith, D. Hausmann, and Y. J. Chabal, ACS Appl. Mater. Interfaces 10,
+31784 (2018).
+63D. R. Zywotko, J. Faguet, and S. M. George, J. Vac. Sci. Technol. A 36, 061508
+(2018).
+64S. K. Natarajan and S. D. Elliott, Chem. Mater. 30, 5912 (2018).
+65N. R. Johnson, H. Sun, K. Sharma, and S. M. George, J. Vac. Sci. Technol. A
+34, 050603 (2016).
+66J. Zhao, M. Konh, and A. Teplyakov, Appl. Surf. Sci. 455, 438 (2018).
+67X. Lin, M. Chen, A. Janotti, and R. Opila, J. Vac. Sci. Technol. A 36, 051401
+(2018).
+68Y. Lee, N. R. Johnson, and S. M. George, Chem. Mater. 32, 5937 (2020).
+69N. R. Johnson, J. K. Hite, M. A. Mastro, Charles R. Eddy, and S. M. George,
+Appl. Phys. Lett. 114, 243103 (2019).
+70Y. Lee and S. M. George, J. Vac. Sci. Technol. A 36, 061504 (2018).
+71J. Murdzek and S. M. George, in 2019 International Symposium on VLSI, TSA,
+Hsinchu, Taiwan, 22–25 April 2019 (IEEE, New York, 2019), p. 18970301.
+72Y. Lu, J. Lee, J. Murdzek, A. Gertsch, A. Vardi, L. Kong, S. George, and
+J. del Alamo, in International Electron Devices Meeting, San Francisco, 1–5
+December 2018 (IEDM, Montgomery Village, 2018), p. 895.
+73W. Lu, Y. Lee, J. C. Gertsch, J. A. Murdzek, A. S. Cavanagh, L. Kong, J. A. del
+Alamo, and S. M. George, Nano Lett. 19, 5159 (2019).
+74A. Routzahn, A. Fischer, and T. Lill, U.S. patent pending (2020).
+75A. H. Basher, M. Krstić, K. Fink, T. Ito, K. Karahashi, W. Wenzel, and
+S. Hamaguchi, J. Vac. Sci. Technol. A 38, 052602 (2020).
+76S. Imai, T. Haga, O. Matsuzaki, T. Hattori, and M. Matsumura, Jpn. J. Appl.
+Phys. 34, 5049 (1995).
+77A. I. Abdulagatov and S. M. George, J. Vac. Sci. Technol. A 38, 022607 (2020).
+78K. Shinoda, N. Miyoshi, H. Kobayashi, M. Izawa, K. Ishikawa, and M. Hori,
+J. Phys. D: Appl. Phys. 52, 475106 (2019).
+79W. Xie, P. C. Lemaire, and G. N. Parsons, ACS Appl. Mater. Interfaces 10,
+9147 (2018).
+80W. Xie and G. N. Parsons, J. Vac. Sci. Technol. A 38, 022605 (2020).
+81S. K. Song, H. Saare, and G. N. Parsons, Chem. Mater. 31, 4793
+(2019).
+82Z. Wang and R. L. Opila, J. Vac. Sci. Technol. A 38, 022611 (2020).
+83Michelangelo di Lodovico Buonarroti Simoni, 1475–1564.

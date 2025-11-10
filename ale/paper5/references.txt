@@ -1,0 +1,46 @@
+[1] J. Coburn, H. F. Winters, and T. J. Chuang, J. Appl. Phys. 48, 3532 (1977).
+[2] H. F. Winters and J. W. Coburn, Surf. Sci. Rep. 14, 162 (1992).
+[3] F. Palumbo, C. Wen, S. Lombardo, S. Pazos, F. Aguirre, M. Eizenberg, F. Hui, and M. Lanza, Adv. Funct. Mater. 30, 1900657 (2020).
+[4] V. M. Donnelly and A. Kornblit, J. Vac. Sci. Technol. A 31, 050825 (2013).
+[5] T. Faraz, F. Roozeboom, H. C. M. Knoops, and W. M. M. Kessels, ECS J. Solid State Sci. Technol. 4, N5023 (2015).
+[6] K. J. Kanarik, T. Lill, E. A. Hudson, S. Sriraman, S. Tan, J. Marks, V. Vahedi, and R. A. Gottscho, J. Vac. Sci. Technol. A 33, 020802 (2015).
+[7] G. Oehrlein, D. Metzler, and C. Li, ECS J. Solid State Sci. Technol. 4, N5041 (2015).
+[8] Y. Kim, S. Lee, Y. Cho, S. Kim, and H. Chae, J. Vac. Sci. Technol. A 38, 022606 (2020).
+[9] J. Kim, H. Kang, Y. Kim, M. Jeon, and H. Chae, Plasma Processes Polym. e2300216 (2024).
+[10] S. K. Sung, T. Y. Kim, E. S. Cho, H. J. Cho, B. Y. Choi, C. W. Oh, B. K. Cho, C. H. Lee, and D. Park, IEEE Trans. Nanotechnol. 5, 174 (2006).
+[11] H. Yun, T. Kim, C. B. Shin, C. -K. Kim, J. -H. Min, and S. H. Moon, Korean J. Chem. Eng. 24, 670 (2007).
+[12] N. R. Johnson and S. M. George, ACS Appl. Mater. Interfaces 9, 34435 (2017).
+[13] J. Kim, D. Shim, Y. Kim, and H. Chae, J. Vac. Sci. Technol. A 40, 032603 (2022).
+[14] Y. Lee, Y. Kim, J. Son, and H. Chae, J. Vac. Sci. Technol. A 40, 022602 (2022).
+[15] D. Shim, J. Kim, Y. Kim, and H. Chae, J. Vac. Sci. Technol. B 40, 022208 (2022).
+[16] N. R. Johnson, H. Sun, K. Sharma, and S. M. George, J. Vac. Sci. Technol. A 34, 050603 (2016).
+[17] Y. Lee and S. M. George, Chem. Mater. 29, 8202 (2017). 
+[18] A. M. Cano, A. E. Marquardt, J. W. DuMont, and S. M. George, J. Phys. Chem. C 123, 10346 (2019).
+[19] S. M. George, Acc. Chem. Res. 53, 1151 (2020).
+[20] Y. Kim, H. Kang, H. Ha, M. Choi, M. Jeon, S. M. Cho, and H. Chae, Plasma Processes Polym. e2300161 (2023).
+[21] Y. Kim, H. Kang, H. Ha, C. Kim, S. Cho, and H. Chae, Appl. Surf. Sci. 627, 157309 (2023).
+[22] M. Kawakami, D. Metzler, C. Li, and G. S. Oehrlein, J. Vac. Sci. Technol. A 34, 040603 (2016).
+[23] C. Li, D. Metzler, C. S. Lai, E. A. Hudson, and G. S. Oehrlein, J. Vac. Sci. Technol. A 34, 041307 (2016).
+[24] D. Metzler, C. Li, S. Engelmann, R. L. Bruce, E. A. Joseph, and G. S. Oehrlein, J. Vac. Sci. Technol. A 34, 01B101 (2016).
+[25] J. W. DuMont, A. E. Marquardt, A. M. Cano, and S. M. George, ACS Appl. Mater. Interfaces 9, 10296 (2017).
+[26] R. J. Gasvoda, A. W. van de Steeg, R. Bhowmick, E. A. Hudson, and S. Agarwal, ACS Appl. Mater. Interfaces 9, 31067 (2017).
+[27] S. S. Kaler, Q. Lou, V. M. Donnelly, and D. J. Economou, J. Phys. D: Appl. Phys. 50, 234001 (2017).
+[28] D. Metzler, C. Li, C. S. Lai, E. A. Hudson, and G. S. Oehrlein, J. Phys. D: Appl. Phys. 50, 254006 (2017).
+[29] T. Tsutsumi, H. Kondo, M. Hori, M. Zaitsu, A. Kobayashi, T. Nozawa, and N. Kobayashi, J. Vac. Sci. Technol. A 35, 01A103 (2017).
+[30] K. Koh, Y. Kim, C. -K. Kim, and H. Chae, J. Vac. Sci. Technol. A 36, 01B106 (2018).
+[31] K. Y. Lin, C. Li, S. Engelmann, R. L. Bruce, E. A. Joseph, D. Metzler, and G. S. Oehrlein, J. Vac. Sci. Technol. A 36, 040601 (2018).
+[32] R. Rahman, E. C. Mattson, J. P. Klesko, A. Dangerfield, S. Rivillon-Amy, D. C. Smith, D. Hausmann, and Y. J. Chabal, ACS Appl. Mater. Interfaces 10, 31784 (2018).
+[33] S. Dallorto, A. Goodyear, M. Cooke, J. E. Szornel, C. Ward, C. Kastl, A. Schwartzberg, I. W. Rangelow, and S. Cabrini, Plasma Processes Polym. 16, 1900051 (2019).
+[34] R. J. Gasvoda, Y. G. Verstappen, S. Wang, E. A. Hudson, and S. Agarwal, J. Vac. Sci. Technol. A 37, 051003 (2019).
+[35] Y. Cho, Y. Kim, S. Kim, and H. Chae, J. Vac. Sci. Technol. A 38, 022604 (2020).
+[36] G. Antoun, T. Tillocher, P. Lefaucheux, J. Faguet, K. Maekawa, and R. Dussart, Sci. Rep. 11, 357 (2021).
+[37] A. Fischer, A. Routzahn, S. M. George, and T. Lill, J. Vac. Sci. Technol. A 39, 030801 (2021).
+[38] R. J. Gasvoda, Z. Zhang, E. A. Hudson, and S. Agarwal, J. Vac. Sci. Technol. A 39, 040401 (2021).
+[39] Y. J. Gill, D. S. Kim, H. S. Gil, K. H. Kim, Y. J. Jang, Y. E. Kim, and G. Y. Yeom, Plasma Processes Polym. 18, 2100063 (2021).
+[40] M. Y. Yoon, H. J. Yeom, J. H. Kim, W. Chegal, Y. J. Cho, D. C. Kwon, J. R. Jeong, and H. C. Lee, Phys. Plasmas 28, 063504 (2021).
+[41] S. Kim, I. Park, and J. Ahn, Appl. Surf. Sci. 589, 153045 (2022).
+[42] N. Miyoshi, H. Kobayashi, K. Shinoda, M. Kurihara, K. Kawamura, Y. Kouzuma, and M. Izawa, J. Vac. Sci. Technol. A 40, 012601 (2022).
+[43] Y. Kim, H. Kang, C. Kim, and H. Chae, ACS Sustainable Chem. Eng. 11, 6136 (2023).
+[44] C. Mogab, A. Adams, and D. Flamm, J. Appl. Phys. 49, 3796 (1978).
+[45] H. Doh, J. Kim, K. Whang, and S. Lee, J. Vac. Sci. Technol. A 14, 1088 (1996).
+[46] D. Marra and E. Aydil, J. Vac. Sci. Technol. A 15, 2508 (1997).

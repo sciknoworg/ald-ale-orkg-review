@@ -1,0 +1,16 @@
+﻿orkg:P183129,orkg:P183125,orkg:P183130,orkg:P183131,paper:doi,paper:research_field
+resource:C4F8/Ar plasma,resource:Ar plasma,10,2.5,10.1116/1.4935462,R254
+resource:CHF3/Ar plasma,resource:Ar plasma,10,3.5,10.1116/1.4935462,R254
+resource:C4F6/Ar plasma,resource:Ar plasma,-10,13,10.1063/5.0047811,R254
+resource:C4F8/Ar plasma,resource:Ar plasma,10,2.6,10.1116/1.5035291,R254
+resource:C4F8/H2/Ar plasma,resource:Ar plasma,10,1.6,10.1116/1.5035291,R254
+resource:C3H3F3/Ar plasma,resource:Ar plasma,10,1.2,10.1116/1.5035291,R254
+resource:CHF3 plasma,resource:O2 plasma,RT,6.8,10.1116/1.5003417,R254
+resource:CHF3 plasma,resource:Ar plasma,RT,4,10.1116/1.5003417,R254
+resource:CF3I/Ar plasma,resource:O2 plasma,40,9.3,10.1016/j.apsusc.2022.153045,R254
+resource:C4F8 plasma,resource:Ar plasma,RT,5.8,10.1116/1.5134710,R254
+resource:CHF3 plasma,resource:O2 plasma,RT,4.1,10.1116/1.5134710,R254
+resource:n-C3F7OCH3 plasma,resource:O2 plasma,RT,2.1,10.1116/1.5134710,R254
+resource:n-C3F7OCH3 plasma,resource:Ar plasma,RT,2.1,10.1021/acssuschemeng.2c05186,R254
+resource:i-C3F7OCH3 plasma,resource:Ar plasma,RT,1.8,10.1021/acssuschemeng.2c05186,R254
+resource:CF3CF2CF2CH2OH plasma,resource:Ar plasma,RT,5.2,10.1021/acssuschemeng.2c05186,R254
