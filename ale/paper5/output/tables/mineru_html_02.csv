@@ -1,8 +1,16 @@
-0,1,2,3,4,5,6
-Precursor chemistries for fluorination,Removal,lon energy in the removal step (Bias voltage),Process temperature (C),Etching rate (A/cycle),Ref.,
-Precursor chemistries for fluorination,Removal,lon energy in the removal step (Bias voltage),Process temperature (C),Etching rate (A/cycle),Ref.,
-CHF3 plasma,Ar plasma,0-50V,-40-20,9.0-11.0,[33],
-C F8 plasma beam,Ar ion beam,30-200V,RT,1.9,[27],
-C4F6/Ar plasma C4F8 plasma,Ar plasma,10-100V,-10,14.2 5.8,[40],
-CHF3 plasma C3F7OCH3 plasma n-C3F7OCH3 plasma,Ar plasma O2 plasma,30-90V,20,4.1 2.1 2.1,[8],
-i-C3F7OCH3 plasma CF3CF2CF2CH2OH plasma,Ar plasma,10-80V,RT,1.8 5.2,[43],
+0,1,2,3,4,5,6,7
+Materials,Direction,Reaction,Removal,Process Temperature (℃),EPC (Å/cycle),Time of cycle,Reference
+Co,Anisotropy,02,Formic acid,80,28,350 sec,17
+Co,Isotropy,$Cl_}$,hfacH,140,2,95 sec,32
+Fe,,,Formic acid,,42,350sec,
+Pd,Anisotropy,02,,80,12,350sec,17
+Pt,Anisotropy,02,,80,,5,350sec
+Cr,Anisotropy,$02$,$C_2}$,RT,1.1,40 sec,28
+W,Isotropy,$02,WF6,300,6.3,320 sec,33
+W,Isotropy,02/03,BC13 → HF,207,2.5,325 sec,31
+W,Anisotropy,NF3,02,RT,2.6,40 sec,29
+W,Anisotropy,$C_₂}$,Ar,60,2.1,25 sec,26
+Cu,Isotropy,$02$,Hfac,275,0.9,11 min,34
+Cu,Anisotropy,Acetic acid,O2-GCIB,RT,0.7,92 sec,30
+TiN,Isotropy,03,HF,250,0.15,64sec,18
+AIN,Isotropy,HF,Sn(acac)2,275,0.36,280 sec,19

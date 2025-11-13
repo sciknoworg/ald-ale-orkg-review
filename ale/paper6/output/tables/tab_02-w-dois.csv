@@ -1,15 +1,10 @@
-﻿Material,Direction,Reaction,Removal,Process Temperature (°C),EPC (Å/cycle),Time of cycle,Reference,doi
-Co,Anisotropy,O2,Formic acid,80,28,350 sec,17,10.1116/1.4983830
-Co,Isotropy,Cl2,hfacH,140,2,95 sec,32,10.3390/sci1020037
-Fe,Anisotropy,O2,Formic acid,80,42,350 sec,17,10.1116/1.4983830
-Pd,Anisotropy,O2,Formic acid,80,12,350 sec,17,10.1116/1.4983830
-Pt,Anisotropy,O2,Formic acid,80,5,350 sec,17,10.1116/1.4983830
-Cr,Anisotropy,O2,Cl2,RT,1.1,40 sec,28,10.1088/1361-6528/aaf521
-W,Isotropy,O2,WF6,300,6.3,320 sec,33,10.1021/acsami.7b19024
-W,Isotropy,O2/O3,BCl3 → HF,207,2.5,325 sec,31,10.1021/acsami.7b09161
-W,Anisotropy,NF3,O2,RT,2.6,40 sec,29,10.1002/ppap.201900081
-W,Anisotropy,Cl2,Ar,60,2.1,25 sec,26,10.1116/1.4979019
-Cu,Isotropy,O2,Hfac,275,0.9,11 min,34,10.1149/2.0211809jss
-Cu,Anisotropy,Acetic acid,O2-GCIB,RT,0.7,92 sec,30,10.1088/1361-6463/aa6527
-TiN,Isotropy,O3,HF,250,0.15,64 sec,18,10.1021/acs.chemmater.7b02286
-AlN,Isotropy,HF,Sn(acac)2,275,0.36,280 sec,19,10.1116/1.4959779
+﻿Precursor chemistries for fluorination,Removal,Ion energy in the removal step (Bias voltage),Process temperature (°C),Etching rate (Å/cycle),Ref,doi
+CHF3 plasma,Ar plasma,0–50V,-40–20,9.0–11.0,[33],10.1002/ppap.201900051
+C4F8 plasma beam,Ar ion beam,30–200V,RT,1.9,[27],10.1088/1361-6463/aa6f40
+C4F6/Ar plasma,Ar plasma,10–100V,-10,14.2,[40],10.1063/5.0047811
+C4F8 plasma,Ar plasma,30–90V,20,5.8,[8],10.1116/1.5134710
+CHF3 plasma,O2 plasma,30–90V,20,4.1,[8],10.1116/1.5134710
+C3F7OCH3 plasma,O2 plasma,30–90V,20,2.1,[8],10.1116/1.5134710
+n-C3F7OCH3 plasma,Ar plasma,10–80V,RT,2.1,[43],10.1021/acssuschemeng.2c05186
+i-C3F7OCH3 plasma,Ar plasma,10–80V,RT,1.8,[43],10.1021/acssuschemeng.2c05186
+CF3CF2CF2CH2OH plasma,Ar plasma,10–80V,RT,5.2,[43],10.1021/acssuschemeng.2c05186
