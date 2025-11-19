@@ -21,6 +21,12 @@ Extract tables from a PDF via **GROBID → TEI → crop → Camelot/Tabula**, th
 pip install requests lxml pandas pymupdf camelot-py[cv] tabula-py tqdm
 ```
 
+install grobid
+
+```bash
+docker pull grobid/grobid:0.8.2-full
+```
+
 > **Windows notes**  
 > • Camelot needs **Ghostscript** and **OpenCV**.  
 > • Tabula needs **Java**.
