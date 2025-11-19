@@ -12,11 +12,11 @@ https://doi.org/10.1039/D0CP03358H
 
 **Table 2:** https://orkg.org/comparisons/R1469158
 
-### NL easy query  
+### 1. NL easy query  
 Show all combinations of reactor types and LHAR structures reported in the ORKG comparison, and count how many times each combination occurs across the included studies.  
 SPARQL: https://tinyurl.com/lhr-reactor
 
-### NL complex query  
+### 2. NL complex query  
 At 300 °C in PillarHall-3, what were the cTMA values reported across studies (ORKG comparison resource R1469158)?  
 SPARQL: https://tinyurl.com/pillarhall3-ctma
 
@@ -29,11 +29,11 @@ https://doi.org/10.48550/arXiv.2506.17725
 ### Table 3  
 https://orkg.org/comparisons/R1469383
 
-#### NL easy query  
+#### 3. NL easy query  
 Which phosphors were coated with SiO₂ in the ORKG comparison R1469383 that represents Table 3 of the review ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’?  
 SPARQL: https://tinyurl.com/Phosphor-SiO2-ALD
 
-#### NL complex query  
+#### 4. NL complex query  
 Among Eu²⁺-doped phosphors with red emission in the ORKG comparison R1469383 (Table 3 of ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’), which ALD coatings were deposited at temperatures ≤150 °C with optimal thickness ≤20 nm, and what precursor schemes were used?  
 SPARQL: https://tinyurl.com/Red-Eu2-ALD-thinlowT
 
@@ -42,11 +42,11 @@ SPARQL: https://tinyurl.com/Red-Eu2-ALD-thinlowT
 ### Table 4  
 https://orkg.org/comparisons/R1469594
 
-#### NL easy query  
+#### 5. NL easy query  
 Which support materials were coated at ≤ 40 °C in the ORKG comparison R1469594 (Table 4 of *‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’*), and which precursor pairs were used, along with the reported coating thickness?  
 SPARQL: https://tinyurl.com/less-than-40
 
-#### NL complex query  
+#### 6. NL complex query  
 Among low-temperature runs (< 70 °C) that produced thin coatings (< 20 nm) in the ORKG comparison R1469594 (Table 4 of *‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’*), list the support material, precursor pair, deposition temperature, coating thickness, and—when alumina is implied by TMA-based precursors—classify the Al₂O₃ growth-per-cycle (GPC) as `slow` (< 0.4 nm), `average` (0.4–1.0 nm), or `fast` (> 1.0 nm).  
 SPARQL: https://tinyurl.com/pharma-hard-query
 
@@ -59,11 +59,11 @@ https://doi.org/10.1002/admi.202400274
 ### Table 2  
 https://orkg.org/comparisons/R1469955
 
-#### NL easy query  
+#### 7. NL easy query  
 For each application (e.g. luminescence, memory, gate dielectrics, electrolytes), which rare-earth dopants appear on the largest number of distinct host materials in the ORKG comparison R1469955 (Table 2 of *‘Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements’*)? Count the number of unique hosts per dopant and application to identify the most versatile dopants within each functional category.  
 SPARQL: https://tinyurl.com/versatile-dopants
 
-#### NL complex query  
+#### 8. NL complex query  
 Which host materials appear in two or more different application domains in the ORKG comparison R1469955 (Table 2 of *‘Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements’*)? For each such ‘cross-functional’ host, list the number of distinct applications, and enumerate all (application, dopant) combinations under which the host is used.  
 SPARQL: https://tinyurl.com/cross-functional-hosts
 
@@ -72,11 +72,11 @@ SPARQL: https://tinyurl.com/cross-functional-hosts
 ### Table 3  
 https://orkg.org/comparisons/R1471077
 
-#### NL easy query  
+#### 9. NL easy query  
 List all rare-earth ALD processes that achieve high growth per cycle (GPC ≥ 1 Å) at low deposition temperature (≤ 250 °C). Report the deposited material, the metal precursor family (e.g. Cp-derived, amidinate, β-diketonate), the co-reactant, the GPC value, and the deposition temperature, and sort the results by GPC.  
 SPARQL: https://tinyurl.com/ald-highgpc-lowtemp
 
-#### NL hard query  
+#### 10. NL hard query  
 For Y₂O₃ only, compare **average** growth per cycle (GPC) between plasma-enhanced ALD (PE-ALD) and thermal ALD within the 200–300 °C temperature window. For each mode (PE vs. thermal), return the ALD mode, the average GPC (in Å/cycle), the number of contributing table rows, and an example co-reactant description.  
 SPARQL: https://tinyurl.com/ald-y2o3-gpc200
 
@@ -85,11 +85,11 @@ SPARQL: https://tinyurl.com/ald-y2o3-gpc200
 ### Table 4  
 https://orkg.org/comparisons/R1470110
 
-#### NL easy query  
+#### 11. NL easy query  
 List all rare-earth ALD/MLD hybrid films that achieve **high growth per cycle** (GPC ≥ 5 Å) at **low deposition temperature** (≤ 250 °C). For each entry, report the material system, the metal precursor family (e.g. R(thd)₃, R(dpdmg)₃), the organic precursor, the GPC, and the deposition temperature, and sort the results by GPC.  
 SPARQL: https://tinyurl.com/HiGLoT-query
 
-#### NL complex query  
+#### 12. NL complex query  
 Group rare-earth ALD/MLD hybrid films by **organic linker family** (terephthalate, pyridinedicarboxylate, naphthalenedicarboxylate, pyrazine-based, other) and compute the **average growth per cycle (GPC)** for each family, considering only films deposited at temperatures ≤ 250 °C.  
 Report, for each linker family, the average GPC and the number of films contributing to this average, and sort the families by descending average GPC.  
 SPARQL: https://tinyurl.com/aldmld-linker-gpc
@@ -99,12 +99,12 @@ SPARQL: https://tinyurl.com/aldmld-linker-gpc
 ### Table 5  
 https://orkg.org/comparisons/R1469991
 
-#### NL easy query  
+#### 13. NL easy query  
 Among Er³⁺ MOSLEDs in the comparison, which **host matrices** achieved **high external quantum efficiency (EQE ≥ 10%)** at the **lowest threshold voltage**, and what **annealing temperatures** and **lifetimes** (emission lifetime τ and operational device lifetime OLT) were reported?  
 Return, for each qualifying host matrix, the EQE, threshold voltage, annealing temperature, τ, and OLT, and sort the results by increasing threshold voltage and, within the same voltage, by decreasing EQE.  
 SPARQL: https://tinyurl.com/mosled-high-eqe
 
-#### NL complex query  
+#### 14. NL complex query  
 Compute an **efficiency-per-volt** metric, defined as external quantum efficiency divided by threshold voltage (EQE/Vol), for all Er³⁺ MOSLED entries in the comparison.  
 Return, for each host matrix, the EQE, threshold voltage, the derived EQE-per-Volt value, and (optionally) the annealing temperature, emission lifetime (τ), and operational device lifetime (OLT).  
 Rank the host matrices by **descending EQE-per-Volt**, breaking ties by **lower threshold voltage** and then **higher EQE**, to highlight materials that deliver high emission efficiency at low operating voltage.  
@@ -112,7 +112,7 @@ SPARQL: https://tinyurl.com/mosled-pareto-score
 
 ---
 
-### Cross-table: Tables 3 and 5 (easy query)  
+### 15. Cross-table: Tables 3 and 5 (easy query)  
 Show the **ALD recipe alongside device performance** for Er³⁺-based MOSLED host matrices.  
 Join MOSLED performance (Table 5) with ALD process entries (Table 3) and report host, best EQE, ALD material, metal precursor, co-reactant, precursor family, GPC, and deposition temperature.  
 Sort by decreasing EQE.  
@@ -120,25 +120,25 @@ SPARQL: https://tinyurl.com/t3t5-lowT
 
 ---
 
-### Cross-table: Tables 2 and 5 (easy query)  
+### 16. Cross-table: Tables 2 and 5 (easy query)  
 Which luminescent materials listed as doped systems in the ALD dopant overview (Table 2) also have MOSLED performance data?  
 SPARQL: https://tinyurl.com/LumMOSLED-query
 
 ---
 
-### Cross-table: Tables 3 and 5 (complex query 1)  
+### 17. Cross-table: Tables 3 and 5 (complex query 1)  
 For each luminescent MOSLED host material in Table 5, retrieve the ALD process parameters from Table 3 and report alongside EQE.  
 SPARQL: https://tinyurl.com/t3t5-complex
 
 ---
 
-### Cross-table: Tables 3 and 5 (complex query 2)  
+### 18. Cross-table: Tables 3 and 5 (complex query 2)  
 Which rare-earth oxide matrices share synthesis (Table 3) and device performance (Table 5), and how do synthesis/annealing conditions relate to efficiencies and lifetimes?  
 SPARQL: https://tinyurl.com/t3t5-correlation
 
 ---
 
-### Cross-table: Tables 2, 3, and 5 (complex query)  
+### 19. Cross-table: Tables 2, 3, and 5 (complex query)  
 From Table 2, select Er-doped luminescent oxides. Combine synthesis temperatures (Table 3) and EQEs (Table 5) and compute:  
 **efficiency index = EQE / synthesis temperature × 100**.  
 Rank materials by this index.  
@@ -155,11 +155,11 @@ https://doi.org/10.1149/2.0061506jss
 ### Table I  
 https://orkg.org/comparisons/R1562672
 
-#### NL easy query  
+#### 1. NL easy query  
 For each ALE investigation, list the material, adsorption precursor chemistry, and energy source.  
 SPARQL: https://tinyurl.com/orkg-ale-materials
 
-#### NL complex query  
+#### 2. NL complex query  
 Group ALE materials by dominant energy-source category (neutral beam, plasma ions, photon, thermal) and count distinct precursor chemistries.  
 SPARQL: https://tinyurl.com/ale-energy-classes
 
@@ -172,11 +172,11 @@ https://doi.org/10.1116/6.0000894
 ### Table III  
 https://orkg.org/comparisons/R1563034
 
-#### NL easy query  
+#### 3. NL easy query  
 List, for each material etched, the distinct reactant tuples (Reactant 1–3) and how many entries report each tuple.  
 SPARQL: https://tinyurl.com/t3-easy-ale
 
-#### NL complex query  
+#### 4. NL complex query  
 Classify each thermal ALE chemistry by archetype (Fluorination + ligand-exchange, Oxidation + chelation, Halogenation & conversion, Other) and count chemistries and materials per archetype.  
 SPARQL: https://tinyurl.com/t3-mechanism-buckets
 
@@ -189,11 +189,11 @@ https://doi.org/10.1016/j.pnsc.2018.11.003
 ### Table 3  
 https://orkg.org/comparisons/R1560222
 
-#### NL easy query  
+#### 5. NL easy query  
 List all thermal ALE processes with EPC > 0.5 Å/cycle; return material, reactants, EPC, and etching temperature; sort by EPC.  
 SPARQL: https://tinyurl.com/t3-easy-fang
 
-#### NL complex query  
+#### 6. NL complex query  
 Group all thermal ALE processes by mechanism archetype and compute distinct materials and mean EPC per group.  
 SPARQL: https://tinyurl.com/t3-complex-fang
 
@@ -206,11 +206,11 @@ https://doi.org/10.1088/1361-6463/ab6d94
 ### Table 1  
 https://orkg.org/comparisons/R1560825
 
-#### NL easy query  
+#### 7. NL easy query  
 List all semiconductor ALE processes and return modification, removal, and activation types; sort by activation mode.  
 SPARQL: https://tinyurl.com/t1-semi-ale
 
-#### NL complex query  
+#### 8. NL complex query  
 Group semiconductor ALE processes by activation type and count materials per modification–removal pair.  
 SPARQL: https://tinyurl.com/t1-sang-complex
 
@@ -223,11 +223,11 @@ https://doi.org/10.5757/ASCT.2020.29.3.041
 ### Table 2  
 https://orkg.org/comparisons/R1563131
 
-#### NL easy query  
+#### 9. NL easy query  
 List all metal ALE processes with EPC ≥ 2 Å/cycle; return material, direction, modification/removal chemistry, EPC, process temperature, and cycle time; sort by EPC.  
 SPARQL: https://tinyurl.com/t2-metals-high-epc
 
-#### NL complex query  
+#### 10. NL complex query  
 Group metal ALE processes by direction and compute number of metals and mean EPC per group; sort by mean EPC.  
 SPARQL: https://tinyurl.com/t2-metals-complex
 
@@ -237,7 +237,7 @@ SPARQL: https://tinyurl.com/t2-metals-complex
 **Atomic Layer Etching of SiO₂ for Nanoscale Semiconductor Devices: A Review**  
 https://doi.org/10.5757/ASCT.2024.33.1.1
 
-### Cross-table NL easy query  
+### 11. Cross-table NL easy query  
 #### Tables I & II  
 https://orkg.org/comparisons/R1560949  
 https://orkg.org/comparisons/R1560977
@@ -247,7 +247,7 @@ SPARQL: https://tinyurl.com/pap6-crossq1-easy
 
 ---
 
-### Cross-table NL easy query  
+### 12. Cross-table NL easy query  
 #### Tables III & IV  
 https://orkg.org/comparisons/R1561025  
 https://orkg.org/comparisons/R1561023
@@ -257,14 +257,14 @@ SPARQL: https://tinyurl.com/pap6-crossq2-easy
 
 ---
 
-### Cross-table NL complex query  
+### 13. Cross-table NL complex query  
 #### Tables I, II, III  
 Group anisotropic SiO₂ ALE processes by fluorocarbon precursor family (e.g. C₄F₈, CHF₃, C₃F₇OCH₃ isomers) and compute mean/max etching rate, union of ion-energy windows, and max selectivity.  
 SPARQL: https://tinyurl.com/pap6-crossq1-complex
 
 ---
 
-### Cross-table NL complex query  
+### 14. Cross-table NL complex query  
 #### Tables V & VI  
 https://orkg.org/comparisons/R1561046  
 https://orkg.org/comparisons/R1562478
