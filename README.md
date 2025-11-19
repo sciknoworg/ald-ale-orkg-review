@@ -18,7 +18,7 @@ SPARQL: https://tinyurl.com/lhr-reactor
 
 ### NL complex query  
 At 300 °C in PillarHall-3, what were the cTMA values reported across studies (ORKG comparison resource R1469158)?  
-SPARQL: https://tinyurl.com/pillarhall3-ctm
+SPARQL: https://tinyurl.com/pillarhall3-ctma
 
 ---
 
