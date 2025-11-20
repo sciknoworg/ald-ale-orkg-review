@@ -270,4 +270,4 @@ https://orkg.org/comparisons/R1561046
 https://orkg.org/comparisons/R1562478
 
 Combine all isotropic SiO₂ ALE processes and group by mechanism class; report number of variants, min/max/mean etching rate, temperature range, and plasma requirement.  
-SPARQL: https://tinyurl.com/pap6-crossq2-complex
+SPARQL: https://tinyurl.com/pap6-crossq2-complex-fixed
