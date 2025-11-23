@@ -319,3 +319,122 @@ Q14_RE-MOSLED-efficiency-per-volt/results_rag_[modelname].csv
 ```
 
 This mode is useful for debugging or comparing RAG vs. context-injected behavior on a single query.
+
+## 5. Neurosymbolic querying over ORKG tables (symbolic input)
+
+In this setting, the LLM is **grounded directly in machine-actionable ORKG tables**, rather than PDFs. Each query folder `Qnn_*` contains one or more CSV files representing ORKG comparisons, e.g.:
+
+- `orkg_table2_symbolic_input.csv`
+- `orkg_table3_symbolic_input.csv`
+- `orkg_tableII_symbolic_input.csv` (Roman numerals)
+
+The neurosymbolic script:
+
+- Reads `metadata.json` in each `Qnn_*` folder to determine which table(s) are modeled  
+  - `paper_context.table_modeled` for single-table queries  
+  - `paper_context.tables_modeled[].label` for cross-table queries  
+- Maps these table labels (e.g. `"Table 2"`, `"Table 3"`, `"Table II"`) to the corresponding `orkg_table*_symbolic_input.csv` files  
+- Reads `natural_language_query_detailed.md` in the same `Qnn_*` folder  
+- Builds a prompt where **each table is introduced by its paper identifier**, followed by the CSV:
+
+  ```text
+  Table 2
+
+  <CSV>
+  ...contents of orkg_table2_symbolic_input.csv...
+  </CSV>
+
+  Table 3
+
+  <CSV>
+  ...contents of orkg_table3_symbolic_input.csv...
+  </CSV>
+  ```
+
+- Sends these neurosymbolic tables + the detailed NL query to an open-weights LLM  
+- Writes the model’s answer as:
+
+```text
+results_neurosymbolic_[modelname].csv
+```
+
+inside each `Qnn_*` folder.
+
+### 5.1 Inputs and assumptions
+
+For each query folder `Qnn_*`:
+
+- `metadata.json` must be present and contain:
+  - `paper_context.table_modeled` **or**
+  - `paper_context.tables_modeled[].label`
+- `natural_language_query_detailed.md` must exist and describe:
+  - The task over the ORKG tables
+  - The required output format (usually a **single CSV table**)
+- One CSV per modeled table must be present, with names following:
+
+  ```text
+  orkg_table2_symbolic_input.csv
+  orkg_table3_symbolic_input.csv
+  orkg_tableII_symbolic_input.csv
+  ```
+
+The script keeps the table labels **exactly as given** in the metadata (e.g. `"Table 2"` vs `"Table II"`) and uses them verbatim in the prompt.
+
+### 5.2 Running the script
+
+From the project directory (where `neurosymbolic_tables_doc_qa.py` lives):
+
+```bash
+python llm-experiments/neurosymbolic_tables_doc_qa.py
+```
+
+You will be prompted for:
+
+- `Run mode: [1] full dataset, [2] single query folder (1/2) [1]:`
+- `API key`
+- `Base URL` (e.g. `https://chat-ai.academiccloud.de/v1`)
+- `Model name` (e.g. `gemma-3-27b-it`, `qwen3-32b`, etc.)
+
+### 5.3 Full-dataset mode
+
+Choose run mode `1` to process **all** queries in the dataset:
+
+```text
+Run mode: [1] full dataset, [2] single query folder (1/2) [1]: 1
+Dataset root directory: C:\Users\DSouzaJ\Datasets\ald-e-zenodo-dataset
+```
+
+For each `ALD` / `ALE` paper and each `Qnn_*` folder, the script:
+
+1. Reads `metadata.json` to determine which table(s) to load.
+2. Loads the corresponding `orkg_table*_symbolic_input.csv` files.
+3. Builds the neurosymbolic prompt (tables + NL query).
+4. Calls the LLM once per query.
+5. Writes:
+
+```text
+ALD/paperX/Qnn_*/results_neurosymbolic_[modelname].csv
+ALE/paperY/Qmm_*/results_neurosymbolic_[modelname].csv
+```
+
+### 5.4 Single-query mode
+
+Choose run mode `2` to process **one specific query folder**:
+
+```text
+Run mode: [1] full dataset, [2] single query folder (1/2) [1]: 2
+Absolute path to query folder (Qnn_*): C:\Users\DSouzaJ\Datasets\ald-e-zenodo-dataset\ALD\paper3\Q14_RE-MOSLED-efficiency-per-volt
+```
+
+The script will:
+
+1. Work only on that single `Qnn_*` folder.
+2. Read `metadata.json` and the relevant `orkg_table*_symbolic_input.csv` files.
+3. Read `natural_language_query_detailed.md`.
+4. Call the LLM and write:
+
+```text
+Q14_RE-MOSLED-efficiency-per-volt/results_neurosymbolic_[modelname].csv
+```
+
+This mode is useful for debugging neurosymbolic behavior on a single query, or for comparing **symbolic (ORKG tables)** vs. **PDF-based** setups on the same task.
