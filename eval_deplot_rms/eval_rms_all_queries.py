@@ -324,6 +324,16 @@ def main():
         help="Output CSV file with the best cumulative setting per query (per domain).",
     )
     parser.add_argument(
+        "--out-per-query-avg-ald",
+        default="rms_per_query_avg_ALD.csv",
+        help="Output CSV file for per-query scores averaged over all systems (ALD).",
+    )
+    parser.add_argument(
+        "--out-per-query-avg-ale",
+        default="rms_per_query_avg_ALE.csv",
+        help="Output CSV file for per-query scores averaged over all systems (ALE).",
+    )
+    parser.add_argument(
         "--out-overall",
         default="rms_overall.csv",
         help="Output CSV file for aggregated RMS scores per system.",
@@ -442,6 +452,14 @@ def main():
 
     per_query_df = pd.DataFrame(per_query_rows)
 
+    # Global set of non-SPARQL *system configurations* (should be 21); used for constant denominator
+    non_sparql_mask = ~per_query_df["is_gold_system"]  # only SPARQL has is_gold_system=True
+    non_sparql_systems = sorted(
+        per_query_df.loc[non_sparql_mask, "system_label"].unique()
+    )
+    n_non_sparql_systems = len(non_sparql_systems)
+    print(f"[INFO] Non-SPARQL system configurations counted for averages: {n_non_sparql_systems}")
+
     # 1) Detailed per-query table (one row per (domain, paper, query_folder, system))
     out_per_query_detailed_path = os.path.abspath(args.out_per_query_detailed)
     per_query_df.to_csv(out_per_query_detailed_path, index=False)
@@ -496,6 +514,70 @@ def main():
     ale_cum_df.to_csv(out_ale_path, index=False)
     print(f"[INFO] Wrote cumulative per-query RMS table for ALE to: {out_ale_path}")
 
+    def _make_avg_per_query(
+        cum_df: pd.DataFrame,
+        all_non_sparql_systems: list[str],
+    ) -> pd.DataFrame:
+        """Average cumulative per-query scores across all non-SPARQL systems.
+
+        - Excludes only SPARQL.
+        - Uses a constant denominator = len(all_non_sparql_systems),
+        treating missing system-query pairs as 0.
+        """
+        if cum_df.empty:
+            return pd.DataFrame()
+
+        # Drop SPARQL row(s) only
+        df = cum_df[cum_df["system_name"] != "SPARQL"].copy()
+        if df.empty:
+            return pd.DataFrame()
+
+        n_total = len(all_non_sparql_systems)
+
+        group_cols = ["domain", "query_id", "query_label"]
+
+        agg = (
+            df.groupby(group_cols, dropna=False)
+            .agg(
+                sum_precision=("rms_precision_mean", "sum"),
+                sum_recall=("rms_recall_mean", "sum"),
+                sum_f1=("rms_f1_mean", "sum"),
+                n_systems_present=("rms_f1_mean", "count"),
+            )
+            .reset_index()
+        )
+
+        agg["n_systems_total"] = n_total
+        # Constant denominator: missing systems implicitly contribute 0
+        agg["rms_precision_mean"] = agg["sum_precision"] / n_total
+        agg["rms_recall_mean"] = agg["sum_recall"] / n_total
+        agg["rms_f1_mean"] = agg["sum_f1"] / n_total
+
+        agg = agg[
+            [
+                "domain",
+                "query_id",
+                "query_label",
+                "n_systems_present",
+                "n_systems_total",
+                "rms_precision_mean",
+                "rms_recall_mean",
+                "rms_f1_mean",
+            ]
+        ].sort_values(["domain", "query_id"])
+
+        return agg
+
+    ald_avg_df = _make_avg_per_query(ald_cum_df, non_sparql_systems)
+    ale_avg_df = _make_avg_per_query(ale_cum_df, non_sparql_systems)
+
+    out_ald_avg_path = os.path.abspath(args.out_per_query_avg_ald)
+    ald_avg_df.to_csv(out_ald_avg_path, index=False)
+    print(f"[INFO] Wrote per-query average (across non-symbolic systems) RMS table for ALD to: {out_ald_avg_path}")
+
+    out_ale_avg_path = os.path.abspath(args.out_per_query_avg_ale)
+    ale_avg_df.to_csv(out_ale_avg_path, index=False)
+    print(f"[INFO] Wrote per-query average (across non-symbolic systems) RMS table for ALE to: {out_ale_avg_path}")
 
     # 3) Best cumulative setting per query (per domain)
     all_cum_df = pd.concat([ald_cum_df, ale_cum_df], ignore_index=True)
