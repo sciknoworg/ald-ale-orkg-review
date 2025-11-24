@@ -499,23 +499,31 @@ def main():
 
     # 3) Best cumulative setting per query (per domain)
     all_cum_df = pd.concat([ald_cum_df, ale_cum_df], ignore_index=True)
-    if not all_cum_df.empty:
-        # For each (domain, query_id, query_label), pick the row with max rms_f1_mean
-        group_keys = ["domain", "query_id", "query_label"]
-        idx = all_cum_df.groupby(group_keys)["rms_f1_mean"].idxmax()
-        best_per_query_df = (
-            all_cum_df
-            .loc[idx]
-            .sort_values(["domain", "query_id", "setting_major", "setting_id"])
-        )
 
-        out_best_path = os.path.abspath(args.out_best_per_query)
-        best_per_query_df.to_csv(out_best_path, index=False)
-        print(f"[INFO] Wrote best-per-query RMS table to: {out_best_path}")
+    if not all_cum_df.empty:
+        # Exclude SPARQL (symbolic baseline) from "best" selection
+        # You can filter either by variant or by system_name; both are redundant.
+        candidates_df = all_cum_df[all_cum_df["variant"] != "symbolic"]
+        # Alternatively:
+        # candidates_df = all_cum_df[all_cum_df["system_name"] != "SPARQL"]
+
+        if candidates_df.empty:
+            print("[WARN] No non-symbolic systems found; best-per-query table not written.")
+        else:
+            # For each (domain, query_id, query_label), pick the non-symbolic row with max F1
+            group_keys = ["domain", "query_id", "query_label"]
+            idx = candidates_df.groupby(group_keys)["rms_f1_mean"].idxmax()
+            best_per_query_df = (
+                candidates_df
+                .loc[idx]
+                .sort_values(["domain", "query_id", "setting_major", "setting_id"])
+            )
+
+            out_best_path = os.path.abspath(args.out_best_per_query)
+            best_per_query_df.to_csv(out_best_path, index=False)
+            print(f"[INFO] Wrote best-per-query RMS table to: {out_best_path}")
     else:
         print("[WARN] No cumulative per-query data; best-per-query table not written.")
-
-
 
     # Aggregate over all queries per system (overall results for all settings)
     # We average precision/recall/F1 across queries for each system.
