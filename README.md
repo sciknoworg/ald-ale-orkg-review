@@ -48,11 +48,13 @@ https://doi.org/10.1039/D0CP03358H
 https://orkg.org/comparisons/R1469158
 
 #### 1. NL easy query  
-Show all combinations of reactor types and LHAR structures reported in the ORKG comparison, and count how many times each combination occurs across the included studies.  
+Short: Show all combinations of reactor types and LHAR structures reported in the ORKG comparison, and count how many times each combination occurs across the included studies.  
+Detailed: Please extract all combinations of reactor types and LHAR structures from Table 2 of the article titled "Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels". Count how many times each combination occurs across the included studies. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: reactor_value, lhar_value, n.
 SPARQL: https://tinyurl.com/lhr-reactor
 
 #### 2. NL complex query  
-At 300 °C in PillarHall-3, what were the cTMA values reported across studies (ORKG comparison resource R1469158)?  
+Short: At 300 °C in PillarHall-3, what were the cTMA values reported across studies (ORKG comparison resource R1469158)? 
+Detailed: Please extract all rows from Table 2 where the temperature is 300 °C and the LHAR type contains "pillarhall-3". For each matching row, include the contribution, paper, paper title, temperature, LHAR type, and cTMA values. The result must be returned as one single table only, in CSV format, with one row per result, and with the following columns: temp, lharText, cTMA.
 SPARQL: https://tinyurl.com/pillarhall3-ctma
 
 ---
@@ -65,11 +67,13 @@ https://doi.org/10.48550/arXiv.2506.17725
 https://orkg.org/comparisons/R1469383
 
 #### 3. NL easy query  
-Which phosphors were coated with SiO₂ in the ORKG comparison R1469383 that represents Table 3 of the review ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’?  
+Short: Which phosphors were coated with SiO₂ in the ORKG comparison R1469383 that represents Table 3 of the review ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’?  
+Detailed: Please provide a table in CSV format that includes all rows from Table 3 of the paper "Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications" where the coating material contains "SiO2". The table should have columns for "phosphor", and "coating", with one row per result.
 SPARQL: https://tinyurl.com/Phosphor-SiO2-ALD
 
 #### 4. NL complex query  
-Among Eu²⁺-doped phosphors with red emission in the ORKG comparison R1469383 (Table 3 of ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’), which ALD coatings were deposited at temperatures ≤150 °C with optimal thickness ≤20 nm, and what precursor schemes were used?
+Short: Among Eu²⁺-doped phosphors with red emission in the ORKG comparison R1469383 (Table 3 of ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’), which ALD coatings were deposited at temperatures ≤150 °C with optimal thickness ≤20 nm, and what precursor schemes were used?
+Detailed: In Table 3 of the paper titled "Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications," retrieve all rows where the phosphor material contains "Eu2+" and the emission color is "red." Additionally, filter the rows to include only those where the ALD deposition temperature is less than or equal to 150 °C and the ALD coating thickness is less than or equal to 20 nm. For each qualifying row, include the phosphor material, coating material, ALD precursor scheme, ALD deposition temperature, and ALD coating thickness. The result must be returned as one single table only, in CSV format, with one row per result, and with the following columns: phosphor_value, coating_value, precursors_value, temp_num, thick_num.
 SPARQL: https://tinyurl.com/Red-Eu2-ALD-thinlowT
 
 ---
