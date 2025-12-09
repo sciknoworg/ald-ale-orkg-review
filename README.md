@@ -49,7 +49,7 @@ https://orkg.org/comparisons/R1469158
 
 #### 1. NL easy query  
 `Short`: Show all combinations of reactor types and LHAR structures reported in the ORKG comparison, and count how many times each combination occurs across the included studies.  
-`Detailed`: Please extract all combinations of reactor types and LHAR structures from Table 2 of the article titled "Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels". Count how many times each combination occurs across the included studies. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: reactor_value, lhar_value, n.
+`Detailed`: Please extract all combinations of reactor types and LHAR structures from Table 2 of the article titled "Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels". Count how many times each combination occurs across the included studies. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: reactor_value, lhar_value, n.  
 `SPARQL`: https://tinyurl.com/lhr-reactor
 
 #### 2. NL complex query  
