@@ -1,0 +1,69 @@
+{
+  "id": "Q10",
+  "domain": "ALE",
+  "query_group": "MetalsALE2020-T2",
+  "query_variant": "complex",
+  "query_scope": "single-table-aggregated",
+  "description_short": "Aggregate metals ALE Table 2 by direction (anisotropic vs. isotropic) to compute the number of distinct metals and mean EPC per direction.",
+  "paper_context": {
+    "paper": {
+      "title": "Anisotropic/Isotropic Atomic Layer Etching of Metals",
+      "doi": "10.5757/ASCT.2020.29.3.041",
+      "doi_url": "https://doi.org/10.5757/ASCT.2020.29.3.041"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 2",
+        "description": "Summary of anisotropic and isotropic metal ALE chemistries, including direction, modification/removal chemistry, EPC, process temperature, and cycle time."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1563131",
+        "comparison_url": "https://orkg.org/comparisons/R1563131",
+        "role": "metals_ALE_table2",
+        "table_source": "Table 2 (metals ALE processes) from the metal ALE review."
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t2-metals-complex"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183148",
+      "label": "Direction",
+      "role": "Specifies whether the ALE process is anisotropic or isotropic; used as the grouping key."
+    },
+    {
+      "pid": "P9071",
+      "label": "Material",
+      "role": "Identifies the metal being etched; normalized to count distinct metals per direction."
+    },
+    {
+      "pid": "P183120",
+      "label": "EPC (Å/cycle)",
+      "role": "Etch-per-cycle rate, parsed as a numeric value and averaged per direction group."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": {
+      "grouping_key": "direction",
+      "description": "Rows are grouped by etch direction (anisotropic vs. isotropic). Within each group, distinct metals are counted and EPC values are averaged."
+    },
+    "output_shape": {
+      "description": "One row per etch direction (anisotropic / isotropic).",
+      "columns": [
+        "direction: anisotropic or isotropic.",
+        "n_metals: number of distinct metal materials with at least one reported process for this direction.",
+        "avg_epc: average etch-per-cycle rate (Å/cycle) over all processes in this direction."
+      ]
+    },
+    "interpretation": "The result summarizes directional trends in metal ALE. Comparing avg_epc and n_metals between anisotropic and isotropic regimes highlights which direction tends to achieve higher average etch rates and how broadly each regime has been explored across different metals."
+  }
+}

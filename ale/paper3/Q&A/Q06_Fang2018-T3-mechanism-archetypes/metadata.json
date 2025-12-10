@@ -1,0 +1,85 @@
+{
+  "id": "Q06",
+  "domain": "ALE",
+  "query_group": "Fang2018-T3",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Group thermal ALE chemistries from Fang et al. Table 3 into inferred mechanistic archetypes and compute, for each group, the number of distinct materials and the mean EPC.",
+  "paper_context": {
+    "paper": {
+      "title": "Thermal atomic layer etching: Mechanism, materials and prospects",
+      "doi": "10.1016/j.pnsc.2018.11.003",
+      "doi_url": "https://doi.org/10.1016/j.pnsc.2018.11.003"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 3",
+        "description": "Summary of thermal ALE processes: etched material, surface-adsorption and surface-removal reactants, etch-per-cycle (EPC), and etching temperature."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1560222",
+        "comparison_url": "https://orkg.org/comparisons/R1560222",
+        "role": "thermal_ALE_table3",
+        "table_source": "Fang et al. (2018), Thermal ALE Table 3"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t3-complex-fang"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183117",
+      "label": "Material",
+      "role": "Identifies the solid being etched in the thermal ALE process (e.g., SiO2, Al2O3, Si3N4)."
+    },
+    {
+      "pid": "P183118",
+      "label": "Surface adsorption reactant",
+      "role": "Reactant responsible for the initial surface modification or adsorption step in the ALE cycle."
+    },
+    {
+      "pid": "P183119",
+      "label": "Surface removal reactant",
+      "role": "Reactant that removes the modified surface layer, typically via volatile products."
+    },
+    {
+      "pid": "P183120",
+      "label": "Etch per cycle (EPC)",
+      "role": "Etch-per-cycle value in Å/cycle; used here to compare etch-rate efficiency across mechanistic archetypes."
+    }
+  ],
+  "postprocessing_notes": {
+    "numeric_parsing": {
+      "field": "P183120 (EPC)",
+      "strategy": "Extract the first numeric token from EPC strings that may contain ranges or multiple values, using a regex capture and casting to xsd:decimal.",
+      "caveats": "For multi-valued or range EPC entries, only one representative number is used; more refined analysis of ranges would require separate handling."
+    },
+    "mechanism_buckets": {
+      "description": "Mechanistic archetypes are inferred from keyword patterns over adsorption and removal reactants.",
+      "buckets": [
+        "Fluorination + ligand-exchange: HF combined with TMA, DMAC, Sn(acac)2, Al(CH3)2Cl, or SiCl4.",
+        "Halogenation + conversion: WF6 combined with BCl3.",
+        "Oxidation + fluorination: O2 or O3 together with HF.",
+        "Other: all chemistries not matching the above patterns."
+      ],
+      "note": "The classification is heuristic and intended for high-level grouping rather than a fully detailed mechanistic assignment."
+    },
+    "output_shape": {
+      "description": "One row per inferred mechanism archetype.",
+      "columns": [
+        "mechanism: inferred mechanistic family label.",
+        "n_materials: number of distinct etched materials in this family.",
+        "avg_epc: average etch-per-cycle (Å/cycle) over chemistries in this family."
+      ]
+    },
+    "interpretation": "The result supports cross-material comparison of etch-rate efficiency within broadly defined reaction families, helping identify which mechanistic archetypes tend to deliver higher EPC across the thermal ALE landscape summarized in Fang et al. Table 3."
+  }
+}

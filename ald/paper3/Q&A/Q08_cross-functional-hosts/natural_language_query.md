@@ -1,0 +1,1 @@
+Which host materials appear in two or more different application domains in the ORKG comparison R1469955 (Table 2 of *‘Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements’*)? For each such ‘cross-functional’ host, list the number of distinct applications, and enumerate all (application, dopant) combinations under which the host is used.

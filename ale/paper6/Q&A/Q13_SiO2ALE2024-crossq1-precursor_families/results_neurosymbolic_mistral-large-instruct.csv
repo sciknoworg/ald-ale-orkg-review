@@ -1,0 +1,5 @@
+precursor_family,mean_etch_rate,max_etch_rate,ion_energy_windows,max_sel_SiO2_Si,max_sel_SiO2_Si3N4
+C4F8-based,,,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,>10.0,>7.0
+CHF3-based,,,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,,0.2–15.0
+C3F7OCH3 isomers,,,Precursor selection,102.8,2.6–17.5
+CF3CF2CF2CH2OH plasma,,,Precursor selection,,3.4

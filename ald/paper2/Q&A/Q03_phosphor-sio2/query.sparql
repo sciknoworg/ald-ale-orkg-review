@@ -1,0 +1,11 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+
+SELECT ?contrib ?phosphor ?coating
+WHERE {
+  orkgr:R1469383 orkgp:compareContribution ?contrib .
+  ?contrib orkgp:P180010 ?phosphor .
+  ?contrib orkgp:P180014 ?coating .
+  FILTER ( CONTAINS(LCASE(STR(?coating)), "sio2") )
+}
+ORDER BY ?phosphor

@@ -1,0 +1,1 @@
+Group all thermal ALE processes by inferred mechanism archetype—(i) Fluorination + ligand-exchange (HF with TMA/DMAC/Sn(acac)2/Al(CH3)2Cl/SiCl4), (ii) Halogenation + conversion (WF6 with BCl3), (iii) Oxidation + fluorination (O2/O3 with HF), or (iv) Other—and compute, for each group, the number of distinct materials and the mean EPC.

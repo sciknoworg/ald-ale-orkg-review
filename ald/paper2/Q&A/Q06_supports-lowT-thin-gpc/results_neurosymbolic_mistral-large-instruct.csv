@@ -1,0 +1,13 @@
+support_value,precursors_value,temp_num,thick_num,gpc_num_nm,gpc_class
+lactose,TMA/H2O,30,2.5-11.0,0.47-0.73,average
+lactose,TMA/H2O,30,2.5-11.0,0.47-0.73,average
+lactose,TMA/O3,30,3.8-10.3,0.47-1.00,average
+budesonide,TMA/H2O,40,0.8-2.0,0.20-0.33,slow
+budesonide,TMA/O3,40,20.0-50.0,1.00-2.00,fast
+budesonide,TMA/O3,40,20.0-50.0,1.00-2.00,fast
+budesonide,TMA/O3,40,20.0-50.0,1.00-2.00,fast
+indomethacin,TMA/H2O,50,30.0-35.0,0.26-0.30,slow
+posaconazole/HPMCAS,TMA/H2O,35,,>1.00,n/a
+posaconazole/HPMCAS,TMA/H2O,35,12,0.40-1.00,average
+posaconazole/HPMCAS,TMA/H2O,35,8.0-40.0,<0.40,slow
+myoglobin,TMA/H2O,30,8.3,0.21,slow

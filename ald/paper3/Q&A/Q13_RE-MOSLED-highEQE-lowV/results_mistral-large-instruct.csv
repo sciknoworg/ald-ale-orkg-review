@@ -1,0 +1,3 @@
+host_matrix,eqe_num,vol_num,anneal_num,tau_num,olt_num
+LuAlO,10,50,1100,1.65,NG
+YGaO,2.5,25,800,2.26,49

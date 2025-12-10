@@ -1,0 +1,1 @@
+List all rare-earth ALD/MLD hybrid films that achieve **high growth per cycle** (GPC ≥ 5 Å) at **low deposition temperature** (≤ 250 °C). For each entry, report the material system, the metal precursor family (e.g. R(thd)₃, R(dpdmg)₃), the organic precursor, the GPC, and the deposition temperature, and sort the results by GPC.

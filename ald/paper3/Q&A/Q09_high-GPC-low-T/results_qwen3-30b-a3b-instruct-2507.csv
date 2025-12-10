@@ -1,0 +1,237 @@
+material,family,co_reactant,gpc_num,temp_num
+La(iPrCp) HO, Cp-derived, HO, 0.10, 280
+La(iPrCp) O, Cp-derived, O, 0.30-0.60, 150
+La(iPrCp) O plasma, Cp-derived, O plasma, 0.60, 300
+La(iPr2amd) HO, amidinate, HO, 1.05, 200
+La(iPr2amd) O, amidinate, O, 1.20-1.40, 200
+La(iPr2amd)(iPrCp) HO, amidinate, HO, 1.20-3.00, 200
+La(iPr2amd)(iPrCp) O, amidinate, O, 0.60-2.10, 200
+La(iPr2amd)(iPrCp) HO+O, amidinate, HO+O, 0.70-1.80, 200
+La(iPr2amd)(iPrCp) EtOH, amidinate, EtOH, 0.50-1.70, 200
+La(iPr2famd) HO, formamidinate, HO, 1.70, 200
+La(iPr2famd) O, formamidinate, O, 1.20-1.40, 200
+La(iPr2famd) O, formamidinate, O, 0.40, 300
+La(iPr2amd)(iPrCp) HO, amidinate, HO, 1.20-3.00, 200
+La(iPr2amd)(iPrCp) O, amidinate, O, 0.60-2.10, 200
+La(iPr2amd)(iPrCp) HO+O, amidinate, HO+O, 0.70-1.80, 200
+La(iPr2amd)(iPrCp) EtOH, amidinate, EtOH, 0.50-1.70, 200
+La(iPr2famd) HO, formamidinate, HO, 1.70, 200
+La(iPr2famd) O, formamidinate, O, 1.20-1.40, 200
+La(iPr2famd) O, formamidinate, O, 0.40, 300
+La(iPr2amd) TMA HO, amidinate, TMA HO, 0.80, 300
+La(iPr2famd) TMA HO, formamidinate, TMA HO, 2.80, 300
+La(iPrCp) TMA HO, Cp-derived, TMA HO, 0.12, 300
+LaAl(OiPr)(iPrOH)] HO, other, HO, 0.10-0.50, 160
+LaNiO La(thd) Ni(thd) O, β-diketonate, O, 0.08-0.26, 215
+LaCoO La(thd) Co(thd) O, β-diketonate, O, 0.35, 200
+LaMnO La(thd) Mn(thd) O, β-diketonate, O, 0.10-0.23, 250
+LaGaO La(thd) Ga(acac) O, β-diketonate, O, 0.38, 325
+LaFeO La(thd) Fe(thd) O, β-diketonate, O, 0.20-0.30, 200
+LaLuO La(thd) Lu(thd) O, β-diketonate, O, 300, 300
+La(iPr2amd) Lu(Etfamd) HO, amidinate, HO, 1.20, 300
+LaScO La(iPr2amd) Sc(Etamd) HO, amidinate, HO, 1.10, 300
+LaYO La(iPr2amd) Y(iPramd) HO, amidinate, HO, 0.80, 280
+HfLaO La(iPrCp) TEMA-Hf HO, Cp-derived, HO, 1.40, 300
+La(iPrCp) TEMA-Hf O, Cp-derived, O, NA, 225
+La(iPrCp) TEMA-Hf O plasma, Cp-derived, O plasma, 0.50, 225
+La(iPr2famd) TEMA-Hf O, formamidinate, O, _, 265
+LaWO La(thd) W(tBuN)(MeN) O HO, β-diketonate, O HO, 0.48-0.58, 250
+LaPO La(thd) TMPO HO O, β-diketonate, HO O, 0.78, 275
+LaCaPO La(thd) Ca(thd) TMPO HO/O, β-diketonate, HO/O, 0.78, 275
+LaCuO La(thd) Cu(acac) O, β-diketonate, O, 0.40, 210
+LaVO La(thd) VO(acac) _, β-diketonate, _, 270
+La x Zr 1-X O 2-𝛿 La(iPrCp) 3 (MeCp) 2 ZrMe(OMe) H 2 O, Cp-derived, H 2 O, _, 300
+La(thd) (MeCp)ZrMe(OMe) O, β-diketonate, O, _, 300
+La(tmsa) Zr[N(CHCH)] HO, alkoxide/amide, HO, 0.58-0.72, 250
+LiLaO Li(thd) La(thd) O, β-diketonate, O, 0.20-0.30, 225
+LiLaZrO LiOtBu [La(iPrFamd)] TDMAZ O, other, O, 0.80, 225
+7 3 2 12 3 3
+La SrFeO La(thd) Sr(thd) Fe(thd) O, β-diketonate, O, 0.20-0.30, 260
+1-X x 3 2 3 3
+La SrMnO La(MeCp) Srn-PrMeCp MnMeCp HO, Cp-derived, HO, 5.00, 300
+1-X x 3 3 4 2 2 2
+La CaMnO La(thd) Ca(thd) Mn(thd) O, β-diketonate, O, 0.15-0.40, 235
+1-X x 3 3 2 3 3
+(La,Sr)CoO 3−𝛿 La(thd) 3 Sr(thd) 2 Co(acac) 3 O 3, β-diketonate, O 3, 0.50, 250
+La SrCuO La(thd) Cu(acac) Sr(thd) O, β-diketonate, O, 0.40, 225
+2−x x 4−y 3 2 2 3
+LaNiCu O La(thd) Ni(acac) Cu(acac) O, β-diketonate, O, _, 225
+x 1-x 3 3 2 2 3
+LaF La(thd) TiF, β-diketonate, TiF, 2.00-5.00, 225
+3 3 4 4
+La(thd) O Hfac, β-diketonate, O Hfac, 0.49, 250
+3 3
+LaS3 La(thd) HS, β-diketonate, HS, 0.15, 360
+2 3 2
+Ce(iPrCp) O plasma, Cp-derived, O plasma, 0.35, 250
+Ce(iPrCp) HO, Cp-derived, HO, 0.20, 250
+Ce(iPr2amd)(iPrCp) HO, amidinate, HO, 1.90, 240
+Ce(iPr2amd) O, amidinate, O, 2.80, 210
+Ce(dpdmg) HO, other, HO, 2.10, 160
+Ce(iPr2famd)(iPrCp) HO, formamidinate, HO, 1.50, 245
+Pr(iPr2amd)(iPrCp) HO, amidinate, HO, 1.47-1.66, 200
+PrAl O Pr(iPr2amd) TMA HO, amidinate, TMA HO, 0.8-1.0, 295
+x 2–x 3 3 2
+[PrAl(OPri)(PriOH)] HO, other, HO, _, 180
+6 2 2
+Pr(iPrCp) TMA HO, Cp-derived, TMA HO, 1.70, 250
+NdO Nd(thd) O, β-diketonate, O, 0.44-0.45, 310
+2 3 3 3
+NdAlO Nd(thd) O TMA HO, β-diketonate, TMA HO, 0.53, 300
+3 3 3 2
+[NdAl(OiPr)(PriOH)] HO, other, HO, _, 180
+6 2 2
+NdNiO Nd(iPrCp) Ni(tBuamd) O, Cp-derived, O, 0.36, 160
+3 3 2 2 3
+SmO Sm(thd) O, β-diketonate, O, 0.36, 300
+2 3 3 3
+SmMnO Sm(thd) Mn(thd) O, β-diketonate, O, 0.23, 275
+3 3 2 3
+EuO Eu(thd) O, β-diketonate, O, 73, 300
+2 3 3 3
+EuTiO Eu(thd) O TiCl HO, β-diketonate, TiCl HO, 0.38-0.45, 300
+x y z 3 3 4 2 4 2
+EuTiPO Eu(thd) O TiCl+HO MePO, β-diketonate, TiCl+HO MePO, 0.80-1.00, 300
+x y z 3 3 4 2 3 4 4 2 3 4
+GdO Gd(thd) O, β-diketonate, O, 0.31, 300
+2 3 3 3
+Gd(MeCp) HO, Cp-derived, HO, 1.00-3.20, 175
+3 2
+Gd(RCp) HO, Cp-derived, HO, 1.00-3.20, _
+3 2
+Gd(mmp) HO, other, HO, 0.20-1.00, 200
+3 2
+Gd(dpdmg) HO, other, HO, 1.00-1.10, 175
+3 2
+Gd(tBu2amd) HO, amidinate, HO, 0.26-0.49, 350
+3 2
+Gd(iPrCp) O plasma, Cp-derived, O plasma, 1.40, 250
+3 2
+Gd(iPrCp) HO, Cp-derived, HO, 0.80, 250
+3 2
+Gd(iPrCp) O, Cp-derived, O, 0.20, 250
+3 3
+Gd(iPr2amd)(iPrCp) HO, amidinate, HO, 1.16-1.38, 200
+2 2
+GdAlO Gd(iPrCp) TMA O, Cp-derived, O, 1.75-2.75, 200
+3 3 3
+Gd(iPrCp) TMA HO, Cp-derived, HO, 4.50-5.00, 200
+3 2
+ZrO-GdO Zr(MeCp)Me(OMe) Gd(thd) O, β-diketonate, O, 0.39-0.53, 300
+2 2 3 2 3 3
+GdScO Gd(iPr2amd) Sc(Et2amd) HO, amidinate, HO, 2.00, 310
+3 3 3 2
+Gd(thd) Sc(thd) O, β-diketonate, O, 0.21, 300
+3 3 3
+Gd(iPrCp) Sc(MeCp) HO, Cp-derived, HO, 2.20, 300
+3 3 2
+GdFeO GdFe(OtBu)(CHN) O, other, O, 0.20-0.30, 200
+3 6 5 5 2 3
+GdCoO Gd(thd) Co(thd) O, β-diketonate, O, 0.24, 300
+3 3 2 3
+GdGaO Gd(thd) TEGa O, β-diketonate, O, 0.19, 350
+3 5 12 3 3
+Gd Ca CoO Gd(thd) Co(thd) Ca(thd) O, β-diketonate, O, 0.30, 300
+0.9 0.1 3 3 2 2 3
+GdN Gd(MeCp) N plasma, Cp-derived, N plasma, 0.33, 150
+3 2
+GdF Gd(thd) NHF, β-diketonate, NHF, 0.26, 300
+3 3 4 4
+TbO-AlO Tb(thd) TMA O, β-diketonate, O, _, 350
+2 3 2 3 3 3
+TbMnO Tb(thd) Mn(thd) O, β-diketonate, O, 0.18, 250
+3 3 2 3
+TbScO Tb(thd) Sc(thd) O, β-diketonate, O, 0.40, 300
+3 3 3 3
+TbF Tb(thd) TiF, β-diketonate, TiF, 0.75, 175
+3 3 4 4
+DyO Dy(thd) O, β-diketonate, O, 0.31, 300
+2 3 3 3
+Dy(dpdmg) HO, other, HO, 1.00, 200
+3 2
+Dy(iPr2amd)(iPrCp) O plasma, amidinate, O plasma, 0.30, 140
+2 2
+Dy(iPr2amd)(iPrCp) HO, amidinate, HO, 1.16-1.38, 300
+2 2
+Dy(iPr2amd)(iPrCp) O, amidinate, O, _, 200
+2 3
+HoO Ho(thd) O, β-diketonate, O, 0.25, 300
+2 3 3 3
+HoF Ho(thd) NbF, β-diketonate, NbF, 1.00, 250
+3 3 5 5
+ErO Er(thd) O, β-diketonate, O, 0.20-0.25, 250
+2 3 3 3
+Er(thd) O plasma, β-diketonate, O plasma, 0.50, 200
+3 2
+Er(MeCp) HO, Cp-derived, HO, 1.50, 250
+3 2
+Er(MeCp) O, Cp-derived, O, 0.12, 170
+3 3
+Erbitel12 O, β-diketonate, O, 0.20-0.40, 175
+3
+Er(tBu2amd) O, amidinate, O, 0.37-0.55, 225
+3 3
+Er(dpdmg) HO, other, HO, 1.10, 150
+3 2
+Er(iPr2amd)(MeCp) HO, amidinate, HO, 0.50, 180
+2 2
+Er(iPr2amd)(MeCp) O plasma, amidinate, O plasma, 0.70, 180
+2 2
+Er(iPr2amd)(MeCp) HO, amidinate, HO, 1.10-1.20, 225
+2 2
+Er(iPr2amd)(MeCp) O, amidinate, O, 0.20-1.0, 200
+2 3
+Er(iPrCp) HO, Cp-derived, HO, 0.80-1.20, 200
+3 2
+Er(iPrCp) O, Cp-derived, O, 0.30-0.80, 200
+3 3
+Er(nBuCp) HO, Cp-derived, HO, 1.20, 250
+3 2
+Er(nBuCp) O, Cp-derived, O, 0.40-0.80, 225
+3 3
+Er TiO Er(MeCp) TDEAT O, Cp-derived, O, 0.5-10.64, 175
+1-x x y 3 3
+ZrO-ErO Zr(MeCp)Me(OMe) Er(thd) O, β-diketonate, O, 0.20, 350
+2 2 3 2 3 3
+(Er,Ga)O Er(thd) Ga(acac) O, β-diketonate, O, 0.25-0.28, 350
+2 3 3 3 3
+Er(MeCp) Ga(NMe ) HO, Cp-derived, HO, 0.95-1.00, 250
+3 2 2 6 2
+ErFeO Er(thd) Fe(thd) O, β-diketonate, O, 1.00, 280
+3 3 3 3
+TmO Tm(thd) O, β-diketonate, O, 0.22, 300
+2 3 3 3
+Tm(Cp) HO, Cp-derived, HO, 1.50, 200
+3 2
+YbO Yb(thd) O, β-diketonate, O, 0.15-0.2, 250
+2 3 3 3
+Yb(MeCp) HO, Cp-derived, HO, 1.00, 180
+3 2
+YbAlO Yb(thd) TMA O, β-diketonate, O, 0.20, 350
+3 5 12 3 3
+YbTiO Yb(thd) O TiCl HO, β-diketonate, TiCl HO, 0.36-0.37, 300
+x y z 3 3 4 2 4 2
+YbMnO Yb(thd) Mn(thd) O, β-diketonate, O, 0.18, 275
+3 3 2 3
+YbVO Yb(thd) VO(thd) O, β-diketonate, O, 0.08-0.23, 240
+4 3 2 3
+LuO Lu(SiMe3Cp)Cl HO, Cp-derived, HO, 0.25, 360
+2 3 2 2
+Lu(iPrCp) HO, Cp-derived, HO, _, 330
+3 2
+LuMnO Lu(thd) Mn(thd) O, β-diketonate, O, 0.18, 275
+3 3 3 3
+LuAlO Lu(thd) TMA O, β-diketonate, O, 0.35, 300
+3 3 3
+Lu(iPrCp) TDEAA O, Cp-derived, O, 1.30, 250
+3 3
+Lu(iPrCp) TDEAA HO, Cp-derived, HO, 1.30, 250
+3 2
+LuAlO Lu(thd) TMA O, β-diketonate, O, 0.19, 350
+3 5 12 3 3
+Lu Lu(thd) O, β-diketonate, O, 0.30, 230
+3 3
+LuSi O Lu(tmsa) HO/O, alkoxide/amide, HO/O, 0.60-4.3, 280
+1.5 5 3 2 3
+LuGaO Lu(thd) Ga(CH) O, β-diketonate, O, 0.20, 350
+3 5 12 3 2 5 3 3

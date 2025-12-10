@@ -1,0 +1,5 @@
+selectivity_pair,selectivity,selectivity_method,chamber_wall_treatment,etch_rate
+SiO2/Si3N4,0.2-15.0,"Precursor selection, Fluorocarbon film thickness, Ion energy, Etching step time",O2 plasma cleaning + wall heating,3.0
+SiO2/Si3N4,>7.0,Precursor selection,O2 plasma cleaning + wall heating,3.0
+SiO2/Si,>10.0,Precursor selection,O2 plasma cleaning + wall heating,3.0
+SiO2/Si3N4,2.1-4.5,Selective deposition (benzaldehyde),O2 plasma cleaning + wall heating,3.0

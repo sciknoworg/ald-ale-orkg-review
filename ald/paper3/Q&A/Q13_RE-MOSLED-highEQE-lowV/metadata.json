@@ -1,0 +1,72 @@
+{
+  "id": "ALD-Q13",
+  "domain": "ALD",
+  "query_group": "ALD-Table5-Ghazy",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "Among Er3+-based MOSLEDs, list host matrices that reach high external quantum efficiency (EQE ≥ 10%) and report their threshold voltage, annealing temperature, emission lifetime (τ), and operational device lifetime (OLT), sorted by lowest voltage and highest EQE.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "table_modeled": "Table 5",
+    "table_description": "Performance characteristics of Er3+-based MOSLED devices fabricated by ALD: annealing temperature, external quantum efficiency (EQE), power efficiency, threshold voltage (Vol), emission lifetime (τ), and operational device lifetime (OLT)."
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/mosled-high-eqe"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180031",
+      "label": "host material matrix"
+    },
+    {
+      "pid": "P180032",
+      "label": "annealing temperature in °C"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %"
+    },
+    {
+      "pid": "P180035",
+      "label": "threshold voltage in volts"
+    },
+    {
+      "pid": "P180036",
+      "label": "emission lifetime in milliseconds"
+    },
+    {
+      "pid": "P180037",
+      "label": "operational device lifetime in hours"
+    }
+  ],
+  "postprocessing_notes": {
+    "numeric_parsing": {
+      "motivation": "Table 5 contains heterogeneous textual entries, including units (e.g. \"%\", \"V\"), approximate signs (\"≈\"), and non-numeric placeholders such as \"NG\".",
+      "strategy": "For each performance field (EQE, Vol, Ann. T, τ, OLT), the query first converts the cell value to a string and then strips all non-numeric characters (except digits, decimal point, and minus sign) using a regex, before casting to xsd:decimal.",
+      "regex_used": "REPLACE(?field_string, \"[^0-9.\\\\-]+\", \"\")",
+      "missing_values": "If no digit is present (e.g. \"NG\"), the corresponding numeric variable is left UNDEF, and BOUND() checks ensure that such rows are excluded from filters that require a numeric value."
+    },
+    "filters": {
+      "efficiency_filter": "Rows are restricted to those with EQE ≥ 10% via FILTER(BOUND(?eqe_num) && ?eqe_num >= 10). This selects high-efficiency Er3+ MOSLEDs.",
+      "voltage_filter": "Rows must have a numeric threshold voltage via FILTER(BOUND(?vol_num)), ensuring that sorting by voltage is meaningful.",
+      "domain_note": "The comparison R1469991 specifically models Er3+-based MOSLED devices, so no additional dopant filter is required in the query."
+    },
+    "output_columns": "The query returns host_matrix, eqe_num, vol_num, anneal_num, tau_num, and olt_num, ordered primarily by ascending voltage and secondarily by descending EQE.",
+    "interpretation": "The joined view over host matrix, EQE, threshold voltage, annealing temperature, emission lifetime (τ), and operational lifetime (OLT) supports multi-criteria assessment of MOSLED performance (efficiency, power consumption, thermal budget, and stability) without manual re-aggregation from the original table."
+  }
+}

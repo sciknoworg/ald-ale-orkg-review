@@ -1,0 +1,4 @@
+etching_mechanism_class,n_variants,min_etch_rate,max_etch_rate,mean_etch_rate,min_temp_rate_lim,max_temp_rate_lim,plasma_required,high_rate_low_temp
+AFS-based plasma-assisted,3,27,75,57.3,150,160,Yes,Yes
+AFS-based thermal,1,9,9,9.0,140,140,No,Yes
+Al2O3-conversion cycles,2,0.07,1.50,0.55,300,350,No,No

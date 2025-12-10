@@ -1,0 +1,31 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT
+  ?ml                          # material label (from Table 2)
+  ?ppL                         # performance predicate label
+  ?perf_val
+WHERE {
+  # Table 2: materials + labels
+  orkgr:R1469955 orkgp:compareContribution ?c2 .
+  ?c2 orkgp:P180027 ?m2 .
+  ?m2 rdfs:label ?ml .
+
+  # Table 5: materials + labels
+  orkgr:R1469991 orkgp:compareContribution ?c5 .
+  ?c5 orkgp:P180031 ?m5 .
+  ?m5 rdfs:label ?ml2 .
+
+  # join by normalized label
+  FILTER(LCASE(STR(?ml)) = LCASE(STR(?ml2)))
+
+  # performance statements
+  ?c5 ?perf_pred ?perf_val .
+  FILTER(isLiteral(?perf_val))
+  FILTER(?perf_pred != rdfs:label)
+
+  OPTIONAL { ?perf_pred rdfs:label ?ppL . }
+}
+ORDER BY LCASE(STR(?ml)) ?ppL ?perf_val
+LIMIT 200

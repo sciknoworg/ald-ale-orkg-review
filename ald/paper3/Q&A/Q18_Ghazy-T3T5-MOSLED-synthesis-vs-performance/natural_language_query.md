@@ -1,0 +1,3 @@
+Which rare-earth oxide matrices share process-level synthesis information and device-level performance data across Tables 3 and 5, and how do synthesis and annealing conditions relate to their optical efficiencies and lifetimes?
+
+For each matched host matrix, retrieve the synthesis temperature from the ALD process overview (Table 3) and the annealing temperature, external quantum efficiency (EQE), power efficiency (PE), and emission lifetime (τ) from the MOSLED performance table (Table 5). Aggregate these values per matrix to obtain representative synthesis and annealing temperatures, EQE, power efficiency, and emission lifetime.

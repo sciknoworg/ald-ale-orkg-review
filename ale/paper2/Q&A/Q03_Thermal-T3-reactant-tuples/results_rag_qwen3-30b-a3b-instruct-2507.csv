@@ -1,0 +1,61 @@
+material,reactant_1,reactant_2,reactant_3,n_reports
+Al2O3, HF, TMA, ,1
+Al2O3, HF, TMA, DMAC,1
+Al2O3, HF, TMA, ,1
+Al2O3, HF, DMAC, ,1
+Al2O3, HF, DMAC, ,1
+Al2O3, HF, DMAC, ,1
+Al2O3, HF, TMA, ,1
+Al2O3, HF, SF4, Sn(acac)2,1
+Al2O3, HF, TMA, ,1
+Al2O3, HF, Sn(acac)2, ,1
+Al2O3, HF, Sn(acac)2, TMA, DMAC,1
+Al2O3, CHF3, TMA, ,1
+Al2O3, HF, TMA, ,1
+Al2O3, HF, DFT study of fluorination reaction, ,1
+AlF3, HF, Sn(acac)2, ,1
+AlN, HF, Sn(acac)2, ,1
+Co, Cl2, Hhfac, Hacac,1
+CoO, Hhfac, , ,1
+CuO, Hhfac, , ,1
+Fe, Cl2, Hacac, ,1
+Ga2O3, HF, BCl3, DMAC, TMA,1
+GaN, XeF2, BCl3, ,1
+Ge, Cl2, , ,1
+HfO2, HF, Sn(acac)2, ,1
+HfO2, HF, Sn(acac)2, TMA, DMAC,1
+HfO2, HF, TiCl4, ,1
+HfO2, HF, DMAC, ,1
+HfO2, HF, DFT study of fluorination reaction, ,1
+HfO2, HF, DMAC, TiCl4,1
+HfO2, HF, XeF2, SF4, DMAC, TiCl4,1
+HfZrO2, HF, DMAC, TiCl4,1
+HfZrO2, HF, XeF2, SF4, DMAC, TiCl4,1
+InGaAs, HF, DMAC, ,1
+InAlAs, HF, DMAC, ,1
+InGaAs, HF, DMAC, ,1
+InGaZnO4, HF, DMAC, ,1
+MoO3, BCl3, HF, ,1
+NiO, H+hfac, , ,1
+SiO2, TMA, HF, ,1
+SiO2, CHF3, TMA, ,1
+SiCl4, , , ,1
+Si, Cl2, , ,1
+Si3N4, O2, O3, HF, TMA,1
+SiO2, TMA, HF, ,1
+SiO2, CHF3, TMA, ,1
+TiN, O3, HF, ,1
+TiN, CHF3/O2 downstream plasma, , ,1
+TiO2, WF6, BCl3, ,1
+TiO2, WF6, BCl3, ,1
+VO2, HF, SF4, Sn(acac)2,1
+WO3, O2, BCl3, HF,1
+WO3, O2, WF6, ,1
+WO3, O2, WCl6, ,1
+WO3, O2, BCl3, HF,1
+ZnO, Hacac, O2 plasma, ,1
+ZnO, HF, TMA, ,1
+ZrO2, HF, Sn(acac)2, TMA, DMAC,1
+ZrO2, HF, DMAC, ,1
+ZrO2, HF, DFT study of fluorination reaction, ,1
+ZrO2, HF, DMAC, TiCl4,1

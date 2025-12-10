@@ -1,4 +1,4 @@
-# ALD & ALE ORKG Machine-Actionable Tables: Papers and Exact NL Queries
+# ALD & ALE Machine-Actionable Tables in the Open Research Knowledge Graph (ORKG): Papers, Tables, & their Natural Language and SPARQL Queries
 
 Below are the **exact natural-language queries (NL)** and corresponding **SPARQL TinyURL links** used for machine-actionable ORKG comparisons generated from the ALD and ALE review papers.
 
@@ -242,12 +242,12 @@ https://doi.org/10.1149/2.0061506jss
 ### Table I (R1562672)
 https://orkg.org/comparisons/R1562672
 
-#### 1. NL easy query  
+#### 20. NL easy query  
 `Short`: For each ALE investigation, list the material, adsorption precursor chemistry, and energy source.    
 `Detailed`: For each atomic layer etching (ALE) investigation summarized in Table I of the article "Atomic Layer Etching at the Tipping Point: An Overview," list the material, adsorption precursor chemistry, and energy source used for etching or desorption. The result must be returned as one single table only, in CSV format, with one row per result, and with the columns "material," "precursor," and "energy."  
 `SPARQL`: https://tinyurl.com/orkg-ale-materials-nolimit 
 
-#### 2. NL complex query  
+#### 21. NL complex query  
 `Short`: Group ALE materials by dominant energy-source category (neutral beam, plasma ions, photon, thermal) and count distinct precursor chemistries.  
 `Detailed`: Please analyze Table I from the article "Atomic Layer Etching at the Tipping Point: An Overview" and perform the following steps:
 
@@ -273,12 +273,12 @@ https://doi.org/10.1116/6.0000894
 ### Table III (R1563034)
 https://orkg.org/comparisons/R1563034
 
-#### 3. NL easy query  
+#### 22. NL easy query  
 `Short`: List, for each material etched, the distinct reactant tuples (Reactant 1–3) and how many entries report each tuple.  
 `Detailed`: Please extract data from Table III in the article titled "Thermal atomic layer etching: A review" (DOI: 10.1116/6.0000894). For each material etched, list the distinct combinations of Reactant 1, Reactant 2, and Reactant 3 reported, along with the number of entries that report each combination. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: material, reactant_1, reactant_2, reactant_3, n_reports.  
 `SPARQL`: https://tinyurl.com/t3-easy-ale
 
-#### 4. NL complex query  
+#### 23. NL complex query  
 `Short`: Classify each thermal ALE chemistry by archetype (Fluorination + ligand-exchange, Oxidation + chelation, Halogenation & conversion, Other) and count chemistries and materials per archetype.  
 `Detailed`: Please analyze Table III from the article "Thermal atomic layer etching: A review" (DOI: 10.1116/6.0000894). Classify each thermal atomic layer etching (ALE) chemistry by its dominant mechanistic archetype based on the following criteria:
 
@@ -302,12 +302,12 @@ https://doi.org/10.1016/j.pnsc.2018.11.003
 ### Table 3 (R1560222)
 https://orkg.org/comparisons/R1560222
 
-#### 5. NL easy query  
+#### 24. NL easy query  
 `Short`: List all thermal ALE processes with EPC > 0.5 Å/cycle; return material, reactants, EPC, and etching temperature; sort by EPC.  
 `Detailed`: Please extract all rows from Table 3 in the article titled "Thermal atomic layer etching: Mechanism, materials and prospects" where the Etch Per Cycle (EPC) value is greater than 0.5 Å/cycle. For each row, include the material, surface-adsorption reactant, surface-removal reactant, EPC, and etching temperature. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: material, surface_adsorption, surface_removal, epc, temp.  
 `SPARQL`: https://tinyurl.com/t3-easy-fang  
 
-#### 6. NL complex query  
+#### 25. NL complex query  
 `Short`: Group all thermal ALE processes by mechanism archetype and compute distinct materials and mean EPC per group.  
 `Detailed`: Please analyze Table 3 from the article "Thermal atomic layer etching: Mechanism, materials and prospects" and group all thermal ALE processes by inferred mechanism archetype. The archetypes are defined as follows:
 
@@ -329,12 +329,12 @@ https://doi.org/10.1088/1361-6463/ab6d94
 ### Table 1 (R1560825)
 https://orkg.org/comparisons/R1560825
 
-#### 7. NL easy query  
+#### 26. NL easy query  
 `Short`: List all semiconductor ALE processes and return modification, removal, and activation types; sort by activation mode.  
 `Detailed`: Please extract data from Table 1 in the article "Physical and chemical effects in directional atomic layer etching" (DOI: 10.1088/1361-6463/ab6d94). For each unique combination of activation type, modification chemistry, and removal chemistry, count the number of distinct semiconductors that use this combination. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: "activation", "chemistry_pair", and "n_semiconductors". The "chemistry_pair" column should be a combined string in the format "<modification> / <removal>". Sort the results by activation type in ascending order and then by the number of semiconductors in descending order.  
 `SPARQL`: https://tinyurl.com/t1-semi-ale  
 
-#### 8. NL complex query  
+#### 27. NL complex query  
 `Short`: Group semiconductor ALE processes by activation type and count materials per modification–removal pair.  
 `Detailed`: Please extract data from Table 1 in the article titled "Physical and chemical effects in directional atomic layer etching" with the DOI 10.1088/1361-6463/ab6d94. Group the semiconductor ALE processes by activation type (plasma vs thermal) and count the number of distinct materials using each modification–removal pair. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: activation, chemistry_pair, n_semiconductors.  
 `SPARQL`: https://tinyurl.com/t1-sang-complex
@@ -349,12 +349,12 @@ https://doi.org/10.5757/ASCT.2020.29.3.041
 ### Table 2 (R1563131)
 https://orkg.org/comparisons/R1563131
 
-#### 9. NL easy query  
+#### 28. NL easy query  
 `Short`: List all metal ALE processes with EPC ≥ 2 Å/cycle; return material, direction, modification/removal chemistry, EPC, process temperature, and cycle time; sort by EPC.  
 `Detailed`: Please extract data from Table 2 in the article titled "Anisotropic/Isotropic Atomic Layer Etching of Metals" with DOI 10.5757/ASCT.2020.29.3.041. Specifically, retrieve rows where the Etch-per-cycle (EPC) rate is 2 Å/cycle or higher. For each qualifying row, include the following columns: material, direction (anisotropic vs. isotropic), modification chemistry (reaction), removal chemistry, EPC, process temperature, and time per cycle. The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: material, direction, reaction, removal, epc, process_temp, time_per_cycle.  
 `SPARQL`: https://tinyurl.com/t2-metals-high-epc
 
-#### 10. NL complex query  
+#### 29. NL complex query  
 `Short`: Group metal ALE processes by direction and compute number of metals and mean EPC per group; sort by mean EPC.  
 `Detailed`: Please extract data from Table 2 in the article titled "Anisotropic/Isotropic Atomic Layer Etching of Metals" (DOI: 10.5757/ASCT.2020.29.3.041). Group the metal Atomic Layer Etching (ALE) processes by the direction (anisotropic vs. isotropic) and compute, for each group, the number of distinct metals covered and the mean Etch-Per-Cycle (EPC) rate. Sort the results by the mean EPC in descending order. The result must be returned as one single table only, in CSV format, with one row per result, and with the following columns: direction, n_metals, avg_epc.  
 `SPARQL`: https://tinyurl.com/t2-metals-complex  
@@ -366,7 +366,7 @@ https://orkg.org/comparisons/R1563131
 https://doi.org/10.5757/ASCT.2024.33.1.1  
 `Hong, D., Kim, Y., & Chae, H. (2024). Atomic layer etching of SiO2 for nanoscale semiconductor devices: A review. Applied Science and Convergence Technology, 33(1), 1-6.`  
 
-### 11. Cross-table NL easy query  
+### 30. Cross-table NL easy query  
 #### Tables I & II  
 https://orkg.org/comparisons/R1560949  
 https://orkg.org/comparisons/R1560977
@@ -377,7 +377,7 @@ https://orkg.org/comparisons/R1560977
 
 ---
 
-### 12. Cross-table NL easy query  
+### 31. Cross-table NL easy query  
 #### Tables III & IV  
 https://orkg.org/comparisons/R1561025  
 https://orkg.org/comparisons/R1561023
@@ -390,7 +390,7 @@ The result MUST be returned as one single table only, in CSV format, with one ro
 
 ---
 
-### 13. Cross-table NL complex query  
+### 32. Cross-table NL complex query  
 #### Tables I, II, III  
 
 `Short`: Group anisotropic SiO₂ ALE processes by fluorocarbon precursor family (e.g. C₄F₈, CHF₃, C₃F₇OCH₃ isomers) and compute mean/max etching rate, union of ion-energy windows, and max selectivity.  
@@ -405,7 +405,7 @@ Return the results as one single table only, in CSV format, with one row per pre
 
 ---
 
-### 14. Cross-table NL complex query  
+### 33. Cross-table NL complex query  
 #### Tables V & VI  
 https://orkg.org/comparisons/R1561046  
 https://orkg.org/comparisons/R1562478

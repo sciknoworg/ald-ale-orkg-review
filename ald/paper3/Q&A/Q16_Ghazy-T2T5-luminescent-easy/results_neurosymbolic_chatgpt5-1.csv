@@ -1,0 +1,37 @@
+ml,ppL,perf_val
+Y3Ga5O12,external quantum efficiency in %,2.5
+Gd3Ga5O12,external quantum efficiency in %,1.9
+ZnGa2O4,external quantum efficiency in %,0.3
+Lu3Al5O12,external quantum efficiency in %,10.0
+Yb2O3,external quantum efficiency in %,8.5
+Yb3Al5O12,external quantum efficiency in %,5.2
+Ga2O3,external quantum efficiency in %,36.0
+Y3Ga5O12,threshold voltage in volts,25
+Gd3Ga5O12,threshold voltage in volts,30
+ZnGa2O4,threshold voltage in volts,30
+Lu3Al5O12,threshold voltage in volts,50
+Yb2O3,threshold voltage in volts,60
+Yb3Al5O12,threshold voltage in volts,~5
+Ga2O3,threshold voltage in volts,~15
+Y3Ga5O12,power efficiency ×10⁻⁴,3.8
+Gd3Ga5O12,power efficiency ×10⁻⁴,3.6
+Lu3Al5O12,power efficiency ×10⁻⁴,12.0
+Yb2O3,power efficiency ×10⁻⁴,10.0
+Yb3Al5O12,power efficiency ×10⁻⁴,4.8
+Ga2O3,power efficiency ×10⁻⁴,81.0
+Y3Ga5O12,annealing temperature in °c,800.0
+Gd3Ga5O12,annealing temperature in °c,1000.0
+ZnGa2O4,annealing temperature in °c,800.0
+Lu3Al5O12,annealing temperature in °c,1100.0
+Yb2O3,annealing temperature in °c,1000.0
+Yb3Al5O12,annealing temperature in °c,1100.0
+Ga2O3,annealing temperature in °c,900.0
+Y3Ga5O12,emission lifetime in milliseconds,2.26
+Gd3Ga5O12,emission lifetime in milliseconds,1.59
+ZnGa2O4,emission lifetime in milliseconds,0.82
+Lu3Al5O12,emission lifetime in milliseconds,1.65
+Yb3Al5O12,emission lifetime in milliseconds,1.2
+Ga2O3,emission lifetime in milliseconds,2.04
+Y3Ga5O12,operational device lifetime in hours,49.0
+ZnGa2O4,operational device lifetime in hours,5.5
+Ga2O3,operational device lifetime in hours,100.0

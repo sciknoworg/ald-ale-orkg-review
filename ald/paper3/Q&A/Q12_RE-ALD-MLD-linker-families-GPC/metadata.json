@@ -1,0 +1,67 @@
+{
+  "id": "ALD-Q12",
+  "domain": "ALD",
+  "query_group": "ALD-Table4-Ghazy",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Group rare-earth ALD/MLD hybrid films by organic linker family and compute average growth per cycle (GPC) for films deposited at temperatures ≤ 250 °C, reporting linker family, average GPC, and number of films.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "table_modeled": "Table 4"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1470110",
+        "comparison_url": "https://orkg.org/comparisons/R1470110"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/aldmld-linker-gpc"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180040",
+      "label": "organic precursor (linker)"
+    },
+    {
+      "pid": "P180041",
+      "label": "GPC [Å/cycle]"
+    },
+    {
+      "pid": "P180013",
+      "label": "deposition temperature [°C]"
+    }
+  ],
+  "postprocessing_notes": {
+    "linker_family_bucketing": {
+      "logic": "The organic precursor value is lowercased as ?org_s and mapped into coarse linker families based on substring matches:",
+      "mapping": [
+        "if ?org_s contains \"tp\" → \"terephthalate\"",
+        "if ?org_s contains \"pdc\" → \"pyridinedicarboxylate\"",
+        "if ?org_s contains \"ndc\" → \"naphthalenedicarboxylate\"",
+        "if ?org_s contains \"pza\" → \"pyrazine-based\"",
+        "otherwise → \"other\""
+      ],
+      "remark": "These abbreviations reflect the notation used in the modeled Table 4 data (e.g., terephthalate → TP, pyridinedicarboxylate → PDC)."
+    },
+    "numeric_parsing": {
+      "gpc": "GPC values may contain units or ranges as strings. The query uses REPLACE(STR(?gpc), \"[^0-9.].*$\", \"\") to strip everything after the first non-numeric character, then casts the remaining prefix to xsd:decimal as ?gpc_num.",
+      "temperature": "Deposition temperature strings are treated identically: REPLACE(STR(?temp), \"[^0-9.].*$\", \"\") is cast to xsd:decimal as ?temp_num. This captures the leading numeric value in entries like \"200–250\" or \"200 °C\"."
+    },
+    "filter_logic": {
+      "temperature_filter": "Rows are kept only if ?temp_num ≤ 250, i.e., low-temperature ALD/MLD processes.",
+      "gpc_filter": "Rows are kept only if ?gpc_num is successfully parsed (BOUND).",
+      "aggregation": "The query groups by ?linker_family and computes AVG(?gpc_num) as ?avg_gpc and COUNT(*) as ?n_films."
+    },
+    "output_columns": "The final result contains linker_family, avg_gpc, and n_films, ordered by descending avg_gpc."
+  }
+}

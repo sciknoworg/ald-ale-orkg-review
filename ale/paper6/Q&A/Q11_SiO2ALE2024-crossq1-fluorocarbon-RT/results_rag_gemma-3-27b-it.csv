@@ -1,0 +1,6 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+CHF plasma,Arplasma,-40–20,9.0–11.0,0–50V
+C F /Arplasma,Arplasma,-10,14.2,10–100V
+4 6
+C F plasmabeam,Arionbeam,RT,1.9,30–200V
+4 8

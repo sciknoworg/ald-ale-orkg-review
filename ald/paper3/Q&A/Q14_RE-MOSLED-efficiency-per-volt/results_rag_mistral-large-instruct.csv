@@ -1,0 +1,4 @@
+host_matrix,eqe_num,vol_num,eqe_per_vol,anneal_num,tau_num,olt_num
+```
+
+Unfortunately, the retrieved segments do not contain Table 5 or any data related to the columns specified in the query (Host matrix, External quantum efficiency, Threshold voltage, Annealing temperature, Emission lifetime, Operational device lifetime). Therefore, it is not possible to extract the requested data or calculate the efficiency-per-volt metric.

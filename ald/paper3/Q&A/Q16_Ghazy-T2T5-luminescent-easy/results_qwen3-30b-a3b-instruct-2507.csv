@@ -1,0 +1,55 @@
+ml,ppL,perf_val
+YGaO,Annealing temperature,800
+YGaO,External quantum efficiency,2.5
+YGaO,Power efficiency,3.8
+YGaO,Threshold voltage,25
+YGaO,Emission lifetime,2.26
+YGaO,Operational lifetime,49
+GdGaO,Annealing temperature,1000
+GdGaO,External quantum efficiency,1.9
+GdGaO,Power efficiency,3.6
+GdGaO,Threshold voltage,30
+GdGaO,Emission lifetime,1.59
+GdGaO,Operational lifetime,NG
+ZnGaO,Annealing temperature,800
+ZnGaO,External quantum efficiency,0.3
+ZnGaO,Power efficiency,NG
+ZnGaO,Threshold voltage,30
+ZnGaO,Emission lifetime,0.82
+ZnGaO,Operational lifetime,5.5
+LuAlO,Annealing temperature,1100
+LuAlO,External quantum efficiency,10
+LuAlO,Power efficiency,12
+LuAlO,Threshold voltage,50
+LuAlO,Emission lifetime,1.65
+LuAlO,Operational lifetime,NG
+YbO,Annealing temperature,1000
+YbO,External quantum efficiency,8.5
+YbO,Power efficiency,10
+YbO,Threshold voltage,60
+YbO,Emission lifetime,NG
+YbO,Operational lifetime,NG
+YbAlO,Annealing temperature,1100
+YbAlO,External quantum efficiency,5.2
+YbAlO,Power efficiency,4.8
+YbAlO,Threshold voltage,≈5
+YbAlO,Emission lifetime,1.2
+YbAlO,Operational lifetime,NG
+GaO,Annealing temperature,900
+GaO,External quantum efficiency,36
+GaO,Power efficiency,81
+GaO,Threshold voltage,≈15
+GaO,Emission lifetime,2.04
+GaO,Operational lifetime,100
+AlO-YO,Annealing temperature,800
+AlO-YO,External quantum efficiency,8.7
+AlO-YO,Power efficiency,12
+AlO-YO,Threshold voltage,NG
+AlO-YO,Emission lifetime,NG
+AlO-YO,Operational lifetime,NG
+AlO:Yb,Annealing temperature,NG
+AlO:Yb,External quantum efficiency,24
+AlO:Yb,Power efficiency,28
+AlO:Yb,Threshold voltage,≈14
+AlO:Yb,Emission lifetime,0.90
+AlO:Yb,Operational lifetime,NG

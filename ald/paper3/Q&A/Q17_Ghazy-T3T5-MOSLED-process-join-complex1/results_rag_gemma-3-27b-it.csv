@@ -1,0 +1,15 @@
+matrix,process_material,eqe,metal_precursor,co_reactant,gpc,temp
+AlO,Er,NA,Er(thd),O,0.65,300
+YO,Er,NA,Y(thd),O,0.22,250
+YO,Eu,NA,Y(thd),O,0.22,250
+TiO,La,NA,NA,NA,NA,NA
+TiO,Pr,NA,NA,NA,NA,NA
+TiO,Nd,NA,NA,NA,NA,NA
+TiO,Sm,NA,NA,NA,NA,NA
+TiO,Eu,NA,NA,NA,NA,NA
+TiO,Tb,NA,NA,NA,NA,NA
+TiO,Dy,NA,NA,NA,NA,NA
+TiO,Ho,NA,NA,NA,NA,NA
+TiO,Er,NA,NA,NA,NA,NA
+TiO,Tm,NA,NA,NA,NA,NA
+TiO,Yb,NA,NA,NA,NA,NA

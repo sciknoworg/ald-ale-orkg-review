@@ -1,0 +1,26 @@
+application,dopant,n_hosts
+Luminescence,Er,11
+Luminescence,Eu,5
+Luminescence,Tb,4
+Memory,Y,10
+Memory,Dy,10
+Memory,Er,10
+Memory,Gd,10
+Memory,Pr,10
+Memory,La,10
+Gate dielectrics,Y,10
+Gate dielectrics,Dy,10
+Gate dielectrics,Er,10
+Gate dielectrics,Gd,10
+Gate dielectrics,Pr,10
+Gate dielectrics,La,10
+Electrolyte,Y,6
+Electrolyte,Dy,6
+Electrolyte,La,6
+Interphase,Y,6
+Interphase,Dy,6
+Interphase,La,6
+Waveguides,Er,3
+Waveguides,Yb,3
+Optoelectronics,La,1
+Thermometry,Yb,2

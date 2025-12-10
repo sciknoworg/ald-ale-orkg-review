@@ -1,0 +1,22 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?linker_family (AVG(?gpc_num) AS ?avg_gpc) (COUNT(*) AS ?n_films)
+WHERE {
+  orkgr:R1470110 orkgp:compareContribution ?c .
+  ?c orkgp:P180040 ?org ; orkgp:P180041 ?gpc ; orkgp:P180013 ?temp .
+  BIND(LCASE(STR(?org)) AS ?org_s)
+  BIND(
+    IF(CONTAINS(?org_s,"tp"), "terephthalate",
+    IF(CONTAINS(?org_s,"pdc"), "pyridinedicarboxylate",
+    IF(CONTAINS(?org_s,"ndc"), "naphthalenedicarboxylate",
+    IF(CONTAINS(?org_s,"pza"), "pyrazine-based",
+    "other")))) AS ?linker_family)
+  BIND(xsd:decimal(REPLACE(STR(?gpc),"[^0-9.].*$","")) AS ?gpc_num)
+  BIND(xsd:decimal(REPLACE(STR(?temp),"[^0-9.].*$","")) AS ?temp_num)
+  FILTER(BOUND(?gpc_num) && ?temp_num <= 250)
+}
+GROUP BY ?linker_family
+ORDER BY DESC(?avg_gpc)

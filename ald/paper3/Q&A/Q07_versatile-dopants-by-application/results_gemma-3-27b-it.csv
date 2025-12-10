@@ -1,0 +1,11 @@
+application,dopant,n_hosts
+Gate dielectrics,Y,6
+Gate dielectrics,La,5
+Electrolyte,Y,2
+Luminescence,Eu,8
+Luminescence,Tb,6
+Luminescence,Er,5
+Luminescence,Dy,2
+Luminescence,Ho,1
+Luminescence,Sm,1
+Luminescence,Yb,1

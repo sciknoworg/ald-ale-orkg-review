@@ -1,0 +1,1 @@
+Among Eu²⁺-doped phosphors with red emission in the ORKG comparison R1469383 (Table 3 of ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’), which ALD coatings were deposited at temperatures ≤150 °C with optimal thickness ≤20 nm, and what precursor schemes were used?

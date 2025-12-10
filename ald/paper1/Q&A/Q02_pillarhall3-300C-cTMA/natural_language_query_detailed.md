@@ -1,0 +1,1 @@
+Please extract all rows from Table 2 where the temperature is 300 °C and the LHAR type contains "pillarhall-3". For each matching row, include the contribution, paper, paper title, temperature, LHAR type, and cTMA values. The result must be returned as one single table only, in CSV format, with one row per result, and with the following columns: temp, lharText, cTMA.

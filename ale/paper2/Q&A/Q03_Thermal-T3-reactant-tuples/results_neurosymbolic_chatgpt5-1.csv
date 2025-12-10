@@ -1,0 +1,32 @@
+material,reactant_1,reactant_2,reactant_3,n_reports
+Si,Cl2,, ,1
+Si,"ClF3,BrF3,BrF5,IF5",, ,1
+Si,O2,, ,1
+Si3N4,"O2,O3",, ,1
+TiN,"CHF3/O2 downstream plasma",, ,1
+TiN,O3,, ,1
+TiO2,WF6,, ,1
+VO2,"HF,SF4",, ,1
+W,"O2,O3",, ,1
+W,"O2,O3",, ,1
+W,"O2,O3",, ,1
+WO3,"O2,O3",, ,1
+ZnO,Hacac,, ,1
+ZrO2,HF,, ,1
+ZrO2,HF,, ,1
+HfO2,HF,TMA, ,1
+HfO2,HF,TMA, ,1
+HfO2,HF,TMA, ,1
+HfO2,"Thermal cycling",TMA, ,1
+HfO2,HF,TMA, ,1
+Al2O3,BCl3,TMA, ,2
+Al2O3,"Sn(acac)2",TMA, ,1
+Al2O3,"BCl3,HF",TMA, ,1
+Al2O3,WCl6,TMA, ,1
+Al2O3,WF6,TMA, ,1
+Al2O3,"BCl3,HF",TMA, ,1
+Al2O3,"O2 plasma",TMA, ,1
+Al2O3,DMAC,TMA, ,1
+Al2O3,"DMAC,TiCl4",TMA, ,1
+Al2O3,"Sn(acac)2,TMA,DMAC,SiCl4",TMA, ,1
+Al2O3,DMAC,TMA, ,1

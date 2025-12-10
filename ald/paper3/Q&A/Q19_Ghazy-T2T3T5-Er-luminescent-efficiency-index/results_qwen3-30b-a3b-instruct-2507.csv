@@ -1,0 +1,10 @@
+material,synthesis_temp,eqe,efficiency_index
+YGaO3,800,2.5,0.3125
+GdGaO3,1000,1.9,0.19
+ZnGaO2,800,0.3,0.0375
+LuAlO3,1100,10,0.9091
+YbO2,1000,8.5,0.85
+YbAlO3,1100,5.2,0.4727
+GaO2,900,36,4.0
+AlO2-YO2,800,8.7,1.0875
+AlO2:Yb,NA,24,NA

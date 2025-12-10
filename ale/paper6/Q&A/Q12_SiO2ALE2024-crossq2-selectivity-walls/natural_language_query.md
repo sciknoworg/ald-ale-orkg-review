@@ -1,0 +1,1 @@
+Collect all anisotropic SiO₂ ALE processes based on C₄F₈/Ar plasma from Table III and Table IV, and list for each the target selectivity pair (SiO₂/Si or SiO₂/Si₃N₄), selectivity range (if available), chamber-wall treatment (none, O₂ cleaning, wall heating), and etching rate; sort by etching rate.

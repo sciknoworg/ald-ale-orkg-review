@@ -1,0 +1,5 @@
+The query requests information from **Table 2**, **Table 3**, and **Table 5**. However, **Table 5 is not present** in the retrieved segments. Additionally, **Table 2** lists materials doped with Er for luminescence, but **no EQE (External Quantum Efficiency) values** are provided in any of the retrieved segments.
+
+Therefore, **the required data (EQE from Table 5) is missing**, and it is **not possible** to compute the efficiency index or rank materials as requested.
+
+**Conclusion:** The query cannot be answered due to missing data (Table 5 and EQE values).

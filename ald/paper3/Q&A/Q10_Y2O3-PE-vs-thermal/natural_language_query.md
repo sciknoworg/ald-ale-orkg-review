@@ -1,0 +1,1 @@
+For Y₂O₃ only, compare **average** growth per cycle (GPC) between plasma-enhanced ALD (PE-ALD) and thermal ALD within the 200–300 °C temperature window. For each mode (PE vs. thermal), return the ALD mode, the average GPC (in Å/cycle), the number of contributing table rows, and an example co-reactant description.

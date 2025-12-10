@@ -1,0 +1,8 @@
+selectivity_pair,selectivity,selectivity_method,chamber_wall_treatment,etch_rate
+SiO2/Si3N4,0.2–15.0,Precursor selection; Fluorocarbon film thickness; Ion energy; Etching step time,none,3.0
+SiO2/Si3N4,>7.0,Precursor selection,none,3.0
+SiO2/Si,>10.0,Precursor selection,none,5.6–11.4
+SiO2/Si3N4,2.6–17.5,Precursor selection,none,5.6–11.4
+SiO2/Si,17.5,Precursor selection,none,5.6–11.4
+SiO2/Si,102.8,Precursor selection,none,5.6–11.4
+SiO2/Si3N4,3.4,Precursor selection,none,5.6–11.4

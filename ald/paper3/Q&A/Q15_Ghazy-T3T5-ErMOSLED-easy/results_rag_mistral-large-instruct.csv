@@ -1,0 +1,15 @@
+matrix,eqe_best,process_material,metal_precursor,co_reactant_any,family,gpc_num,temp_num
+ErO,0.25,ErO,Er(thd),O,thd,0.20–0.25,250–375
+Er(MeCp),0.50,Er(MeCp),Er(MeCp),HO,MeCp,1.50,250–350
+Er(MeCp),0.12,Er(MeCp),Er(MeCp),O,MeCp,0.12,170–330
+Er(tBu2amd),0.37–0.55,Er(tBu2amd),Er(tBu2amd),O,tBu2amd,0.37–0.55,225–300
+Er(dpdmg),1.10,Er(dpdmg),Er(dpdmg),HO,dpdmg,1.10,150–275
+Er(iPr2amd)(MeCp),0.50,Er(iPr2amd)(MeCp),Er(iPr2amd)(MeCp),HO,iPr2amd(MeCp),0.50,180
+Er(iPr2amd)(MeCp),0.70,Er(iPr2amd)(MeCp),Er(iPr2amd)(MeCp),O,iPr2amd(MeCp),0.70,180
+Er(iPr2amd)(MeCp),1.10–1.20,Er(iPr2amd)(MeCp),Er(iPr2amd)(MeCp),HO,iPr2amd(MeCp),1.10–1.20,225–275
+Er(iPr2amd)(MeCp),0.20–1.0,Er(iPr2amd)(MeCp),Er(iPr2amd)(MeCp),O,iPr2amd(MeCp),0.20–1.0,200–325
+Er(iPrCp),0.80–1.20,Er(iPrCp),Er(iPrCp),HO,iPrCp,0.80–1.20,200–300
+Er(iPrCp),0.30–0.80,Er(iPrCp),Er(iPrCp),O,iPrCp,0.30–0.80,200–300
+Er(nBuCp),1.20,Er(nBuCp),Er(nBuCp),HO,nBuCp,1.20,250–325
+Er(nBuCp),0.40–0.80,Er(nBuCp),Er(nBuCp),O,nBuCp,0.40–0.80,225–350
+ErTiO,0.5–10.64,ErTiO,Er(MeCp),TDEAT,O,MeCp,0.5–10.64,175–275

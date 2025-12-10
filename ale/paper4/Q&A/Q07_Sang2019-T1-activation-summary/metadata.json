@@ -1,0 +1,74 @@
+{
+  "id": "Q07",
+  "domain": "ALE",
+  "query_group": "Sang2019-T1",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "Summarize semiconductor ALE processes from Sang & Chang Table 1 by activation type and modification/removal chemistry, counting how many distinct semiconductors use each combination.",
+  "paper_context": {
+    "paper": {
+      "title": "Physical and chemical effects in directional atomic layer etching",
+      "doi": "10.1088/1361-6463/ab6d94",
+      "doi_url": "https://doi.org/10.1088/1361-6463/ab6d94"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 1",
+        "description": "Summary of directional semiconductor ALE processes: semiconductor, surface modification chemistry, removal chemistry, and activation type."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1560825",
+        "comparison_url": "https://orkg.org/comparisons/R1560825",
+        "role": "directional_semiconductor_ALE_table1",
+        "table_source": "Sang & Chang (2020), directional ALE Table 1"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t1-semi-ale"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183123",
+      "label": "Semiconductor",
+      "role": "Identifies the semiconductor material being etched (e.g., Si, SiO2, Si3N4, III–V)."
+    },
+    {
+      "pid": "P183124",
+      "label": "Modification",
+      "role": "Describes the surface-modification (adsorption) chemistry used in the first ALE step."
+    },
+    {
+      "pid": "P183125",
+      "label": "Removal",
+      "role": "Describes the removal / desorption chemistry used to remove the modified surface layer."
+    },
+    {
+      "pid": "P183126",
+      "label": "Activation",
+      "role": "Specifies the activation mode (e.g., ion bombardment, neutral beam, photon/thermal) that drives the ALE process."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": {
+      "grouping_key": "activation + (modification, removal) chemistry pair",
+      "description": "Rows are grouped by activation type and modification/removal pair; the query counts distinct semiconductors per group."
+    },
+    "output_shape": {
+      "description": "One row per (activation, modification/removal) combination.",
+      "columns": [
+        "activation: activation mode label (e.g., ion-bombardment-assisted, neutral-beam-assisted).",
+        "chemistry_pair: combined string \"<modification> / <removal>\".",
+        "n_semiconductors: number of distinct semiconductor materials for which this combination is reported."
+      ]
+    },
+    "interpretation": "The result highlights which activation pathways and chemistries are used across multiple semiconductor ALE systems, helping to identify dominant strategies in directional ALE."
+  }
+}

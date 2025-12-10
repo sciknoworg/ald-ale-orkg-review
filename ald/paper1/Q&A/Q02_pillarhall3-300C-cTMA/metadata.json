@@ -1,0 +1,48 @@
+{
+  "id": "ALD-Q02",
+  "domain": "ALD",
+  "query_group": "ALD-Table2",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Retrieves all contributions in comparison R1469158 that report cTMA values for PillarHall-3 structures at 300 °C, together with the associated paper context.",
+  "paper_context": {
+    "paper": {
+      "title": "Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels",
+      "doi": "10.1039/D0CP03358H",
+      "doi_url": "https://doi.org/10.1039/D0CP03358H"
+    },
+    "table_modeled": "Table 2"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469158",
+        "comparison_url": "https://orkg.org/comparisons/R1469158"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/pillarhall3-ctm"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P37561",
+      "label": "temperature (°C)"
+    },
+    {
+      "pid": "P180003",
+      "label": "LHAR type"
+    },
+    {
+      "pid": "P180008",
+      "label": "sticking coefficient for TMA (cTMA)"
+    },
+    {
+      "pid": "P32",
+      "label": "related research problem / paper context"
+    }
+  ]
+}

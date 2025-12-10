@@ -1,0 +1,4 @@
+host_matrix,eqe_num,vol_num,anneal_num,tau_num,olt_num
+LuAlO3,10,50,1100,1.65,NG
+YbAlO3,5.2,≈5,1100,1.2,NG
+GaO23,36,≈15,900,2.04,100

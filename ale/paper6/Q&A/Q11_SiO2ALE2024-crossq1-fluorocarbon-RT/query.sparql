@@ -1,0 +1,79 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?precL2, ?precBase) AS ?precursor)
+  (COALESCE(?remL2,  STR(?rem2)) AS ?removal)
+  (?temp2Str                      AS ?process_temp)
+  (?rate2Val                      AS ?etch_rate)
+  (STR(?ionwinRaw)                AS ?ion_energy_window)
+WHERE {
+
+  # --------- Table I (R1560949): only used to detect shared precursors ---------
+  orkgr:R1560949 orkgp:compareContribution ?c1 .
+
+  OPTIONAL { ?c1 orkgp:P183129 ?prec1 .
+            OPTIONAL { ?prec1 rdfs:label ?precL1 . } }
+
+  # Normalized precursor string for Table I
+  BIND( LCASE(COALESCE(?precL1, STR(?prec1))) AS ?precStr1 )
+
+  # Derive a ``base'' precursor key from the first token (e.g., c4f8, chf3, c3f7och3)
+  BIND(
+    REPLACE(?precStr1, "^\\s*([^\\s/]+).*$", "$1")
+    AS ?base1
+  )
+
+  # --------- Table II (R1560977): source of temp, rate, ion energy ---------
+  orkgr:R1560977 orkgp:compareContribution ?c2 .
+
+  OPTIONAL { ?c2 orkgp:P183129 ?prec2 .
+            OPTIONAL { ?prec2 rdfs:label ?precL2 . } }
+  OPTIONAL { ?c2 orkgp:P183125 ?rem2  .
+            OPTIONAL { ?rem2 rdfs:label ?remL2 . } }
+  OPTIONAL { ?c2 orkgp:P183130 ?temp2Raw . }
+  OPTIONAL { ?c2 orkgp:P183131 ?rate2Raw . }
+  OPTIONAL { ?c2 orkgp:P183132 ?ionwinRaw . }
+
+  # Normalized precursor string for Table II
+  BIND( LCASE(COALESCE(?precL2, STR(?prec2))) AS ?precStr2 )
+
+  # Same ``base'' key extraction for Table II
+  BIND(
+    REPLACE(?precStr2, "^\\s*([^\\s/]+).*$", "$1")
+    AS ?base2
+  )
+
+  # Join only if the base precursor appears in both tables
+  FILTER(BOUND(?base1) && BOUND(?base2) && ?base1 = ?base2)
+
+  # Human-readable precursor key
+  BIND(?base2 AS ?precBase)
+
+  # --------- Normalize process temperature from Table II ---------
+  BIND(STR(?temp2Raw) AS ?temp2Str)
+
+  BIND(
+    IF(
+      REGEX(?temp2Str, "[0-9]"),
+      xsd:decimal(REPLACE(?temp2Str, ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")),
+      IF(CONTAINS(LCASE(?temp2Str), "rt"), xsd:decimal("25"), UNDEF)
+    ) AS ?temp2Num
+  )
+
+  # --------- Normalize etch rate from Table II ---------
+  BIND(
+    IF(
+      REGEX(STR(?rate2Raw), "[0-9]"),
+      xsd:decimal(REPLACE(STR(?rate2Raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")),
+      UNDEF
+    ) AS ?rate2Val
+  )
+
+  # Broad near-room-temperature window (covers RT and RT-like ranges)
+  FILTER(BOUND(?temp2Num) && ?temp2Num >= -20 && ?temp2Num <= 60)
+  FILTER(BOUND(?rate2Val))
+}
+ORDER BY DESC(?rate2Val)

@@ -1,0 +1,1 @@
+Which support materials were coated at ≤ 40 °C in the ORKG comparison R1469594 (Table 4 of *‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’*), and which precursor pairs were used, along with the reported coating thickness?

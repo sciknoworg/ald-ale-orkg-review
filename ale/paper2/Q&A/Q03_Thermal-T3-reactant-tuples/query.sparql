@@ -1,0 +1,25 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT
+  (COALESCE(?matL, STR(?mat)) AS ?material)
+  (COALESCE(?r1L,  STR(?r1)) AS ?reactant_1)
+  (COALESCE(?r2L,  STR(?r2)) AS ?reactant_2)
+  (COALESCE(?r3L,  STR(?r3)) AS ?reactant_3)
+  (COUNT(?c) AS ?n_reports)
+WHERE {
+  orkgr:R1563034 orkgp:compareContribution ?c .
+
+  OPTIONAL { ?c orkgp:P183144 ?mat . OPTIONAL { ?mat rdfs:label ?matL . } }  # material etched
+  OPTIONAL { ?c orkgp:P183145 ?r1  . OPTIONAL { ?r1  rdfs:label ?r1L  . } }  # reactant 1
+  OPTIONAL { ?c orkgp:P183146 ?r2  . OPTIONAL { ?r2  rdfs:label ?r2L  . } }  # reactant 2
+  OPTIONAL { ?c orkgp:P183147 ?r3  . OPTIONAL { ?r3  rdfs:label ?r3L  . } }  # reactant 3
+}
+GROUP BY ?mat ?matL ?r1 ?r1L ?r2 ?r2L ?r3 ?r3L
+ORDER BY
+  LCASE(COALESCE(?matL, STR(?mat)))
+  DESC(?n_reports)
+  LCASE(COALESCE(?r1L, STR(?r1)))
+  LCASE(COALESCE(?r2L, STR(?r2)))
+  LCASE(COALESCE(?r3L, STR(?r3)))

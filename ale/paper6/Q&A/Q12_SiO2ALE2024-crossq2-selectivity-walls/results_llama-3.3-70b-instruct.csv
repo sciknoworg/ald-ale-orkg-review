@@ -1,0 +1,4 @@
+"selectivity_pair","selectivity","selectivity_method","chamber_wall_treatment","etch_rate"
+"SiO₂/Si₃N₄",">7.0","Precursorselection","none",13
+"SiO₂/Si₃N₄",">7.0","Precursorselection","O₂ cleaning",13 
+"SiO₂/Si",">10.0","Precursorselection","none",14.2

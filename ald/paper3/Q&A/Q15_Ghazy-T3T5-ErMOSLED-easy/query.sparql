@@ -1,0 +1,80 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?host5Label, STR(?host5)) AS ?matrix)
+  ?eqe_best
+  (COALESCE(?mat3Label, STR(?mat3))   AS ?process_material)
+  (COALESCE(?m1Label,  STR(?m1))      AS ?metal_precursor)
+  (COALESCE(?coLabel,   ?coRaw)       AS ?co_reactant_any)
+  ?family ?gpc_num ?temp_num
+WHERE {
+  # ---- Table 5: device (EQE best per host)
+  orkgr:R1469991 orkgp:compareContribution ?c5 .
+  ?c5 orkgp:P180031 ?host5 .
+  OPTIONAL { ?host5 rdfs:label ?host5Label . }
+  OPTIONAL { ?c5  orkgp:P180033 ?eqe_raw . }
+
+  {
+    SELECT ?host5 (MAX(xsd:decimal(REPLACE(STR(?eqe_raw),"[^0-9.].*$",""))) AS ?eqe_best)
+    WHERE {
+      orkgr:R1469991 orkgp:compareContribution ?cx .
+      ?cx orkgp:P180031 ?host5 .
+      OPTIONAL { ?cx orkgp:P180033 ?eqe_raw . }
+    } GROUP BY ?host5
+  }
+
+  # ---- T5 join key (normalize: fold Greek beta -> b, strip non-alnum)
+  BIND(LCASE(REPLACE(REPLACE(COALESCE(?host5Label, STR(?host5)), "β", "b"), "[^A-Za-z0-9]+", "")) AS ?key5)
+
+  # ---- Table 3: all process rows with parsed numerics
+  orkgr:R1471077 orkgp:compareContribution ?c3 .
+  ?c3 orkgp:P9071 ?mat3 .
+  OPTIONAL { ?mat3 rdfs:label ?mat3Label . }
+
+  OPTIONAL { ?c3 orkgp:P180042 ?m1 . OPTIONAL { ?m1  rdfs:label ?m1Label . } }
+  OPTIONAL { ?c3 orkgp:P180043 ?p2 . OPTIONAL { ?p2  rdfs:label ?p2Label . } }
+  OPTIONAL { ?c3 orkgp:P180044 ?p3 . OPTIONAL { ?p3  rdfs:label ?p3Label . } }
+  OPTIONAL { ?c3 orkgp:P180045 ?p4 . OPTIONAL { ?p4  rdfs:label ?p4Label . } }
+  OPTIONAL { ?c3 orkgp:P180041 ?gpc . }
+  OPTIONAL { ?c3 orkgp:P180013 ?temp . }
+
+  # ---- Parse numbers (first number if range "225–350")
+  BIND(IF(REGEX(STR(?gpc),"[0-9]"),
+           xsd:decimal(REPLACE(STR(?gpc),"^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$","$1")),
+           UNDEF) AS ?gpc_num)
+  BIND(IF(REGEX(STR(?temp),"[0-9]"),
+           xsd:decimal(REPLACE(STR(?temp),"^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$","$1")),
+           UNDEF) AS ?temp_num)
+
+  # ---- Keep only the *lowest-temp* row per material (anti-join)
+  FILTER(BOUND(?temp_num))
+  FILTER NOT EXISTS {
+    orkgr:R1471077 orkgp:compareContribution ?c3b .
+    ?c3b orkgp:P9071 ?mat3 .
+    OPTIONAL { ?c3b orkgp:P180013 ?tempb . }
+    BIND(IF(REGEX(STR(?tempb),"[0-9]"),
+             xsd:decimal(REPLACE(STR(?tempb),"^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$","$1")),
+             UNDEF) AS ?tempb_num)
+    FILTER(BOUND(?tempb_num) && ?tempb_num < ?temp_num)
+  }
+
+  # ---- Co-reactant & family
+  BIND(COALESCE(?p2Label, ?p3Label, ?p4Label) AS ?coLabel)
+  BIND(COALESCE(STR(?p2), STR(?p3), STR(?p4)) AS ?coRaw)
+  BIND(LCASE(COALESCE(STR(?m1Label),STR(?m1))) AS ?m1_s)
+  BIND(
+    IF(CONTAINS(?m1_s,"(thd)"),   "R(thd)x",
+    IF(CONTAINS(?m1_s,"(cp)"),    "R(Cp)3",
+    IF(CONTAINS(?m1_s,"(amd)"),   "R(amd)3 / R(amd)(Cp)2",
+    IF(CONTAINS(?m1_s,"(famd)"),  "R(famd)3",
+    IF(CONTAINS(?m1_s,"(guan)"),  "R(guan)3",
+    "other"))))) AS ?family)
+
+  # ---- T3 join key and final join
+  BIND(LCASE(REPLACE(REPLACE(COALESCE(?mat3Label, STR(?mat3)), "β", "b"), "[^A-Za-z0-9]+", "")) AS ?key3)
+  FILTER(?key5 = ?key3)
+}
+ORDER BY DESC(?eqe_best) LCASE(?matrix)

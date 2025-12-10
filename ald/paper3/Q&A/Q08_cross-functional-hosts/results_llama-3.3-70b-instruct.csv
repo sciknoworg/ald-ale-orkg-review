@@ -1,0 +1,7 @@
+"host","n_apps","application","dopant"
+"AlO","3","Waveguides,Luminescence","Er,Yb,(Er,Yb)"
+"AlO","3","Waveguides,Luminescence,MOSLEDs","Er,Yb"
+"ZrO","2","Electrolyte,Interphase","Y,La,Dy"
+"HfO","2","Gatedielectrics,Memory","Y,La,Pr,Gd,Er,Dy"
+"TiO","2","Magnetics,Luminescence","La,Pr,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb"
+"YO","2","Luminescence","Er,Eu"

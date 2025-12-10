@@ -1,0 +1,5 @@
+mechanism,n_materials,avg_epc
+Fluorination + ligand-exchange,6,0.427
+Halogenation + conversion,1,2.095
+Oxidation + fluorination,2,3.15
+Other,3,2.19

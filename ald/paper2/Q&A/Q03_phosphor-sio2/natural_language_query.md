@@ -1,0 +1,1 @@
+Which phosphors were coated with SiO₂ in the ORKG comparison R1469383 that represents Table 3 of the review ‘Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications’?

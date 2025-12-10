@@ -1,0 +1,11 @@
+material,synthesis_temp,eqe,efficiency_index
+Ga2O3,900,36,4.00
+Lu3Al5O12,1100,10,0.91
+Al2O3-Y2O3,800,8.7,1.09
+Yb3Al5O12,1100,5.2,0.47
+Y3Ga5O12,800,2.5,0.31
+Gd3Ga5O12,1000,1.9,0.19
+ZnGa2O4,800,0.3,0.04
+Al2O3:Yb,,24,
+Yb2O3:Er,1000,8.5,0.85
+Er2O3,,,,,

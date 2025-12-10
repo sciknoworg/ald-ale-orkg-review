@@ -1,0 +1,34 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT
+  (COALESCE(?hostLabel, STR(?host)) AS ?host)
+  ?n_apps
+  (COALESCE(?appLabel,  STR(?app))  AS ?application)
+  (COALESCE(?dopLabel,  STR(?dopant)) AS ?dopant)
+WHERE {
+  # Stage 1: find cross-functional hosts (>=2 different applications)
+  {
+    SELECT ?host (COUNT(DISTINCT ?app) AS ?n_apps)
+    WHERE {
+      orkgr:R1469955 orkgp:compareContribution ?c .
+      ?c orkgp:P180027 ?host ;
+         orkgp:P180029 ?app ;
+         orkgp:P180028 ?dopant .
+    }
+    GROUP BY ?host
+    HAVING (COUNT(DISTINCT ?app) >= 2)
+  }
+
+  # Stage 2: list app–dopant pairs for those hosts
+  orkgr:R1469955 orkgp:compareContribution ?c2 .
+  ?c2 orkgp:P180027 ?host ;
+      orkgp:P180029 ?app ;
+      orkgp:P180028 ?dopant .
+
+  OPTIONAL { ?host   rdfs:label ?hostLabel . }
+  OPTIONAL { ?app    rdfs:label ?appLabel  . }
+  OPTIONAL { ?dopant rdfs:label ?dopLabel  . }
+}
+ORDER BY DESC(?n_apps) ?host ?application ?dopant

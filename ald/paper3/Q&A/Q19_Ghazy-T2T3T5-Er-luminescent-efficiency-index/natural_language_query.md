@@ -1,0 +1,1 @@
+From Table 2, select oxide materials doped with Er for luminescence. Combine their synthesis temperatures (Table 3) and EQEs (Table 5), then compute an efficiency index = (EQE / synthesis temperature × 100) to identify materials that deliver high efficiency at lower fabrication temperatures. Rank materials by this index.

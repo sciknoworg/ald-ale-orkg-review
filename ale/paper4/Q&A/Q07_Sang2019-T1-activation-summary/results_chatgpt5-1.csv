@@ -1,0 +1,17 @@
+activation,chemistry_pair,n_semiconductors
+Ion,O2 / Ar,3
+Ion,O2 / Ne,2
+Ion,Cl2 / Ar,2
+Ion,O2 / Ar+,1
+Ion,O2 / He,1
+Ion,Cl2 / Ne,1
+Ion,Cl2 / He,1
+Ion,Br2 / Ar,1
+Ion,Br2 / Ne,1
+Ion,Br2 / He,1
+Ion,F2 / Ar,1
+Ion,F2 / Ne,1
+Ion,F2 / He,1
+Ion,CH4 / Ar,1
+Ion,CH4 / Ne,1
+Ion,CH4 / He,1

@@ -1,0 +1,5 @@
+"precursor_family","mean_etch_rate","max_etch_rate","ion_energy_windows","max_sel_SiO2_Si","max_sel_SiO2_Si3N4"
+"C₄F₈-based",5.45,14.2,"10-100V, 30-200V, 0-50V",17.5,15.0
+"CHF₃-based",6.15,11.0,"30-90V, 0-50V",10.0,7.0
+"C₃F₇OCH₃ isomers",2.0,2.1,"10-80V",102.8,4.5
+"CF-based",3.75,9.3,"10-100V, 30-200V",2.6,3.4

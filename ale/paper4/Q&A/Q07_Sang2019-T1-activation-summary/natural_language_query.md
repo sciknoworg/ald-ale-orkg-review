@@ -1,0 +1,1 @@
+List all semiconductor ALE processes and return, for each, the modification, removal, and activation types; sort by activation mode.

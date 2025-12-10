@@ -1,0 +1,8 @@
+The retrieved segments do not contain Table 5 or any data related to Er³⁺ MOSLEDs with the specified parameters: external quantum efficiency (EQE ≥ 10%), threshold voltage, annealing temperature, emission lifetime (τ), and operational device lifetime (OLT). While the text mentions Er³⁺-doped thin films and their use in MOSLEDs, particularly in the context of NIR emission (≈1530 nm) for optical telecommunications, no specific performance metrics such as EQE, threshold voltage, annealing temperature, τ, or OLT are provided for any host matrix in the retrieved content.
+
+Therefore, based solely on the retrieved segments, it is **not possible** to identify any host matrices that achieved EQE ≥ 10% or to report the required parameters.
+
+**Final Answer:**
+```
+host_matrix,eqe_num,vol_num,anneal_num,tau_num,olt_num
+```

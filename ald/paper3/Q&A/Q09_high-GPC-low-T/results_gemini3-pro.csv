@@ -1,0 +1,38 @@
+material,family,co_reactant,gpc_num,temp_num
+Sc2O3,Cp-derived,O3,0.60–1.00,250–375
+Sc2O3,Cp-derived,O3,1.09–1.94,"225, 275"
+Y2O3,Guanidinate,H2O,1.10,175–250
+Y2O3,Formamidinate,H2O,1.36,150–325
+Y2O3,Cp-derived,H2O,1.70,250
+Y2O3,Amidinate/Cp-derived,H2O plasma,1.03,150–275
+YF3,β-diketonate,TiF4,1.10–1.70,225–325
+La2O3,Amidinate,H2O,1.05,200–300
+La2O3,Formamidinate,H2O,1.70,200–250
+La2O3,Formamidinate,O3,1.20–1.40,200–250
+La2O3,Amidinate/Cp-derived,H2O,1.20–3.00,200–300
+La2O3,Amidinate/Cp-derived,O3,0.60–2.10,200–325
+La2O3,Amidinate/Cp-derived,H2O + O3,0.70–1.80,200–325
+La2O3,Amidinate/Cp-derived,EtOH,0.50–1.70,200–325
+LaF3,β-diketonate,TiF4,2.00–5.00,225–350
+CeO2,Amidinate/Cp-derived,H2O,1.90,240
+CeO2,Amidinate,O3,2.80,210–270
+CeO2,Guanidinate,H2O,2.10,160
+CeO2,Formamidinate/Cp-derived,H2O,1.50,245
+Pr2O3,Alkoxide/Amide,H2O,0.15–2.90,200–400
+Pr2O3,Amidinate/Cp-derived,H2O,1.47–1.66,200–300
+Gd2O3,Cp-derived,H2O,1.00–3.20,175–300
+Gd2O3,Guanidinate,H2O,1.00–1.10,175–350
+Gd2O3,Cp-derived,O2 plasma,1.40,250
+Gd2O3,Amidinate/Cp-derived,H2O,1.16–1.38,200–250
+GdAlO3,Cp-derived,"TMA, O3",1.75–2.75,200–350
+GdAlO3,Cp-derived,"TMA, H2O",4.50–5.00,200–350
+Dy2O3,Guanidinate,H2O,1.00,200–350
+HoF3,β-diketonate,NbF5,1.00,250–275
+Er2O3,Cp-derived,H2O,1.50,250–350
+Er2O3,Guanidinate,H2O,1.10,150–275
+Er2O3,Amidinate/Cp-derived,H2O,1.10–1.20,225–275
+Er2O3,Cp-derived,H2O,0.80–1.20,200–300
+Er2O3,Cp-derived,H2O,1.20,250–325
+Tm2O3,Cp-derived,H2O,1.50,200–300
+LuAlO3,Cp-derived,"TDEAA, O3",1.30,250
+LuAlO3,Cp-derived,"TDEAA, H2O",1.30,250

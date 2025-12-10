@@ -1,0 +1,109 @@
+{
+  "id": "Q17",
+  "domain": "ALD",
+  "query_group": "Ghazy-Table3+Table5",
+  "query_variant": "complex1",
+  "query_scope": "cross-table",
+  "description_short": "Join rare-earth MOSLED host matrices from the performance table (Table 5) with their corresponding ALD process recipes from the rare-earth ALD process overview (Table 3), returning host, process material, EQE, metal precursor, co-reactant, GPC, and deposition temperature.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 3",
+        "description": "Overview of rare-earth ALD processes (materials, metal precursors, co-reactants, growth per cycle (GPC), and deposition temperatures)."
+      },
+      {
+        "label": "Table 5",
+        "description": "Performance characteristics of Er3+-based MOSLED devices (host matrices, annealing temperatures, EQE, power efficiency, threshold voltage, emission lifetime τ, and operational lifetime OLT)."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1471077",
+        "comparison_url": "https://orkg.org/comparisons/R1471077",
+        "role": "ald_process_overview",
+        "table_source": "Ghazy Table 3"
+      },
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991",
+        "role": "mosled_performance_overview",
+        "table_source": "Ghazy Table 5"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t3t5-complex"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180031",
+      "label": "host material matrix",
+      "role": "MOSLED_host_in_Table5"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %",
+      "role": "device_EQE_in_Table5"
+    },
+    {
+      "pid": "P9071",
+      "label": "material",
+      "role": "ALD_process_material_in_Table3"
+    },
+    {
+      "pid": "P180042",
+      "label": "precursor 1 (metal precursor)",
+      "role": "ALD_metal_precursor_in_Table3"
+    },
+    {
+      "pid": "P180043",
+      "label": "precursor 2 (co-reactant)",
+      "role": "ALD_co_reactant_in_Table3"
+    },
+    {
+      "pid": "P180041",
+      "label": "GPC [Å]",
+      "role": "growth_per_cycle_in_Table3"
+    },
+    {
+      "pid": "P180013",
+      "label": "temperature in °C",
+      "role": "ALD_deposition_temperature_in_Table3"
+    }
+  ],
+  "postprocessing_notes": {
+    "join_strategy": {
+      "description": "The query joins MOSLED host matrices (Table 5) with ALD process materials (Table 3) by normalizing their labels and stripping non-alphanumeric characters.",
+      "steps": [
+        "From Table 5 comparison R1469991, retrieve host matrices via P180031 and their labels (?hostLabel).",
+        "From Table 3 comparison R1471077, retrieve ALD materials via P9071 and their labels (?mat3Label).",
+        "For each side, construct a join key by lowercasing and removing non-alphanumeric characters (keys ?key5, ?key3).",
+        "Filter on equality of these keys (FILTER(?key5 = ?key3)) to link ALD process rows to MOSLED hosts."
+      ],
+      "limitations": "The label-based join may miss matches if naming conventions differ strongly (e.g., alternative abbreviations or spelling variants not normalized by the simple regex)."
+    },
+    "output_shape": {
+      "description": "Each row corresponds to one joined (host matrix, ALD process) pair with associated EQE and process parameters.",
+      "columns": [
+        "matrix: normalized name of the MOSLED host material (from Table 5)",
+        "process_material: ALD material entry from Table 3 matched to the host",
+        "eqe: external quantum efficiency as stored in Table 5",
+        "metal_precursor: human-readable label of precursor 1 (P180042) when available",
+        "co_reactant: human-readable co-reactant label (from P180043) when available",
+        "gpc: reported growth per cycle (P180041) from Table 3",
+        "temp: deposition temperature (P180013) from Table 3"
+      ]
+    },
+    "interpretation": "The query operationalizes the question 'For each luminescent MOSLED host material, what ALD recipe was used to deposit it, and what EQE does the resulting device achieve?' By joining process-level data (precursor chemistry, GPC, thermal budget) with device-level performance (EQE), it enables analysis of how specific ALD chemistries relate to MOSLED efficiency, without manually cross-referencing two separate tables in the original review."
+  }
+}

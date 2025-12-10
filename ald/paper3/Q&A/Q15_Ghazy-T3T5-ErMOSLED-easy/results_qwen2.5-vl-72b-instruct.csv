@@ -1,0 +1,4 @@
+matrix,eqe_best,process_material,metal_precursor,co_reactant_any,family,gpc_num,temp_num
+LuAlO3,10.0,ErAlO3,Er(thd)3,TMA,O,0.19,350
+GaO23,36.0,ErGaO3,Er(thd)3,TMA,O,NG,NG
+AlO23,24.0,ErAlO3,Er(thd)3,TMA,O,NG,NG

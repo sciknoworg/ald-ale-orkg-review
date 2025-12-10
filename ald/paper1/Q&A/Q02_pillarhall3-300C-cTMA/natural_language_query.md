@@ -1,0 +1,1 @@
+At 300 °C in PillarHall-3, what were the cTMA values reported across studies (ORKG comparison resource R1469158)?

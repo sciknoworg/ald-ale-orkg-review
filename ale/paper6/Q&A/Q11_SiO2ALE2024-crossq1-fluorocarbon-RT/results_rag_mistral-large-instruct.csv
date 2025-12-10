@@ -1,0 +1,4 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+CHF plasma,Ar plasma,RT,14.2,10–100V
+C F plasma,Ar plasma,RT,5.8,30–90V
+C F /Ar plasma,Ar plasma,RT,1.8,10–80V

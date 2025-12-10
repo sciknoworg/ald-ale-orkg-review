@@ -1,0 +1,64 @@
+{
+  "id": "ALD-Q11",
+  "domain": "ALD",
+  "query_group": "ALD-Table4-Ghazy",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "List all rare-earth ALD/MLD hybrid films that achieve high growth per cycle (GPC ≥ 5 Å) at low deposition temperature (≤ 250 °C); report material system, metal precursor family, organic precursor, GPC, and temperature.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "table_modeled": "Table 4"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1470110",
+        "comparison_url": "https://orkg.org/comparisons/R1470110"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/HiGLoT-query"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180038",
+      "label": "material system (RE–organic hybrid)"
+    },
+    {
+      "pid": "P180039",
+      "label": "metal precursor"
+    },
+    {
+      "pid": "P180040",
+      "label": "organic precursor"
+    },
+    {
+      "pid": "P180041",
+      "label": "GPC [Å/cycle]"
+    },
+    {
+      "pid": "P180013",
+      "label": "deposition temperature [°C]"
+    }
+  ],
+  "postprocessing_notes": {
+    "numeric_parsing": {
+      "gpc": "GPC values are treated as strings; the first numeric value is extracted using a regular expression (e.g. '2.5–3.2' → 2.5) and cast to xsd:decimal as ?gpc_num.",
+      "temperature": "Deposition temperature strings are parsed similarly; the first numeric token (e.g. '160–280' → 160) is used as ?temp_num."
+    },
+    "filter_logic": {
+      "high_gpc": "Rows are retained if ?gpc_num ≥ 5.0 Å/cycle.",
+      "low_temperature": "Rows are retained if ?temp_num ≤ 250 °C."
+    },
+    "family_classification": "The metal precursor is lowercased and inspected for ligand tags '(dpdmg)', '(thd)', '(amd)', '(famd)', '(guan)'; these are mapped to simple families 'R(dpdmg)3', 'R(thd)3', 'R(amd)3', 'R(famd)3', 'R(guan)3'. All others fall into 'other'.",
+    "output_columns": "The query returns a human-readable material system, metal precursor label, organic precursor label, a coarse metal-precursor family, and numeric GPC and temperature values, sorted by family, GPC, and material."
+  }
+}

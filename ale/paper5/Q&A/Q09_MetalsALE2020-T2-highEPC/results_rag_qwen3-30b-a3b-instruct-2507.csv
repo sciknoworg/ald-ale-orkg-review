@@ -1,0 +1,6 @@
+The retrieved segments do not contain Table II (or any table) titled "Summary of reported ALE of metals" as referenced in the query. Although the text mentions Table II and references it in the context of summarizing anisotropic and isotropic ALE of metals, no actual table data is present in the retrieved segments.
+
+Therefore, it is **not possible** to extract the requested data (material, direction, reaction, removal, epc, process_temp, time_per_cycle) for rows where EPC ≥ 2 Å/cycle, because the required table is missing from the retrieved content.
+
+**Answer:**  
+No data can be extracted because Table II is not present in the retrieved segments.

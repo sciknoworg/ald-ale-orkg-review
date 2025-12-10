@@ -1,0 +1,11 @@
+material,surface_adsorption,surface_removal,epc,temp
+Al2O3,HF,Sn(acac)2,0.61,250°C
+Al2O3,HF,TMA,0.75,325°C
+HfO2,HF,Al(CH3)2Cl,0.77,250°C
+ZnO,HF,TMA,2.19,295°C
+TiO2,WF6,BCl3,0.6-0.7,170°C
+WO3,BCl3,HF,4.19,207°C
+W,O3/BCl3,HF,2.5,207°C
+W,O2,WF6,6.3,300°C
+AlN,HF,Sn(acac)2/H2 plasma,1.96,250°C
+AlF3,HF,Sn(acac)2,0.63,250°C

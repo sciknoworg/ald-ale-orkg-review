@@ -1,0 +1,3 @@
+material,direction,reaction,removal,epc,process_temp,time_per_cycle
+W,anisotropic,NF3,O+,2.6 Å/cycle,Not specified,Not specified
+TiN,isotropic,O3,HF,~2.44 Å/cycle,250 ℃,Not specified

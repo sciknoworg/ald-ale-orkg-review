@@ -1,0 +1,40 @@
+{
+  "id": "ALD-Q01",
+  "domain": "ALD",
+  "query_group": "ALD-Table2",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "Counts how often each reactor–LHAR-structure combination appears in the ALD comparison R1469158 (Table 2 of the conformality study).",
+  "paper_context": {
+    "paper": {
+      "title": "Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels",
+      "doi": "10.1039/D0CP03358H",
+      "doi_url": "https://doi.org/10.1039/D0CP03358H"
+    },
+    "table_modeled": "Table 2"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469158",
+        "comparison_url": "https://orkg.org/comparisons/R1469158"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/lhr-reactor"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180007",
+      "label": "reactor type"
+    },
+    {
+      "pid": "P180003",
+      "label": "LHAR structure"
+    }
+  ]
+}

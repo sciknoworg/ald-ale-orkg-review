@@ -1,0 +1,12 @@
+material,surface_adsorption,surface_removal,epc,temp
+Al2O3,HF,Sn(acac)2,0.61,250
+Al2O3,HF,TMA,0.75,325
+HfO2,HF,Sn(acac)2,0.117,250
+ZnO,HF,TMA,2.19,295
+TiO2,WF6,BCl3,0.6,170
+SiO2,HF,TMA,0.31,300
+WO3,BCl3,HF,4.19,207
+W,O3,BCl3,6.3,300
+TiN,O3,HF,0.20,250
+AlN,HF,Sn(acac)2,1.96,250
+AlF3,HF,Sn(acac)2,0.63,250

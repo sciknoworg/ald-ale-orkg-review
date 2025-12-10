@@ -1,0 +1,12 @@
+material,family,co_reactant,gpc_num,temp_num
+Sc(Cp),Cp-derived,HO,0.75,250
+Y(iPrCp),Cp-derived,HO,1.70,200
+Y(iPr2amd)(iPrCp),amidinate,HO,1.16,200
+Er(iPr2amd)(iPrCp),amidinate,HO,1.10,200
+Er(iPr2amd)(iPrCp),amidinate,O,0.20,200
+Tb(iPr2amd)(iPrCp),amidinate,HO,1.10,200
+Tb(iPr2amd)(iPrCp),amidinate,O,0.70,200
+Yb(iPr2amd)(iPrCp),amidinate,HO,1.10,200
+Yb(iPr2amd)(iPrCp),amidinate,O,0.70,200
+Er(dpdmg),β-diketonate,HO,1.10,200
+Tb(dpdmg),β-diketonate,HO,1.00,200

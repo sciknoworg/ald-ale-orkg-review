@@ -1,0 +1,2 @@
+Among Er³⁺ MOSLEDs in the comparison, which **host matrices** achieved **high external quantum efficiency (EQE ≥ 10%)** at the **lowest threshold voltage**, and what **annealing temperatures** and **lifetimes** (emission lifetime τ and operational device lifetime OLT) were reported?  
+Return, for each qualifying host matrix, the EQE, threshold voltage, annealing temperature, τ, and OLT, and sort the results by increasing threshold voltage and, within the same voltage, by decreasing EQE.

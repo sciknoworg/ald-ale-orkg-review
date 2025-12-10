@@ -1,0 +1,4 @@
+﻿"Title","etching mechanism","1st step","2nd step","3rd step","etching rate (å/cycle)"
+"Thermal Atomic Layer Etching of SiO<sub>2</sub> by a “Conversion-Etch” Mechanism Using Sequential Reactions of Trimethylaluminum and Hydrogen Fluoride - Contribution","Conversion: SiO2 → Al2O3; Fluorination: Al2O3 → AlF3; Ligand exchange: AlF3 → AlF(CH3)2","TMA(300°C)","HF(300°C)","","0.07–0.27"
+"Thermal Atomic Layer Etching of Silica and Alumina Thin Films Using Trimethylaluminum with Hydrogen Fluoride or Fluoroform - Contribution","Conversion: SiO2 → Al2O3; Fluorination: Al2O3 → AlF3; Ligand exchange: AlF3 → AlF(CH3)2","TMA(350°C)","HF(350°C)","TMA(300°C)","0.35–1.50"
+"Atomic layer etching of SiO2 with self-limiting behavior on the surface modification step using sequential exposure of HF and NH3 - Contribution","Conversion: SiO2 → (NH4)2SiF6; Heating: (NH4)2SiF6 → SiF4 + 2NH3 + 2HF","HF(20°C)","NH3(20°C)","Heating(140°C)","9"

@@ -1,0 +1,28 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?matL,  STR(?mat))  AS ?material)
+  (COALESCE(?adsL,  STR(?ads))  AS ?surface_adsorption)
+  (COALESCE(?remL,  STR(?rem))  AS ?surface_removal)
+  ?epc ?temp
+WHERE {
+  # Table 3 (Fang 2018) modeled as R1560222
+  orkgr:R1560222 orkgp:compareContribution ?c .
+
+  OPTIONAL { ?c orkgp:P183117 ?mat .  OPTIONAL { ?mat  rdfs:label ?matL . } }   # material
+  OPTIONAL { ?c orkgp:P183118 ?ads .  OPTIONAL { ?ads  rdfs:label ?adsL . } }   # surface adsorption
+  OPTIONAL { ?c orkgp:P183119 ?rem .  OPTIONAL { ?rem  rdfs:label ?remL . } }   # surface removal
+  OPTIONAL { ?c orkgp:P183121 ?temp . }                                         # etching temperature
+
+  # EPC may contain ranges like "0.6-0.7" or "0.14/0.75"; take a numeric token
+  OPTIONAL {
+    ?c orkgp:P183120 ?epcRaw .
+    BIND( xsd:decimal( REPLACE(STR(?epcRaw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1") ) AS ?epc )
+  }
+
+  FILTER(BOUND(?epc) && ?epc > 0.5)
+}
+ORDER BY DESC(?epc) LCASE(?material) LCASE(?surface_adsorption) LCASE(?surface_removal)

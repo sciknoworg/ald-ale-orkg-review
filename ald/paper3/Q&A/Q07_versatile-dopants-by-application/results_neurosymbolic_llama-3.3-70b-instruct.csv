@@ -1,0 +1,24 @@
+"dopant","application","n_hosts"
+"Er","Luminescence",7
+"Yb","Luminescence",4
+"Eu","Luminescence",4
+"Dy","Interphase, Electrolyte",1
+"La","Interphase, Electrolyte",1
+"Y","Interphase, Electrolyte",1
+"Er","Gate dielectrics, Memory",1
+"Dy","Gate dielectrics, Memory",1
+"Er","Gate dielectrics",1
+"Gd","Gate dielectrics",1
+"La","Gate dielectrics",1
+"Pr","Gate dielectrics",1
+"Y","Gate dielectrics",1
+"La","Optoelectronics",1
+"Er","Thermometry",1
+"Yb","Thermometry",1
+"Eu","Thermometry",1
+"Nd","Thermometry",1
+"Sm","Thermometry",1
+"Dy","Thermometry",1
+"Ho","Thermometry",1
+"Tm","Thermometry",1
+"Er","Waveguides",1

@@ -1,0 +1,8 @@
+host,n_apps,application,dopant
+YO2,2,Luminescence,Er,Eu
+YO2,2,Luminescence,Er
+YO2,2,Luminescence,Eu
+HfO2,2,Gatedielectrics,Memory,Y,La,Pr,Gd,Er,Dy
+HfO2,2,Gatedielectrics,Memory,Y,La,Gd
+TiO2,2,Magnetics,Luminescence,La,Pr,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb
+TiO2,2,Magnetics,Luminescence,La,Pr,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm

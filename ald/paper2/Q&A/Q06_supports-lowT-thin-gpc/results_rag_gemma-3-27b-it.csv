@@ -1,0 +1,5 @@
+support_value,precursors_value,temp_num,thick_num,gpc_num_nm,gpc_class
+lactose,TMA/H O,30,2.5-11.0,0.47-0.73,slow
+lactose,TMA/O,30,3.8-10.3,0.47-1.00,average
+budesonide,TMA/H O,40,0.8-2.0,0.20-0.33,slow
+myoglobin,TMA/H O,30,8.3,0.21,slow

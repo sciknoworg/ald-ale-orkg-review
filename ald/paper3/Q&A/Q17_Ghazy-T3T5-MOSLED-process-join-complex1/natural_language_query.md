@@ -1,0 +1,1 @@
+For each luminescent MOSLED host material listed in the rare-earth MOSLED performance comparison (Table 5), retrieve the corresponding ALD process parameters from the rare-earth ALD process overview (Table 3) — metal precursor, co-reactant, growth-per-cycle rate (GPC), and deposition temperature — and report them alongside the external quantum efficiency (EQE).

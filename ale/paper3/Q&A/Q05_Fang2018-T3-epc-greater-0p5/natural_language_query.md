@@ -1,0 +1,1 @@
+List all thermal ALE processes with EPC > 0.5 Å/cycle; return the material, surface-adsorption and surface-removal reactants, EPC, and etching temperature; sort by EPC.

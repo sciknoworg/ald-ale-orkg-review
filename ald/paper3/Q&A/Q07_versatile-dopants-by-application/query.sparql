@@ -1,0 +1,15 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT (COALESCE(?appLabel, STR(?app)) AS ?application)
+       (COALESCE(?dopLabel, STR(?dopant)) AS ?dopant)
+       (COUNT(DISTINCT ?host) AS ?n_hosts)
+WHERE {
+  orkgr:R1469955 orkgp:compareContribution ?c .
+  ?c orkgp:P180029 ?app ; orkgp:P180028 ?dopant ; orkgp:P180027 ?host .
+  OPTIONAL { ?app rdfs:label ?appLabel . }
+  OPTIONAL { ?dopant rdfs:label ?dopLabel . }
+}
+GROUP BY ?app ?appLabel ?dopant ?dopLabel
+ORDER BY ?application DESC(?n_hosts) ?dopant

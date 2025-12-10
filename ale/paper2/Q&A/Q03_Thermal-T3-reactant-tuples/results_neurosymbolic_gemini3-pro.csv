@@ -1,0 +1,50 @@
+material,reactant_1,reactant_2,reactant_3,n_reports
+Al2O3,HF,TMA,,6
+Al2O3,HF,DMAC,,3
+Al2O3,HF,Sn(acac)2,,2
+Al2O3,CHF3,TMA,,1
+Al2O3,HF,"Sn(acac)2,TMA,DMAC,SiCl4",,1
+Al2O3,HF,"TMA,DMAC",,1
+Al2O3,"HF, DFT study of fluorination reaction",TMA,,1
+Al2O3,"HF,SF4",Sn(acac)2,,1
+AlF3,HF,Sn(acac)2,,1
+AlN,HF,Sn(acac)2,,1
+Co,Cl2,"Hhfac,Hacac",,1
+Co,O2,Hhfac,,1
+Cu,O3,Hhfac,,1
+Fe,Cl2,Hacac,,1
+Ga2O3,HF,"BCl3, DMAC, TMA, TiCl4, Ga[N(CH3)2]3",,1
+GaN,XeF2,BCl3,,1
+Ge,Cl2,Thermalcycling,,1
+HfO2,HF,DMAC,,1
+HfO2,HF,"DMAC,TiCl4",,1
+HfO2,HF,Sn(acac)2,,1
+HfO2,HF,"Sn(acac)2,TMA,DMAC,SiCl4",,1
+HfO2,HF,TiCl4,,1
+HfO2,"HF, DFT study of fluorination reaction",DMAC,,1
+HfO2,"HF,XeF2,SF4","DMAC,TiCl4",,1
+HfZrO2,HF,"DMAC,TiCl4",,1
+HfZrO2,"HF,XeF2,SF4","DMAC,TiCl4",,1
+InAlAs,HF,DMAC,,1
+InGaAs,HF,DMAC,,1
+Ni,O2,Hhfac,,1
+Si,Cl2,Thermal cycling,TMA,1
+Si,"ClF3,BrF3,BrF5,IF5",HF,TMA,1
+Si,O2,HF,TMA,1
+Si3N4,"O2,O3",HF,TMA,1
+SiO2,CHF3,TMA,,1
+SiO2,TMA,HF,,1
+TiN,CHF3/O2 downstream plasma,Thermal cycling,TMA,1
+TiN,O3,HF,TMA,1
+TiO2,WF6,BCl3,TMA,2
+VO2,"HF,SF4",Sn(acac)2,TMA,1
+W,"O2,O3","BCl3,HF",TMA,1
+W,"O2,O3",WCl6,TMA,1
+W,"O2,O3",WF6,TMA,1
+WO3,"O2,O3","BCl3,HF",TMA,1
+ZnO,HF,TMA,,1
+ZnO,Hacac,O2 plasma,TMA,1
+ZrO2,HF,DMAC,TMA,1
+ZrO2,HF,"DMAC,TiCl4",TMA,1
+ZrO2,HF,"Sn(acac)2,TMA,DMAC,SiCl4",TMA,1
+ZrO2,"HF, DFT study of fluorination reaction",DMAC,TMA,1

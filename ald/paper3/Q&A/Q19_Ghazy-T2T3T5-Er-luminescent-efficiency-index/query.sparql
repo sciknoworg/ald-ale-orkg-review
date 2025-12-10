@@ -1,0 +1,48 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?material (MIN(?synT) AS ?synthesis_temp) (MAX(?eqeNum) AS ?eqe)
+       ((MAX(?eqeNum) / MIN(?synT) * 100) AS ?efficiency_index)
+WHERE {
+  # Tbl 2: material + dopant + application
+  orkgr:R1469955 orkgp:compareContribution ?c2 .
+  ?c2 orkgp:P180027 ?mat2 .
+  OPTIONAL { ?mat2 rdfs:label ?mat2Label . }
+  ?c2 orkgp:P180028 ?dopant .
+  OPTIONAL { ?dopant rdfs:label ?dopantLabel . }
+  ?c2 orkgp:P180029 ?app .
+  OPTIONAL { ?app rdfs:label ?appLabel . }
+
+  FILTER(REGEX(STR(?dopantLabel), "\\bEr\\b", "i"))
+  FILTER(REGEX(STR(?appLabel), "Luminesc", "i"))
+
+  # Tbl 3: synthesis T
+  orkgr:R1471077 orkgp:compareContribution ?c3 .
+  ?c3 orkgp:P9071 ?mat3 .
+  OPTIONAL { ?mat3 rdfs:label ?mat3Label . }
+  ?c3 orkgp:P180013 ?temp_raw .
+  BIND(xsd:decimal(REPLACE(STR(?temp_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?synT0)
+  BIND(IF(?synT0 >= 50 && ?synT0 <= 1500, ?synT0, UNDEF) AS ?synT)
+
+  # Tbl 5: EQE
+  orkgr:R1469991 orkgp:compareContribution ?c5 .
+  ?c5 orkgp:P180031 ?host .
+  OPTIONAL { ?host rdfs:label ?hostLabel . }
+  ?c5 orkgp:P180033 ?eqe_raw .
+  BIND(xsd:decimal(REPLACE(STR(?eqe_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?eqeNum)
+
+  # Normalized name matching (strip dopant parentheses)
+  BIND(LCASE(REPLACE(COALESCE(?mat2Label, STR(?mat2)), "\\([^)]*\\)", "")) AS ?m2)
+  BIND(LCASE(REPLACE(COALESCE(?mat3Label, STR(?mat3)), "\\([^)]*\\)", "")) AS ?m3)
+  BIND(LCASE(REPLACE(COALESCE(?hostLabel, STR(?host)), "\\([^)]*\\)", "")) AS ?h)
+
+  FILTER((CONTAINS(?m3, ?m2) || CONTAINS(?m2, ?m3)) &&
+         (CONTAINS(?h,  ?m2) || CONTAINS(?m2, ?h)))
+
+  FILTER(BOUND(?synT) && BOUND(?eqeNum))
+  BIND(COALESCE(?mat2Label, ?mat3Label, ?hostLabel) AS ?material)
+}
+GROUP BY ?material
+ORDER BY DESC(?efficiency_index)

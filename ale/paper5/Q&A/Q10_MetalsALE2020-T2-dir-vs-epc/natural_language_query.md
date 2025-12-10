@@ -1,0 +1,1 @@
+Group metal ALE processes by direction (anisotropic vs. isotropic) and compute, for each group, the number of distinct metals covered and the mean EPC; sort by mean EPC in descending order.

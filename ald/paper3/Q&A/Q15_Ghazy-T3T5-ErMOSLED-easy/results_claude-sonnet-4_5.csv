@@ -1,0 +1,10 @@
+matrix,eqe_best,process_material,metal_precursor,co_reactant_any,family,gpc_num,temp_num
+Ga2O3,36,Ga2O3,Nd(thd)3 or Er(thd)3,O3,β-diketonate,0.25-0.28,350
+Al2O3:Yb,24,Al2O3,TMA,H2O,Alkyl,N/A,N/A
+Lu3Al5O12,10,Lu3Al5O12,Lu(thd)3 + TMA,O3,β-diketonate,0.19,350
+Al2O3-Y2O3,8.7,Y2O3,Y(thd)3,O3,β-diketonate,0.22-0.23,250-300
+Yb2O3,8.5,Yb2O3,Yb(thd)3,O3,β-diketonate,0.15-0.2,250-400
+Yb3Al5O12,5.2,Yb3Al5O12,Yb(thd)3 + TMA,O3,β-diketonate,0.20,350
+Y3Ga5O12,2.5,Y3Ga5O12,Y(thd)3 + Et3Ga,O3,β-diketonate,0.23,350
+Gd3Ga5O12,1.9,Gd3Ga5O12,Gd(thd)3 + TEGa,O3,β-diketonate,0.19,350
+ZnGa2O4,0.3,ZnGa2O4,Er(MeCp)3 + Ga2(NMe2)6,H2O,Cyclopentadienyl,0.95-1.00,250

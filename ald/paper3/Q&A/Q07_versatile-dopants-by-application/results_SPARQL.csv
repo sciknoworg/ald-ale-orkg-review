@@ -1,0 +1,56 @@
+application,dopant,n_hosts
+Electrolyte,Y,2
+Electrolyte,Dy,1
+Electrolyte,La,1
+Gate dielectrics,La,2
+Gate dielectrics,Dy,1
+Gate dielectrics,Er,1
+Gate dielectrics,Gd,1
+Gate dielectrics,Pr,1
+Gate dielectrics,Y,1
+Interphase,Dy,1
+Interphase,La,1
+Interphase,Y,1
+Luminescence,Er,12
+Luminescence,Eu,5
+Luminescence,Tb,5
+Luminescence,Nd,3
+Luminescence,Ce,2
+Luminescence,Dy,2
+Luminescence,Ho,2
+Luminescence,La,2
+Luminescence,Pr,2
+Luminescence,Sm,2
+Luminescence,Tm,2
+Luminescence,Yb,2
+Luminescence,"(Er,Yb)",1
+Magnetics,Dy,1
+Magnetics,Er,1
+Magnetics,Eu,1
+Magnetics,Ho,1
+Magnetics,La,1
+Magnetics,Nd,1
+Magnetics,Pr,1
+Magnetics,Sm,1
+Magnetics,Tb,1
+Magnetics,Tm,1
+Magnetics,Yb,1
+Memory,Gd,2
+Memory,La,2
+Memory,Y,2
+Memory,Dy,1
+Memory,Er,1
+Memory,Pr,1
+Optoelectronics,La,1
+Thermometry,Dy,1
+Thermometry,Er,1
+Thermometry,Eu,1
+Thermometry,Ho,1
+Thermometry,Nd,1
+Thermometry,Sm,1
+Thermometry,Tb,1
+Thermometry,Tm,1
+Thermometry,Yb,1
+Waveguides,"(Er,Yb)",1
+Waveguides,Er,1
+Waveguides,Yb,1

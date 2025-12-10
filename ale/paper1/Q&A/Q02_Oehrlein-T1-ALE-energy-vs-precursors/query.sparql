@@ -1,0 +1,24 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?energy_category (COUNT(DISTINCT ?precursor) AS ?n_precursors)
+WHERE {
+  orkgr:R1562672 orkgp:compareContribution ?c .
+  OPTIONAL { ?c orkgp:P183143 ?energy . }
+  OPTIONAL { ?c orkgp:P183142 ?precursor . }
+
+  # --- classify energy source keywords into broader categories
+  BIND(LCASE(STR(?energy)) AS ?e)
+  BIND(
+    IF(CONTAINS(?e,"neutral"), "Neutral beam",
+      IF(CONTAINS(?e,"plasma") || CONTAINS(?e,"ion"), "Plasma / ion",
+        IF(CONTAINS(?e,"laser") || CONTAINS(?e,"photon") || CONTAINS(?e,"excimer"), "Photon-assisted",
+          IF(CONTAINS(?e,"lamp") || CONTAINS(?e,"thermal") || CONTAINS(?e,"wet"), "Thermal / chemical", "Other")
+        )
+      )
+    ) AS ?energy_category
+  )
+}
+GROUP BY ?energy_category
+ORDER BY DESC(?n_precursors)

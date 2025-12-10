@@ -1,0 +1,127 @@
+{
+  "id": "Q16",
+  "domain": "ALD",
+  "query_group": "Ghazy-Table2+Table5",
+  "query_variant": "easy",
+  "query_scope": "cross-table",
+  "description_short": "Cross-link luminescent host materials from the ALD dopant overview (Table 2) with MOSLED performance data (Table 5), listing all recorded performance parameters for materials that appear in both tables.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 2",
+        "description": "Overview of rare-earth-doped ALD systems: host materials, dopants or co-dopants, and targeted application domains (e.g., luminescence, memory, gate dielectrics)."
+      },
+      {
+        "label": "Table 5",
+        "description": "Performance characteristics of Er3+-based MOSLED devices: annealing temperature, external quantum efficiency (EQE), power efficiency, threshold voltage, emission lifetime (τ), and operational device lifetime (OLT)."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469955",
+        "comparison_url": "https://orkg.org/comparisons/R1469955",
+        "role": "dopant_overview_comparison",
+        "table_source": "Ghazy Table 2"
+      },
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991",
+        "role": "device_performance_comparison",
+        "table_source": "Ghazy Table 5"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/LumMOSLED-query"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180027",
+      "label": "host material (Table 2)",
+      "role": "host_material_in_dopant_overview"
+    },
+    {
+      "pid": "P180028",
+      "label": "dopant / rare-earth ion",
+      "role": "dopant_context_in_Table2"
+    },
+    {
+      "pid": "P180029",
+      "label": "application",
+      "role": "application_domain_for_doped_system"
+    },
+    {
+      "pid": "P180031",
+      "label": "host material matrix (Table 5)",
+      "role": "host_material_in_MOSLED_performance"
+    },
+    {
+      "pid": "P180032",
+      "label": "annealing temperature in °C",
+      "role": "device_annealing_temperature"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %",
+      "role": "device_EQE"
+    },
+    {
+      "pid": "P180034",
+      "label": "power efficiency ×10⁻⁴",
+      "role": "device_power_efficiency"
+    },
+    {
+      "pid": "P180035",
+      "label": "threshold voltage in volts",
+      "role": "device_threshold_voltage"
+    },
+    {
+      "pid": "P180036",
+      "label": "emission lifetime in milliseconds",
+      "role": "device_emission_lifetime_tau"
+    },
+    {
+      "pid": "P180037",
+      "label": "operational device lifetime in hours",
+      "role": "device_operational_lifetime_OLT"
+    }
+  ],
+  "postprocessing_notes": {
+    "join_strategy": {
+      "description": "The query joins Table 2 (doped ALD systems) and Table 5 (Er3+-MOSLED performance) by matching host material labels case-insensitively.",
+      "steps": [
+        "From Table 2 comparison R1469955, retrieve host materials via P180027 and their rdfs:label (?ml).",
+        "From Table 5 comparison R1469991, retrieve host matrices via P180031 and their rdfs:label (?ml2).",
+        "Apply a case-insensitive equality filter on the string forms of ?ml and ?ml2.",
+        "For hosts present in both tables, traverse all literal-valued performance predicates in Table 5."
+      ],
+      "limitations": "The join currently relies on exact string equality (up to case) of labels; hosts with differing spellings or formatting are not matched."
+    },
+    "performance_properties": {
+      "description": "The query generically iterates over all literal-valued properties attached to each Table 5 contribution (?c5 ?perf_pred ?perf_val) and excludes rdfs:label. In practice, the relevant predicates for MOSLED performance are P180032–P180037 (annealing, EQE, PE, voltage, τ, OLT).",
+      "note": "The label ?ppL provides a human-readable description of each performance predicate (e.g. 'external quantum efficiency in %')."
+    },
+    "dopant_context": {
+      "description": "Dopant information for each host is available in Table 2 via P180028 (dopant / rare-earth ion) and P180029 (application). Although not directly selected in this query, these properties can be retrieved in a follow-up query keyed by the same host label to contextualize MOSLED performance by dopant and application domain."
+    },
+    "output_shape": {
+      "description": "Each result row corresponds to one (host material, performance property, performance value) triple. The same host appears in multiple rows, once for each reported performance metric.",
+      "columns": [
+        "ml: host material label (from Table 2, shared with Table 5)",
+        "ppL: label of the performance predicate (e.g. EQE, threshold voltage, OLT)",
+        "perf_val: literal value of the performance metric"
+      ]
+    },
+    "interpretation": "The query identifies luminescent host materials that are both (i) doped systems in the ALD overview (Table 2) and (ii) characterized as Er3+ MOSLED hosts (Table 5), then lists all MOSLED performance metrics for those overlaps. This bridges composition-level knowledge (which rare earths are used in which hosts) with device-level figures of merit (EQE, voltage, lifetime), enabling integrated analysis of composition–performance relationships."
+  }
+}

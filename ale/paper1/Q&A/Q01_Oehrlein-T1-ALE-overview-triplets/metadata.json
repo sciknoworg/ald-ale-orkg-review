@@ -1,0 +1,80 @@
+{
+  "id": "Q01",
+  "domain": "ALE",
+  "query_group": "Oehrlein-T1-ALE-overview",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "Basic extraction of material–precursor–energy-source triplets from the ALE overview (Table I) to show how diverse ALE studies can be unified in a structured format.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic Layer Etching at the Tipping Point: An Overview",
+      "doi": "10.1149/2.0061506jss",
+      "doi_url": "https://doi.org/10.1149/2.0061506jss"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table I",
+        "description": "Summary of atomic layer etching (ALE) investigations, listing materials, adsorption precursor chemistries, and energy sources used for etching or desorption."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1562672",
+        "comparison_url": "https://orkg.org/comparisons/R1562672",
+        "role": "ale_overview",
+        "table_source": "Oehrlein Table I"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/orkg-ale-materials-nolimit"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P9071",
+      "label": "material",
+      "role": "ALE substrate or film material summarized in Table I"
+    },
+    {
+      "pid": "P183142",
+      "label": "precursor chemistries for adsorption",
+      "role": "adsorption precursor chemistry used in the ALE cycle (e.g., Cl2, fluorocarbon species)"
+    },
+    {
+      "pid": "P183143",
+      "label": "energy source",
+      "role": "energy source or activation mode used for etching/desorption (e.g., ions, plasma, photons)"
+    }
+  ],
+  "postprocessing_notes": {
+    "join_strategy": {
+      "description": "No cross-table joins are performed; this query operates on a single ORKG comparison that models Table I.",
+      "steps": [
+        "Select all contributions (rows) from the ALE overview comparison (R1562672).",
+        "For each contribution, retrieve the material (P9071), precursor chemistry (P183142), and energy source (P183143) if present."
+      ],
+      "limitations": "Some cells may be missing (e.g., no explicit energy source recorded), in which case the corresponding variable will be empty in the results."
+    },
+    "aggregation_logic": {
+      "description": "This Easy Query does not aggregate or compute derived metrics.",
+      "details": [
+        "Each row in the result corresponds directly to one ALE investigation as represented by a single comparison contribution.",
+        "Multiple investigations involving the same material but different precursors or energy sources will appear as separate rows, enabling later grouping or counting in downstream analyses."
+      ]
+    },
+    "output_shape": {
+      "description": "Simple triplet view of ALE studies from Table I.",
+      "columns": [
+        "material: ALE material under study (substrate/film).",
+        "precursor: adsorption precursor chemistry used in the ALE cycle.",
+        "energy: energy source used for etching or desorption (e.g., plasma, ion bombardment, photon exposure)."
+      ]
+    },
+    "interpretation": "The query provides a compact overview of how different ALE studies combine material systems, adsorption chemistries, and energy sources. This serves as a starting point for more advanced analyses, such as grouping by energy source, counting precursor usage across materials, or linking these process choices to etch rates and selectivities in subsequent queries."
+  }
+}

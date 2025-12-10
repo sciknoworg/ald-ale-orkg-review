@@ -1,0 +1,7 @@
+"precursor","removal","process_temp","etch_rate","ion_energy_window"
+"C4F8 plasma","Ar plasma","RT","1.9","30–200V"
+"C3F7OCH3 plasma","O2 plasma","20","2.1","30–90V"
+"n-C3F7OCH3 plasma","Ar plasma","RT","2.1","10–80V"
+"i-C3F7OCH3 plasma","Ar plasma","RT","1.8","10–80V"
+"CF3CF2CF2CH2OH plasma","Ar plasma","RT","5.2","10–80V"
+"C4F6/Ar plasma","Ar plasma","-10","14.2","10–100V"

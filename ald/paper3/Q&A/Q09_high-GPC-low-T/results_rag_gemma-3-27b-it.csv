@@ -1,0 +1,17 @@
+material,family,co_reactant,gpc_num,temp_num
+ScO,β-diketonate,O,0.13,335
+Sc(Cp),alkoxide/amide,HO,0.75,250
+Y(thd),β-diketonate,O,0.22,250
+Y(Cp),alkoxide/amide,HO,1.20,200
+Y(iPr2amd),amidinate,HO,0.80,150
+Y(iPrCp),formamidinate,O,1.70,245
+Y(dpdmg),guanidinate,HO,1.10,175
+YO,β-diketonate,O,0.23,300
+LaO,β-diketonate,O,0.36,180
+La(iPrCp),formamidinate,HO,0.10,280
+La(iPrCp),formamidinate,O,0.30,150
+CeO,β-diketonate,O,0.32,175
+Ce(dpdmg),guanidinate,HO,0.10,200
+PrO,β-diketonate,HO,0.15,200
+TbO,β-diketonate,O,0.31,300
+Tb(dpdmg),guanidinate,HO,1.00,200

@@ -1,0 +1,4 @@
+selectivity_pair,selectivity,selectivity_method,chamber_wall_treatment,etch_rate
+SiO₂/Si₃N₄,0.2-15.0,Precursor selection,Cleaned with O₂ plasma,5.6–11.4
+SiO₂/Si₃N₄,>7.0,Precursor selection,Cleaned with O₂ plasma,5.6–11.4
+SiO₂/Si,2.6-17.5,Precursor selection,None,3.0

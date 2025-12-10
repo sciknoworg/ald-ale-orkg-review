@@ -1,0 +1,10 @@
+support_value,precursors_value,temp_num,thickness_text
+lactose,TMA/H2O,30,2.5-11.0
+lactose,TMA/O3,30,3.8-10.3
+budesonide,TMA/H2O,40,0.8-2.0
+budesonide,TMA/O3,40,20.0-50.0
+budesonide,TiCl4/H2O,40,3.0-15.0
+budesonide,SiCl4/H2O,40,1.5-10.0
+HPV 16 L1 capsomer,TMA/H2O,70,40.0-59.9
+posaconazole/HPMCAS,TMA/H2O,35,12.0
+myoglobin,TMA/H2O,30,8.3

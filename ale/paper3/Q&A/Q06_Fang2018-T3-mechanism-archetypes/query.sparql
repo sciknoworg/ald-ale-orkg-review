@@ -1,0 +1,39 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?mechanism
+       (COUNT(DISTINCT ?matKey) AS ?n_materials)
+       (AVG(?epcVal)           AS ?avg_epc)
+WHERE {
+  orkgr:R1560222 orkgp:compareContribution ?c .
+
+  OPTIONAL { ?c orkgp:P183117 ?mat .  OPTIONAL { ?mat  rdfs:label ?matL . } }   # material
+  OPTIONAL { ?c orkgp:P183118 ?ads .  OPTIONAL { ?ads  rdfs:label ?adsL . } }   # surface adsorption
+  OPTIONAL { ?c orkgp:P183119 ?rem .  OPTIONAL { ?rem  rdfs:label ?remL . } }   # surface removal
+
+  # EPC normalization (take a numeric token if text contains ranges)
+  OPTIONAL {
+    ?c orkgp:P183120 ?epcRaw .
+    BIND( xsd:decimal( REPLACE(STR(?epcRaw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1") ) AS ?epcVal )
+  }
+
+  # Normalize strings for pattern matching and material keying
+  BIND( LCASE(COALESCE(?adsL, STR(?ads), "")) AS ?ads_s )
+  BIND( LCASE(COALESCE(?remL, STR(?rem), "")) AS ?rem_s )
+  BIND( LCASE(COALESCE(?matL, STR(?mat), "")) AS ?matKey )
+
+  # Mechanism inference buckets
+  BIND(
+    IF( REGEX(?ads_s, "\\bhf\\b") && REGEX(?rem_s, "\\b(tma|dmac|sn\\(acac\\)2|al\\(ch3\\)2cl|sic l4|sicl4)\\b"),
+        "Fluorination + ligand-exchange",
+    IF( REGEX(?ads_s, "\\bwf6\\b") && REGEX(?rem_s, "\\bbcl3\\b"),
+        "Halogenation + conversion",
+    IF( (REGEX(?ads_s, "\\bo2\\b") || REGEX(?ads_s, "\\bo3\\b")) && REGEX(?rem_s, "\\bhf\\b"),
+        "Oxidation + fluorination",
+        "Other"))) AS ?mechanism
+  )
+}
+GROUP BY ?mechanism
+ORDER BY DESC(?avg_epc) DESC(?n_materials) ?mechanism

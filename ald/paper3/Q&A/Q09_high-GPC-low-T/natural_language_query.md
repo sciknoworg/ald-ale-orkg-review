@@ -1,0 +1,1 @@
+List all rare-earth ALD processes that achieve high growth per cycle (GPC ≥ 1 Å) at low deposition temperature (≤ 250 °C). Report the deposited material, the metal precursor family (e.g. Cp-derived, amidinate, β-diketonate), the co-reactant, the GPC value, and the deposition temperature, and sort the results by GPC.

@@ -1,0 +1,6 @@
+material,direction,reaction,removal,epc,process_temp,time_per_cycle
+W,Isotropy,F radical adsorption,O⁺ ion desorption,2.6,Not specified,10–30 s
+Cu,Anisotropy,O₂ plasma oxidation,Formic acid vapor,37,80 °C,Not specified
+Fe,Anisotropy,O₂ plasma oxidation,Formic acid vapor,42,80 °C,Not specified
+Co,Anisotropy,O₂ plasma oxidation,Formic acid vapor,28,80 °C,Not specified
+Pd,Anisotropy,O₂ plasma oxidation,Formic acid vapor,12,80 °C,Not specified

@@ -1,0 +1,3 @@
+For Table 3 in the article titled "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements," retrieve rows where the material is Y₂O₃ (or its equivalents like yttria or yttrium oxide) and the deposition temperature overlaps with the range of 200–300 °C. For each row, determine the ALD mode as either "PE-ALD" if any co-reactant contains the term "plasma," or "Thermal ALD" otherwise. Calculate the average growth per cycle (GPC) in Å/cycle for each mode, the number of contributing rows, and provide an example co-reactant description.
+
+The result must be returned as one single table only, in CSV format, with one row per result. The table should have the following columns: mode, avg_gpc_A, n_rows, example_co_reactant.

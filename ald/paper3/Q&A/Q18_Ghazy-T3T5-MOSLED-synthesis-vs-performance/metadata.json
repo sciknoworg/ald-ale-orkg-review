@@ -1,0 +1,118 @@
+{
+  "id": "Q18",
+  "domain": "ALD",
+  "query_group": "Ghazy-Table3+Table5",
+  "query_variant": "complex2",
+  "query_scope": "cross-table",
+  "description_short": "Cross-table aggregation of synthesis temperature (Table 3) and device performance (Table 5) for rare-earth oxide matrices that appear in both the ALD process overview and the Er3+-based MOSLED performance comparison.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 3",
+        "description": "Rare-earth ALD process overview: materials, metal precursors, co-reactants, GPC values, and deposition temperatures."
+      },
+      {
+        "label": "Table 5",
+        "description": "Performance characteristics of Er3+-based MOSLED devices: host matrices, annealing temperatures, EQE, power efficiency, threshold voltage, emission lifetime (τ), and operational lifetime (OLT)."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1471077",
+        "comparison_url": "https://orkg.org/comparisons/R1471077",
+        "role": "ald_process_overview",
+        "table_source": "Ghazy Table 3"
+      },
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991",
+        "role": "mosled_performance_overview",
+        "table_source": "Ghazy Table 5"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t3t5-correlation"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180031",
+      "label": "host material matrix",
+      "role": "MOSLED_host_in_Table5"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %",
+      "role": "device_EQE_in_Table5"
+    },
+    {
+      "pid": "P180034",
+      "label": "power efficiency ×10⁻⁴",
+      "role": "device_power_efficiency_in_Table5"
+    },
+    {
+      "pid": "P180032",
+      "label": "annealing temperature in °C",
+      "role": "annealing_temperature_in_Table5"
+    },
+    {
+      "pid": "P180036",
+      "label": "emission lifetime in milliseconds",
+      "role": "emission_lifetime_in_Table5"
+    },
+    {
+      "pid": "P9071",
+      "label": "material",
+      "role": "ALD_process_material_in_Table3"
+    },
+    {
+      "pid": "P180013",
+      "label": "temperature in °C",
+      "role": "ALD_deposition_temperature_in_Table3"
+    }
+  ],
+  "postprocessing_notes": {
+    "join_strategy": {
+      "description": "Aligns host matrices from the MOSLED performance table (Table 5) with ALD process materials from the process overview (Table 3) using normalized labels and fuzzy string matching.",
+      "steps": [
+        "From Table 5 comparison R1469991, retrieve host matrices via P180031 and their labels (?hostLabel).",
+        "From Table 3 comparison R1471077, retrieve materials via P9071 and their labels (?mat3Label).",
+        "Normalize each label by lowercasing and stripping parenthetical content (e.g., dopant annotations) using regex into ?h_norm and ?m3_norm.",
+        "Use FILTER(CONTAINS(?h_norm, ?m3_norm) || CONTAINS(?m3_norm, ?h_norm)) to allow partial matches in both directions.",
+        "Bind a human-readable matrix label via COALESCE(?hostLabel, ?mat3Label, STR(?host))."
+      ],
+      "limitations": "The fuzzy CONTAINS-based join is heuristic and may include ambiguous matches if two materials have very similar names, or miss matches when naming diverges strongly (different abbreviations or translations)."
+    },
+    "aggregation_logic": {
+      "description": "The query aggregates multiple records per matrix to obtain representative synthesis and performance values.",
+      "details": [
+        "Synthesis temperature (synthesis_temp) is taken as MAX(?synT) over all joined process rows in Table 3, after filtering for physically plausible values (50–1500 °C).",
+        "Annealing temperature (annealing_temp) is taken as MAX(?annT) from P180032 in Table 5.",
+        "EQE, power efficiency, and emission lifetime are each summarized as MAX of their numeric values, reflecting best reported performance per matrix in the review.",
+        "Numeric values are extracted from mixed-format literals using regex to capture the first number (e.g., '36', '≈15', '24 (peak)')."
+      ]
+    },
+    "output_shape": {
+      "description": "Each output row corresponds to one rare-earth oxide matrix that has both ALD process information (Table 3) and MOSLED performance data (Table 5).",
+      "columns": [
+        "matrix: normalized host/matrix label shared between Tables 3 and 5.",
+        "synthesis_temp: representative ALD deposition temperature (°C) extracted from Table 3 (P180013).",
+        "annealing_temp: representative post-deposition annealing temperature (°C) from Table 5 (P180032).",
+        "eqe: maximum external quantum efficiency (%) from Table 5 (P180033).",
+        "power_eff: maximum reported power efficiency (×10⁻⁴) from Table 5 (P180034).",
+        "lifetime: maximum reported emission lifetime τ (ms) from Table 5 (P180036)."
+      ]
+    },
+    "interpretation": "This query operationalizes the question 'How do synthesis (ALD deposition) and post-processing (annealing) conditions relate to optical performance for rare-earth oxide MOSLED hosts that appear in both the process and device tables?' It connects ALD thermal budgets to EQE, power efficiency, and emission lifetime, enabling matrix-level comparisons that would otherwise require manual cross-reading of Tables 3 and 5 in the original Ghazy et al. review."
+  }
+}

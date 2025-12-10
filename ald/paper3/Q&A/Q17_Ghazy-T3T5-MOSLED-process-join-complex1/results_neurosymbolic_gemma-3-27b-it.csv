@@ -1,0 +1,10 @@
+matrix,process_material,eqe,metal_precursor,co_reactant,gpc,temp
+Y3Ga5O12,Er,2.5,Er(thd)3,O3,0.23,350
+Gd3Ga5O12,Er,1.9,Er(thd)3,O3,0.23,350
+ZnGa2O4,Er,0.3,Er(thd)3,O3,0.23,350
+Lu3Al5O12,Er,10,Er(thd)3,O3,0.23,350
+Yb2O3,Er,8.5,Yb(thd)3,O3,0.15-0.2,250-400
+Yb3Al5O12,Er,5.2,Yb(thd)3,O3,0.2,350
+Ga2O3,Er,36,Er(thd)3,O3,0.23,350
+Al2O3-Y2O3,Er,8.7,Er(thd)3,O3,0.22-0.23,250-300
+Al2O3:Yb,Er,24,Er(thd)3,O3,0.22-0.23,250-300

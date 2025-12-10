@@ -1,0 +1,18 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT
+  (COALESCE(?actL, STR(?act)) AS ?activation)
+  (CONCAT(COALESCE(?modL, STR(?mod)), " / ", COALESCE(?remL, STR(?rem))) AS ?chemistry_pair)
+  (COUNT(DISTINCT ?semi) AS ?n_semiconductors)
+WHERE {
+  orkgr:R1560825 orkgp:compareContribution ?c .
+
+  OPTIONAL { ?c orkgp:P183123 ?semi . OPTIONAL { ?semi rdfs:label ?semiL . } }   # semiconductor
+  OPTIONAL { ?c orkgp:P183124 ?mod  . OPTIONAL { ?mod  rdfs:label ?modL  . } }   # modification
+  OPTIONAL { ?c orkgp:P183125 ?rem  . OPTIONAL { ?rem  rdfs:label ?remL  . } }   # removal
+  OPTIONAL { ?c orkgp:P183126 ?act  . OPTIONAL { ?act  rdfs:label ?actL  . } }   # activation
+}
+GROUP BY ?act ?actL ?mod ?modL ?rem ?remL
+ORDER BY LCASE(COALESCE(?actL, STR(?act))) DESC(?n_semiconductors)

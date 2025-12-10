@@ -1,0 +1,10 @@
+host_matrix,eqe_num,vol_num,eqe_per_vol,anneal_num,tau_num,olt_num
+Ga2O3,36.0,15.0,2.4,900.0,2.04,100.0
+Al2O3:Yb,24.0,14.0,1.71,NA,0.90,NA
+Al2O3-Y2O3,8.7,NA,NA,800.0,NA,NA
+Yb2O3,8.5,60.0,0.14,1000.0,NA,NA
+Lu3Al5O12,10.0,50.0,0.2,1100.0,1.65,NA
+Yb3Al5O12,5.2,5.0,1.04,1100.0,1.2,NA
+Polycrystalline Er-doped Y3Ga5O12,2.5,25.0,0.1,800.0,2.26,49.0
+Gd3Ga5O12,1.9,30.0,0.06,1000.0,1.59,NA
+ZnGa2O4,0.3,30.0,0.01,800.0,0.82,5.5

@@ -1,0 +1,9 @@
+host_matrix,eqe_num,vol_num,eqe_per_vol,anneal_num,tau_num,olt_num
+AlO-YO,8.7,NG,NG,800,NG,NG
+GaO,36,15,2.4,900,NG,100
+LuAlO,10,50,0.2,1100,1.65,NG
+YbAlO,5.2,NG,NG,1100,NG,NG
+GdGaO,1.9,30,0.063,1000,1.59,NG
+YGaO,2.5,25,0.1,800,2.26,49
+ZnGaO,0.3,30,0.01,800,0.82,5.5
+ErTiO,NG,NG,NG,NG,NG,NG

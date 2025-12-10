@@ -1,0 +1,10 @@
+matrix,process_material,eqe,metal_precursor,co_reactant,gpc,temp
+YGaO3_5_12,YGaO3_5_12,2.5,Y(thd)3,Ga(acac)3,0.23,350
+GdGaO3_5_12,GdGaO3_5_12,1.9,Gd(thd)3,Ga(acac)3,0.23,350
+ZnGaO2_4,ZnGaO2_4,0.3,Zn(thd)3,Ga(acac)3,0.23,350
+LuAlO3_5_12,LuAlO3_5_12,10,Lu(thd)3,Al(acac)3,0.35,300
+YbO2_3,YbO2_3,8.5,Yb(thd)3,O3,0.15-0.2,250-400
+YbAlO3_5_12,YbAlO3_5_12,5.2,Yb(thd)3,Al(acac)3,0.20,350
+GaO2_3,GaO2_3,36,Ga(thd)3,O3,0.23,350
+AlO2_3-YO2_3,AlO2_3-YO2_3,8.7,Y(thd)3,O3,0.22-0.23,250-300
+AlO2_3:Yb,AlO2_3:Yb,24,Yb(thd)3,O3,0.15-0.2,250-400

@@ -1,0 +1,8 @@
+"precursor_family","mean_etch_rate","max_etch_rate","ion_energy_windows","max_sel_SiO2_Si","max_sel_SiO2_Si3N4"
+"C4F8-based",NULL,NULL,"Ar plasma",">10.0",">7.0"
+"CHF3-based",NULL,NULL,"O2 plasma",NULL,">7.0"
+"C3F7OCH3 isomers",NULL,NULL,"Ar plasma,O2 plasma",NULL,">7.0"
+"C3H3F3-based",NULL,NULL,"Ar plasma",NULL,">7.0"
+"CF3CF2CF2CH2OH-based",NULL,NULL,"Ar plasma",NULL,NULL 
+"n-C3F7OCH3-based",NULL,NULL,"Ar plasma",NULL,NULL
+"i-C3F7OCH3-based",NULL,NULL,"Ar plasma",NULL,NULL

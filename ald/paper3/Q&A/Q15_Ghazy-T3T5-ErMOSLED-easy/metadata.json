@@ -1,0 +1,119 @@
+{
+  "id": "Q15",
+  "domain": "ALD",
+  "query_group": "Ghazy-Table3+Table5",
+  "query_variant": "easy",
+  "query_scope": "cross-table",
+  "description_short": "Join ALD process parameters from Table 3 with device-level performance from Table 5 for Er3+-based MOSLED hosts, listing the best EQE per host alongside its ALD recipe.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 3",
+        "description": "Growth-per-cycle (GPC) and process window for rare-earth ALD processes, including material, metal precursor, co-reactants, temperature, and ligand family."
+      },
+      {
+        "label": "Table 5",
+        "description": "Performance characteristics of Er3+-based MOSLED devices: annealing temperature, external quantum efficiency (EQE), power efficiency, threshold voltage, emission lifetime, and operational device lifetime."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1471077",
+        "comparison_url": "https://orkg.org/comparisons/R1471077",
+        "role": "process_comparison",
+        "table_source": "Ghazy Table 3"
+      },
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991",
+        "role": "device_performance_comparison",
+        "table_source": "Ghazy Table 5"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t3t5-lowT"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180031",
+      "label": "host material matrix",
+      "role": "join_target_from_Table5"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %",
+      "role": "device_performance_metric"
+    },
+    {
+      "pid": "P9071",
+      "label": "material",
+      "role": "process_material_in_Table3"
+    },
+    {
+      "pid": "P180042",
+      "label": "metal precursor (precursor 1)",
+      "role": "ALD_metal_precursor"
+    },
+    {
+      "pid": "P180043",
+      "label": "precursor 2 (co-reactant)",
+      "role": "ALD_co_reactant_slot_1"
+    },
+    {
+      "pid": "P180044",
+      "label": "precursor 3",
+      "role": "ALD_co_reactant_slot_2"
+    },
+    {
+      "pid": "P180045",
+      "label": "precursor 4",
+      "role": "ALD_co_reactant_slot_3"
+    },
+    {
+      "pid": "P180041",
+      "label": "GPC [Å/cycle]",
+      "role": "growth_per_cycle"
+    },
+    {
+      "pid": "P180013",
+      "label": "T [°C]",
+      "role": "deposition_temperature"
+    }
+  ],
+  "postprocessing_notes": {
+    "join_strategy": {
+      "description": "Cross-table join between Er3+ MOSLED hosts (Table 5) and ALD processes (Table 3) via normalized host/matrix labels.",
+      "steps": [
+        "From Table 5 (R1469991), compute the maximum EQE per host matrix using a nested SELECT.",
+        "Normalize host names from both tables by lowercasing, replacing Greek β with 'b', and stripping non-alphanumeric characters.",
+        "Use the normalized strings (?key5, ?key3) as join keys to align device-level entries with corresponding ALD processes."
+      ],
+      "normalization_regex": "REPLACE(REPLACE(label_or_iri, \"β\", \"b\"), \"[^A-Za-z0-9]+\", \"\")"
+    },
+    "process_row_selection": {
+      "description": "For each material in Table 3, retain only the lowest-temperature ALD process as a canonical representative for the join.",
+      "mechanism": "Use a FILTER NOT EXISTS block to discard any row that has another row for the same material with a strictly lower parsed deposition temperature."
+    },
+    "numeric_parsing": {
+      "gpc_and_temperature": "GPC and temperature may be given as ranges or with units (e.g. '1.5–2.0', '225–350 °C'). The query extracts the FIRST numeric value from each field using a regex and casts it to xsd:decimal.",
+      "regex_first_number": "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$"
+    },
+    "ligand_family_classification": {
+      "description": "Metal precursor family is inferred from the ligand tag in the metal precursor (P180042) label, mapping strings such as '(thd)', '(cp)', '(amd)', '(famd)', '(guan)' to coarse families like 'R(thd)x', 'R(Cp)3', 'R(amd)3 / R(amd)(Cp)2', 'R(famd)3', 'R(guan)3'.",
+      "note": "This is a heuristic text-based classification intended for exploratory analysis of ligand families."
+    },
+    "output_columns": "The query returns: matrix (host from Table 5), eqe_best (maximum EQE per host), process_material (material from Table 3), metal_precursor, co_reactant_any (first available co-reactant label), family (ligand family bucket), gpc_num (numeric GPC), and temp_num (numeric deposition temperature).",
+    "interpretation": "By joining device-level EQE with process-level ALD parameters, this cross-table query exposes which ALD recipes underlie the best-performing Er3+ MOSLED hosts, enabling a process–performance linkage that is not directly visible in the individual tables."
+  }
+}

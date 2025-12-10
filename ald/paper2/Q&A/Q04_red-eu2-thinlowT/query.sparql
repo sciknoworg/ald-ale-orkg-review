@@ -1,0 +1,50 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?contrib
+  (COALESCE(?phosLabel, STR(?phosphor))      AS ?phosphor_value)
+  (COALESCE(?coatLabel, STR(?coating))        AS ?coating_value)
+  (COALESCE(?schemeLabel, STR(?scheme))       AS ?precursors_value)
+  ?temp_num
+  ?thick_num
+WHERE {
+  # comparison → rows
+  orkgr:R1469383 orkgp:compareContribution ?contrib .
+
+  # core fields
+  ?contrib orkgp:P180010 ?phosphor .
+  ?contrib orkgp:P180014 ?coating .
+  ?contrib orkgp:P180011   ?color .
+  ?contrib orkgp:P180013    ?temp .
+  ?contrib orkgp:P180015   ?thick . 
+  ?contrib orkgp:P180012  ?scheme .
+
+  # readable labels (if resources)
+  OPTIONAL { ?phosphor rdfs:label ?phosLabel . }
+  OPTIONAL { ?coating  rdfs:label ?coatLabel . }
+  OPTIONAL { ?scheme   rdfs:label ?schemeLabel . }
+  OPTIONAL { ?color    rdfs:label ?colorLabel . }
+
+  # normalize text fields (handle resources or literals; normalize Eu²⁺ vs Eu2+)
+  BIND( LCASE(COALESCE(?colorLabel, STR(?color))) AS ?color_text )
+  BIND( LCASE(REPLACE(COALESCE(?phosLabel, STR(?phosphor)), "²", "2")) AS ?phos_text )
+
+  # --- extract the FIRST numeric value from temp/thickness strings ---
+  # e.g., "30–200" -> "30", "11±1 (20c)" -> "11", "25" -> "25"
+  BIND( REPLACE(STR(?temp),  "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$",  "$1") AS ?temp_first )
+  BIND( REPLACE(STR(?thick), "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$",  "$1") AS ?thick_first )
+
+  # cast to numbers
+  BIND( xsd:decimal(?temp_first)  AS ?temp_num )
+  BIND( xsd:decimal(?thick_first) AS ?thick_num )
+
+  # filters for the question
+  FILTER( CONTAINS(?phos_text, "eu2+") )     # Eu2+ doped
+  FILTER( CONTAINS(?color_text, "red") )     # red emission
+  FILTER( ?temp_num  <= 150 )                # deposited at ≤ 150 °C
+  FILTER( ?thick_num <= 20 )                 # optimal thickness ≤ 20 nm
+}
+ORDER BY ?phosphor_value ?coating_value ?temp_num

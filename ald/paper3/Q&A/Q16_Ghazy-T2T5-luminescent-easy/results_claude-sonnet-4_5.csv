@@ -1,0 +1,43 @@
+ml,ppL,perf_val
+Y₃Ga₅O₁₂,Ann. T [°C],800
+Y₃Ga₅O₁₂,EQE [%],2.5
+Y₃Ga₅O₁₂,PE [x10⁻⁴],3.8
+Y₃Ga₅O₁₂,Vol [V],25
+Y₃Ga₅O₁₂,τ [ms],2.26
+Y₃Ga₅O₁₂,OLT [h],49
+Gd₃Ga₅O₁₂,Ann. T [°C],1000
+Gd₃Ga₅O₁₂,EQE [%],1.9
+Gd₃Ga₅O₁₂,PE [x10⁻⁴],3.6
+Gd₃Ga₅O₁₂,Vol [V],30
+Gd₃Ga₅O₁₂,τ [ms],1.59
+Gd₃Ga₅O₁₂,OLT [h],NG
+ZnGa₂O₄,Ann. T [°C],800
+ZnGa₂O₄,EQE [%],0.3
+ZnGa₂O₄,PE [x10⁻⁴],NG
+ZnGa₂O₄,Vol [V],30
+ZnGa₂O₄,τ [ms],0.82
+ZnGa₂O₄,OLT [h],5.5
+Lu₃Al₅O₁₂,Ann. T [°C],1100
+Lu₃Al₅O₁₂,EQE [%],10
+Lu₃Al₅O₁₂,PE [x10⁻⁴],12
+Lu₃Al₅O₁₂,Vol [V],50
+Lu₃Al₅O₁₂,τ [ms],1.65
+Lu₃Al₅O₁₂,OLT [h],NG
+Yb₂O₃,Ann. T [°C],1000
+Yb₂O₃,EQE [%],8.5
+Yb₂O₃,PE [x10⁻⁴],10
+Yb₂O₃,Vol [V],60
+Yb₂O₃,τ [ms],NG
+Yb₂O₃,OLT [h],NG
+Yb₃Al₅O₁₂,Ann. T [°C],1100
+Yb₃Al₅O₁₂,EQE [%],5.2
+Yb₃Al₅O₁₂,PE [x10⁻⁴],4.8
+Yb₃Al₅O₁₂,Vol [V],≈5
+Yb₃Al₅O₁₂,τ [ms],1.2
+Yb₃Al₅O₁₂,OLT [h],NG
+Ga₂O₃,Ann. T [°C],900
+Ga₂O₃,EQE [%],36
+Ga₂O₃,PE [x10⁻⁴],81
+Ga₂O₃,Vol [V],≈15
+Ga₂O₃,τ [ms],2.04
+Ga₂O₃,OLT [h],100

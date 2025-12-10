@@ -1,0 +1,3 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+CHF3 plasma,O plasma,RT,6.8,0-50V
+CHF3 plasma,Ar plasma,RT,4.1,30-90V

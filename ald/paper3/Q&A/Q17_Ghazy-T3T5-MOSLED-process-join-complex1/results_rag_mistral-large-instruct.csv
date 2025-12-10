@@ -1,0 +1,23 @@
+matrix,process_material,eqe,metal_precursor,co_reactant,gpc,temp
+AlO,Er,Yb,(Er,Yb),Y(thd),VO(thd),O,0.15–0.17,260–300
+YO,Er,Eu,Y(thd),VO(thd),O,0.15–0.17,260–300
+YGaO,Er,Y(thd),EtGa,O,0.23,350
+YVO,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb,Y(thd),VO(thd),O,0.15–0.17,260–300
+YbAlO,Er,Yb(thd),TMA,O,0.18,350
+LuAlO,Er,Yb(thd),TMA,O,0.18,350
+ZnGaO,Er,ZnGaO,Er(thd),O,0.23,350
+SrSnO,La,La(thd),O,0.20–0.30,225
+YbTiO,La,Pr,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb,Yb(thd),TiCl,HO,0.36–0.37,300
+YDC,Y,Y(thd),O,0.22–0.23,250–300
+YO S,Eu,Y(MeCp),HO,H,S,0.20–0.30,300
+YVO,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb,Y(thd),VO(thd),O,0.15–0.17,260–300
+GdGaO,Er,Gd(thd),Ga(acac),O,0.19,350
+YbAlO,Er,Yb(thd),TMA,O,0.18,350
+LuAlO,Er,Yb(thd),TMA,O,0.18,350
+ZnGaO,Er,ZnGaO,Er(thd),O,0.23,350
+SrSnO,La,La(thd),O,0.20–0.30,225
+YbTiO,La,Pr,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb,Yb(thd),TiCl,HO,0.36–0.37,300
+YDC,Y,Y(thd),O,0.22–0.23,250–300
+YO S,Eu,Y(MeCp),HO,H,S,0.20–0.30,300
+YVO,Nd,Sm,Eu,Tb,Dy,Ho,Er,Tm,Yb,Y(thd),VO(thd),O,0.15–0.17,260–300
+GdGaO,Er,Gd(thd),Ga(acac),O,0.19,350

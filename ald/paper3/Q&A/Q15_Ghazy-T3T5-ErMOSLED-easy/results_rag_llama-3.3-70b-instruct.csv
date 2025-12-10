@@ -1,0 +1,4 @@
+"matrix","eqe_best","process_material","metal_precursor","co_reactant_any","family","gpc_num","temp_num"
+"AlO","0.12","ErAlO","Er(EtCp)","TMA + HO","Cp","1.55","300"
+"YO","0.10","YVO","Y(thd)","VO(thd) + O","thd","0.15-0.17","260-300"
+"YGaO","0.08","YGaO","Y(thd)","EtGa + O","thd","0.23","350"

@@ -1,0 +1,1 @@
+For each fluorocarbon precursor system that appears in both Table I and Table II, list the precursor chemistries, removal gas, process temperature, etching rate, and ion-energy window used in the removal step; restrict to conditions near room temperature (RT ± 20 °C) and sort by etching rate in descending order.

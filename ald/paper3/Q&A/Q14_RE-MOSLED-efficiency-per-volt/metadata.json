@@ -1,0 +1,77 @@
+{
+  "id": "ALD-Q14",
+  "domain": "ALD",
+  "query_group": "ALD-Table5-Ghazy",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Compute an efficiency-per-volt metric (EQE/Vol) for Er3+-based MOSLED host matrices and rank them by this indicator, jointly considering external quantum efficiency and operating voltage.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "table_modeled": "Table 5",
+    "table_description": "Performance characteristics of Er3+-based MOSLED devices fabricated by ALD: annealing temperature (Ann. T), external quantum efficiency (EQE), power efficiency (PE), threshold voltage (Vol), emission lifetime (τ), and operational device lifetime (OLT)."
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/mosled-pareto-score"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180031",
+      "label": "host material matrix"
+    },
+    {
+      "pid": "P180032",
+      "label": "annealing temperature in °C"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %"
+    },
+    {
+      "pid": "P180035",
+      "label": "threshold voltage in volts"
+    },
+    {
+      "pid": "P180036",
+      "label": "emission lifetime in milliseconds"
+    },
+    {
+      "pid": "P180037",
+      "label": "operational device lifetime in hours"
+    }
+  ],
+  "postprocessing_notes": {
+    "derived_metric": {
+      "name": "EQE-per-Volt",
+      "definition": "eqe_per_vol = EQE [%] / Vol [V]",
+      "rounding": "The metric is rounded to three decimal places in the SPARQL query via ROUND(1000 * (EQE/Vol)) / 1000.",
+      "motivation": "Couples external quantum efficiency with operating voltage to identify host matrices that provide high emission efficiency at low electrical drive, approximating an efficiency-per-drive metric for MOSLED performance."
+    },
+    "numeric_parsing": {
+      "motivation": "Table 5 values may include units, approximate signs (e.g. \"≈\"), and non-numeric placeholders such as \"NG\".",
+      "strategy": "For each field (EQE, Vol, Ann. T, τ, OLT), the query converts the cell to a string and strips all non-numeric characters (except digits, decimal point, minus sign) using a regex, then casts the result to xsd:decimal.",
+      "regex_used": "REPLACE(?field_string, \"[^0-9.\\-]+\", \"\")",
+      "missing_values": "If a string does not contain any digit (e.g. \"NG\"), the corresponding numeric variable is left UNDEF. BOUND() checks ensure that rows without numeric EQE or voltage are excluded from the efficiency-per-volt calculation."
+    },
+    "filters": {
+      "validity_constraint": "Rows must have both EQE and Vol present and Vol > 0 via FILTER(BOUND(?eqe_num) && BOUND(?vol_num) && ?vol_num > 0).",
+      "domain_note": "Since R1469991 models Er3+-based MOSLED devices, no explicit dopant filter is necessary; all rows correspond to the same dopant class."
+    },
+    "output_columns": "The query returns host_matrix, eqe_num, vol_num, eqe_per_vol, anneal_num, tau_num, and olt_num, ordered primarily by decreasing eqe_per_vol, secondarily by increasing voltage, and then by decreasing EQE and host name.",
+    "interpretation": "The EQE-per-volt indicator does not replace detailed device modeling, but provides a simple comparative measure to highlight host matrices that combine high external quantum efficiency with low threshold voltage."
+  }
+}

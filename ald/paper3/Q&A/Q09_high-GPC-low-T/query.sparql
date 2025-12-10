@@ -1,0 +1,54 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?matLabel,  STR(?material)) AS ?material)
+  ?family
+  (COALESCE(?p2Label, STR(?p2))         AS ?co_reactant)
+  ?gpc_num ?temp_num
+WHERE {
+  orkgr:R1471077 orkgp:compareContribution ?c .
+
+  ?c orkgp:P9071   ?material ;
+     orkgp:P180042 ?p1 ;           # metal precursor
+     orkgp:P180043 ?p2 ;           # co-reactant
+     orkgp:P180041 ?gpc ;
+     orkgp:P180013 ?temp .
+
+  OPTIONAL { ?material rdfs:label ?matLabel . }
+  OPTIONAL { ?p1       rdfs:label ?p1Label . }
+  OPTIONAL { ?p2       rdfs:label ?p2Label . }
+
+  # Use p1 LABEL (fallback to STR) for family parsing
+  BIND(LCASE(COALESCE(?p1Label, STR(?p1))) AS ?p1s)
+
+  # normalize punctuation
+  BIND(REPLACE(REPLACE(STR(?gpc),  ",", " "), "–|—", "-") AS ?gpc_s)
+  BIND(REPLACE(REPLACE(STR(?temp), ",", " "), "–|—", "-") AS ?temp_s)
+
+  # first numeric token
+  BIND(IF(REGEX(?gpc_s, "[0-9]"),
+           xsd:decimal(REPLACE(?gpc_s, "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1")),
+           UNDEF) AS ?gpc_num)
+  BIND(IF(REGEX(?temp_s, "[0-9]"),
+           xsd:decimal(REPLACE(?temp_s, "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1")),
+           UNDEF) AS ?temp_num)
+
+  # concise ligand-family buckets
+  BIND(
+    IF(CONTAINS(?p1s,"dpdmg") || CONTAINS(?p1s,"guanidin"), "guanidinate",
+    IF(CONTAINS(?p1s,"famd"),                               "formamidinate",
+    IF(CONTAINS(?p1s,"amd"),                                "amidinate",
+    IF(CONTAINS(?p1s,"thd") || CONTAINS(?p1s,"acac") || CONTAINS(?p1s,"hfac"),
+                                                            "β-diketonate",
+    IF(CONTAINS(?p1s,"cp"),                                 "Cp-derived",
+    IF(CONTAINS(?p1s,"tmsa") || CONTAINS(?p1s,"(oiPr)") || CONTAINS(?p1s,"otbu"),
+                                                            "alkoxide/amide",
+                                                            "other")))))) AS ?family)
+
+  FILTER(BOUND(?gpc_num)  && ?gpc_num  >= 1.0)
+  FILTER(BOUND(?temp_num) && ?temp_num <= 250)
+}
+ORDER BY DESC(?gpc_num) LCASE(?family) LCASE(?material)

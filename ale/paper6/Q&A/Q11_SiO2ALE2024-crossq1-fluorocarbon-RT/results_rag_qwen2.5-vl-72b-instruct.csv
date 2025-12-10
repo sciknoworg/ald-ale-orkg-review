@@ -1,0 +1,3 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+C F /Arplasma,Arplasma,RT,14.2,"10–100V"
+C F plasma,Arplasma,RT,5.8,"30–200V"

@@ -1,0 +1,1 @@
+List all metal ALE processes with EPC ≥ 2 Å/cycle; return the material, direction (anisotropic vs. isotropic), modification and removal chemistries, EPC, process temperature, and cycle time; sort by EPC in descending order.

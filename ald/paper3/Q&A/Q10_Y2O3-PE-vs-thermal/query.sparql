@@ -1,0 +1,56 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?mode
+       (ROUND(100*AVG(?gpc_entry))/100 AS ?avg_gpc_A)
+       (COUNT(*)                        AS ?n_rows)
+       (SAMPLE(?co_s)                   AS ?example_co_reactant)
+WHERE {
+  orkgr:R1471077 orkgp:compareContribution ?c .
+
+  ?c orkgp:P9071    ?material ;
+     orkgp:P180043  ?p2 ;
+     orkgp:P180041  ?gpc ;
+     orkgp:P180013  ?temp .
+  OPTIONAL { ?material rdfs:label ?matLabel . }
+  OPTIONAL { ?p2       rdfs:label ?p2Label . }
+  OPTIONAL { ?c orkgp:P180044 ?p3 . OPTIONAL { ?p3 rdfs:label ?p3Label . } }
+  OPTIONAL { ?c orkgp:P180045 ?p4 . OPTIONAL { ?p4 rdfs:label ?p4Label . } }
+
+  # ---- Material filter: normalize to catch "Y[sub 2]O[sub 3]", "yttria", etc.
+  BIND(LCASE(COALESCE(?matLabel, STR(?material))) AS ?mat_raw)
+  BIND(REPLACE(?mat_raw, "\\[/?sub\\]", "")       AS ?mat_a)   # remove [sub] markup if present
+  BIND(REPLACE(?mat_a,  "sub",        "")         AS ?mat_b)   # remove literal "sub"
+  BIND(REPLACE(?mat_b,  "[^a-z0-9]",  "", "i")    AS ?mat_norm)# keep only a–z,0–9
+  FILTER( CONTAINS(?mat_norm,"y2o3") || CONTAINS(?mat_norm,"yttria") || CONTAINS(?mat_norm,"yttriumoxide") )
+
+  # ---- Normalize punctuation in numeric fields
+  BIND(REPLACE(REPLACE(STR(?gpc),  ",", " "), "–|—", "-") AS ?gpc_s)
+  BIND(REPLACE(REPLACE(STR(?temp), ",", " "), "–|—", "-") AS ?temp_s)
+
+  # ---- GPC: average of range (or single value)
+  BIND(IF(REGEX(?gpc_s,"[0-9]"), xsd:decimal(REPLACE(?gpc_s,"^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$","$1")), UNDEF) AS ?gpc_first)
+  BIND(IF(REGEX(?gpc_s,"[0-9]"), xsd:decimal(REPLACE(?gpc_s,"^.*(-?\\d+(?:\\.\\d+)?)[^0-9]*$","$1")), UNDEF) AS ?gpc_last)
+  BIND(IF(BOUND(?gpc_last) && ?gpc_last!=?gpc_first, (?gpc_first+?gpc_last)/2, ?gpc_first) AS ?gpc_entry)
+
+  # ---- Temperature: compute min/max; accept ANY overlap with 200–300 °C
+  BIND(IF(REGEX(?temp_s,"[0-9]"), xsd:decimal(REPLACE(?temp_s,"^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$","$1")), UNDEF) AS ?temp_first)
+  BIND(IF(REGEX(?temp_s,"[0-9]"), xsd:decimal(REPLACE(?temp_s,"^.*(-?\\d+(?:\\.\\d+)?)[^0-9]*$","$1")), UNDEF) AS ?temp_last)
+  BIND(IF(BOUND(?temp_last),  IF(?temp_first<=?temp_last, ?temp_first, ?temp_last),  ?temp_first) AS ?tmin)
+  BIND(IF(BOUND(?temp_last),  IF(?temp_first>=?temp_last, ?temp_first, ?temp_last),  ?temp_first) AS ?tmax)
+  FILTER(BOUND(?tmin) && BOUND(?tmax) && ?tmax >= 200 && ?tmin <= 300)
+  FILTER(BOUND(?gpc_entry))
+
+  # ---- Mode classification from any co-reactant slot
+  BIND(LCASE(COALESCE(?p2Label, STR(?p2))) AS ?p2s)
+  BIND(LCASE(COALESCE(?p3Label, STR(?p3))) AS ?p3s)
+  BIND(LCASE(COALESCE(?p4Label, STR(?p4))) AS ?p4s)
+  BIND(IF(CONTAINS(?p2s,"plasma") || CONTAINS(?p3s,"plasma") || CONTAINS(?p4s,"plasma"),
+          "PE-ALD", "Thermal ALD") AS ?mode)
+
+  BIND(COALESCE(?p2Label, STR(?p2)) AS ?co_s)
+}
+GROUP BY ?mode
+ORDER BY DESC(?avg_gpc_A)

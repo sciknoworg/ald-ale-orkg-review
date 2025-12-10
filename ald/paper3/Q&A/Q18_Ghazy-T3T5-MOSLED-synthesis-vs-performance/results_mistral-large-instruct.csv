@@ -1,0 +1,4 @@
+matrix,synthesis_temp,annealing_temp,eqe,power_eff,lifetime
+YGaO,250-375,800,2.5,3.8,2.26
+GdGaO,350,1000,1.9,3.6,1.59
+YbAlO,350,1100,5.2,4.8,1.2

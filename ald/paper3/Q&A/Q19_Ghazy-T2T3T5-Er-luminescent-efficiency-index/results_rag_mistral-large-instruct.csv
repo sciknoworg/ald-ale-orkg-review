@@ -1,0 +1,5 @@
+material,synthesis_temp,eqe,efficiency_index
+AlO,250,0.01,0.004
+YO,250,0.01,0.004
+YGaO,350,0.01,0.002857142857142857
+YVO,260,0.01,0.003846153846153846

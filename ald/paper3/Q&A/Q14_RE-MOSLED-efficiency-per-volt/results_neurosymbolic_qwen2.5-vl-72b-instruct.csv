@@ -1,0 +1,4 @@
+host_matrix,eqe_num,vol_num,eqe_per_vol,anneal_num,tau_num,olt_num
+Ga2O3,36,15,2.4,900,2.04,100
+Lu3Al5O12,5.2,5,1.04,1100,1.2,
+Al2O3-Y2O3,8.7,1,8.7,800,,,

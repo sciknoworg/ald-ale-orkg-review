@@ -1,0 +1,11 @@
+host,n_apps,application,dopant
+Al2O3,2,"Luminescence","(Er,Yb), Yb, Er"
+Al2O3,2,"Waveguides","(Er,Yb), Yb, Er"
+HfO2,2,"Memory","Dy, Er, Gd, Pr, La, Y"
+HfO2,2,"Gate dielectrics","Dy, Er, Gd, Pr, La, Y"
+ZrO2,2,"Interphase","Dy, La, Y"
+ZrO2,2,"Electrolyte","Dy, La, Y"
+Y2O3,2,"Luminescence","Eu, Er"
+TiO2,2,"Luminescence","Yb, Tm, Er, Ho, Dy, Tb, Eu, Sm, Nd, Pr, La"
+TiO2,2,"Magnetics","Yb, Tm, Er, Ho, Dy, Tb, Eu, Sm, Nd, Pr, La"
+YVO4,2,"Thermometry","Yb, Tm, Er, Ho, Dy, Tb, Eu, Sm, Nd"

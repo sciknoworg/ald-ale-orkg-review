@@ -1,0 +1,6 @@
+material,surface_adsorption,surface_removal,epc,temp
+Al2O3, HF, TMA, 0.75, 325°C
+ZnO, HF, TMA, 2.19, 295°C
+WO3, BCl3, HF, 4.19, 207°C
+W, O3/BCl3, HF, 2.5, 207°C
+W, O2, WF6, 6.3, 300°C

@@ -1,0 +1,35 @@
+material,precursor,energy
+Al2O3,BCl3,Ar neutral beam
+Al2O3,BCl3,Ar neutral beam
+BeO,BCl3,Ar neutral beam
+III-V:GaAs,Cl2,Electron bombardment
+III-V:GaAs,Cl2,low-energy Ar+ ions
+III-V:GaAs,Cl2,Ar neutral beam
+III-V:GaAs,Cl2,Ar neutral beam
+III-V:GaAs,Cl2,Ar neutral beam
+III-V:GaAs,Cl2/Ar plasma,Ar neutral beam
+III-V:GaAs,Cl2/Ar plasma,Ar neutral beam
+III-V:GaAs,Cl2,Ar neutral beam
+III-V:InP,Tertiarybutylphosphine,Ar neutral beam
+III-V:InP(andInAlAs,InGaAs),$Cl2$,Ar neutral beam
+III-V:InP(andInAlAs,InGaAs),$Cl2$,Ar neutral beam
+HfO2,BCl3,Ar neutral beam
+HfO2,BCl3,Ar neutral beam
+HfO2,BCl3,Ar neutral beam
+HfO2,BCl3,Ar neutral beam
+Al2O3,BCl3,Ar ions from helicon plasma
+Al2O3,BCl3,Ar ions from ICP type ion gun
+Al2O3,BCl3,Ar neutral beam
+Al2O3,BCl3,Ar neutral beam
+Al2O3,BCl3,Ar neutral beam
+Al2O3,BCl3,Ar neutral beam
+Si,BCl3,Ar or He ions from ICP source
+Si,BCl3,Ar ions from ICP source
+SiO2,CHF3, Ion bombardment from Ar/H2 ECR plasma
+SiO2,HF(aq),Wet etching (aqueous HF solution)
+SiO2,CF4,Ar ions (MD simulation)
+SiO2,C4Fg/Ar plasma,Ion bombardment from C4Fg/Ar ICP plasma
+Si3N4,CH3F/Ar,Ar ions from magnetically enhanced plasma
+ZnO,Cl2,Ar ions from ICP source
+TiO2,BCl3,Ar neutral beam
+ZrO2,BCl3,Ar neutral beam

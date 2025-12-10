@@ -1,0 +1,10 @@
+application,dopant,n_hosts
+Electrolyte,Y,2
+Gate dielectrics,La,2
+Interphase,"Dy, La, Y",1
+Luminescence,Er,12
+Magnetics,"Dy, Er, Eu, Ho, La, Nd, Pr, Sm, Tb, Tm, Yb",1
+Memory,"Gd, La, Y",2
+Optoelectronics,La,1
+Thermometry,"Dy, Er, Eu, Ho, Nd, Sm, Tb, Tm, Yb",1
+Waveguides,"Er, Yb",1

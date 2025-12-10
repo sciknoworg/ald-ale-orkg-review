@@ -1,0 +1,8 @@
+"material","direction","reaction","removal","epc","process_temp","time_per_cycle"
+"Co","anisotropic","O2 plasma","formic acid","2.8","80","-"
+"Fe","anisotropic","O2 plasma","formic acid","4.2","80","-"
+"Pd","anisotropic","O2 plasma","formic acid","1.2","80","-"
+"Pt","anisotropic","O2 plasma","formic acid","0.5","80","-"
+"Cu","anisotropic","O2 plasma","formic acid","3.7","80","-"
+"W","isotropic","O2/O3, BCl3, HF","-","2.44","200","-"
+"TiN","isotropic","O3, HF","-","2","250","-"

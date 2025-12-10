@@ -1,0 +1,86 @@
+material,family,co_reactant,gpc_num,temp_num
+Sc(iPrCp) HO,alkoxide/amide,HO,0.75,250
+Sc(iPr2amd) HO,formamidinate,HO,0.30,290
+Sc(MeCp) HO,alkoxide/amide,HO,0.65,300
+Sc(Me2pz)(MeCp) O,alkoxide/amide,O,1.09–1.94,225
+Y(iPr2amd) HO,formamidinate,HO,0.80,150
+Y(iPr2amd)(EtCp) HO,formamidinate,HO,1.10,300
+Y(iPr2amd)(EtCp) O,formamidinate,O,1.10,300
+Y(iPr2amd)(EtCp) HOplasma,formamidinate,HOplasma,1.03,150
+Y(iPr2famd) HO,formamidinate,HO,1.36,150
+Y(tBu2famd) HO,formamidinate,HO,0.67,200
+Y(tBuCp) HO,alkoxide/amide,HO,1.70,250
+La(iPrCp) HO,alkoxide/amide,HO,0.10,280
+La(iPrCp) O,alkoxide/amide,O,0.30–0.60,150
+La(iPrCp) O plasma,alkoxide/amide,O plasma,0.60,300
+La(iPr2amd) HO,formamidinate,HO,1.05,200
+La(iPr2famd) O,formamidinate,O,1.20–1.40,200
+La(iPr2amd)(iPrCp) HO,formamidinate,HO,1.20–3.00,200
+La(iPr2amd)(iPrCp) O,formamidinate,O,0.60–2.10,200
+La(iPr2amd)(iPrCp) HO+O,formamidinate,HO+O,0.70–1.80,200
+La(iPr2amd)(iPrCp) EtOH,formamidinate,EtOH,0.50–1.70,200
+La(tmsa) TMA HO,alkoxide/amide,TMA HO,0.58,225
+La(iPr2amd) TMA HO,formamidinate,TMA HO,0.80,300
+La(iPr2famd) TMA HO,formamidinate,TMA HO,2.80,300
+La(iPrCp) TMA HO,alkoxide/amide,TMA HO,0.12,300
+LaAl(OiPr)(iPrOH)] HO,alkoxide/amide,HO,0.10–0.50,160
+LaNiO La(thd) Ni(thd) O,β-diketonate,O,0.08–0.26,215
+LaCoO La(thd) Co(thd) O,β-diketonate,O,0.35,200
+LaMnO La(thd) Mn(thd) O,β-diketonate,O,0.10–0.23,250
+LaGaO La(thd) Ga(acac) O,β-diketonate,O,0.38,325
+LaFeO La(thd) Fe(thd) O,β-diketonate,O,0.20–0.30,200
+LaLuO La(thd) Lu(thd) O,β-diketonate,O,300
+La(iPr2amd) Lu(Etfamd) HO,formamidinate,HO,1.20,300
+LaScO La(iPr2amd) Sc(Etamd) HO,formamidinate,HO,1.10,300
+LaYO La(iPr2amd) Y(iPramd) HO,formamidinate,HO,0.80,280
+La(iPrCp) TEMA-Hf HO,alkoxide/amide,TEMA-Hf HO,1.40,300
+La(iPrCp) TEMA-Hf O plasma,alkoxide/amide,TEMA-Hf O plasma,0.50,225
+La(iPr2famd) TEMA-Hf O,formamidinate,TEMA-Hf O,_,265
+Pr(iPr2amd)(iPrCp) HO,formamidinate,HO,1.47–1.66,200
+Nd(iPrCp) Ni(tBuamd) O,alkoxide/amide,O,0.36,160
+Ce(iPrCp) O plasma,alkoxide/amide,O plasma,0.35,250
+Ce(iPr2amd)(iPrCp) HO,formamidinate,HO,1.90,240
+Ce(iPr2amd) O,formamidinate,O,2.80,210
+Ce(dpdmg) HO,guanidinate,HO,2.10,160
+Ce(iPr2famd)(iPrCp) HO,formamidinate,HO,1.50,245
+Pr(iPrCp) TMA HO,alkoxide/amide,TMA HO,1.70,250
+NdAlO Pr(iPr2amd) TMA HO,formamidinate,TMA HO,0.8–1.0,295
+Gd(MeCp) HO,alkoxide/amide,HO,1.00–3.20,175
+Gd(mmp) HO,guanidinate,HO,0.20–1.00,200
+Gd(dpdmg) HO,guanidinate,HO,1.00–1.10,175
+Gd(tBu2amd) HO,formamidinate,HO,0.26–0.49,350
+Gd(iPrCp) O plasma,alkoxide/amide,O plasma,1.40,250
+Gd(iPrCp) HO,alkoxide/amide,HO,0.80,250
+Gd(iPr2amd)(iPrCp) HO,formamidinate,HO,1.16–1.38,200
+GdAlO Gd(iPrCp) TMA O,alkoxide/amide,TMA O,1.75–2.75,200
+Gd(iPrCp) TMA HO,alkoxide/amide,TMA HO,4.50–5.00,200
+GdN Gd(MeCp) N plasma,alkoxide/amide,N plasma,0.33,150
+GdF Gd(thd) NHF,β-diketonate,NHF,0.26,300
+Dy(dpdmg) HO,guanidinate,HO,1.00,200
+Dy(iPr2amd)(iPrCp) O plasma,formamidinate,O plasma,0.30,140
+Dy(iPr2amd)(iPrCp) HO,formamidinate,HO,1.16–1.38,300
+HoF Ho(thd) NbF,β-diketonate,NbF,1.00,250
+Er(thd) O plasma,β-diketonate,O plasma,0.50,200
+Er(MeCp) HO,alkoxide/amide,HO,1.50,250
+Er(MeCp) O,alkoxide/amide,O,0.12,170
+Erbitel12 O,other,O,0.20–0.40,175
+Er(tBu2amd) O,formamidinate,O,0.37–0.55,225
+Er(dpdmg) HO,guanidinate,HO,1.10,150
+Er(iPr2amd)(MeCp) HO,formamidinate,HO,0.50,180
+Er(iPr2amd)(MeCp) O plasma,formamidinate,O plasma,0.70,180
+Er(iPr2amd)(MeCp) HO,formamidinate,HO,1.10–1.20,225
+Er(iPr2amd)(MeCp) O,formamidinate,O,0.20–1.0,200
+Er(iPrCp) HO,alkoxide/amide,HO,0.80–1.20,200
+Er(iPrCp) O,alkoxide/amide,O,0.30–0.80,200
+Er(nBuCp) HO,alkoxide/amide,HO,1.20,250
+Er(nBuCp) O,alkoxide/amide,O,0.40–0.80,225
+Er TiO Er(MeCp) TDEAT O,alkoxide/amide,TDEAT O,0.5–10.64,175
+Tm(Cp) HO,alkoxide/amide,HO,1.50,200
+Yb(MeCp) HO,alkoxide/amide,HO,1.00,180
+Lu(iPrCp) HO,alkoxide/amide,HO,_,330
+Lu(iPrCp) TDEAA O,alkoxide/amide,TDEAA O,1.30,250
+Lu(iPrCp) TDEAA HO,alkoxide/amide,TDEAA HO,1.30,250
+LuAlO Lu(thd) TMA O,β-diketonate,TMA O,0.19,350
+Lu Lu(thd) O,β-diketonate,O,0.30,230
+LuSi O Lu(tmsa) HO/O,alkoxide/amide,HO/O,0.60–4.3,280
+LuGaO Lu(thd) Ga(CH) O,β-diketonate,Ga(CH) O,0.20,350

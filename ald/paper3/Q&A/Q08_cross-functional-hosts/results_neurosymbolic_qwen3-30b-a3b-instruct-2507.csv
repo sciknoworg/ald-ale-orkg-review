@@ -1,0 +1,6 @@
+"host",n_apps,application,dopant
+"ZrO2",3,"Interphase, Electrolyte","Dy, La, Y"
+"Y2O3",3,"Luminescence","Eu, Er"
+"HfO2",3,"Memory, Gate dielectrics","Dy, Er, Gd, Pr, La, Y"
+"TiO2",2,"Luminescence, Magnetics","Yb, Tm, Er, Ho, Dy, Tb, Eu, Sm, Nd, Pr, La"
+"YVO4",2,"Thermometry","Yb, Tm, Er, Ho, Dy, Tb, Eu, Sm, Nd"

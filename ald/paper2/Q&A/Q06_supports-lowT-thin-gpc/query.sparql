@@ -1,0 +1,55 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?contrib
+  (COALESCE(?supLabel, STR(?support)) AS ?support_value)
+  (COALESCE(?rxLabel,  STR(?react))   AS ?precursors_value)
+  ?temp_num
+  ?thick_num
+  (COALESCE(?gpc_num, -1) AS ?gpc_num_nm)   # -1 if no numeric GPC parsed
+  ?gpc_class
+WHERE {
+  orkgr:R1469594 orkgp:compareContribution ?contrib .
+
+  # PROPERTIES: replace with your P-IDs
+  ?contrib orkgp:P180016 ?support .       # support material
+  ?contrib orkgp:P180017  ?react .          # ALD precursors, e.g., "TMA/H2O", "TiCl4/H2O"
+  ?contrib orkgp:P180013   ?temp .           # deposition temperature [°C]
+  ?contrib orkgp:P180018  ?thick .          # reported coating thickness [nm]
+  OPTIONAL { ?contrib orkgp:P180019 ?gpc . }  # growth per cycle [nm] (may be missing)
+
+  OPTIONAL { ?support rdfs:label ?supLabel . }
+  OPTIONAL { ?react   rdfs:label ?rxLabel . }
+
+  # --- normalize fields ---
+  BIND( LCASE(COALESCE(?rxLabel, STR(?react))) AS ?rx_text )
+
+  # numeric extraction: first number in the string
+  BIND( REPLACE(STR(?temp),  "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1") AS ?temp_first )
+  BIND( REPLACE(STR(?thick), "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1") AS ?thick_first )
+  BIND( IF(BOUND(?gpc),
+           REPLACE(STR(?gpc), "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1"),
+           "") AS ?gpc_first )
+
+  BIND( xsd:decimal(?temp_first)  AS ?temp_num )
+  BIND( xsd:decimal(?thick_first) AS ?thick_num )
+  BIND( IF(STRLEN(?gpc_first)>0, xsd:decimal(?gpc_first), UNDEF) AS ?gpc_num )
+
+  # filters: low temperature & thin film
+  FILTER( ?temp_num  < 70 )
+  FILTER( ?thick_num < 20 )
+
+  # GPC classification (only meaningful for alumina; approximate by TMA-based precursors)
+  BIND( CONTAINS(?rx_text, "tma/") AS ?is_alumina_like )
+  BIND(
+    IF( !BOUND(?gpc_num) || !?is_alumina_like, "n/a",
+      IF( ?gpc_num < 0.4, "slow",
+        IF( ?gpc_num <= 1.0, "average", "fast")
+      )
+    ) AS ?gpc_class
+  )
+}
+ORDER BY ?support_value ?precursors_value ?temp_num

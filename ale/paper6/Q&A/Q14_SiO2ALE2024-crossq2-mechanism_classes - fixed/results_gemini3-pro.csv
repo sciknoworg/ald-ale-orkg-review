@@ -1,0 +1,4 @@
+etching_mechanism_class,n_variants,min_etch_rate,max_etch_rate,mean_etch_rate,min_temp_rate_lim,max_temp_rate_lim,plasma_required,high_rate_low_temp
+AFS-based plasma-assisted processes,2,27 Å/cycle,75 Å/cycle,57.3 Å/cycle,150 °C,160 °C,Yes,TRUE
+AFS-based thermal processes,1,9 Å/cycle,9 Å/cycle,9.0 Å/cycle,140 °C,140 °C,No,TRUE
+Al2O3-conversion cycles,2,0.07 Å/cycle,1.50 Å/cycle,0.55 Å/cycle,300 °C,350 °C,No,FALSE

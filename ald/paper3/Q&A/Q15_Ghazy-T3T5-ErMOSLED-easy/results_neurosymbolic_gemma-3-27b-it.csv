@@ -1,0 +1,8 @@
+matrix,eqe_best,process_material,metal_precursor,co_reactant_any,family,gpc_num,temp_num
+Lu3Al5O12,10,LuAlO3,Lu(thd)3,O3,Cp,0.35,300
+Ga2O3,36,Ga2O3,Ga(acac)3,O3,acac,0.38,325
+Al2O3-Y2O3,8.7,Y2O3,Y(thd)3,O3,thd,0.22-0.23,250
+Yb2O3:Er,8.5,Yb2O3,Yb(thd)3,O3,thd,0.15-0.2,250
+Y3Ga5O12,2.5,Y3Ga5O12,Y(thd)3,O3,thd,0.23,350
+Gd3Ga5O12,1.9,Gd3Ga5O12,Gd(thd)3,O3,thd,0.41-0.53,300
+ZnGa2O4,0.3,ZnGa2O4,Zn(thd)2,O3,thd,0.08-0.23,240

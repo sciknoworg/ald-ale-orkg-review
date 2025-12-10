@@ -1,0 +1,198 @@
+material,family,co_reactant,gpc_num,temp_num
+ScO,Cp-derived,HO,0.75,250-350
+Sc(iPrCp),β-diketonate,O,0.60-1.00,250-375
+Sc(iPr2amd),β-diketonate,HO,0.30,290
+Sc(MeCp),β-diketonate,HO,0.65,300
+Sc(Me2pz)(MeCp),β-diketonate,O,1.09-1.94,225,275
+ScAlO,Cp-derived,HO,0.65,300
+YScO,β-diketonate,O,0.18,335-350
+Y(MeCp),Cp-derived,HO,1.07,300
+DyScO,β-diketonate,O,0.43,350
+YO,β-diketonate,O,0.22-0.23,250-300
+Y(thd),β-diketonate,O plasma,0.30,200-300
+Y(Cp),β-diketonate,HO,1.20-1.30,200-400
+Y(MeCp),β-diketonate,HO,1.00,250-325
+Y(EtCp),β-diketonate,HO,1.70,200-400
+Y(iPr2amd),β-diketonate,HO,0.80,150-280
+Y(iPrCp),β-diketonate,O,1.70,245-300
+Y(iPr2amd)(EtCp),β-diketonate,HO,1.10,300-450
+Y(iPr2amd)(EtCp),β-diketonate,O,1.10,300-450
+Y(iPr2amd)(EtCp),β-diketonate,O,0.90,300-450
+Y(iPr2amd)(iPrCp),β-diketonate,HO,0.40,1.30,350-450
+Y(iPr2amd)(iPrCp),β-diketonate,O,_,350
+Y(dpdmg),β-diketonate,HO,1.10,175-250
+Y(BuCp),β-diketonate,HO,1.40-1.70,230
+Y(iPr2amd)(EtCp),β-diketonate,HO,0.74,150-275
+Y(iPr2amd)(EtCp),β-diketonate,O plasma,0.83,150-275
+Y(iPr2amd)(EtCp),β-diketonate,HO plasma,1.03,150-275
+Y(iPr2famd),β-diketonate,HO,1.36,150-325
+Y(tBu2famd),β-diketonate,HO,0.67,200-325
+Y(tBuCp),β-diketonate,HO,1.70,250
+YMnO,β-diketonate,O,0.18-0.60,250-300
+Y(thd),β-diketonate,O,0.25-0.30,250
+YAlO,Cp-derived,HO,1.55,300
+YVO,β-diketonate,O,0.15-0.17,260-300
+YGaO,β-diketonate,O,0.23,350
+YOS,β-diketonate,HS,_,350-450
+YO S,Cp-derived,HO,HS,_,300
+YF,β-diketonate,TiF,1.10-1.70,225-325
+LaO,β-diketonate,O,0.36,180-425
+La(thd),β-diketonate,HO,0.30-0.50,230-350
+La(thd)-DEMA,β-diketonate,O,0.4,225-250
+La(iPrCp),β-diketonate,HO,0.10,280-480
+La(iPrCp),β-diketonate,O,0.30-0.60,150-250
+La(iPrCp),β-diketonate,O plasma,0.60,300-350
+La(Cp),β-diketonate,HO,_,260
+La(Cp),β-diketonate,O plasma,0.50,150
+La(tmsa),β-diketonate,HO,0.43,200-300
+La(iPr2amd),β-diketonate,HO,1.05,200-300
+[La(iPr2famd)],β-diketonate,HO,1.70,200-250
+La(iPr2famd),β-diketonate,O,1.20-1.40,200-250
+La(iPr2famd),β-diketonate,O,0.40,300
+La(iPr2amd)(iPrCp),β-diketonate,HO,1.20-3.00,200-300
+La(iPr2amd)(iPrCp),β-diketonate,O,0.60-2.10,200-325
+La(iPr2amd)(iPrCp),β-diketonate,HO+O,0.70-1.80,200-325
+La(iPr2amd)(iPrCp),β-diketonate,EtOH,0.50-1.70,200-325
+LaAlO,β-diketonate,O,0.36-0.39,325-400
+La(thd),β-diketonate,TMA,HO,0.55,270
+La(thd),β-diketonate,TMA,O,0.64,250
+La(tmsa),β-diketonate,TMA,HO,0.58,225-250
+La(iPr2amd),β-diketonate,TMA,HO,0.80,300-330
+La(iPr2famd),β-diketonate,TMA,HO,2.80,300-330
+La(iPrCp),β-diketonate,TMA,HO,0.12,300
+LaAl(OiPr)(iPrOH)],β-diketonate,HO,0.10-0.50,160-300
+LaNiO,β-diketonate,O,0.08-0.26,215-400
+La(thd),β-diketonate,Ni(acac),O,0.31,225
+LaCoO,β-diketonate,O,0.35,200-400
+LaMnO,β-diketonate,O,0.10-0.23,250-325
+LaGaO,β-diketonate,O,0.38,325-400
+LaFeO,β-diketonate,O,0.20-0.30,200-360
+LaLuO,β-diketonate,O,300
+La(iPr2amd),β-diketonate,Lu(Etfamd),HO,1.20,300
+LaScO,β-diketonate,Sc(Etamd),HO,1.10,300
+LaYO,β-diketonate,Y(iPramd),HO,0.80,280
+HfLaO,Cp-derived,TEMA-Hf,HO,1.40,300
+La(iPrCp),β-diketonate,TEMA-Hf,O,NA,225
+La(iPrCp),β-diketonate,TEMA-Hf,O plasma,0.50,225,300-350
+La(iPr2famd),β-diketonate,TEMA-Hf,O,_,265
+LiLaO,β-diketonate,O,0.20-0.30,225
+LaWO,β-diketonate,W(tBuN)(MeN),O,HO,0.48-0.58,250-375
+LaPO,β-diketonate,TMPO,HO,O,0.78,275
+LaCaPO,β-diketonate,Ca(thd),TMPO,HO/O,0.78,275
+LaCuO,β-diketonate,Cu(acac),O,0.40,210-250
+LaVO,β-diketonate,VO(acac),_,270
+La x Zr 1-X O 2-𝛿,β-diketonate,(MeCp) 2 ZrMe(OMe),H 2 O,_,300
+La(thd),β-diketonate,(MeCp)ZrMe(OMe),O,_,300
+La(tmsa),β-diketonate,Zr[N(CHCH)],HO,0.58-0.72,250
+Li La TiO,β-diketonate,TiCl/LiOtBu,HO,0.15-0.35,225
+LiLaZrO,β-diketonate,[La(iPrFamd)],TDMAZ,O,0.80,225
+La SrFeO,β-diketonate,Sr(thd),Fe(thd),O,0.20-0.30,260
+La SrMnO,β-diketonate,Sr(thd),Mn(thd),O,0.15-0.40,235-285
+La CaMnO,β-diketonate,Ca(thd),Mn(thd),O,0.15-0.40,235-285
+(La,Sr)CoO 3−𝛿,β-diketonate,La(thd),Sr(thd),Co(acac),O,0.50,250-310
+La SrCuO,β-diketonate,Cu(acac),Sr(thd),O,0.40,225
+LaNiCu O,β-diketonate,Ni(acac),Cu(acac),O,_,225
+LaF,β-diketonate,TiF,2.00-5.00,225-350
+La(thd),β-diketonate,O,Hfac,0.49,250-300
+LaS3,β-diketonate,HS,0.15,360-410
+CeO,β-diketonate,O,0.32,175-375
+Ce(thd)phen,β-diketonate,O,0.42,225-350
+Ce(mmp),β-diketonate,O plasma,_,150-300
+Ce(iPrCp),β-diketonate,O plasma,0.35,250
+Ce(iPrCp),β-diketonate,HO,0.20,250
+Ce(iPr2amd)(iPrCp),β-diketonate,HO,1.90,240
+Ce(iPr2amd),β-diketonate,O,2.80,210-270
+Ce(dpdmg),β-diketonate,HO,2.10,160
+Ce(iPr2famd)(iPrCp),β-diketonate,HO,1.50,245
+CeO YO,β-diketonate,Y(thd),O,0.41-0.53,300
+CeGdO,β-diketonate,Gd(thd),O,0.32,250
+CeVO,β-diketonate,VO(acac),_,270
+CeFeO,β-diketonate,Fe(CP),_,270
+CeMnO,β-diketonate,Mn(thd),_,270
+PrO,β-diketonate,HO,0.15-2.90,200-400
+Pr(mmp),β-diketonate,HO,0.10-0.70,200-350
+Pr(EtCp),β-diketonate,HO,0.70,130
+Pr(iPr2amd)(iPrCp),β-diketonate,HO,1.47-1.66,200-300
+PrAl O,β-diketonate,TMA,HO,0.8-1.0,295
+[PrAl(OPri)(PriOH)],β-diketonate,HO,_,180-350
+Pr(iPrCp),β-diketonate,TMA,HO,1.70,250-350
+NdO,β-diketonate,O,0.44-0.45,310
+NdAlO,β-diketonate,O,TMA,HO,0.53,300
+[NdAl(OiPr)(PriOH)],β-diketonate,HO,_,180-350
+NdNiO,β-diketonate,Ni(tBuamd),O,0.36,160
+SmO,β-diketonate,O,0.36,300
+SmMnO,β-diketonate,Mn(thd),O,0.23,275
+EuO,β-diketonate,O,73,0.32,300
+EuTiO,β-diketonate,O,TiCl,HO,0.38-0.45,300
+EuTiPO,β-diketonate,O,TiCl+HO,MePO,0.80-1.00,300
+GdO,β-diketonate,O,0.31,300
+Gd(MeCp),β-diketonate,HO,1.00-3.20,175-300
+Gd(RCp),β-diketonate,HO,1.00-3.20
+Gd(mmp),β-diketonate,HO,0.20-1.00,200-300
+Gd(dpdmg),β-diketonate,HO,1.00-1.10,175-350
+Gd(tBu2amd),β-diketonate,HO,0.26-0.49,350-400
+Gd(iPrCp),β-diketonate,O plasma,1.40,250
+Gd(iPrCp),β-diketonate,HO,0.80,250
+Gd(iPrCp),β-diketonate,O,0.20,250
+Gd(iPr2amd)(iPrCp),β-diketonate,HO,1.16-1.38,200-250
+GdAlO,β-diketonate,TMA,O,1.75-2.75,200-350
+Gd(iPrCp),β-diketonate,TMA,HO,4.50-5.00,200-350
+ZrO-GdO,β-diketonate,Zr(MeCp)Me(OMe),Gd(thd),O,0.39-0.53,300
+GdScO,β-diketonate,Sc(Et2amd),HO,2.00,310
+Gd(thd),β-diketonate,Sc(thd),O,0.21,300
+Gd(iPrCp),β-diketonate,Sc(MeCp),HO,2.20,300
+GdFeO,β-diketonate,Fe(OtBu)(CHN),O,0.20-0.30,200
+GdCoO,β-diketonate,Co(thd),O,0.24,300
+GdGaO,β-diketonate,TEGa,O,0.19,350
+Gd Ca CoO,β-diketonate,Co(thd),Ca(thd),O,0.30,300
+GdN,β-diketonate,N,plasma,0.33,150-300
+GdF,β-diketonate,NHF,0.26,300
+TbO-AlO,β-diketonate,TMA,O,_,350
+TbMnO,β-diketonate,Mn(thd),O,0.18,250-325
+TbScO,β-diketonate,Sc(thd),O,0.40,300
+TbF,β-diketonate,TiF,0.75,175-350
+DyO,β-diketonate,O,0.31,300
+Dy(dpdmg),β-diketonate,HO,1.00,200-350
+Dy(iPr2amd)(iPrCp),β-diketonate,O plasma,0.30,140-230
+Dy(iPr2amd)(iPrCp),β-diketonate,HO,1.16-1.38,300-350
+Dy(iPr2amd)(iPrCp),β-diketonate,O,_,200-350
+HoO,β-diketonate,O,0.25,300
+HoF,β-diketonate,NbF,1.00,250-275
+ErO,β-diketonate,O,0.20-0.25,250-375
+Er(thd),β-diketonate,O plasma,0.50,200-300
+Er(MeCp),β-diketonate,HO,1.50,250-350
+Er(MeCp),β-diketonate,O,0.12,170-330
+Erbitel12,β-diketonate,O,0.20-0.40,175-300
+Er(tBu2amd),β-diketonate,O,0.37-0.55,225-300
+Er(dpdmg),β-diketonate,HO,1.10,150-275
+Er(iPr2amd)(MeCp),β-diketonate,HO,0.50,180
+Er(iPr2amd)(MeCp),β-diketonate,O plasma,0.70,180
+Er(iPr2amd)(MeCp),β-diketonate,HO,1.10-1.20,225-275
+Er(iPr2amd)(MeCp),β-diketonate,O,0.20-1.0,200-325
+Er(iPrCp),β-diketonate,HO,0.80-1.20,200-300
+Er(iPrCp),β-diketonate,O,0.30-0.80,200-300
+Er(nBuCp),β-diketonate,HO,1.20,250-325
+Er(nBuCp),β-diketonate,O,0.40-0.80,225-350
+Er TiO,β-diketonate,TDEAT,O,0.5-10.64,175-275
+ZrO-ErO,β-diketonate,Zr(MeCp)Me(OMe),Er(thd),O,0.20,350
+(Er,Ga)O,β-diketonate,Ga(acac),O,0.25-0.28,350
+Er(MeCp),β-diketonate,Ga(NMe ),HO,0.95-1.00,250
+ErFeO,β-diketonate,Fe(thd),O,1.00,280-300
+TmO,β-diketonate,O,0.22,300
+Tm(Cp),β-diketonate,HO,1.50,200-300
+YbO,β-diketonate,O,0.15-0.2,250-400
+Yb(MeCp),β-diketonate,HO,1.00,180-375
+YbAlO,β-diketonate,TMA,O,0.20,350
+YbTiO,β-diketonate,O,TiCl,HO,0.36-0.37,300
+YbMnO,β-diketonate,Mn(thd),O,0.18,275-300
+YbVO,β-diketonate,VO(thd),O,0.08-0.23,240
+LuO,β-diketonate,Lu(SiMe3Cp)Cl,HO,0.25,360-370
+Lu(iPrCp),β-diketonate,HO,_,330
+LuMnO,β-diketonate,Mn(thd),O,0.18,275-300
+LuAlO,β-diketonate,TMA,O,0.35,300
+Lu(iPrCp),β-diketonate,TDEAA,O,1.30,250
+Lu(iPrCp),β-diketonate,TDEAA,HO,1.30,250
+LuAlO,β-diketonate,TMA,O,0.19,350
+Lu Lu(thd),β-diketonate,O,0.30,230
+LuSi,β-diketonate,Lu(tmsa),HO/O,0.60-4.3,280-380
+LuGaO,β-diketonate,Ga(CH),O,0.20,350

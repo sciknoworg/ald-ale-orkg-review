@@ -1,0 +1,43 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?hostLabel, STR(?host)) AS ?host_matrix)
+  ?eqe_num ?vol_num ?anneal_num ?tau_num ?olt_num
+WHERE {
+  orkgr:R1469991 orkgp:compareContribution ?c .
+  ?c orkgp:P180031  ?host .
+  OPTIONAL { ?host rdfs:label ?hostLabel . }
+
+  # raw literals (may contain 'NG', '≈', units, etc.)
+  OPTIONAL { ?c orkgp:P180032 ?anneal . }
+  OPTIONAL { ?c orkgp:P180033    ?eqe . }
+  OPTIONAL { ?c orkgp:P180035   ?vol . }
+  OPTIONAL { ?c orkgp:P180036    ?tau . }
+  OPTIONAL { ?c orkgp:P180037    ?olt . }
+
+  # helper to cast only if a digit is present; else UNDEF
+  BIND(STR(?eqe)    AS ?eqe_s)
+  BIND(STR(?vol)    AS ?vol_s)
+  BIND(STR(?anneal) AS ?anneal_s)
+  BIND(STR(?tau)    AS ?tau_s)
+  BIND(STR(?olt)    AS ?olt_s)
+
+  BIND( IF(REGEX(?eqe_s,    "[0-9]"),
+           xsd:decimal(REPLACE(?eqe_s,    "[^0-9.\\-]+","")), UNDEF) AS ?eqe_num )
+  BIND( IF(REGEX(?vol_s,    "[0-9]"),
+           xsd:decimal(REPLACE(?vol_s,    "[^0-9.\\-]+","")), UNDEF) AS ?vol_num )
+  BIND( IF(REGEX(?anneal_s, "[0-9]"),
+           xsd:decimal(REPLACE(?anneal_s, "[^0-9.\\-]+","")), UNDEF) AS ?anneal_num )
+  BIND( IF(REGEX(?tau_s,    "[0-9]"),
+           xsd:decimal(REPLACE(?tau_s,    "[^0-9.\\-]+","")), UNDEF) AS ?tau_num )
+  BIND( IF(REGEX(?olt_s,    "[0-9]"),
+           xsd:decimal(REPLACE(?olt_s,    "[^0-9.\\-]+","")), UNDEF) AS ?olt_num )
+
+  # insights constraint: high EQE, voltage present
+  FILTER(BOUND(?eqe_num) && ?eqe_num >= 10)
+  FILTER(BOUND(?vol_num))
+}
+ORDER BY ASC(?vol_num) DESC(?eqe_num) LCASE(?host_matrix)

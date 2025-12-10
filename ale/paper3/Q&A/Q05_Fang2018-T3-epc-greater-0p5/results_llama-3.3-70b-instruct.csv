@@ -1,0 +1,8 @@
+"material","surface_adsorption","surface_removal","epc","temp"
+"Al2O3","HF","TMA",0.75,325
+"ZnO","HF","TMA",2.19,295
+"WO3","BCl3","HF",4.19,207
+"W","O3/BCl3","HF",2.5,207
+"W","O2","WF6",6.3,300
+"TiO2","WF6","BCl3",0.6,170
+"TiO2","WF6","BCl3",0.7,170

@@ -1,0 +1,52 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?matrix (MAX(?synT) AS ?synthesis_temp) (MAX(?annT) AS ?annealing_temp)
+       (MAX(?eqeNum) AS ?eqe) (MAX(?peNum) AS ?power_eff) (MAX(?ltNum) AS ?lifetime)
+WHERE {
+  # Tbl 5: device performance
+  orkgr:R1469991 orkgp:compareContribution ?c5 .
+  ?c5 orkgp:P180031 ?host .
+  OPTIONAL { ?host rdfs:label ?hostLabel . }
+
+  OPTIONAL {
+    ?c5 orkgp:P180033 ?eqe_raw .
+    BIND(xsd:decimal(REPLACE(STR(?eqe_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?eqeNum)
+  }
+  OPTIONAL {
+    ?c5 orkgp:P180034 ?pe_raw .
+    BIND(xsd:decimal(REPLACE(STR(?pe_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?peNum)
+  }
+  OPTIONAL {
+    ?c5 orkgp:P180032 ?ann_raw .
+    BIND(xsd:decimal(REPLACE(STR(?ann_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?annT)
+  }
+  OPTIONAL {
+    ?c5 orkgp:P180036 ?lt_raw .
+    BIND(xsd:decimal(REPLACE(STR(?lt_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?ltNum)
+  }
+
+  # Tbl 3: synthesis temperature
+  orkgr:R1471077 orkgp:compareContribution ?c3 .
+  ?c3 orkgp:P9071 ?mat3 .
+  OPTIONAL { ?mat3 rdfs:label ?mat3Label . }
+  OPTIONAL {
+    ?c3 orkgp:P180013 ?temp_raw .
+    BIND(xsd:decimal(REPLACE(STR(?temp_raw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")) AS ?synT0)
+    # sanity bounds (adjust as needed)
+    BIND(IF(?synT0 >= 50 && ?synT0 <= 1500, ?synT0, UNDEF) AS ?synT)
+  }
+
+  # Name normalization + fuzzy match
+  BIND(LCASE(REPLACE(COALESCE(?hostLabel, STR(?host)), "\\([^)]*\\)", "")) AS ?h_norm)
+  BIND(LCASE(REPLACE(COALESCE(?mat3Label, STR(?mat3)), "\\([^)]*\\)", "")) AS ?m3_norm)
+
+  FILTER(CONTAINS(?h_norm, ?m3_norm) || CONTAINS(?m3_norm, ?h_norm))
+  FILTER(BOUND(?eqeNum) || BOUND(?peNum))
+
+  BIND(COALESCE(?hostLabel, ?mat3Label, STR(?host)) AS ?matrix)
+}
+GROUP BY ?matrix
+ORDER BY DESC(?eqe) DESC(?power_eff)

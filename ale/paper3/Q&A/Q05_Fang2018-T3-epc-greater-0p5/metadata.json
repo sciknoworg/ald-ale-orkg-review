@@ -1,0 +1,82 @@
+{
+  "id": "Q05",
+  "domain": "ALE",
+  "query_group": "Fang2018-T3",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "Select all thermal ALE processes from Fang et al. Table 3 with EPC > 0.5 Å/cycle, returning material, adsorption and removal reactants, EPC, and etching temperature.",
+  "paper_context": {
+    "paper": {
+      "title": "Thermal atomic layer etching: Mechanism, materials and prospects",
+      "doi": "10.1016/j.pnsc.2018.11.003",
+      "doi_url": "https://doi.org/10.1016/j.pnsc.2018.11.003"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 3",
+        "description": "Summary of thermal ALE processes including etched material, surface-adsorption reactant, surface-removal reactant, etch-per-cycle (EPC), and etching temperature."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1560222",
+        "comparison_url": "https://orkg.org/comparisons/R1560222",
+        "role": "thermal_ALE_table3",
+        "table_source": "Fang et al. (2018), Thermal ALE Table 3"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t3-easy-fang"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183117",
+      "label": "Material",
+      "role": "Identifies the solid being etched in the thermal ALE process (e.g., SiO2, Al2O3, Si3N4)."
+    },
+    {
+      "pid": "P183118",
+      "label": "Surface adsorption reactant",
+      "role": "Molecular species responsible for the initial surface modification or adsorption step in the ALE cycle."
+    },
+    {
+      "pid": "P183119",
+      "label": "Surface removal reactant",
+      "role": "Reactant that removes the modified surface layer, typically forming volatile products."
+    },
+    {
+      "pid": "P183120",
+      "label": "Etch per cycle (EPC)",
+      "role": "Etch-per-cycle value in Å/cycle; used as a proxy for process efficiency and throughput."
+    },
+    {
+      "pid": "P183121",
+      "label": "Etching temperature (°C)",
+      "role": "Substrate temperature during the thermal ALE process, relevant for thermal budget and compatibility with underlying materials."
+    }
+  ],
+  "postprocessing_notes": {
+    "numeric_parsing": {
+      "field": "P183120 (EPC)",
+      "strategy": "Extract the first numeric token from EPC strings that may contain ranges or multiple values, using a regex capture and casting to xsd:decimal.",
+      "caveats": "For EPC ranges or multi-valued entries, only a single representative number is used; more detailed range-aware analysis would require a dedicated query."
+    },
+    "output_shape": {
+      "description": "One row per thermal ALE entry with EPC > 0.5 Å/cycle.",
+      "columns": [
+        "material: label or identifier of the etched material.",
+        "surface_adsorption: label or identifier of the surface-adsorption reactant.",
+        "surface_removal: label or identifier of the surface-removal reactant.",
+        "epc: numeric etch-per-cycle representative value (Å/cycle).",
+        "temp: etching temperature as stored in the comparison (may be literal with units)."
+      ]
+    },
+    "interpretation": "The filtered list highlights thermal ALE chemistries that combine atomic-scale etching with relatively high EPC, serving as a starting point for comparing process productivity across different materials and reactant pairs."
+  }
+}

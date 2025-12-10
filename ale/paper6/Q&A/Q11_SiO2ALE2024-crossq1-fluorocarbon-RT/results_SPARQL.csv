@@ -1,0 +1,22 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+C4F6/Ar plasma,Ar plasma,-10,14.2,10–100V
+CHF3 plasma,Ar plasma,-40–20,9,0–50V
+CHF3 plasma,Ar plasma,-40–20,9,0–50V
+CHF3 plasma,Ar plasma,-40–20,9,0–50V
+CHF3 plasma,Ar plasma,-40–20,9,0–50V
+C4F8 plasma,Ar plasma,20,5.8,30–90V
+C4F8 plasma,Ar plasma,20,5.8,30–90V
+C4F8 plasma,Ar plasma,20,5.8,30–90V
+C4F8 plasma,Ar plasma,20,5.8,30–90V
+CF3CF2CF2CH2OH plasma,Ar plasma,RT,5.2,10–80V
+CHF3 plasma,O2 plasma,20,4.1,30–90V
+CHF3 plasma,O2 plasma,20,4.1,30–90V
+CHF3 plasma,O2 plasma,20,4.1,30–90V
+CHF3 plasma,O2 plasma,20,4.1,30–90V
+n-C3F7OCH3 plasma,Ar plasma,RT,2.1,10–80V
+n-C3F7OCH3 plasma,Ar plasma,RT,2.1,10–80V
+C4F8 plasma,Arionbeam,RT,1.9,30–200V
+C4F8 plasma,Arionbeam,RT,1.9,30–200V
+C4F8 plasma,Arionbeam,RT,1.9,30–200V
+C4F8 plasma,Arionbeam,RT,1.9,30–200V
+i-C3F7OCH3 plasma,Ar plasma,RT,1.8,10–80V

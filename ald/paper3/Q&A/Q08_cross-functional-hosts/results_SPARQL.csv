@@ -1,0 +1,261 @@
+host,n_apps,application,dopant
+Al2O3,2,Luminescence,"(Er,Yb)"
+Al2O3,2,Luminescence,"(Er,Yb)"
+Al2O3,2,Luminescence,"(Er,Yb)"
+Al2O3,2,Luminescence,"(Er,Yb)"
+Al2O3,2,Luminescence,Er
+Al2O3,2,Luminescence,Er
+Al2O3,2,Luminescence,Er
+Al2O3,2,Luminescence,Er
+Al2O3,2,Luminescence,Yb
+Al2O3,2,Luminescence,Yb
+Al2O3,2,Luminescence,Yb
+Al2O3,2,Luminescence,Yb
+Al2O3,2,Waveguides,"(Er,Yb)"
+Al2O3,2,Waveguides,"(Er,Yb)"
+Al2O3,2,Waveguides,"(Er,Yb)"
+Al2O3,2,Waveguides,"(Er,Yb)"
+Al2O3,2,Waveguides,Er
+Al2O3,2,Waveguides,Er
+Al2O3,2,Waveguides,Er
+Al2O3,2,Waveguides,Er
+Al2O3,2,Waveguides,Yb
+Al2O3,2,Waveguides,Yb
+Al2O3,2,Waveguides,Yb
+Al2O3,2,Waveguides,Yb
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Dy
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Er
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,Gd
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,La
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Pr
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Gate dielectrics,Y
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Dy
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Er
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,Gd
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,La
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Pr
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+HfO2,2,Memory,Y
+TiO2,2,Luminescence,Dy
+TiO2,2,Luminescence,Dy
+TiO2,2,Luminescence,Er
+TiO2,2,Luminescence,Er
+TiO2,2,Luminescence,Eu
+TiO2,2,Luminescence,Eu
+TiO2,2,Luminescence,Ho
+TiO2,2,Luminescence,Ho
+TiO2,2,Luminescence,La
+TiO2,2,Luminescence,La
+TiO2,2,Luminescence,Nd
+TiO2,2,Luminescence,Nd
+TiO2,2,Luminescence,Pr
+TiO2,2,Luminescence,Pr
+TiO2,2,Luminescence,Sm
+TiO2,2,Luminescence,Sm
+TiO2,2,Luminescence,Tb
+TiO2,2,Luminescence,Tb
+TiO2,2,Luminescence,Tm
+TiO2,2,Luminescence,Tm
+TiO2,2,Luminescence,Yb
+TiO2,2,Luminescence,Yb
+TiO2,2,Magnetics,Dy
+TiO2,2,Magnetics,Dy
+TiO2,2,Magnetics,Er
+TiO2,2,Magnetics,Er
+TiO2,2,Magnetics,Eu
+TiO2,2,Magnetics,Eu
+TiO2,2,Magnetics,Ho
+TiO2,2,Magnetics,Ho
+TiO2,2,Magnetics,La
+TiO2,2,Magnetics,La
+TiO2,2,Magnetics,Nd
+TiO2,2,Magnetics,Nd
+TiO2,2,Magnetics,Pr
+TiO2,2,Magnetics,Pr
+TiO2,2,Magnetics,Sm
+TiO2,2,Magnetics,Sm
+TiO2,2,Magnetics,Tb
+TiO2,2,Magnetics,Tb
+TiO2,2,Magnetics,Tm
+TiO2,2,Magnetics,Tm
+TiO2,2,Magnetics,Yb
+TiO2,2,Magnetics,Yb
+ZrO2,2,Electrolyte,Dy
+ZrO2,2,Electrolyte,Dy
+ZrO2,2,Electrolyte,Dy
+ZrO2,2,Electrolyte,Dy
+ZrO2,2,Electrolyte,Dy
+ZrO2,2,Electrolyte,Dy
+ZrO2,2,Electrolyte,La
+ZrO2,2,Electrolyte,La
+ZrO2,2,Electrolyte,La
+ZrO2,2,Electrolyte,La
+ZrO2,2,Electrolyte,La
+ZrO2,2,Electrolyte,La
+ZrO2,2,Electrolyte,Y
+ZrO2,2,Electrolyte,Y
+ZrO2,2,Electrolyte,Y
+ZrO2,2,Electrolyte,Y
+ZrO2,2,Electrolyte,Y
+ZrO2,2,Electrolyte,Y
+ZrO2,2,Interphase,Dy
+ZrO2,2,Interphase,Dy
+ZrO2,2,Interphase,Dy
+ZrO2,2,Interphase,Dy
+ZrO2,2,Interphase,Dy
+ZrO2,2,Interphase,Dy
+ZrO2,2,Interphase,La
+ZrO2,2,Interphase,La
+ZrO2,2,Interphase,La
+ZrO2,2,Interphase,La
+ZrO2,2,Interphase,La
+ZrO2,2,Interphase,La
+ZrO2,2,Interphase,Y
+ZrO2,2,Interphase,Y
+ZrO2,2,Interphase,Y
+ZrO2,2,Interphase,Y
+ZrO2,2,Interphase,Y
+ZrO2,2,Interphase,Y

@@ -1,0 +1,6 @@
+mode,avg_gpc_A,n_rows,example_co_reactant
+Thermal ALD,0.22,3,"O"
+Thermal ALD,0.65,1,"HO"
+Thermal ALD,1.07,1,"HO"
+Thermal ALD,1.70,1,"O"
+PE-ALD,0.30,1,"O plasma"

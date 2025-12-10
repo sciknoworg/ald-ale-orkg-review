@@ -1,0 +1,55 @@
+{
+  "id": "ALD-Q06",
+  "domain": "ALD",
+  "query_group": "ALD-Table4",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Among low-temperature (< 70 °C) runs with thin coatings (< 20 nm) in comparison R1469594, list support, precursor pair, temperature, thickness, and classify alumina-like GPC as slow/average/fast when TMA-based precursors are used.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications",
+      "doi": "10.48550/arXiv.2506.17725",
+      "doi_url": "https://doi.org/10.48550/arXiv.2506.17725"
+    },
+    "table_modeled": "Table 4"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469594",
+        "comparison_url": "https://orkg.org/comparisons/R1469594"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/pharma-hard-query"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180016",
+      "label": "support material"
+    },
+    {
+      "pid": "P180017",
+      "label": "ALD reactants (precursors)"
+    },
+    {
+      "pid": "P180013",
+      "label": "deposition temperature [°C]"
+    },
+    {
+      "pid": "P180018",
+      "label": "coating thickness [nm]"
+    },
+    {
+      "pid": "P180019",
+      "label": "growth per cycle [nm]"
+    }
+  ],
+  "postprocessing_notes": {
+    "gpc_interpretation": "For TMA-based precursor pairs (approximate alumina-like processes), numeric GPC values are classified as slow (< 0.4 nm), average (0.4–1.0 nm), or fast (> 1.0 nm). Non-alumina-like rows or missing GPC values are labeled 'n/a'."
+  }
+}

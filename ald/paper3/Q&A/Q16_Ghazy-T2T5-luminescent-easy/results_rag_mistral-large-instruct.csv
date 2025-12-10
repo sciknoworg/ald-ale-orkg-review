@@ -1,0 +1,13 @@
+ml,ppL,perf_val
+AlO,EQE,0.001
+AlO,threshold voltage,10 V
+AlO,power efficiency,0.001 W/W
+AlO,annealing temperature,400 °C
+AlO,emission lifetime τ,1 ms
+AlO,operational lifetime OLT,1000 h
+YO,EQE,0.01
+YO,threshold voltage,5 V
+YO,power efficiency,0.01 W/W
+YO,annealing temperature,300 °C
+YO,emission lifetime τ,2 ms
+YO,operational lifetime OLT,2000 h

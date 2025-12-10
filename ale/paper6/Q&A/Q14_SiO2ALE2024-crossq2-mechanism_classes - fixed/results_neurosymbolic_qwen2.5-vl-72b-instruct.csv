@@ -1,0 +1,2 @@
+etching_mechanism_class,n_variants,min_etch_rate,max_etch_rate,mean_etch_rate,min_temp_rate_lim,max_temp_rate_lim,plasma_required,high_rate_low_temp
+AFS-based plasma-assisted processes,3,27,75,47.33,20,160,True,True

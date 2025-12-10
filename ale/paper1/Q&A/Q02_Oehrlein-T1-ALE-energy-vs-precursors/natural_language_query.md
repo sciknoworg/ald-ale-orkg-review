@@ -1,0 +1,1 @@
+Group all ALE materials by the dominant energy-source category (neutral beam, plasma ions, photon, or thermal), and count how many distinct precursor chemistries are used within each category.

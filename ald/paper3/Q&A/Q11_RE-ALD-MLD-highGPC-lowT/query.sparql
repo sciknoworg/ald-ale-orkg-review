@@ -1,0 +1,54 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?matLabel,  STR(?material)) AS ?material_system)
+  (COALESCE(?metalLabel,STR(?metal))    AS ?metal_precursor)
+  (COALESCE(?orgLabel,  STR(?org))      AS ?organic_precursor)
+  ?family ?gpc_num ?temp_num
+WHERE {
+  orkgr:R1470110 orkgp:compareContribution ?c .
+
+  ?c orkgp:P180038 ?material ;
+     orkgp:P180039    ?metal ;
+     orkgp:P180040      ?org ;
+     orkgp:P180041      ?gpc ;
+     orkgp:P180013     ?temp .
+
+  OPTIONAL { ?material rdfs:label ?matLabel . }
+  OPTIONAL { ?metal    rdfs:label ?metalLabel . }
+  OPTIONAL { ?org      rdfs:label ?orgLabel . }
+
+  # --- Normalize strings ---
+  BIND(STR(?gpc)  AS ?gpc_s)
+  BIND(STR(?temp) AS ?temp_s)
+  BIND(LCASE(STR(?metal)) AS ?metal_s)
+
+  # --- Extract numeric representatives from ranges ---
+  # GPC: keep the FIRST number (treats "2.5-3.2" -> 2.5; adjust to MAX by swapping regex if desired)
+  BIND( IF(REGEX(?gpc_s,"[0-9]"),
+           xsd:decimal(REPLACE(?gpc_s, "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1")),
+           UNDEF) AS ?gpc_num )
+
+  # Temperature: keep the FIRST number in range (e.g., "160-280" -> 160)
+  BIND( IF(REGEX(?temp_s,"[0-9]"),
+           xsd:decimal(REPLACE(?temp_s, "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1")),
+           UNDEF) AS ?temp_num )
+
+  # --- Classify metal-precursor family from its ligand tag ---
+  BIND(
+    IF(CONTAINS(?metal_s,"(dpdmg)"), "R(dpdmg)3",
+    IF(CONTAINS(?metal_s,"(thd)"),   "R(thd)3",
+    IF(CONTAINS(?metal_s,"(amd)"),   "R(amd)3",
+    IF(CONTAINS(?metal_s,"(famd)"),  "R(famd)3",
+    IF(CONTAINS(?metal_s,"(guan)"),  "R(guan)3",
+    "other"))))) AS ?family
+  )
+
+  # --- Filters for insight ---
+  FILTER(BOUND(?gpc_num)  && ?gpc_num  >= 5.0)
+  FILTER(BOUND(?temp_num) && ?temp_num <= 250)
+}
+ORDER BY LCASE(?family) DESC(?gpc_num) LCASE(?material_system)

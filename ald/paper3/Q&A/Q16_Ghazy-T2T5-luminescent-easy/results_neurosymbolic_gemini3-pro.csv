@@ -1,0 +1,41 @@
+ml,ppL,perf_val
+Al2O3:Yb,EQE,24.0
+Al2O3:Yb,Emission Lifetime,0.9
+Al2O3:Yb,Power Efficiency,28.0
+Al2O3:Yb,Threshold Voltage,~14
+Ga2O3,Annealing Temperature,900.0
+Ga2O3,EQE,36.0
+Ga2O3,Emission Lifetime,2.04
+Ga2O3,Operational Lifetime,100.0
+Ga2O3,Power Efficiency,81.0
+Ga2O3,Threshold Voltage,~15
+Gd3Ga5O12,Annealing Temperature,1000.0
+Gd3Ga5O12,EQE,1.9
+Gd3Ga5O12,Emission Lifetime,1.59
+Gd3Ga5O12,Power Efficiency,3.6
+Gd3Ga5O12,Threshold Voltage,30
+Lu3Al5O12,Annealing Temperature,1100.0
+Lu3Al5O12,EQE,10.0
+Lu3Al5O12,Emission Lifetime,1.65
+Lu3Al5O12,Power Efficiency,12.0
+Lu3Al5O12,Threshold Voltage,50
+Y3Ga5O12,Annealing Temperature,800.0
+Y3Ga5O12,EQE,2.5
+Y3Ga5O12,Emission Lifetime,2.26
+Y3Ga5O12,Operational Lifetime,49.0
+Y3Ga5O12,Power Efficiency,3.8
+Y3Ga5O12,Threshold Voltage,25
+Yb2O3,Annealing Temperature,1000.0
+Yb2O3,EQE,8.5
+Yb2O3,Power Efficiency,10.0
+Yb2O3,Threshold Voltage,60
+Yb3Al5O12,Annealing Temperature,1100.0
+Yb3Al5O12,EQE,5.2
+Yb3Al5O12,Emission Lifetime,1.2
+Yb3Al5O12,Power Efficiency,4.8
+Yb3Al5O12,Threshold Voltage,~5
+ZnGa2O4,Annealing Temperature,800.0
+ZnGa2O4,EQE,0.3
+ZnGa2O4,Emission Lifetime,0.82
+ZnGa2O4,Operational Lifetime,5.5
+ZnGa2O4,Threshold Voltage,30

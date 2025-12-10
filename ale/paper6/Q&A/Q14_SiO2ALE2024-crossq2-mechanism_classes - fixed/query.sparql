@@ -1,0 +1,128 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (?mechClass                                   AS ?etching_mechanism_class)
+  (COUNT(DISTINCT ?c)                           AS ?n_variants)
+  (MIN(?rateVal)                                AS ?min_etch_rate)
+  (MAX(?rateVal)                                AS ?max_etch_rate)
+  (AVG(?rateVal)                                AS ?mean_etch_rate)
+  (MIN(?tRateLimit)                             AS ?min_temp_rate_lim)
+  (MAX(?tRateLimit)                             AS ?max_temp_rate_lim)
+  (IF(MAX(?plasmaFlag) > 0, "yes", "no")        AS ?plasma_required)
+  (IF( MAX(?rateVal) > 5 && MIN(?tRateLimit) < 200,
+       "yes", "no")                             AS ?high_rate_low_temp)
+WHERE {
+  # --- Collect all isotropic SiO2 ALE contributions from Tables V and VI ---
+  {
+    orkgr:R1561046 orkgp:compareContribution ?c .  # Table V (thermal, 2017–2021)
+  }
+  UNION
+  {
+    orkgr:R1562478 orkgp:compareContribution ?c .  # Table VI (AFS-based, 2020–2021)
+  }
+
+  # --- Core descriptors shared by both tables ---
+  OPTIONAL {
+    ?c orkgp:P183136 ?mech .                      # etching mechanism
+    OPTIONAL { ?mech rdfs:label ?mechLabel . }
+  }
+  OPTIONAL { ?c orkgp:P183131 ?rateRaw . }        # etching rate (Å/cycle)
+
+  # --- Step descriptions: resolve labels if values are resources ---
+  OPTIONAL {
+    ?c orkgp:P183137 ?step1Raw .                  # 1st step
+    BIND( IF(isLiteral(?step1Raw), STR(?step1Raw), "") AS ?step1Lit )
+    OPTIONAL { ?step1Raw rdfs:label ?step1Lab . }
+    BIND( COALESCE(?step1Lab, ?step1Lit) AS ?step1 )
+  }
+  OPTIONAL {
+    ?c orkgp:P183138 ?step2Raw .                  # 2nd step
+    BIND( IF(isLiteral(?step2Raw), STR(?step2Raw), "") AS ?step2Lit )
+    OPTIONAL { ?step2Raw rdfs:label ?step2Lab . }
+    BIND( COALESCE(?step2Lab, ?step2Lit) AS ?step2 )
+  }
+  OPTIONAL {
+    ?c orkgp:P183139 ?step3Raw .                  # 3rd step
+    BIND( IF(isLiteral(?step3Raw), STR(?step3Raw), "") AS ?step3Lit )
+    OPTIONAL { ?step3Raw rdfs:label ?step3Lab . }
+    BIND( COALESCE(?step3Lab, ?step3Lit) AS ?step3 )
+  }
+
+  # Concatenate all step descriptions (for plasma detection and temp parsing)
+  BIND( STR(CONCAT(COALESCE(?step1, ""), " ",
+                  COALESCE(?step2, ""), " ",
+                  COALESCE(?step3, "")))
+        AS ?stepsStr )
+
+  # --- Normalize etching mechanism into a mechanism-class label ---
+  BIND( LCASE(COALESCE(?mechLabel, STR(?mech))) AS ?mechLower )
+
+  # Mechanism classes:
+  #  - Al2O3-conversion cycles
+  #  - AFS-based plasma-assisted   (AFS + "plasma" in any step)
+  #  - AFS-based thermal           (AFS but no plasma in steps)
+  #  - Other (fallback)
+  BIND(
+    IF(
+      CONTAINS(?mechLower, "al2o3"),
+      "Al2O3-conversion cycles",
+      IF(
+        CONTAINS(?mechLower, "(nh4)2sif6") && CONTAINS(LCASE(?stepsStr), "plasma"),
+        "AFS-based plasma-assisted",
+        IF(
+          CONTAINS(?mechLower, "(nh4)2sif6"),
+          "AFS-based thermal",
+          "Other"
+        )
+      )
+    ) AS ?mechClass
+  )
+
+  # --- Parse a representative numeric etch rate from the string ---
+  # Take the first numeric value in the rate string (e.g., "0.07–0.27" -> 0.07)
+  BIND(
+    IF(
+      REGEX(STR(?rateRaw), "[0-9]"),
+      xsd:decimal(
+        REPLACE(STR(?rateRaw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")
+      ),
+      UNDEF
+    ) AS ?rateVal
+  )
+
+  # Discard rows without a numeric etch rate
+  FILTER(BOUND(?rateVal))
+
+  # --- Approximate rate-limiting temperature from step descriptions ---
+  # 1) Candidate temperature: first numeric in all step labels
+  BIND(
+    IF(
+      REGEX(?stepsStr, "[0-9]"),
+      xsd:decimal(
+        REPLACE(?stepsStr, ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")
+      ),
+      UNDEF
+    ) AS ?tCandidate
+  )
+
+  # 2) Keep only physically reasonable temperatures (< 1000 °C),
+  #    otherwise leave it UNDEF so it won't pollute aggregates.
+  BIND(
+    IF(BOUND(?tCandidate) && ?tCandidate < 1000, ?tCandidate, UNDEF)
+    AS ?tRateLimit
+  )
+
+  # --- Plasma flag: 1 if any step mentions "plasma", else 0 ---
+  BIND(
+    IF(
+      CONTAINS(LCASE(?stepsStr), "plasma"),
+      1,
+      0
+    ) AS ?plasmaFlag
+  )
+}
+GROUP BY ?mechClass
+ORDER BY DESC(?mean_etch_rate) LCASE(?mechClass)

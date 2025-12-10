@@ -1,0 +1,8 @@
+application,dopant,n_hosts
+Electrolyte,Y,3
+Gate dielectrics,Y,6
+Interphase,Y,3
+Luminescence,Er,10
+Luminescence,Yb,6
+Memory,Y,6
+Thermometry,Yb,1

@@ -1,0 +1,4 @@
+activation,chemistry_pair,n_semiconductors
+plasma,"Cl2,Ar",6
+Thermal,"XeF2,BCl3",1
+Thermal,"HF-pyridine,AlCl(CH3)2",1

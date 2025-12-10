@@ -1,0 +1,10 @@
+material,synthesis_temp,eqe,efficiency_index
+AlO2,300,NA,NA
+YO2_3,300,NA,NA
+YbTiO4,NA,NA,NA
+YbAlO3_5_12,NA,NA,NA
+LuAlO3_5_12,NA,NA,NA
+ZnGaO2_4,NA,NA,NA
+```
+
+**Note:** The provided segments do not contain the necessary information from Table 5 (EQEs) and some synthesis temperatures from Table 3 are missing. Therefore, the "eqe" column contains "NA", and consequently, the "efficiency_index" cannot be computed accurately. The materials listed are those mentioned in Table 2 as being doped with Er for luminescence purposes.

@@ -1,0 +1,8 @@
+"activation","chemistry_pair","n_semiconductors"
+"Plasma","Cl / Ar","1"
+"Plasma","Cl2 / Ar","2"
+"Plasma","Cl2 / Ne","1"
+"Plasma","Cl2 / XeF2","1"
+"Plasma","Cl2 / BCl3","1"
+"Thermal","HF-pyridine / AlCl(CH3)2","1"
+"Thermal","XeF2 / BCl3","1"

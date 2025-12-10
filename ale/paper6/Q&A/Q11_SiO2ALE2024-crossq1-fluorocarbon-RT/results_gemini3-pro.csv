@@ -1,0 +1,6 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+CF3CF2CF2CH2OH plasma,Ar plasma,RT,5.2 Å/cycle,10-80 V
+CHF3 plasma,O3 plasma,20 °C,4.1 Å/cycle,30-90 V
+n-C3F7OCH3 plasma,Ar plasma,RT,2.1 Å/cycle,10-80 V
+C3F7OCH3 plasma,O3 plasma,20 °C,2.1 Å/cycle,30-90 V
+i-C3F7OCH3 plasma,Ar plasma,RT,1.8 Å/cycle,10-80 V

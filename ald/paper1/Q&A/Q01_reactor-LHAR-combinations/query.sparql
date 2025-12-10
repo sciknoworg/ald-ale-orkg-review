@@ -1,0 +1,17 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT
+  (COALESCE(?reactorLabel, STR(?reactor)) AS ?reactor_value)
+  (COALESCE(?lharLabel, STR(?lhar))       AS ?lhar_value)
+  (COUNT(*) AS ?n)
+WHERE {
+  orkgr:R1469158 orkgp:compareContribution ?contrib .
+  ?contrib orkgp:P180007 ?reactor .
+  ?contrib orkgp:P180003 ?lhar .
+  OPTIONAL { ?reactor rdfs:label ?reactorLabel . }
+  OPTIONAL { ?lhar    rdfs:label ?lharLabel . }
+}
+GROUP BY ?reactor ?reactorLabel ?lhar ?lharLabel
+ORDER BY DESC(?n) ?reactor_value ?lhar_value

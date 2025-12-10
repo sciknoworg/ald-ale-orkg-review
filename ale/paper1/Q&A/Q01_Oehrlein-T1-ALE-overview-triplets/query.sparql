@@ -1,0 +1,14 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+
+SELECT ?material ?precursor ?energy
+WHERE {
+  # --- Table I comparison (ALE overview)
+  orkgr:R1562672 orkgp:compareContribution ?c .
+
+  # --- Core data columns
+  OPTIONAL { ?c orkgp:P9071   ?material . }   # Material
+  OPTIONAL { ?c orkgp:P183142 ?precursor . }  # Precursor chemistry
+  OPTIONAL { ?c orkgp:P183143 ?energy . }     # Energy source
+}
+LIMIT 20

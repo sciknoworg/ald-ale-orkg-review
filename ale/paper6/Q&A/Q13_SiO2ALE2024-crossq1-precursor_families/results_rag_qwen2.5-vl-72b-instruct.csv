@@ -1,0 +1,12 @@
+precursor_family,mean_etch_rate,max_etch_rate,ion_energy_windows,max_sel_SiO2_Si,max_sel_Si3N4
+C₃F₇OCH₃ isomers,5.0,6.8,"30–90V",102.8,4.5
+C₄F₈-based,5.4,14.2,"0–50V, 30–200V, 10–100V",17.5,15.0
+CHF₃-based,6.6,11.0,"0–50V, 30–90V",10.0,7.0
+```
+
+Explanation:
+- **C₃F₇OCH₃ isomers**: Includes n-C₃F₇OCH₃, i-C₃F₇OCH₃. Mean etch rate calculated from values 2.1, 1.8, 6.8. Ion energy windows from 30-90V. Maximum selectivity from Table III.
+- **C₄F₈-based**: Includes C₄F₈, C₄F₈/H₂, C₄F₆. Mean etch rate calculated from values 9.0, 1.9, 14.2, 5.8, 4.1. Ion energy windows from various entries. Maximum selectivity from Table III.
+- **CHF₃-based**: Includes CHF₃. Mean etch rate calculated from values 9.0, 4.1, 6.8. Ion energy windows from 0-50V, 30-90V. Maximum selectivity from Table III.
+
+Rows ordered by maximum selectivity, then by mean etching rate.

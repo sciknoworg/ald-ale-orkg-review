@@ -1,0 +1,6 @@
+activation,chemistry_pair,n_semiconductors
+Plasma,Cl / Ar,4
+Plasma,Cl2 / Ar,3
+Plasma,Cl2 / Ne,1
+Plasma,XeF2 / BCl3,1
+Thermal,AlCl(CH3)2 / HF-pyridine,1

@@ -1,0 +1,4 @@
+phosphor_value,coating_value,precursors_value,temp_num,thick_num
+ZnAl2O4:Eu2+,ZnO,DEZ/H2O,175,
+Sr2Si5N8:Eu2+,Al2O3,TMA/O3,TMA/H2O,30,8
+K2GeF6:Mn4+,Al2O3,TMA/O3,90,(30c)

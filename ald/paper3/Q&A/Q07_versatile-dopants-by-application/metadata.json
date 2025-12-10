@@ -1,0 +1,47 @@
+{
+  "id": "ALD-Q07",
+  "domain": "ALD",
+  "query_group": "ALD-Table2-Ghazy",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "For each application (luminescence, memory, gate dielectrics, electrolytes, etc.), count how many distinct host materials are reported per rare-earth dopant in comparison R1469955, and identify the most versatile dopants within each application.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "table_modeled": "Table 2"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469955",
+        "comparison_url": "https://orkg.org/comparisons/R1469955"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/versatile-dopants"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180029",
+      "label": "application"
+    },
+    {
+      "pid": "P180028",
+      "label": "dopant (rare-earth species)"
+    },
+    {
+      "pid": "P180027",
+      "label": "host material"
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": "The query groups by application and dopant, counting distinct host materials per group (n_hosts) to reveal versatile dopants (many hosts) versus more specialized dopants (few hosts) within each functional category."
+  }
+}

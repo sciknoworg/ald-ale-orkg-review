@@ -1,0 +1,63 @@
+{
+  "id": "ALD-Q10",
+  "domain": "ALD",
+  "query_group": "ALD-Table3-Ghazy",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "For Y2O3 only, compare average GPC between plasma-enhanced ALD (PE-ALD) and thermal ALD within the 200–300 °C window, returning mode, average GPC, number of records, and an example co-reactant.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "table_modeled": "Table 3"
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1471077",
+        "comparison_url": "https://orkg.org/comparisons/R1471077"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/ald-y2o3-gpc200"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P9071",
+      "label": "material"
+    },
+    {
+      "pid": "P180043",
+      "label": "co-reactant (2nd precursor slot)"
+    },
+    {
+      "pid": "P180044",
+      "label": "3rd precursor slot"
+    },
+    {
+      "pid": "P180045",
+      "label": "4th precursor slot"
+    },
+    {
+      "pid": "P180041",
+      "label": "GPC [Å/cycle]"
+    },
+    {
+      "pid": "P180013",
+      "label": "deposition temperature [°C]"
+    }
+  ],
+  "postprocessing_notes": {
+    "material_filter": "Material labels are normalized by lowercasing, stripping markup such as [sub], and keeping only alphanumeric characters; entries are retained if the normalized form contains 'y2o3', 'yttria', or 'yttriumoxide'.",
+    "gpc_normalization": "GPC text is cleaned for punctuation and ranges; the first and last numeric values are extracted and averaged if they differ, yielding a single numeric GPC entry per row.",
+    "temperature_window": "Temperature strings are parsed to obtain minimum and maximum values; rows are kept if their range overlaps 200–300 °C (tmax ≥ 200 and tmin ≤ 300).",
+    "mode_classification": "Mode is classified as 'PE-ALD' if any co-reactant slot (P180043, P180044, P180045) contains the substring 'plasma' in its label or literal; otherwise, the mode is 'Thermal ALD'.",
+    "aggregation": "Results are grouped by mode; for each mode the query computes AVG(GPC), COUNT(*), and a SAMPLE co-reactant string as an example."
+  }
+}

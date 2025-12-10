@@ -1,0 +1,5 @@
+mechanism,n_chemistries,n_materials
+Fluorination + ligand-exchange,25,17
+Oxidation + chelation,4,4
+Halogenation & conversion,9,7
+Other / unclassified,9,6

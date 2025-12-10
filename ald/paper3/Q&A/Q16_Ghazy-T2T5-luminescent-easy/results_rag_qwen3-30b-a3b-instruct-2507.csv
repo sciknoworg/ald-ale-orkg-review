@@ -1,0 +1,15 @@
+The query asks for a comparison between Table 2 (ALD dopant overview) and Table 5 (rare-earth MOSLED performance comparison) to identify overlapping host materials that have reported MOSLED performance. However, **Table 5 is not present in the retrieved segments**. The only table related to MOSLEDs mentioned in the text is **Table 2**, which lists materials doped with rare earth elements for luminescence applications, including MOSLEDs.
+
+The retrieved text mentions:
+- "The first ALD studies regarding the optoelectronic and waveguide applications are from 2004,[144] and the research is still actively ongoing.[145,146]"
+- "For example, MOSLED structures with emission in the NIR range (977 nm) have been fabricated by depositing nanolaminates of Yb3+-doped Al₂O₃.[147]"
+- "For the MOSLED application, Er³⁺ with its emission maximum ≈1530 nm is considered the best Ln dopant species (allowing the minimum loss window of optical telecommunications),[148,149] and hence Er³⁺-doped thin films are increasingly investigated in ALD.[150]"
+
+However, **no performance data (EQE, threshold voltage, power efficiency, annealing temperature, emission lifetime τ, operational lifetime OLT)** is provided in the retrieved segments for any MOSLED device. Therefore, **Table 5 cannot be reconstructed** from the given information.
+
+As a result, **no valid CSV table can be produced** that satisfies the query, because the required performance data from Table 5 is missing.
+
+**Final Answer:**
+```
+No data available. The requested Table 5 (rare-earth MOSLED performance comparison) is not present in the retrieved segments.
+```

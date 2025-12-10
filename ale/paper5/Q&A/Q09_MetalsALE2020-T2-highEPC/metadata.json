@@ -1,0 +1,93 @@
+{
+  "id": "Q09",
+  "domain": "ALE",
+  "query_group": "MetalsALE2020-T2",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "Filter metals ALE Table 2 for high-rate processes (EPC ≥ 2 Å/cycle) and list material, direction, chemistries, EPC, temperature, and cycle time.",
+  "paper_context": {
+    "paper": {
+      "title": "Anisotropic/Isotropic Atomic Layer Etching of Metals",
+      "doi": "10.5757/ASCT.2020.29.3.041",
+      "doi_url": "https://doi.org/10.5757/ASCT.2020.29.3.041"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 2",
+        "description": "Summary of anisotropic and isotropic metal ALE chemistries, including direction, modification and removal chemistry, EPC, process temperature, and cycle time."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1563131",
+        "comparison_url": "https://orkg.org/comparisons/R1563131",
+        "role": "metals_ALE_table2",
+        "table_source": "Table 2 (metals ALE processes) from the metal ALE review."
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t2-metals-high-epc"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P9071",
+      "label": "Material",
+      "role": "Identifies the metal material being etched (e.g. W, Co, Pt)."
+    },
+    {
+      "pid": "P183148",
+      "label": "Direction",
+      "role": "Specifies whether the ALE process is anisotropic or isotropic."
+    },
+    {
+      "pid": "P183149",
+      "label": "Reaction",
+      "role": "Captures the surface modification / reaction chemistry used in the first ALE step."
+    },
+    {
+      "pid": "P183125",
+      "label": "Removal",
+      "role": "Captures the removal / desorption chemistry used to remove the modified layer."
+    },
+    {
+      "pid": "P183130",
+      "label": "Process Temperature (°C)",
+      "role": "Etching process temperature, relevant to thermal budget and compatibility with device stacks."
+    },
+    {
+      "pid": "P183151",
+      "label": "Time of cycle",
+      "role": "Time per ALE cycle, allowing basic throughput considerations."
+    },
+    {
+      "pid": "P183120",
+      "label": "EPC (Å/cycle)",
+      "role": "Etch-per-cycle rate; used here to filter for high-rate metal ALE processes (EPC ≥ 2 Å/cycle)."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": {
+      "grouping_key": "none",
+      "description": "This Easy Query operates row-wise: it filters individual ALE processes by EPC threshold without aggregating across materials."
+    },
+    "output_shape": {
+      "description": "One row per metal ALE process with EPC ≥ 2 Å/cycle.",
+      "columns": [
+        "material: metal material being etched.",
+        "direction: anisotropic or isotropic ALE.",
+        "reaction: modification chemistry used in the first step.",
+        "removal: removal chemistry used in the second step.",
+        "epc: numeric etch-per-cycle rate (Å/cycle), parsed from text.",
+        "process_temp: process temperature (°C) as recorded in the comparison.",
+        "time_per_cycle: time per ALE cycle."
+      ]
+    },
+    "interpretation": "The result isolates the highest-rate metal ALE chemistries in the table. Comparing EPC alongside direction, chemistry, temperature, and cycle time helps identify promising candidates for high-throughput, anisotropic or isotropic metal etching under realistic process conditions."
+  }
+}

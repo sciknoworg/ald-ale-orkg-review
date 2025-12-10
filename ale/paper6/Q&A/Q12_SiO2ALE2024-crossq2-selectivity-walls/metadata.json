@@ -1,0 +1,99 @@
+{
+  "id": "Q12",
+  "domain": "ALE",
+  "query_group": "SiO2ALE2024-crossq2-selectivity_walls",
+  "query_variant": "easy",
+  "query_scope": "cross-table",
+  "description_short": "Cross-table query linking SiO2 ALE selectivity data (Table III) with chamber-wall treatment and etch rates (Table IV) for C4F8/Ar-based anisotropic processes.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic Layer Etching of SiO2 for Nanoscale Semiconductor Devices: A Review",
+      "doi": "10.5757/ASCT.2024.33.1.1",
+      "doi_url": "https://doi.org/10.5757/ASCT.2024.33.1.1"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table III",
+        "description": "SiO2 ALE selectivity data including selectivity pairs, ranges, and methods for improving selectivity."
+      },
+      {
+        "label": "Table IV",
+        "description": "Chamber-wall treatment studies for SiO2 ALE, including wall-conditioning methods and resulting etch rates."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1561025",
+        "comparison_url": "https://orkg.org/comparisons/R1561025",
+        "role": "SiO2_ALE_Table_III_selectivity"
+      },
+      {
+        "comparison_id": "R1561023",
+        "comparison_url": "https://orkg.org/comparisons/R1561023",
+        "role": "SiO2_ALE_Table_IV_chamber_wall"
+      }
+    ],
+    "persistent_query_url": null
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183133",
+      "label": "Selectivity material pair",
+      "role": "Encodes the target selectivity pair (e.g., SiO2/Si, SiO2/Si3N4) from Table III."
+    },
+    {
+      "pid": "P173032",
+      "label": "Selectivity value",
+      "role": "Selectivity magnitude or range for the SiO2 ALE process from Table III."
+    },
+    {
+      "pid": "P183134",
+      "label": "Selectivity improvement method",
+      "role": "Describes how etch selectivity was improved in Table III (e.g., passivation or pulsing schemes)."
+    },
+    {
+      "pid": "P183129",
+      "label": "Precursor chemistries for fluorination",
+      "role": "Fluorocarbon precursor; used as part of the join key between Tables III and IV and to restrict to C4F8-based plasmas."
+    },
+    {
+      "pid": "P183125",
+      "label": "Removal gas",
+      "role": "Removal / activation gas (e.g., Ar plasma); used both in the join and to enforce C4F8/Ar plasma systems."
+    },
+    {
+      "pid": "P183135",
+      "label": "Chamber wall treatment method",
+      "role": "Describes the chamber-wall conditioning (none, O2 cleaning, wall heating) in Table IV."
+    },
+    {
+      "pid": "P183131",
+      "label": "Etching rate",
+      "role": "Etch rate (Å/cycle) from Table IV, normalized to a numeric value to allow sorting."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": {
+      "grouping_key": "shared C4F8/Ar precursor + removal chemistry across Tables III and IV",
+      "description": "Rows are emitted for C4F8/Ar plasma conditions where the same precursor and removal gas appear in both the selectivity and chamber-wall comparisons."
+    },
+    "output_shape": {
+      "description": "One row per matched C4F8/Ar SiO2 ALE process with joined selectivity and chamber-wall data.",
+      "columns": [
+        "selectivity_pair: target selectivity material pair (e.g., SiO2/Si, SiO2/Si3N4).",
+        "selectivity: reported selectivity range or numerical value.",
+        "selectivity_method: method or strategy used to improve selectivity in Table III.",
+        "chamber_wall_treatment: chamber-wall treatment method (none, O2 cleaning, wall heating) from Table IV.",
+        "etch_rate: numeric etch rate derived from Table IV."
+      ]
+    },
+    "interpretation": "The result links SiO2 ALE selectivity metrics with chamber-wall conditioning and etch rates for C4F8/Ar plasma-based anisotropic processes, enabling comparison of how wall treatment strategies impact both selectivity and throughput."
+  }
+}

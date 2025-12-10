@@ -1,0 +1,4 @@
+phosphor_value,coating_value,precursors_value,temp_num,thick_num
+"ZnAlO:Eu2+","ZnO","DEZ/H2O",175,146
+"KSiF6:Mn4+","Al2O3","TMA/O3",90,20
+"KSiF6:Mn4+","Al2O3","TMA/H2O;TMA/O3",30,20

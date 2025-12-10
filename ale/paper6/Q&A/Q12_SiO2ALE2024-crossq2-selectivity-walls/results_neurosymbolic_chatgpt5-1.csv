@@ -1,0 +1,4 @@
+selectivity_pair,selectivity,selectivity_method,chamber_wall_treatment,etch_rate
+SiO2/Si3N4,0.2–15.0,"Precursor selection; Fluorocarbon film thickness tuning","Chamber cleaning with O₂ plasma; Chamber wall heating",3.0
+SiO2/Si3N4,>7.0,"Precursor selection","Chamber cleaning with O₂ plasma; Chamber wall heating",3.0
+SiO2/Si,>10.0,"Precursor selection","Chamber cleaning with O₂ plasma; Chamber wall heating",3.0

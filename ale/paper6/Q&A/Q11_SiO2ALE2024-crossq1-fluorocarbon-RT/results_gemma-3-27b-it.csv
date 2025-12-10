@@ -1,0 +1,5 @@
+precursor,removal,process_temp,etch_rate,ion_energy_window
+CHF 3 plasma,Arplasma,-10,13,10–100V
+C 4 F 8 /Arplasma,Arplasma,2.5,9.0–11.0,0–50V
+C 4 F 8 plasma,O plasma,RT,5.8,N/A
+C 3 H 3 F 3 plasma,O plasma,RT,4.1,30–90V

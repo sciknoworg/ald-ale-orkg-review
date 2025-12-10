@@ -1,0 +1,5 @@
+"precursor","removal","process_temp","etch_rate","ion_energy_window"
+"C F /Arplasma","Arplasma","−10","14.2","10–100V"
+"CHF plasma","O plasma","RT","4.1","30–90V"
+"C F OCH plasma","Arplasma","RT","2.1","10–80V"
+"i-C F OCH plasma","Arplasma","RT","1.8","10–80V"

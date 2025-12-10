@@ -1,0 +1,18 @@
+The requested query cannot be fully answered based on the retrieved segments.
+
+### Reason:
+- The query asks for **Table 5** (specifically, ALD recipes and device performance for Er³⁺-based MOSLED host matrices), but **Table 5 is not present** in the retrieved segments.
+- The only relevant tables provided are **Table 1 (Complex)**, **Table 2**, **Table 3**, and **Table 4**, none of which contain data on **Er³⁺-based MOSLED host matrices** or their **external quantum efficiency (EQE)**.
+- While **Table 3** contains numerous Er-based ALD processes (e.g., ErO, ErTiO, ErFeO, etc.), it does **not** include any performance metrics such as EQE.
+- The text mentions Er³⁺-doped films in the context of MOSLEDs and waveguides, and notes that Er³⁺ is considered ideal for telecommunications due to its emission at ~1530 nm, but **no EQE values are reported** for any Er³⁺-based MOSLED host.
+
+### Conclusion:
+There is **insufficient information** in the retrieved segments to identify:
+- The host matrices used in Er³⁺-based MOSLEDs,
+- The best EQE for each,
+- Or to match them with ALD processes from Table 3.
+
+Therefore, **no valid CSV table** can be generated that satisfies the query.
+
+> **Output:**  
+> (No output can be generated — required data not present in retrieved segments.)

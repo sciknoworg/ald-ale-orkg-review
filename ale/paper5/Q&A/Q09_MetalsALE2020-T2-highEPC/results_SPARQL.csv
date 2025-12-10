@@ -1,0 +1,10 @@
+material,direction,reaction,removal,epc,process_temp,time_per_cycle
+Fe,Anisotropy,O2,Formic acid,42,80,350 sec
+Co,Anisotropy,O2,Formic acid,28,80,350 sec
+Pd,Anisotropy,O2,Formic acid,12,80,350 sec
+W,Isotropy,O2,WF6,6.3,300,320 sec
+Pt,Anisotropy,O2,Formic acid,5,80,350 sec
+W,Anisotropy,NF3,O2,2.6,,40 sec
+W,Isotropy,O2/O3,BCl3→HF,2.5,207,325 sec
+W,Anisotropy,Cl2,Ar,2.1,60,25 sec
+Co,Isotropy,Cl2,hfacH,2,140,95 sec

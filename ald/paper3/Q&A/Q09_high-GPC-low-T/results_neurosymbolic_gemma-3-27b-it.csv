@@ -1,0 +1,8 @@
+material,family,co_reactant,gpc_num,temp_num
+Sc2O3,Cp-derived,O3,1.09-1.94,225,275
+Y2O3,amidinate,H2O,1.7,200-400
+Y2O3,amidinate,O2 plasma,0.3,200-300
+Y2O3,amidinate,H2O,1.20-1.30,200-400
+Er2O3,Cp-derived,O3,1.5,250-350
+Er2O3,Cp-derived,H2O,0.80-1.20,200-300
+Yb2O3,β-diketonate,O3,0.15-0.2,250-400

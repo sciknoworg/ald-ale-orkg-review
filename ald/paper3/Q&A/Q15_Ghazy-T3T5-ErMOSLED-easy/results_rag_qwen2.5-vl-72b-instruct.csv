@@ -1,0 +1,24 @@
+matrix,eqe_best,process_material,metal_precursor,co_reactant_any,family,gpc_num,temp_num
+,,ErO,Er(thd),O,β-diketonate,0.20-0.25,250-375
+,,ErO,Er(thd),O plasma,β-diketonate,0.50,200-300
+,,ErO,Er(MeCp),HO,alkylcyclopentadienyl,1.50,250-350
+,,ErO,Er(MeCp),O,alkylcyclopentadienyl,0.12,170-330
+,,ErO,Erbitel12,O,β-diketonate,0.20-0.40,175-300
+,,ErO,Er(tBu2amd),O,aminoamide,0.37-0.55,225-300
+,,ErO,Er(dpdmg),HO,β-diketonate,1.10,150-275
+,,ErO,Er(iPr2amd)(MeCp),HO,aminoamide,0.50,180
+,,ErO,Er(iPr2amd)(MeCp),O plasma,aminoamide,0.70,180
+,,ErO,Er(iPr2amd)(MeCp),HO,aminoamide,1.10-1.20,225-275
+,,ErO,Er(iPr2amd)(MeCp),O,aminoamide,0.20-1.0,200-325
+,,ErO,Er(iPrCp),HO,alkylcyclopentadienyl,0.80-1.20,200-300
+,,ErO,Er(iPrCp),O,alkylcyclopentadienyl,0.30-0.80,200-300
+,,ErO,Er(nBuCp),HO,alkylcyclopentadienyl,1.20,250-325
+,,ErO,Er(nBuCp),O,alkylcyclopentadienyl,0.40-0.80,225-350
+,,Er TiO,Er(MeCp),TDEAT,O,alkylcyclopentadienyl,0.5-10.64,175-275
+,,ZrO-ErO,Zr(MeCp)Me(OMe),Er(thd),O,alkylcyclopentadienyl,0.20,350
+,,(Er,Ga)O,Er(thd),Ga(acac),O,β-diketonate,0.25-0.28,350
+,,Er(MeCp),Ga(NMe2)2,HO,alkylcyclopentadienyl,0.95-1.00,250
+,,ErFeO,Er(thd),Fe(thd),O,β-diketonate,1.00,280-300
+```
+
+Note: The provided segments did not contain specific EQE values for Er³⁺-based MOSLEDs, so the `eqe_best` column remains empty. The table is sorted alphabetically by the `process_material` since no EQE values were available for sorting by decreasing EQE.

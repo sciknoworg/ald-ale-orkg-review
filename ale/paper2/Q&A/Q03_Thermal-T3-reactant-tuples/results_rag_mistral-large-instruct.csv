@@ -1,0 +1,55 @@
+material,reactant_1,reactant_2,reactant_3,n_reports
+Al O,HF,TMA,,"2 3",7
+Al O,HF,DMAC,,"2 3",4
+Al O,HF,Sn(acac),,"2 3",3
+Al O,HF,Sn(acac),TMA,DMAC,SiCl,"4 2 3",1
+Al O,HF,TMA,SiCl,"4 2 3",1
+Al O,HF,DMAC,SiCl,"4 2 3",1
+Al O,HF,TMA,CHF,"3 2 3",1
+Al O,HF,DMAC,CHF,"3 2 3",1
+Al O,HF,TMA,DFT study of fluorination reaction,,"2 3",1
+AlF,HF,Sn(acac),,"3 2",1
+AlN,HF,Sn(acac),,"2",1
+Co,Cl,Hhfac,Hacac,"2",1
+Co,O,Hhfac,,"2",1
+Cu,O,Hhfac,,"3",1
+Fe,Cl,Hacac,,"2",1
+Ga O,HF,BCl,DMAC,TMA,TiCl,Ga[N(CH ) ],,"2 3 3 3 4 3 2 3",1
+GaN,XeF,BCl,,"2 3",1
+Ge,Cl,Thermal cycling,,"2",1
+HfO,HF,Sn(acac),,"2 2",1
+HfO,HF,Sn(acac),TMA,DMAC,SiCl,"4 2 2",1
+HfO,HF,TiCl4,,"2",1
+HfO,HF,DMAC,,"2",1
+HfO,HF,DFT study of fluorination reaction,,"2",1
+HfO,HF,DMAC,TiCl,,"4 2 4",1
+HfO,HF,XeF,SF,DMAC,TiCl,,"2 2 4 4",1
+HfZrO,HF,DMAC,TiCl,,"4 2 4",1
+HfZrO,HF,XeF,SF,DMAC,TiCl,,"2 2 4 4",1
+InGaAs,HF,DMAC,,"",1
+InAlAs,HF,DMAC,,"",1
+InGaAs,HF,DMAC,,"",1
+InGaZnO,HF,DMAC,,"4",1
+Mo O,BCl,HF,,"3 3",1
+Ni,O,H+hfac,,"2",1
+Si O,HF,TMA,,"2",1
+Si,ClF,BrF,BrF,IF,,"3 3 5 5",1
+Si,Cl,Thermal cycling,,"2",1
+Si N,O,O,HF,TMA,,"3 4 2 3",1
+SiO,TMA,HF,,"2",1
+SiO,CHF,TMA,,"2, 3",1
+TiN,O,HF,,"3",1
+TiN,CHF /O downstream,Thermal cycling,,"3 2",1
+TiO,WF,BCl,,"2 6 3",1
+TiO,WF,BCl,,"2 6 3",1
+VO,HF,SF,Sn(acac),,"2 4 2",1
+W O,O,BCl,HF,,"2 3 3",1
+W O,O,WF,Xie,,"2 3 6",1
+W O,O,WCl,Xie,,"2 3 6",1
+WO,O,BCl,HF,,"3 2 3 3",1
+ZnO,Hacac,O plasma,,"2",1
+ZnO,HF,TMA,,"",1
+ZrO,HF,Sn(acac),TMA,DMAC,SiCl,,"2 2",1
+ZrO,HF,DMAC,,"2",1
+ZrO,HF,DFT study of fluorination reaction,,"2",1
+ZrO,HF,DMAC,TiCl,,"4 2 4",1

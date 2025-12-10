@@ -1,0 +1,4 @@
+host_matrix,eqe_num,vol_num,anneal_num,tau_num,olt_num
+Al2O3:Yb,24,≈14,NG,0.90,NG
+Ga2O3,36,≈15,900,2.04,100
+Lu3Al5O12,10,50,1100,1.65,NG

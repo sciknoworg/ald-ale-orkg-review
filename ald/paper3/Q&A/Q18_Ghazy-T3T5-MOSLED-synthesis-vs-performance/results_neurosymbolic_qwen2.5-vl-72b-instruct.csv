@@ -1,0 +1,6 @@
+matrix,synthesis_temp,annealing_temp,eqe,power_eff,lifetime
+Y3Ga5O12,350,800,2.5,3.8,2.26
+Gd3Ga5O12,,1000,1.9,3.6,1.59
+Lu3Al5O12,,1100,10,12,1.65
+Yb2O3,,1000,8.5,10,
+Yb3Al5O12,,1100,5.2,4.8,1.2

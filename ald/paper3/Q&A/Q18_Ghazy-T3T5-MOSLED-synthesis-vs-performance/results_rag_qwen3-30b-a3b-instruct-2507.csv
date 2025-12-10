@@ -1,0 +1,7 @@
+The requested query asks for data from **Table 3** (synthesis temperature) and **Table 5** (annealing temperature, EQE, power efficiency, and emission lifetime), but **Table 5 is not present in the retrieved segments**.
+
+Additionally, while **Table 3** is fully provided and contains synthesis temperatures (T[°C]) for various rare-earth oxide materials, **no information about annealing temperature, EQE, power efficiency, or emission lifetime** is available in the retrieved text.
+
+Therefore, **it is impossible to construct the requested CSV table** with the required columns because **Table 5 is missing entirely** from the retrieved segments.
+
+**Conclusion:** The requested data cannot be extracted due to the absence of Table 5 in the retrieved information.

@@ -1,0 +1,37 @@
+material,family,co_reactant,gpc_num,temp_num
+Sc(iPrCp) HO,β-diketonate,HO,0.60-1.00,250
+Y(iPr2amd) HO,amidinate,HO,0.80,150-280
+Y(iPr2amd)(EtCp) HO,amidinate,HO,1.10,300-450
+Y(iPr2amd)(EtCp) O,amidinate,O,1.10,300-450
+Y(iPr2amd)(EtCp) O,amidinate,O,0.90,300-450
+Y(iPr2amd)(iPrCp) HO,amidinate,HO,0.40,350-450
+Y(iPr2amd)(iPrCp) O,amidinate,O,_,350
+Y(dpdmg) HO,formamidinate,HO,1.10,175-250
+Y(iPr2famd) HO,formamidinate,HO,1.36,150-325
+Y(tBu2famd) HO,formamidinate,HO,0.67,200-325
+Y(tBuCp) HO,β-diketonate,HO,1.70,250
+La(iPr2amd) HO,amidinate,HO,1.05,200-300
+La(iPr2famd) HO,formamidinate,HO,1.70,200-250
+La(iPr2famd) O,formamidinate,O,1.20-1.40,200-250
+La(iPr2amd)(iPrCp) HO,amidinate,HO,1.20-3.00,200-300
+La(iPr2amd)(iPrCp) O,amidinate,O,0.60-2.10,200-325
+La(iPr2amd)(iPrCp) HO+O,amidinate,HO+O,0.70-1.80,200-325
+La(iPr2amd)(iPrCp) EtOH,amidinate,EtOH,0.50-1.70,200-325
+LaAlO La(thd) Al(acac) O,β-diketonate,O,0.36-0.39,325-400
+La(thd) TMA HO,β-diketonate,HO,0.55,270
+La(thd) TMA O,β-diketonate,O,0.64,250
+La(tmsa) TMA HO,alkoxide/amide,HO,0.58,225-250
+La(iPr2amd) TMA HO,amidinate,HO,0.80,300-330
+La(iPr2famd) TMA HO,formamidinate,HO,2.80,300-330
+La(iPrCp) TMA HO,β-diketonate,HO,0.12,300
+LaAl(OiPr)(iPrOH)] HO,alkoxide/amide,HO,0.10-0.50,160-300
+LaNiO La(thd) Ni(thd) O,β-diketonate,O,0.08-0.26,215-400
+La(thd) Ni(acac) O,β-diketonate,O,0.31,225
+LaCoO La(thd) Co(thd) O,β-diketonate,O,0.35,200-400
+LaMnO La(thd) Mn(thd) O,β-diketonate,O,0.10-0.23,250-325
+LaGaO La(thd) Ga(acac) O,β-diketonate,O,0.38,325-400
+LaFeO La(thd) Fe(thd) O,β-diketonate,O,0.20-0.30,200-360
+LaLuO La(thd) Lu(thd) O,β-diketonate,O,300
+La(iPr2amd) Lu(Etfamd) HO,amidinate,HO,1.20,300
+LaScO La(iPr2amd) Sc(Etamd) HO,amidinate,HO,1.10,300
+LaYO La(iPr2amd) Y(iPramd) HO,amidinate,HO,0.80,280

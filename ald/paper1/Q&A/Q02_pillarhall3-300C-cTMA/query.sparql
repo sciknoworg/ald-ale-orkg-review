@@ -1,0 +1,26 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?contribution ?paper ?paper_title ?temp ?lharText ?cTMA
+WHERE {
+  # use the correct predicate to reach rows
+  orkgr:R1469158 orkgp:compareContribution ?contribution .
+
+  # properties (adjust P-IDs if yours differ)
+  ?contribution orkgp:P37561  ?temp .     # Temperature (°C)
+  ?contribution orkgp:P180003 ?lhar .     # LHAR type
+  ?contribution orkgp:P180008 ?cTMA .     # cTMA
+
+  OPTIONAL { ?contribution orkgp:P32 ?paper . ?paper rdfs:label ?paper_title . }
+  OPTIONAL { ?lhar rdfs:label ?lharLabel . }
+
+  # normalize temp to a number; handle "300", "300 °C", etc.
+  BIND( xsd:decimal(REPLACE(STR(?temp), "[^0-9.\\-]+", "")) AS ?tempValue )
+  # handle LHAR as resource or literal
+  BIND( COALESCE(?lharLabel, STR(?lhar)) AS ?lharText )
+
+  FILTER(?tempValue = 300)
+  FILTER(CONTAINS(LCASE(?lharText), "pillarhall-3"))
+}

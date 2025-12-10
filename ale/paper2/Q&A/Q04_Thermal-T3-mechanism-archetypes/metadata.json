@@ -1,0 +1,92 @@
+{
+  "id": "Q04",
+  "domain": "ALE",
+  "query_group": "Thermal-T3-overview",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Classify each thermal ALE chemistry in Table III into one of four mechanistic archetypes and count distinct chemistries and materials per archetype.",
+  "paper_context": {
+    "paper": {
+      "title": "Thermal atomic layer etching: A review",
+      "doi": "10.1116/6.0000894",
+      "doi_url": "https://doi.org/10.1116/6.0000894"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table III",
+        "description": "Summary of thermal atomic layer etching (ALE) chemistries, including etched material and up to three reactants involved in the ALE cycle."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1563034",
+        "comparison_url": "https://orkg.org/comparisons/R1563034",
+        "role": "thermal_ale_overview",
+        "table_source": "Thermal ALE Table III"
+      }
+    ],
+    "persistent_query_url": null
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183144",
+      "label": "material etched",
+      "role": "Identifies the solid being etched in a given thermal ALE chemistry (e.g., SiO2, Al2O3, Si3N4)."
+    },
+    {
+      "pid": "P183145",
+      "label": "reactant 1",
+      "role": "First reactant used in the thermal ALE sequence (often the initial surface-modifying, fluorinating, or oxidizing species)."
+    },
+    {
+      "pid": "P183146",
+      "label": "reactant 2",
+      "role": "Second reactant in the thermal ALE sequence, frequently a counter-reactant that forms volatile products."
+    },
+    {
+      "pid": "P183147",
+      "label": "reactant 3",
+      "role": "Optional third reactant or treatment step used in some multi-step thermal ALE chemistries."
+    }
+  ],
+  "postprocessing_notes": {
+    "classification_logic": {
+      "description": "Mechanistic archetypes are assigned via simple keyword rules over the concatenated reactant labels.",
+      "archetypes": [
+        {
+          "name": "Fluorination + ligand-exchange",
+          "rule": "Reactant text contains 'HF' and at least one of 'TMA', 'DMAC', 'Sn(acac)2', 'Sn(acac)'."
+        },
+        {
+          "name": "Oxidation + chelation",
+          "rule": "Reactant text contains 'O2' or 'O3' and at least one of 'Hacac' or 'Hhfac'."
+        },
+        {
+          "name": "Halogenation & conversion",
+          "rule": "Reactant text contains 'Cl2' or 'XeF2' and at least one of 'BCl3', 'WF6', 'WCl6', 'TiCl4'."
+        },
+        {
+          "name": "Other / unclassified",
+          "rule": "All remaining chemistries not matching the above patterns."
+        }
+      ],
+      "caveats": "Classification is heuristic and based on text labels; it does not perform full chemical parsing and may miss edge cases if naming conventions differ strongly."
+    },
+    "output_shape": {
+      "description": "One row per mechanism archetype with counts of distinct chemistries and distinct materials.",
+      "columns": [
+        "mechanism: one of the four archetype labels.",
+        "n_chemistries: number of distinct reactant tuples (Reactant 1–3) in that archetype.",
+        "n_materials: number of distinct etched materials that use chemistries in that archetype."
+      ]
+    },
+    "interpretation": "The result summarizes how many unique thermal ALE chemistries and how many different materials fall into each mechanistic family, providing a high-level view of which process design strategies dominate the thermal ALE literature captured in Table III."
+  }
+}

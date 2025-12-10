@@ -1,0 +1,80 @@
+{
+  "id": "Q03",
+  "domain": "ALE",
+  "query_group": "Thermal-T3-overview",
+  "query_variant": "easy",
+  "query_scope": "single-table",
+  "description_short": "For each etched material in the thermal ALE overview (Table III), list the distinct Reactant 1–3 tuples and count how many entries report each tuple.",
+  "paper_context": {
+    "paper": {
+      "title": "Thermal atomic layer etching: A review",
+      "doi": "10.1116/6.0000894",
+      "doi_url": "https://doi.org/10.1116/6.0000894"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table III",
+        "description": "Summary of thermal atomic layer etching (ALE) chemistries, including etched material and up to three reactants involved in the thermal ALE cycle."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1563034",
+        "comparison_url": "https://orkg.org/comparisons/R1563034",
+        "role": "thermal_ale_overview",
+        "table_source": "Thermal ALE Table III"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t3-easy-ale"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183144",
+      "label": "material etched",
+      "role": "Identifies the solid being etched in a given thermal ALE chemistry (e.g., SiO2, Al2O3, Si3N4)."
+    },
+    {
+      "pid": "P183145",
+      "label": "reactant 1",
+      "role": "First reactant used in the thermal ALE sequence (often the initial surface-modifying or ligand-exchange species)."
+    },
+    {
+      "pid": "P183146",
+      "label": "reactant 2",
+      "role": "Second reactant in the thermal ALE sequence (e.g., counter-reactant for ligand exchange or volatile product formation)."
+    },
+    {
+      "pid": "P183147",
+      "label": "reactant 3",
+      "role": "Optional third reactant or treatment step used in some thermal ALE chemistries."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation_logic": {
+      "description": "The query groups contributions by material and by the ordered triple (Reactant 1, Reactant 2, Reactant 3) and counts how many table rows share that same combination.",
+      "details": [
+        "Each contribution corresponds to one line in the modeled Table III.",
+        "Labels are used where available; otherwise, the raw resource identifiers are used.",
+        "The count ?n_reports indicates how often a given material–reactant tuple appears in the table."
+      ]
+    },
+    "output_shape": {
+      "description": "One row per unique material–reactant tuple, with a frequency count.",
+      "columns": [
+        "material: name or label of the etched material.",
+        "reactant_1: label or identifier of Reactant 1.",
+        "reactant_2: label or identifier of Reactant 2 (may be empty).",
+        "reactant_3: label or identifier of Reactant 3 (may be empty).",
+        "n_reports: number of contributions reporting that exact tuple."
+      ]
+    },
+    "interpretation": "The resulting table can be used to see which thermal ALE chemistries (in terms of reactant combinations) have been studied repeatedly for a given material and which are reported only once, providing a simple empirical indicator of how well-explored different parts of the thermal ALE chemical space are."
+  }
+}

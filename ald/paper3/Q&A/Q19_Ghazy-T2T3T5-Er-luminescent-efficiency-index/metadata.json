@@ -1,0 +1,126 @@
+{
+  "id": "Q19",
+  "domain": "ALD",
+  "query_group": "Ghazy-T2T3T5-Er-luminescence",
+  "query_variant": "complex3",
+  "query_scope": "cross-table",
+  "description_short": "Cross-table efficiency index for Er-doped luminescent oxides by combining dopant/application info (Table 2), ALD synthesis temperatures (Table 3), and MOSLED EQEs (Table 5).",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements",
+      "doi": "10.1002/admi.202400274",
+      "doi_url": "https://doi.org/10.1002/admi.202400274"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table 2",
+        "description": "Rare-earth-doped ALD materials overview: host materials, dopants, and application domains (e.g., luminescence, memory, gate dielectrics)."
+      },
+      {
+        "label": "Table 3",
+        "description": "Rare-earth ALD process overview: materials, metal precursors, co-reactants, growth-per-cycle (GPC), and deposition temperatures."
+      },
+      {
+        "label": "Table 5",
+        "description": "Performance characteristics of Er3+-based MOSLED devices: host matrices, annealing temperatures, EQE, power efficiency, threshold voltage, emission lifetime (τ), and operational device lifetime (OLT)."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1469955",
+        "comparison_url": "https://orkg.org/comparisons/R1469955",
+        "role": "ald_dopant_overview",
+        "table_source": "Ghazy Table 2"
+      },
+      {
+        "comparison_id": "R1471077",
+        "comparison_url": "https://orkg.org/comparisons/R1471077",
+        "role": "ald_process_overview",
+        "table_source": "Ghazy Table 3"
+      },
+      {
+        "comparison_id": "R1469991",
+        "comparison_url": "https://orkg.org/comparisons/R1469991",
+        "role": "mosled_performance_overview",
+        "table_source": "Ghazy Table 5"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/t2t3t5-complex"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P180027",
+      "label": "host material matrix",
+      "role": "host material in ALD dopant overview (Table 2)"
+    },
+    {
+      "pid": "P180028",
+      "label": "dopant",
+      "role": "rare-earth dopant in Table 2 (used to filter Er-doped systems)"
+    },
+    {
+      "pid": "P180029",
+      "label": "application",
+      "role": "application domain in Table 2 (used to filter luminescent systems)"
+    },
+    {
+      "pid": "P9071",
+      "label": "material",
+      "role": "ALD process material in Table 3"
+    },
+    {
+      "pid": "P180013",
+      "label": "temperature in °C",
+      "role": "ALD deposition temperature in Table 3"
+    },
+    {
+      "pid": "P180031",
+      "label": "host material matrix",
+      "role": "MOSLED host matrix in Table 5"
+    },
+    {
+      "pid": "P180033",
+      "label": "external quantum efficiency in %",
+      "role": "device EQE in Table 5"
+    }
+  ],
+  "postprocessing_notes": {
+    "join_strategy": {
+      "description": "Aligns Er-doped luminescent hosts across three comparisons (Tables 2, 3, and 5) using name normalization and string containment.",
+      "steps": [
+        "From Table 2 (R1469955), select only contributions where the dopant label contains 'Er' and the application label contains 'Luminesc', yielding Er-doped luminescent oxide hosts.",
+        "From Table 3 (R1471077), retrieve ALD process entries (P9071, P180013) and parse deposition temperature literals into numeric values (synT) within a plausible range (50–1500 °C).",
+        "From Table 5 (R1469991), retrieve MOSLED hosts (P180031) and EQE values (P180033), parsing EQE literals into numeric form (eqeNum).",
+        "Normalize host/material labels from all three tables by lowercasing and removing text in parentheses (typically dopant annotations) to obtain strings ?m2, ?m3, and ?h.",
+        "Use containment-based joins: require that the Table 3 name contains or is contained in the Table 2 name, and similarly that the Table 5 name contains or is contained in the Table 2 name."
+      ],
+      "limitations": "The fuzzy string matching via CONTAINS can misbehave for materials with very similar names or when abbreviations diverge strongly between tables (e.g., different spelling variants or formula formats). Manual inspection is recommended when interpreting borderline cases."
+    },
+    "aggregation_logic": {
+      "description": "The query aggregates synthesis temperature and EQE per matched material to derive an efficiency index.",
+      "details": [
+        "For each material, synT is taken as the minimum ALD synthesis temperature observed across matching Table 3 entries (MIN(?synT)), representing the lowest reported feasible deposition temperature.",
+        "EQE is taken as the maximum EQE value observed across matching Table 5 entries (MAX(?eqeNum)), representing the best reported external quantum efficiency.",
+        "The efficiency_index is computed as (MAX(EQE) / MIN(synthesis_temp) * 100), providing a simple normalized measure of luminescent efficiency per unit synthesis temperature.",
+        "Numeric extraction uses regex to capture the first number in mixed-format literals (e.g., '36', '≈15', '10–12'), which is then cast to xsd:decimal."
+      ]
+    },
+    "output_shape": {
+      "description": "Each output row corresponds to an Er-doped luminescent host material that is present in all three tables (composition, process, and device performance).",
+      "columns": [
+        "material: common material label resolved across Tables 2, 3, and 5.",
+        "synthesis_temp: minimal ALD deposition temperature (°C) for the material (from Table 3, P180013).",
+        "eqe: maximal external quantum efficiency (%) reported for the material in MOSLED devices (from Table 5, P180033).",
+        "efficiency_index: derived metric (EQE / synthesis_temp × 100) ranking materials by efficiency at low fabrication temperatures."
+      ]
+    },
+    "interpretation": "This query operationalizes the question 'Among Er-doped luminescent oxides discussed in the Ghazy et al. review, which materials achieve high luminescent efficiency at comparatively low ALD synthesis temperatures?' The efficiency index is not a physical law but a screening heuristic: higher values indicate materials that combine good EQE with moderate thermal budgets, which may be attractive candidates for temperature-sensitive device integration."
+  }
+}

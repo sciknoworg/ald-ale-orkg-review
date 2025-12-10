@@ -1,0 +1,39 @@
+material,precursor,energy
+$Al_{2}O_{3}$,$BCl_{3}$,Ar neutral beam
+$Al_{2}O_{3}$,$BCl_{3}$,Ar neutral beam
+BeO,$BCl_{3}$,Ar neutral beam
+III-V: GaAs,$Cl_{2}$,Electron bombardment
+III-V: GaAs,$Cl_{2}$,low-energy $Ar^{+}$ ions
+III-V: GaAs,$Cl_{2}$,248 nm KrF excimer laser and Ti sapphire laser
+III-V: GaAs,$Cl_{2}/Ar$ plasma,Ar ions from ECR plasma
+III-V: GaAs,$Cl_{2}/Ar$ plasma,Ar ions from ECR plasma
+III-V: GaAs,$Cl_{2}$,Ne neutral beam
+III-V: InP,Tertiarybutylphosphine,Halogen lamp desorption
+III-V: InP (and InAlAs, InGaAs),$Cl_{2}$,Ne neutral beam
+Ge,$Cl_{2}$,Ar ions from ECR plasma
+Ge (and Si, SiGe),$Cl_{2}$,Ar ions from ECR plasma
+Graphene,$O_{2}$ plasma,Ar neutral beam
+Graphite,$O_{2}$ plasma,Ar neutral beam
+$HfO_{2}$,$BCl_{3}$,Ar neutral beam
+$HfO_{2}$,$Cl_{2}$,Ar neutral beam
+Polymer (Polystyrene),$O_{2}$,Ar ions from CCP plasma
+Si,$CF_{4}+O_{2}$ plasma,Ar ions from ECR plasma
+Si,"$CF_{4}/O_{2}$, $NF_{3}/N_{2}$, or $F_{2}/He$ plasmas",Ar ions from ECR plasma
+Si,$Cl_{2}$,Ar ions from ECR plasma
+Si,$Cl_{2}$,Ar ions from ECR plasma
+Si,$Cl_{2}$,50 eV Ar ions (MD simulation)
+Si,$Cl_{2}$,Ar ions from helical resonator plasma
+Si,$Cl_{2}$,Ar ions from helicon plasma
+Si,$Cl_{2}$,Ar ions from ICP type ion gun
+Si,$Cl_{2}$,Ar neutral beam
+Si,$Cl_{2}$,Ar or He ions from ICP source
+Si,$Cl_{2}/Ar$ plasma,Ar ions from ICP source
+Si,$Cl_{2}/Ar$ plasma,Ar ions from ICP source
+$Si_{3}N_{4}$,$H_{2}$ plasma,Ion bombardment from $Ar/H_{2}$ ECR plasma
+$Si_{3}N_{4}$,Ion implantation from $H_{2}$ plasma,Wet etching (aqueous HF solution)
+$SiO_{2}$ (and Si),$CF_{x}^{+}$ or radical adsorption,Ar ions (MD simulation)
+$SiO_{2}$,$C_{4}F_{8}/Ar$ plasma,Ion bombardment from $C_{4}F_{8}/Ar$ ICP plasma
+$SiO_{2}$,$C_{4}F_{8}/Ar$ plasma,Ar ions from magnetically enhanced plasma
+$SiO_{2}$,$C_{4}F_{8}/Ar$ plasma,Ar ions from ICP source
+$TiO_{2}$,$BCl_{3}$,Ar neutral beam
+$ZrO_{2}$,$BCl_{3}$,Ar neutral beam

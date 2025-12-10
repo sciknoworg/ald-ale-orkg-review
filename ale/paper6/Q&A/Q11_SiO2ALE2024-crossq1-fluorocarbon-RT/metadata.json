@@ -1,0 +1,89 @@
+{
+  "id": "Q11",
+  "domain": "ALE",
+  "query_group": "SiO2ALE2024-crossq1",
+  "query_variant": "easy",
+  "query_scope": "cross-table",
+  "description_short": "Cross-table fluorocarbon query linking SiO2 ALE Tables I and II to retrieve near-RT etch conditions with ion-energy windows for shared fluorocarbon precursors.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic Layer Etching of SiO2 for Nanoscale Semiconductor Devices: A Review",
+      "doi": "10.5757/ASCT.2024.33.1.1",
+      "doi_url": "https://doi.org/10.5757/ASCT.2024.33.1.1"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table I",
+        "description": "Overview of SiO2 ALE chemistries including fluorocarbon-based fluorination steps."
+      },
+      {
+        "label": "Table II",
+        "description": "SiO2 ALE process window summary including removal gases, process temperature, etch rate, and ion-energy window."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1560949",
+        "comparison_url": "https://orkg.org/comparisons/R1560949",
+        "role": "SiO2_ALE_Table_I_fluorocarbon_overview"
+      },
+      {
+        "comparison_id": "R1560977",
+        "comparison_url": "https://orkg.org/comparisons/R1560977",
+        "role": "SiO2_ALE_Table_II_ion_energy_window"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/pap6-crossq1-easy"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183129",
+      "label": "Fluorocarbon precursor",
+      "role": "Linking key between Tables I and II; normalized to a base precursor token for joining."
+    },
+    {
+      "pid": "P183125",
+      "label": "Removal gas",
+      "role": "Identifies the gas used in the removal step in Table II."
+    },
+    {
+      "pid": "P183130",
+      "label": "Process temperature (°C)",
+      "role": "Removal-step process temperature, parsed to filter near-RT conditions (RT ± 20 °C)."
+    },
+    {
+      "pid": "P183131",
+      "label": "Etching rate",
+      "role": "Numerical etch rate used to sort conditions in descending order."
+    },
+    {
+      "pid": "P183132",
+      "label": "Ion-energy window",
+      "role": "Specifies the ion-energy range for the removal step in Table II."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": {
+      "grouping_key": "shared fluorocarbon precursor base across Tables I and II",
+      "description": "Rows are produced for all conditions in Table II whose fluorocarbon precursor base token also appears in Table I."
+    },
+    "output_shape": {
+      "description": "One row per joined fluorocarbon process condition near RT.",
+      "columns": [
+        "precursor: normalized fluorocarbon precursor (label if available, otherwise base token).",
+        "removal: removal gas used in the ion-assisted or plasma step.",
+        "process_temp: textual representation of the process temperature from Table II.",
+        "etch_rate: numeric etching rate parsed from the Table II entry.",
+        "ion_energy_window: textual ion energy window describing the energy range of the removal step."
+      ]
+    },
+    "interpretation": "The result links fluorocarbon-based fluorination chemistries (Table I) with detailed process conditions and ion-energy windows (Table II) under near-RT conditions, enabling comparison of how different fluorocarbon plasmas perform in SiO2 ALE around room temperature."
+  }
+}

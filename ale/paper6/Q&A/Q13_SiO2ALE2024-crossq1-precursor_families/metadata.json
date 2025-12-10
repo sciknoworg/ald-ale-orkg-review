@@ -1,0 +1,99 @@
+{
+  "id": "Q13",
+  "domain": "ALE",
+  "query_group": "SiO2ALE2024-crossq1-precursor_families",
+  "query_variant": "complex",
+  "query_scope": "cross-table",
+  "description_short": "Complex cross-table query that groups anisotropic SiO2 ALE processes by fluorocarbon precursor family and aggregates etch rates, ion-energy windows, and selectivities across Tables I, II, and III.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic Layer Etching of SiO2 for Nanoscale Semiconductor Devices: A Review",
+      "doi": "10.5757/ASCT.2024.33.1.1",
+      "doi_url": "https://doi.org/10.5757/ASCT.2024.33.1.1"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table I",
+        "description": "Anisotropic SiO2 ALE processes with fluorocarbon-based chemistries and corresponding etch rates."
+      },
+      {
+        "label": "Table II",
+        "description": "SiO2 ALE conditions including ion-energy windows in the removal step, for various fluorocarbon precursors."
+      },
+      {
+        "label": "Table III",
+        "description": "SiO2 ALE selectivity data (SiO2/Si and SiO2/Si3N4) together with fluorination precursors."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1560949",
+        "comparison_url": "https://orkg.org/comparisons/R1560949",
+        "role": "SiO2_ALE_Table_I_etch_rates"
+      },
+      {
+        "comparison_id": "R1560977",
+        "comparison_url": "https://orkg.org/comparisons/R1560977",
+        "role": "SiO2_ALE_Table_II_ion_energy_windows"
+      },
+      {
+        "comparison_id": "R1561025",
+        "comparison_url": "https://orkg.org/comparisons/R1561025",
+        "role": "SiO2_ALE_Table_III_selectivity"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/pap6-crossq1-complex"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183129",
+      "label": "Precursor chemistries for fluorination",
+      "role": "Fluorocarbon precursor for the SiO2 ALE fluorination step; used to derive fluorocarbon family keys and to align entries across Tables I–III."
+    },
+    {
+      "pid": "P183131",
+      "label": "Etching rate",
+      "role": "SiO2 etch rate in Å/cycle from Tables I and II; numeric tokens are extracted and used to compute mean and maximum etch rates per precursor family."
+    },
+    {
+      "pid": "P183132",
+      "label": "Ion energy in removal step",
+      "role": "Ion-energy window for the removal step from Table II; represented as strings and aggregated to a representative ion-energy window per precursor family."
+    },
+    {
+      "pid": "P183133",
+      "label": "Selectivity material pair",
+      "role": "Material selectivity pair (e.g. SiO2/Si, SiO2/Si3N4) from Table III; used to distinguish SiO2/Si and SiO2/Si3N4 selectivities."
+    },
+    {
+      "pid": "P173032",
+      "label": "Selectivity value",
+      "role": "Textual selectivity value or range from Table III; numeric tokens are extracted to compute maximum selectivities for SiO2/Si and SiO2/Si3N4 per precursor family."
+    }
+  ],
+  "postprocessing_notes": {
+    "aggregation": {
+      "grouping_key": "precursor_family",
+      "description": "A fluorocarbon precursor family is defined by normalizing the precursor label to lowercase and taking the first token before a '/' or space (e.g. 'C4F8/Ar plasma' → 'c4f8'). All measurements for precursors sharing this family key are grouped together."
+    },
+    "output_shape": {
+      "description": "One row per fluorocarbon precursor family summarizing etch behavior, ion-energy conditions, and selectivities for anisotropic SiO2 ALE.",
+      "columns": [
+        "precursor_family: normalized name of the fluorocarbon precursor family (e.g. 'c4f8', 'chf3', 'c3f7och3').",
+        "mean_etch_rate: average SiO2 etch rate (Å/cycle) for that family across Tables I and II.",
+        "max_etch_rate: maximum SiO2 etch rate (Å/cycle) for that family across Tables I and II.",
+        "ion_energy_windows: representative ion-energy window(s) in the removal step for that family as reported in Table II.",
+        "max_sel_SiO2_Si: maximum SiO2/Si selectivity observed for that family in Table III.",
+        "max_sel_SiO2_Si3N4: maximum SiO2/Si3N4 selectivity observed for that family in Table III."
+      ]
+    },
+    "interpretation": "The query provides a family-level summary of anisotropic SiO2 ALE, showing which fluorocarbon chemistries combine favorable selectivity (against Si and Si3N4), high etch rates, and characteristic ion-energy windows, thereby supporting comparative process design and hypothesis generation for new ALE experiments."
+  }
+}

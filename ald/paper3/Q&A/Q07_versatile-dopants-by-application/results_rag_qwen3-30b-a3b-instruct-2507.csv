@@ -1,0 +1,24 @@
+application,dopant,n_hosts
+luminescence,Tb,4
+luminescence,Er,4
+luminescence,Yb,3
+luminescence,La,2
+luminescence,Pr,2
+luminescence,Nd,2
+luminescence,Sm,1
+luminescence,Eu,1
+luminescence,Gd,1
+luminescence,Ho,1
+luminescence,Tm,1
+luminescence,Y,1
+memory,Y,2
+memory,La,2
+memory,Pr,1
+memory,Gd,1
+memory,Er,1
+memory,Dy,1
+electrolyte,Y,2
+electrolyte,La,1
+electrolyte,Dy,1
+gate dielectrics,Y,1
+gate dielectrics,La,1

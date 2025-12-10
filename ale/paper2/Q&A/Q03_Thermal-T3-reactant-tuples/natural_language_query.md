@@ -1,0 +1,1 @@
+List, for each material etched, the distinct reactant tuples reported (Reactant 1–3) and how many entries report each tuple.

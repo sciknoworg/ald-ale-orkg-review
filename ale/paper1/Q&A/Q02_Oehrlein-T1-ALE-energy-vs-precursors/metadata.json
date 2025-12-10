@@ -1,0 +1,78 @@
+{
+  "id": "Q02",
+  "domain": "ALE",
+  "query_group": "Oehrlein-T1-ALE-overview",
+  "query_variant": "complex",
+  "query_scope": "single-table",
+  "description_short": "Group ALE investigations from Table I by broad energy-source category and count how many distinct adsorption precursor chemistries are used within each category.",
+  "paper_context": {
+    "paper": {
+      "title": "Atomic Layer Etching at the Tipping Point: An Overview",
+      "doi": "10.1149/2.0061506jss",
+      "doi_url": "https://doi.org/10.1149/2.0061506jss"
+    },
+    "tables_modeled": [
+      {
+        "label": "Table I",
+        "description": "Summary of atomic layer etching (ALE) investigations, including material, adsorption precursor chemistry, and energy source used for etching or desorption."
+      }
+    ]
+  },
+  "orkg_context": {
+    "comparisons": [
+      {
+        "comparison_id": "R1562672",
+        "comparison_url": "https://orkg.org/comparisons/R1562672",
+        "role": "ale_overview",
+        "table_source": "Oehrlein Table I"
+      }
+    ],
+    "persistent_query_url": "https://tinyurl.com/ale-energy-classes"
+  },
+  "files": {
+    "natural_language_query_file": "natural_language_query.md",
+    "sparql_file": "query.sparql",
+    "results_example_file": "results_example.csv"
+  },
+  "properties_used": [
+    {
+      "pid": "P183143",
+      "label": "energy source",
+      "role": "Free-text or resource description of the activation / energy source used in the ALE cycle (e.g. neutral beam, ions, plasma, laser, thermal)."
+    },
+    {
+      "pid": "P183142",
+      "label": "precursor chemistries for adsorption",
+      "role": "Adsorption precursor chemistry used in the ALE half-cycle, whose distinct values are counted per energy category."
+    }
+  ],
+  "postprocessing_notes": {
+    "classification_logic": {
+      "description": "Energy-source strings are mapped to broad categories via keyword matching on the raw energy description.",
+      "rules": [
+        "If the energy field contains 'neutral' → category 'Neutral beam'.",
+        "Else if it contains 'plasma' or 'ion' → category 'Plasma / ion'.",
+        "Else if it contains 'laser', 'photon', or 'excimer' → category 'Photon-assisted'.",
+        "Else if it contains 'lamp', 'thermal', or 'wet' → category 'Thermal / chemical'.",
+        "Otherwise → category 'Other'."
+      ],
+      "limitations": "Energy descriptions that do not contain these keywords, or that are very abbreviated, will fall into the 'Other' category. The grouping is intentionally coarse and can be refined in later versions of the dataset."
+    },
+    "aggregation_logic": {
+      "description": "Within each energy-source category, the query counts DISTINCT adsorption precursor chemistries used across all contributions.",
+      "details": [
+        "Each contribution corresponds to one ALE investigation from Table I.",
+        "Multiple investigations using the same precursor under the same or different conditions are counted once per category.",
+        "No attempt is made here to normalize precursor strings beyond exact equality (e.g. 'Cl2' vs 'Cl\u2082(g)' may appear as distinct if encoded differently in the source)."
+      ]
+    },
+    "output_shape": {
+      "description": "One row per energy-source category with a count of distinct precursor chemistries.",
+      "columns": [
+        "energy_category: coarse class of energy source (Neutral beam, Plasma / ion, Photon-assisted, Thermal / chemical, Other).",
+        "n_precursors: number of distinct adsorption precursor chemistries recorded for ALE investigations in that category."
+      ]
+    },
+    "interpretation": "The query supports meta-analysis of ALE process strategies by showing how chemically diverse the adsorption step is within each broad energy-coupling regime. For example, one can quickly see whether neutral-beam ALE uses a relatively narrow or broad set of precursors compared to plasma-/ion-based ALE."
+  }
+}

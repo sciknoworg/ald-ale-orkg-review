@@ -1,0 +1,30 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?dirL, STR(?dir)) AS ?direction)
+  (COUNT(DISTINCT ?matKey)    AS ?n_metals)
+  (AVG(?epcVal)               AS ?avg_epc)
+WHERE {
+  orkgr:R1563131 orkgp:compareContribution ?c .
+
+  OPTIONAL { ?c orkgp:P183148 ?dir    . OPTIONAL { ?dir  rdfs:label ?dirL  . } }  # direction
+  OPTIONAL { ?c orkgp:P9071   ?mat    . OPTIONAL { ?mat  rdfs:label ?matL  . } }  # material
+  OPTIONAL { ?c orkgp:P183120 ?epcRaw . }                                        # EPC (raw)
+
+  # Normalize material label for distinct counting
+  BIND( LCASE(COALESCE(?matL, STR(?mat))) AS ?matKey )
+
+  # Parse EPC as a numeric value (first number in the string)
+  BIND(
+    IF(
+      REGEX(STR(?epcRaw), "[0-9]"),
+      xsd:decimal(REPLACE(STR(?epcRaw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")),
+      UNDEF
+    ) AS ?epcVal
+  )
+}
+GROUP BY ?dir ?dirL
+ORDER BY DESC(?avg_epc) LCASE(COALESCE(?dirL, STR(?dir)))

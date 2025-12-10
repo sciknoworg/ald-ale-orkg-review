@@ -1,0 +1,40 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?matL, STR(?mat))  AS ?material)
+  (COALESCE(?dirL, STR(?dir))  AS ?direction)
+  (COALESCE(?rxL,  STR(?rx))   AS ?reaction)
+  (COALESCE(?remL, STR(?rem))  AS ?removal)
+  (?epcVal                      AS ?epc)
+  (COALESCE(?tL,    STR(?t))   AS ?process_temp)
+  (COALESCE(?timeL, STR(?time)) AS ?time_per_cycle)
+WHERE {
+  orkgr:R1563131 orkgp:compareContribution ?c .
+
+  OPTIONAL { ?c orkgp:P9071   ?mat  . OPTIONAL { ?mat  rdfs:label ?matL  . } }  # material
+  OPTIONAL { ?c orkgp:P183148 ?dir  . OPTIONAL { ?dir  rdfs:label ?dirL  . } }  # direction
+  OPTIONAL { ?c orkgp:P183149 ?rx   . OPTIONAL { ?rx   rdfs:label ?rxL   . } }  # reaction (modification chemistry)
+  OPTIONAL { ?c orkgp:P183125 ?rem  . OPTIONAL { ?rem  rdfs:label ?remL  . } }  # removal chemistry
+  OPTIONAL { ?c orkgp:P183130 ?t    . OPTIONAL { ?t    rdfs:label ?tL    . } }  # process temp. (°C)
+  OPTIONAL { ?c orkgp:P183151 ?time . OPTIONAL { ?time rdfs:label ?timeL . } }  # time of cycle
+  OPTIONAL { ?c orkgp:P183120 ?epcRaw . }                                      # EPC (Å/cycle, raw)
+
+  # Parse EPC as a numeric value (first number in the string)
+  BIND(
+    IF(
+      REGEX(STR(?epcRaw), "[0-9]"),
+      xsd:decimal(
+        REPLACE(STR(?epcRaw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")
+      ),
+      UNDEF
+    ) AS ?epcVal
+  )
+
+  FILTER(?epcVal >= 2.0)
+}
+ORDER BY
+  DESC(?epcVal)
+  LCASE(COALESCE(?matL, STR(?mat)))

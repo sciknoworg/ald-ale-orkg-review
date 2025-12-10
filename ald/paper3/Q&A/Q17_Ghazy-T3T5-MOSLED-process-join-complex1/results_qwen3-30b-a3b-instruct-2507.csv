@@ -1,0 +1,10 @@
+matrix,process_material,eqe,metal_precursor,co_reactant,gpc,temp
+YGaO,La(thd)3,2.5,La(thd)3,EtGa(OiPr)3,0.23,350
+GdGaO,La(thd)3,1.9,La(thd)3,EtGa(OiPr)3,0.19,350
+ZnGaO,La(thd)3,0.3,La(thd)3,EtGa(OiPr)3,0.25,350
+LuAlO,La(thd)3,10,La(thd)3,TMA,0.35,300
+YbO,La(thd)3,8.5,La(thd)3,TMA,0.15,225
+YbAlO,La(thd)3,5.2,La(thd)3,TMA,0.20,350
+GaO,La(thd)3,36,La(thd)3,TMA,0.15,225
+AlO-YO,La(thd)3,8.7,La(thd)3,TMA,0.15,225
+AlO:Yb,La(thd)3,24,La(thd)3,TMA,0.15,225

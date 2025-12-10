@@ -1,0 +1,31 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?contrib
+  (COALESCE(?supLabel, STR(?support)) AS ?support_value)
+  (COALESCE(?rxLabel,  STR(?react))   AS ?precursors_value)
+  ?temp_num
+  (STR(?thick) AS ?thickness_text)
+WHERE {
+  # comparison -> rows
+  orkgr:R1469594 orkgp:compareContribution ?contrib .
+  
+  # PROPERTIES: replace with your P-IDs
+  ?contrib orkgp:P180016 ?support .            # support material
+  ?contrib orkgp:P180017  ?react .               # ALD reactants (precursors)
+  ?contrib orkgp:P180013   ?temp .                # deposition temperature [°C]
+  ?contrib orkgp:P180018  ?thick .               # reported coating thickness [nm]
+
+  OPTIONAL { ?support rdfs:label ?supLabel . }
+  OPTIONAL { ?react   rdfs:label ?rxLabel . }
+
+  # grab first numeric value from temperature (handles "30", "30–200", etc.)
+  BIND( REPLACE(STR(?temp), "^[^0-9-]*(-?\\d+(?:\\.\\d+)?).*$", "$1") AS ?temp_first )
+  BIND( xsd:decimal(?temp_first) AS ?temp_num )
+
+  FILTER( ?temp_num <= 40 )
+}
+ORDER BY ?support_value ?precursors_value ?temp_num

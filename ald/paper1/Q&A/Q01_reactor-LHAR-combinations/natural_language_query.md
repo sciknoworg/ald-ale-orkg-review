@@ -1,0 +1,1 @@
+Show all combinations of reactor types and LHAR structures reported in the ORKG comparison with resource ID [R1469158](https://orkg.org/comparisons/R1469158), and count how many times each combination occurs across the included studies.

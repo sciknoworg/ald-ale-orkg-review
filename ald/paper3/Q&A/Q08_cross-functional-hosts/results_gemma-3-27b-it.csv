@@ -1,0 +1,19 @@
+host,n_apps,application,dopant
+AlO,4,Gate dielectrics,Er
+AlO,4,Gate dielectrics,La
+AlO,4,Gate dielectrics,Pr
+AlO,4,Gate dielectrics,Gd
+LaO,3,Gate dielectrics,Y
+LaO,3,Gate dielectrics,La
+LaO,3,Gate dielectrics,Pr
+TiO,3,Magnetics,La
+TiO,3,Magnetics,Pr
+TiO,3,Magnetics,Nd
+TiO,3,Magnetics,Sm
+TiO,3,Magnetics,Eu
+TiO,3,Magnetics,Tb
+TiO,3,Magnetics,Dy
+TiO,3,Magnetics,Ho
+TiO,3,Magnetics,Er
+TiO,3,Magnetics,Tm
+TiO,3,Magnetics,Yb

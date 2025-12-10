@@ -1,0 +1,71 @@
+"application","dopant","n_hosts"
+"Luminescence","Er",10
+"Luminescence","Tb",4
+"Luminescence","Eu",4
+"Luminescence","Yb",3
+"Luminescence","Nd",2
+"Luminescence","Dy",2
+"Luminescence","Ho",1
+"Luminescence","Tm",1
+"Luminescence","Sm",1
+"Luminescence","Pr",1
+"Luminescence","La",1
+"Luminescence","Gd",1
+"Luminescence","Y",1
+"Luminescence","Ce",1
+"Memory, Gate dielectrics","Y",10
+"Memory, Gate dielectrics","La",10
+"Memory, Gate dielectrics","Pr",10
+"Memory, Gate dielectrics","Gd",10
+"Memory, Gate dielectrics","Er",10
+"Memory, Gate dielectrics","Dy",10
+"Memory","Gd",1
+"Memory","La",1
+"Memory","Pr",1
+"Memory","Gd",1
+"Memory","Er",1
+"Memory","Dy",1
+"Electrolyte","Y",6
+"Electrolyte","Dy",6
+"Electrolyte","La",6
+"Electrolyte","Yb",1
+"Electrolyte","Tm",1
+"Electrolyte","Er",1
+"Electrolyte","Ho",1
+"Electrolyte","Dy",1
+"Electrolyte","Tb",1
+"Electrolyte","Eu",1
+"Electrolyte","Sm",1
+"Electrolyte","Nd",1
+"Electrolyte","Pr",1
+"Electrolyte","La",1
+"Interphase","Dy",6
+"Interphase","La",6
+"Interphase","Y",6
+"Interphase","Yb",1
+"Interphase","Tm",1
+"Interphase","Er",1
+"Interphase","Ho",1
+"Interphase","Dy",1
+"Interphase","Tb",1
+"Interphase","Eu",1
+"Interphase","Sm",1
+"Interphase","Nd",1
+"Interphase","Pr",1
+"Interphase","La",1
+"Gate dielectrics","Y",10
+"Gate dielectrics","La",10
+"Gate dielectrics","Pr",10
+"Gate dielectrics","Gd",10
+"Gate dielectrics","Er",10
+"Gate dielectrics","Dy",10
+"Thermometry","Yb",2
+"Thermometry","Tm",2
+"Thermometry","Er",2
+"Thermometry","Ho",2
+"Thermometry","Dy",2
+"Thermometry","Tb",2
+"Thermometry","Eu",2
+"Thermometry","Sm",2
+"Thermometry","Nd",2
+"Optoelectronics","La",1

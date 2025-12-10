@@ -1,0 +1,9 @@
+material,direction,reaction,removal,epc,process_temp,time_per_cycle
+W,anisotropic,"NF3 plasma adsorption of F radicals, O+ ion desorption",O+ ion desorption,2.6,not specified,not specified
+Cu,anisotropic,"O2 plasma oxidation, formic acid vapor removal",formic acid vapor removal,37,~80,not specified
+Pt,anisotropic,"O2 plasma oxidation, formic acid vapor removal",formic acid vapor removal,5,~80,not specified
+Pd,anisotropic,"O2 plasma oxidation, formic acid vapor removal",formic acid vapor removal,12,~80,not specified
+Fe,anisotropic,"O2 plasma oxidation, formic acid vapor removal",formic acid vapor removal,42,~80,not specified
+Co,anisotropic,"O2 plasma oxidation, formic acid vapor removal",formic acid vapor removal,28,~80,not specified
+W,anisotropic,"NF3 plasma adsorption of F radicals, O+ ion desorption",O+ ion desorption,2.6,not specified,not specified
+TiN,anisotropic,"O3 oxidation, HF fluorination",HF fluorination,2.44,200,not specified

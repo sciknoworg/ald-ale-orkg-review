@@ -1,0 +1,7 @@
+matrix,eqe_best,process_material,metal_precursor,co_reactant_any,family,gpc_num,temp_num
+Ga2O3,36,Ga2O3,Ga(acac)3,O3,beta-diketonate,_,900
+Lu3Al5O12,10,Lu3Al5O12,Lu(thd)3,TMA,beta-diketonate,0.19,350
+Yb3Al5O12,5.2,Yb3Al5O12,Yb(thd)3,TMA,beta-diketonate,0.2,350
+Y3Ga5O12,2.5,Y3Ga5O12,Y(thd)3,Et3Ga,beta-diketonate,0.23,350
+Gd3Ga5O12,1.9,Gd3Ga5O12,Gd(thd)3,TEGa,beta-diketonate,_,350
+Al2O3-Y2O3,8.7,Al2O3-Y2O3,Al(acac)3,Y(thd)3,beta-diketonate,_,_

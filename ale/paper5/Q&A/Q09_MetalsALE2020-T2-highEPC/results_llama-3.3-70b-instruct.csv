@@ -1,0 +1,6 @@
+"material","direction","reaction","removal","epc","process_temp","time_per_cycle"
+"Co","anisotropic","O2 plasma","formic acid","2","80","-"
+"Fe","anisotropic","O2 plasma","formic acid","2.8","80","-"
+"W","anisotropic","NF3 plasma","O+ ion","2.6","-","-"
+"W","isotropic","O2/O3","BCl3/HF","2.44","200","-"
+"TiN","isotropic","O3","HF","-","250","-"

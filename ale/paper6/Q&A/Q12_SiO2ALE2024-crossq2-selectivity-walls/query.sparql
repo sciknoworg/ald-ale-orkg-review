@@ -1,0 +1,64 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  (COALESCE(?selMatL,  STR(?selMat))    AS ?selectivity_pair)
+  (STR(?selValRaw)                      AS ?selectivity)
+  (COALESCE(?selMethL, STR(?selMeth))   AS ?selectivity_method)
+  (COALESCE(?wallMethL, STR(?wallMeth)) AS ?chamber_wall_treatment)
+  (?rateVal                             AS ?etch_rate)
+WHERE {
+
+  # --------- Table III (R1561025): selectivity data ---------
+  orkgr:R1561025 orkgp:compareContribution ?c3 .
+
+  OPTIONAL { ?c3 orkgp:P183133 ?selMat .
+             OPTIONAL { ?selMat rdfs:label ?selMatL . } }        # selectivity of material
+  OPTIONAL { ?c3 orkgp:P173032 ?selValRaw . }                    # selectivity (range)
+  OPTIONAL { ?c3 orkgp:P183134 ?selMeth .
+             OPTIONAL { ?selMeth rdfs:label ?selMethL . } }      # improving etch selectivity method
+
+  OPTIONAL { ?c3 orkgp:P183129 ?prec3 .
+             OPTIONAL { ?prec3 rdfs:label ?prec3L . } }          # precursor chemistries for fluorination
+  OPTIONAL { ?c3 orkgp:P183125 ?rem3  .
+             OPTIONAL { ?rem3  rdfs:label ?rem3L  . } }          # removal
+
+  # --------- Table IV (R1561023): chamber wall + rate ---------
+  orkgr:R1561023 orkgp:compareContribution ?c4 .
+
+  OPTIONAL { ?c4 orkgp:P183129 ?prec4 .
+             OPTIONAL { ?prec4 rdfs:label ?prec4L . } }          # precursor chemistries for fluorination
+  OPTIONAL { ?c4 orkgp:P183125 ?rem4  .
+             OPTIONAL { ?rem4  rdfs:label ?rem4L  . } }          # removal
+  OPTIONAL { ?c4 orkgp:P183135 ?wallMeth .
+             OPTIONAL { ?wallMeth rdfs:label ?wallMethL . } }    # method of removal chamber wall effect
+  OPTIONAL { ?c4 orkgp:P183131 ?rateRaw . }                      # etching rate (A/cycle)
+
+  # --------- Join on shared C4F8/Ar plasma chemistry ----------
+  BIND( LCASE(COALESCE(?prec3L, STR(?prec3))) AS ?precStr3 )
+  BIND( LCASE(COALESCE(?rem3L,  STR(?rem3)))  AS ?remStr3  )
+  BIND( LCASE(COALESCE(?prec4L, STR(?prec4))) AS ?precStr4 )
+  BIND( LCASE(COALESCE(?rem4L,  STR(?rem4)))  AS ?remStr4  )
+
+  # Require same precursor and removal in both tables
+  FILTER(?precStr3 = ?precStr4 && ?remStr3 = ?remStr4)
+
+  # Restrict to C4F8 / Ar plasma systems
+  FILTER(CONTAINS(?precStr3, "c4f8") && CONTAINS(?remStr3, "ar plasma"))
+
+  # --------- Normalize etch rate from Table IV ---------------
+  BIND(
+    IF(
+      REGEX(STR(?rateRaw), "[0-9]"),
+      xsd:decimal(
+        REPLACE(STR(?rateRaw), ".*?([0-9]+(?:\\.[0-9]+)?).*", "$1")
+      ),
+      UNDEF
+    ) AS ?rateVal
+  )
+
+  FILTER(BOUND(?rateVal))
+}
+ORDER BY DESC(?rateVal)

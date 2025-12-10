@@ -1,0 +1,151 @@
+PREFIX orkgr: <http://orkg.org/orkg/resource/>
+PREFIX orkgp: <http://orkg.org/orkg/predicate/>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+  ?precursor_family
+  (AVG(xsd:decimal(?rate_num)) AS ?mean_etch_rate)
+  (MAX(xsd:decimal(?rate_num)) AS ?max_etch_rate)
+  (SAMPLE(?ion_win)           AS ?ion_energy_windows)
+  (MAX(xsd:decimal(?sel_si_num))    AS ?max_sel_SiO2_Si)
+  (MAX(xsd:decimal(?sel_si3n4_num)) AS ?max_sel_SiO2_Si3N4)
+WHERE {
+
+  # --- Base precursor + family name from all three tables ---
+  {
+    # Table I data
+    orkgr:R1560949 orkgp:compareContribution ?c .
+    ?c orkgp:P183129 ?prec .
+    OPTIONAL { ?prec rdfs:label ?label }
+    BIND(COALESCE(?label, STR(?prec)) AS ?prec_name)
+  }
+  UNION
+  {
+    # Table II data
+    orkgr:R1560977 orkgp:compareContribution ?c .
+    ?c orkgp:P183129 ?prec .
+    OPTIONAL { ?prec rdfs:label ?label }
+    BIND(COALESCE(?label, STR(?prec)) AS ?prec_name)
+  }
+  UNION
+  {
+    # Table III data
+    orkgr:R1561025 orkgp:compareContribution ?c .
+    ?c orkgp:P183129 ?prec .
+    OPTIONAL { ?prec rdfs:label ?label }
+    BIND(COALESCE(?label, STR(?prec)) AS ?prec_name)
+  }
+
+  # Extract family name (first token before "/" or space, lowercased)
+  BIND(LCASE(?prec_name) AS ?prec_lower)
+  BIND(
+    COALESCE(
+      IF(CONTAINS(?prec_lower, "/"), STRBEFORE(?prec_lower, "/"), ""),
+      IF(CONTAINS(?prec_lower, " "), STRBEFORE(?prec_lower, " "), ""),
+      ?prec_lower
+    ) AS ?precursor_family
+  )
+  FILTER(?precursor_family != "")
+
+  # --- Etch rates from Tables I and II ---
+  OPTIONAL {
+    {
+      orkgr:R1560949 orkgp:compareContribution ?c1 .
+      ?c1 orkgp:P183129 ?p1 .
+      OPTIONAL { ?p1 rdfs:label ?l1 }
+      ?c1 orkgp:P183131 ?r1 .               # etching rate (A/cycle)
+      BIND(LCASE(COALESCE(?l1, STR(?p1))) AS ?pn1)
+      BIND(
+        COALESCE(
+          IF(CONTAINS(?pn1, "/"), STRBEFORE(?pn1, "/"), ""),
+          IF(CONTAINS(?pn1, " "), STRBEFORE(?pn1, " "), ""),
+          ?pn1
+        ) AS ?pf1
+      )
+      FILTER(?pf1 = ?precursor_family)
+      BIND(REPLACE(STR(?r1), "[^0-9.]", "") AS ?rate_num)
+      FILTER(REGEX(?rate_num, "^[0-9]"))
+    }
+    UNION
+    {
+      orkgr:R1560977 orkgp:compareContribution ?c2 .
+      ?c2 orkgp:P183129 ?p2 .
+      OPTIONAL { ?p2 rdfs:label ?l2 }
+      ?c2 orkgp:P183131 ?r2 .               # etching rate (A/cycle)
+      BIND(LCASE(COALESCE(?l2, STR(?p2))) AS ?pn2)
+      BIND(
+        COALESCE(
+          IF(CONTAINS(?pn2, "/"), STRBEFORE(?pn2, "/"), ""),
+          IF(CONTAINS(?pn2, " "), STRBEFORE(?pn2, " "), ""),
+          ?pn2
+        ) AS ?pf2
+      )
+      FILTER(?pf2 = ?precursor_family)
+      BIND(REPLACE(STR(?r2), "[^0-9.]", "") AS ?rate_num)
+      FILTER(REGEX(?rate_num, "^[0-9]"))
+    }
+  }
+
+  # --- Ion-energy windows from Table II ---
+  OPTIONAL {
+    orkgr:R1560977 orkgp:compareContribution ?cI .
+    ?cI orkgp:P183129 ?pI .
+    OPTIONAL { ?pI rdfs:label ?lI }
+    ?cI orkgp:P183132 ?ionRaw .            # ion energy in removal step
+    BIND(LCASE(COALESCE(?lI, STR(?pI))) AS ?pnI)
+    BIND(
+      COALESCE(
+        IF(CONTAINS(?pnI, "/"), STRBEFORE(?pnI, "/"), ""),
+        IF(CONTAINS(?pnI, " "), STRBEFORE(?pnI, " "), ""),
+        ?pnI
+      ) AS ?pfI
+    )
+    FILTER(?pfI = ?precursor_family)
+    BIND(STR(?ionRaw) AS ?ion_win)
+  }
+
+  # --- Selectivities from Table III ---
+  OPTIONAL {
+    orkgr:R1561025 orkgp:compareContribution ?cS .
+    ?cS orkgp:P183129 ?pS .
+    OPTIONAL { ?pS rdfs:label ?lS }
+    ?cS orkgp:P183133 ?mat .
+    OPTIONAL { ?mat rdfs:label ?matL }
+    ?cS orkgp:P173032 ?selRaw .
+
+    BIND(LCASE(COALESCE(?lS, STR(?pS))) AS ?pnS)
+    BIND(
+      COALESCE(
+        IF(CONTAINS(?pnS, "/"), STRBEFORE(?pnS, "/"), ""),
+        IF(CONTAINS(?pnS, " "), STRBEFORE(?pnS, " "), ""),
+        ?pnS
+      ) AS ?pfS
+    )
+    FILTER(?pfS = ?precursor_family)
+
+    BIND(LCASE(COALESCE(?matL, "")) AS ?mat_str)
+    BIND(REPLACE(STR(?selRaw), "[^0-9.]", "") AS ?sel_num)
+    FILTER(REGEX(?sel_num, "^[0-9]"))
+
+    # Separate SiO2/Si and SiO2/Si3N4 selectivities
+    BIND(
+      IF(
+        CONTAINS(?mat_str, "sio2/si") && !CONTAINS(?mat_str, "si3n4"),
+        ?sel_num,
+        ""
+      ) AS ?sel_si_num
+    )
+    BIND(
+      IF(
+        CONTAINS(?mat_str, "sio2/si3n4"),
+        ?sel_num,
+        ""
+      ) AS ?sel_si3n4_num
+    )
+  }
+}
+GROUP BY ?precursor_family
+ORDER BY
+  DESC(MAX(xsd:decimal(COALESCE(?sel_si3n4_num, ?sel_si_num, "0"))))
+  DESC(?mean_etch_rate)

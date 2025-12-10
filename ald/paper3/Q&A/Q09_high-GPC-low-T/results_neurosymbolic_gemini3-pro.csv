@@ -1,0 +1,40 @@
+material,family,co_reactant,gpc_num,temp_num
+Sc2O3,Cp-derived,O3,1.09,225.0
+Y2O3,Cp-derived,H2O,1.2,200.0
+Y2O3,Cp-derived,H2O,1.0,250.0
+Y2O3,Cp-derived,H2O,1.7,200.0
+Y2O3,Cp-derived,H2O,1.7,200.0
+Y2O3,Cp-derived,O3,1.7,245.0
+Y2O3,guanidinate,H2O,1.1,175.0
+Y2O3,Cp-derived,H2O,1.4,230.0
+Y2O3,formamidinate,H2O,1.36,150.0
+Y2O3,Cp-derived,H2O,1.7,250.0
+YF3,β-diketonate,TiF4,1.1,225.0
+La2O3,amidinate,H2O,1.05,200.0
+La2O3,formamidinate,H2O,1.7,200.0
+La2O3,formamidinate,O3,1.2,200.0
+La2O3,amidinate,H2O,1.2,200.0
+LaF3,β-diketonate,TiF4,2.0,225.0
+CeO2,amidinate,H2O,1.9,240.0
+CeO2,amidinate,O3,2.8,210.0
+CeO2,guanidinate,H2O,2.1,160.0
+CeO2,formamidinate,H2O,1.5,245.0
+Pr2O3,amidinate,H2O,1.47,200.0
+PrxAl2-xO3,Cp-derived,TMA + H2O,1.7,250.0
+Gd2O3,Cp-derived,H2O,1.0,175.0
+Gd2O3,guanidinate,H2O,1.0,175.0
+Gd2O3,guanidinate,H2O,1.0,175.0
+Gd2O3,guanidinate,H2O,1.0,175.0
+Gd2O3,amidinate,H2O,1.16,200.0
+GdAlO3,Cp-derived,TMA + O3,1.75,200.0
+GdAlO3,Cp-derived,TMA + H2O,4.5,200.0
+Dy2O3,guanidinate,H2O,1.0,200.0
+Dy2O3,guanidinate,H2O,1.0,200.0
+HoF3,β-diketonate,NbF5,1.0,250.0
+Er2O3,Cp-derived,H2O,1.5,250.0
+Er2O3,Cp-derived,H2O,1.5,250.0
+Er2O3,guanidinate,H2O,1.1,150.0
+Er2O3,amidinate,H2O,1.1,225.0
+Er2O3,Cp-derived,H2O,1.2,250.0
+Tm2O3,Cp-derived,H2O,1.5,200.0
+Yb2O3,Cp-derived,H2O,1.0,180.0

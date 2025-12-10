@@ -1,0 +1,5 @@
+material,precursor,energy
+TiO2,BCl3,60eV Ar neutral beam
+ZrO2,BCl3,Ar neutral beam
+SiO2,C4F8,Ar+ ion bombardment (25eV, 30eV)
+Si,C4F8,Ar+ ion bombardment (25eV, 30eV)
