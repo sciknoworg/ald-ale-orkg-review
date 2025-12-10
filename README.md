@@ -42,7 +42,8 @@ Below are the **exact natural-language queries (NL)** and corresponding **SPARQL
 
 ## Paper 1
 **Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels**  
-https://doi.org/10.1039/D0CP03358H
+https://doi.org/10.1039/D0CP03358H  
+`Yim, J., Ylivaara, O. M., Ylilammi, M., Korpelainen, V., Haimi, E., Verkama, E., ... & Puurunen, R. L. (2020). Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels. Physical Chemistry Chemical Physics, 22(40), 23107-23120.`  
 
 ### Table 2 (R1469158)
 https://orkg.org/comparisons/R1469158
@@ -61,7 +62,8 @@ https://orkg.org/comparisons/R1469158
 
 ## Paper 2
 **Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications**  
-https://doi.org/10.48550/arXiv.2506.17725
+https://doi.org/10.48550/arXiv.2506.17725  
+`Piechulla, P. M., Chen, M., Goulas, A., Puurunen, R. L., & van Ommen, J. R. (2025). Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications. arXiv preprint arXiv:2506.17725.`  
 
 ### Table 3 (R1469383)
 https://orkg.org/comparisons/R1469383
@@ -95,7 +97,8 @@ https://orkg.org/comparisons/R1469594
 
 ## Paper 3
 **Atomic and Molecular Layer Deposition of Functional Thin Films Based on Rare Earth Elements**  
-https://doi.org/10.1002/admi.202400274
+https://doi.org/10.1002/admi.202400274  
+`Ghazy, A., Zanders, D., Devi, A., & Karppinen, M. (2025). Atomic and molecular layer deposition of functional thin films based on rare earth elements. Advanced Materials Interfaces, 12(4), 2400274.`  
 
 ### Table 2 (R1469955)
 https://orkg.org/comparisons/R1469955
@@ -233,7 +236,8 @@ The result must be returned as exactly one table only, in CSV format, with one r
 
 ## Paper 1
 **Atomic Layer Etching at the Tipping Point: An Overview**  
-https://doi.org/10.1149/2.0061506jss
+https://doi.org/10.1149/2.0061506jss  
+`Oehrlein, G. S., Metzler, D., & Li, C. (2015). Atomic layer etching at the tipping point: an overview. ECS Journal of Solid State Science and Technology, 4(6), N5041.`  
 
 ### Table I (R1562672)
 https://orkg.org/comparisons/R1562672
@@ -263,7 +267,8 @@ The result must be returned as one single table only, in CSV format, with one ro
 
 ## Paper 2
 **Thermal atomic layer etching: A review**  
-https://doi.org/10.1116/6.0000894
+https://doi.org/10.1116/6.0000894  
+`Fischer, A., Routzahn, A., George, S. M., & Lill, T. (2021). Thermal atomic layer etching: A review. Journal of Vacuum Science & Technology A, 39(3).`  
 
 ### Table III (R1563034)
 https://orkg.org/comparisons/R1563034
@@ -291,7 +296,8 @@ The result must be returned as one single table only, in CSV format, with one ro
 
 ## Paper 3
 **Thermal atomic layer etching: Mechanism, materials and prospects**  
-https://doi.org/10.1016/j.pnsc.2018.11.003
+https://doi.org/10.1016/j.pnsc.2018.11.003  
+`Fang, C., Cao, Y., Wu, D., & Li, A. (2018). Thermal atomic layer etching: Mechanism, materials and prospects. Progress in Natural Science: Materials International, 28(6), 667-675.`  
 
 ### Table 3 (R1560222)
 https://orkg.org/comparisons/R1560222
@@ -317,7 +323,8 @@ For each group, compute the number of distinct materials and the mean etch-per-c
 
 ## Paper 4
 **Physical and chemical effects in directional atomic layer etching**  
-https://doi.org/10.1088/1361-6463/ab6d94
+https://doi.org/10.1088/1361-6463/ab6d94  
+`Sang, X., & Chang, J. P. (2020). Physical and chemical effects in directional atomic layer etching. Journal of Physics D: Applied Physics, 53(18), 183001.`  
 
 ### Table 1 (R1560825)
 https://orkg.org/comparisons/R1560825
@@ -336,7 +343,8 @@ https://orkg.org/comparisons/R1560825
 
 ## Paper 5
 **Anisotropic/Isotropic Atomic Layer Etching of Metals**  
-https://doi.org/10.5757/ASCT.2020.29.3.041
+https://doi.org/10.5757/ASCT.2020.29.3.041  
+`San Kim, D., Kim, J. E., Gill, Y. J., Jang, Y. J., Kim, Y. E., Kim, K. N., ... & Kim, D. W. (2020). Anisotropic/isotropic atomic layer etching of metals. Applied Science and Convergence Technology, 29(3), 41-49.`  
 
 ### Table 2 (R1563131)
 https://orkg.org/comparisons/R1563131
@@ -355,7 +363,8 @@ https://orkg.org/comparisons/R1563131
 
 ## Paper 6
 **Atomic Layer Etching of SiO₂ for Nanoscale Semiconductor Devices: A Review**  
-https://doi.org/10.5757/ASCT.2024.33.1.1
+https://doi.org/10.5757/ASCT.2024.33.1.1  
+`Hong, D., Kim, Y., & Chae, H. (2024). Atomic layer etching of SiO2 for nanoscale semiconductor devices: A review. Applied Science and Convergence Technology, 33(1), 1-6.`  
 
 ### 11. Cross-table NL easy query  
 #### Tables I & II  
