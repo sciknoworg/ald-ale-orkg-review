@@ -413,3 +413,24 @@ https://orkg.org/comparisons/R1562478
 `Short`: Combine all isotropic SiO₂ ALE processes and group by mechanism class; report number of variants, min/max/mean etching rate, temperature range, and plasma requirement.  
 `Detailed`: Combine all isotropic SiO₂ ALE processes from Table V and Table VI in the article "Atomic Layer Etching of SiO2 for Nanoscale Semiconductor Devices: A Review," and group them by etching mechanism class (e.g., Al₂O₃-conversion cycles, AFS-based thermal processes, AFS-based plasma-assisted processes). For each class, report (i) the number of distinct process variants, (ii) the minimum, maximum, and mean etching rate, (iii) the minimum and maximum process temperature of the rate-limiting step, and (iv) whether plasma is required. Sort mechanism classes by their mean etching rate and highlight those achieving >5 Å/cycle below 200 °C. The result must be returned as exactly one table only, in CSV format, with one row per result, and with the following columns: etching_mechanism_class, n_variants, min_etch_rate, max_etch_rate, mean_etch_rate, min_temp_rate_lim, max_temp_rate_lim, plasma_required, high_rate_low_temp.  
 `SPARQL`: https://tinyurl.com/pap6-crossq2-complex-fixed  
+
+---
+
+# Citation
+
+The research paper accompanying this work has been published in the [Journal of Vacuum Science & Technology A (JVSTA)](https://pubs.aip.org/avs/jva) as part of the **Atomic Layer Deposition (ALD) Special Collection**. Please cite the accompanying paper as follows:
+
+```bibtex
+@article{d2026publishing,
+  title={Publishing FAIR and machine-actionable reviews in materials science: The case for symbolic knowledge in neuro-symbolic artificial intelligence},
+  author={D’Souza, Jennifer and Auer, S{\"o}ren and Poupaki, Eleni and Watkins, Alex and Devi, Anjana and Puurunen, Riikka L and Karasulu, Bora and Mackus, Adriaan and Kessels, Erwin},
+  journal={Journal of Vacuum Science \& Technology A},
+  volume={44},
+  number={3},
+  year={2026},
+  publisher={AIP Publishing},
+  doi={10.1116/6.0005226},
+  url={https://doi.org/10.1116/6.0005226}
+}
+```
+
