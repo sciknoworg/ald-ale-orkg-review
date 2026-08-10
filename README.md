@@ -6,7 +6,7 @@ Below are the **exact natural-language queries (NL)** and corresponding **SPARQL
 
 # Table of Contents
 
-## ALD
+## Atomic Layer Deposition (ALD)
 - [Paper 1](#paper-1)  
   - [Table 2](#table-2-r1469158)  
 - [Paper 2](#paper-2)  
@@ -19,7 +19,7 @@ Below are the **exact natural-language queries (NL)** and corresponding **SPARQL
   - [Table 5](#table-5-r1469991)  
   - [Cross-table queries](#cross-table-queries-paper-3)
 
-## ALE
+## Atomic Layer Etching (ALE)
 - [Paper 1](#paper-1-1)  
   - [Table I](#table-i-r1562672)
 - [Paper 2](#paper-2-1)  
@@ -38,7 +38,7 @@ Below are the **exact natural-language queries (NL)** and corresponding **SPARQL
 
 ---
 
-# ALD
+# Atomic Layer Deposition (ALD)
 
 ## Paper 1
 **Saturation profile based conformality analysis for atomic layer deposition: aluminum oxide in lateral high-aspect-ratio channels**  
@@ -232,7 +232,7 @@ The result must be returned as exactly one table only, in CSV format, with one r
 
 ---
 
-# ALE
+# Atomic Layer Etching (ALE)
 
 ## Paper 1
 **Atomic Layer Etching at the Tipping Point: An Overview**  
