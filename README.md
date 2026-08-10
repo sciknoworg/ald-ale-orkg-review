@@ -434,3 +434,20 @@ The research paper accompanying this work has been published in the [Journal of 
 }
 ```
 
+## Dataset
+
+The full dataset underlying this work is openly available on [Zenodo](https://doi.org/10.5281/zenodo.17720429). If you use the dataset directly, please also cite the following dataset record:
+
+```bibtex
+@dataset{dsouza2025alde,
+  author={D'Souza, Jennifer and Poupaki, Eleni and Watkins, Alex and Higuchi, Randall},
+  title={ALD/E Neuro-symbolic Query Benchmark: 33 Scientific Queries over Machine-Actionable ORKG Comparisons},
+  month={nov},
+  year={2025},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.17720429},
+  url={https://doi.org/10.5281/zenodo.17720429}
+}
+```
+
+
