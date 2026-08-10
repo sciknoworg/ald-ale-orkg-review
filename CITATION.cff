@@ -1,0 +1,76 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying paper."
+title: "ALD & ALE Machine-Actionable Tables in the Open Research Knowledge Graph (ORKG): Papers, Tables, & their Natural Language and SPARQL Queries"
+type: dataset
+repository-code: "https://github.com/sciknoworg/ald-ale-orkg-review"
+license: Apache-2.0
+
+authors:
+  - family-names: "D'Souza"
+    given-names: "Jennifer"
+    orcid: "https://orcid.org/0000-0002-6616-9509"
+  - family-names: "Auer"
+    given-names: "Sören"
+    orcid: "https://orcid.org/0000-0002-0698-2864"
+  - family-names: "Poupaki"
+    given-names: "Eleni"
+    orcid: "https://orcid.org/0000-0001-6607-9813"
+  - family-names: "Watkins"
+    given-names: "Alex"
+    orcid: "https://orcid.org/0009-0009-3596-7135"
+  - family-names: "Devi"
+    given-names: "Anjana"
+    orcid: "https://orcid.org/0000-0003-2142-8105"
+  - family-names: "Puurunen"
+    given-names: "Riikka L."
+    orcid: "https://orcid.org/0000-0001-8722-4864"
+  - family-names: "Karasulu"
+    given-names: "Bora"
+    orcid: "https://orcid.org/0000-0001-8129-8010"
+  - family-names: "Mackus"
+    given-names: "Adriaan"
+    orcid: "https://orcid.org/0000-0001-6944-9867"
+  - family-names: "Kessels"
+    given-names: "Erwin"
+    orcid: "https://orcid.org/0000-0002-7630-8226"
+
+preferred-citation:
+  type: article
+  title: "Publishing FAIR and machine-actionable reviews in materials science: The case for symbolic knowledge in neuro-symbolic artificial intelligence"
+  authors:
+    - family-names: "D'Souza"
+      given-names: "Jennifer"
+      orcid: "https://orcid.org/0000-0002-6616-9509"
+    - family-names: "Auer"
+      given-names: "Sören"
+      orcid: "https://orcid.org/0000-0002-0698-2864"
+    - family-names: "Poupaki"
+      given-names: "Eleni"
+      orcid: "https://orcid.org/0000-0001-6607-9813"
+    - family-names: "Watkins"
+      given-names: "Alex"
+      orcid: "https://orcid.org/0009-0009-3596-7135"
+    - family-names: "Devi"
+      given-names: "Anjana"
+      orcid: "https://orcid.org/0000-0003-2142-8105"
+    - family-names: "Puurunen"
+      given-names: "Riikka L."
+      orcid: "https://orcid.org/0000-0001-8722-4864"
+    - family-names: "Karasulu"
+      given-names: "Bora"
+      orcid: "https://orcid.org/0000-0001-8129-8010"
+    - family-names: "Mackus"
+      given-names: "Adriaan"
+      orcid: "https://orcid.org/0000-0001-6944-9867"
+    - family-names: "Kessels"
+      given-names: "Erwin"
+      orcid: "https://orcid.org/0000-0002-7630-8226"
+  journal: "Journal of Vacuum Science & Technology A"
+  volume: 44
+  issue: 3
+  year: 2026
+  date-published: 2026-04-16
+  doi: "10.1116/6.0005226"
+  url: "https://doi.org/10.1116/6.0005226"
+  publisher:
+    name: "AIP Publishing"
