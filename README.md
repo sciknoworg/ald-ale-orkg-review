@@ -62,8 +62,8 @@ https://orkg.org/comparisons/R1469158
 
 ## Paper 2
 **Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications**  
-https://doi.org/10.48550/arXiv.2506.17725  
-`Piechulla, P. M., Chen, M., Goulas, A., Puurunen, R. L., & van Ommen, J. R. (2025). Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials and applications. arXiv preprint arXiv:2506.17725.`  
+https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.5c01919  
+`Piechulla, Peter M., Mingliang Chen, Aristeidis Goulas, Riikka L. Puurunen, and J. Ruud van Ommen. "Atomic layer deposition on particulate materials from 1988 through 2023: A quantitative review of technologies, materials, and applications." Chemistry of Materials 38, no. 1 (2026): 20-86.`  
 
 ### Table 3 (R1469383)
 https://orkg.org/comparisons/R1469383
